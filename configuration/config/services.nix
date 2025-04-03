@@ -8,6 +8,7 @@
       alsa.support32Bit = true;
       wireplumber.enable = true;
     };
+    pulseaudio.enable = false;
 
     fstrim = {
       enable = true;

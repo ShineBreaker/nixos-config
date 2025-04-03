@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  //Graphic
-  
+  # Graphic Card
   boot.extraModprobeConfig = ''
       options snd-intel-dspcfg dsp_driver=1
       options kvm_intel nested=1
@@ -12,6 +11,7 @@
   hardware.cpu.intel.updateMicrocode = true;
   hardware.intel-gpu-tools.enable = true;
   hardware.graphics = {
+      enable = true;
       extraPackages = with pkgs; [
       intel-media-driver 
       intel-vaapi-driver
@@ -20,12 +20,5 @@
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [ intel-vaapi-driver ];
     };
-    
-  hardware.opengl = {
-    enable = true;
-    extraPackages = with pkgs; [
-      vpl-gpu-rt
-    ];
-  };
   
 }

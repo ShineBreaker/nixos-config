@@ -5,7 +5,6 @@
       enable = true;
       enable32Bit = true;
     };
-    pulseaudio.enable = false;
     enableAllFirmware = true;
     enableRedistributableFirmware = true;
   };

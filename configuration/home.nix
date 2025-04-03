@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./programs/install-user.nix
+    # ./programs/install-user.nix
     # ./desktop/services/dconf-gnome.nix
   ];
 
