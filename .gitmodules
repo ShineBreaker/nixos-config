@@ -1,0 +1,3 @@
+[submodule "configuration/private"]
+	path = configuration/private
+	url = https://gitee.com/brokenshine/nixos-configs-private/
