@@ -5,6 +5,8 @@
 
 
 #### 使用说明
+##不建议直接clone下来复用，建议选用部分代码并复制粘贴到你的配置文件里
+##假如你非要直接克隆并使用的话，以下是步骤
 
 首先先git clone下来并且cd到本仓库
 然后再运行
@@ -23,11 +25,3 @@ cp /mnt/etc/nixos/hardware-configuration.nix ./configuration/hardware-configurat
 ```
 nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
 ```
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
