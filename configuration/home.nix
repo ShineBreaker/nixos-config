@@ -7,8 +7,8 @@
   ];
 
   programs.home-manager.enable = true;
-  home.username = "nixos";
-  home.homeDirectory = "/home/nixos";
+  home.username = "brokenshine";
+  home.homeDirectory = "/home/brokenshine";
   home.stateVersion = "21.11";
 
   fonts.fontconfig.enable = true;

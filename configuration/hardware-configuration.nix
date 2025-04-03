@@ -8,35 +8,34 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" "aesni_intel" "cryptd" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/2b367078-a37e-444f-b218-78c66bb8bcf1";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" "subvol=@" ];
-    };
-
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/c78fd7dc-3c4a-4f88-8a33-f1c2b46327ca";
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/2b367078-a37e-444f-b218-78c66bb8bcf1";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" "subvol=@home" ];
-    };
-
-  fileSystems."/var" =
-    { device = "/dev/disk/by-uuid/2b367078-a37e-444f-b218-78c66bb8bcf1";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" "subvol=@var" ];
+    { device = "zpool/RPOOL/NixOS/Clean";
+      fsType = "zfs";
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/2b367078-a37e-444f-b218-78c66bb8bcf1";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" "subvol=@nix" ];
+    { device = "zpool/RPOOL/NixOS/Persist/nix";
+      fsType = "zfs";
+    };
+
+  fileSystems."/etc" =
+    { device = "zpool/RPOOL/NixOS/Persist/etc";
+      fsType = "zfs";
+    };
+
+  fileSystems."/var" =
+    { device = "zpool/RPOOL/NixOS/Persist/var";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home/share.d" =
+    { device = "zpool/DPOOL/Files";
+      fsType = "zfs";
     };
 
   fileSystems."/boot" =

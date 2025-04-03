@@ -14,11 +14,6 @@
         efiSysMountPoint = "/boot";
         canTouchEfiVariables = true;
       };
-      systemd-boot = {
-        enable = lib.mkDefault true;
-        configurationLimit = 3;
-        consoleMode = "max";
-      };
     };
 
     kernelParams = [ "nohibernate" ]; 
