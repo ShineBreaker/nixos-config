@@ -8,7 +8,6 @@
         device = "nodev";
         useOSProber = true;
         efiSupport = true;
-        gfxmodeEfi = "640x480";
       };
   };
 }

@@ -6,7 +6,7 @@
     "margin": "0 10 10 10",
     
     "modules-left": ["group/power"],
-    "modules-center": [""wlr/taskbar"],
+    "modules-center": ["wlr/taskbar"],
     "modules-right": ["tray","group/status","clock"],
 
     "tray": {

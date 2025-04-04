@@ -10,6 +10,10 @@
     };
 
     loader = {
+      systemd-boot = {
+        enable = false;
+        configurationLimit = 10;
+      };
       efi = {
         efiSysMountPoint = "/boot";
         canTouchEfiVariables = true;

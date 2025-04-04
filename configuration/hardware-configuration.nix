@@ -18,6 +18,11 @@
       fsType = "zfs";
     };
 
+  fileSystems."/var" =
+    { device = "zpool/RPOOL/NixOS/Persist/var";
+      fsType = "zfs";
+    };
+
   fileSystems."/nix" =
     { device = "zpool/RPOOL/NixOS/Persist/nix";
       fsType = "zfs";
@@ -28,8 +33,8 @@
       fsType = "zfs";
     };
 
-  fileSystems."/var" =
-    { device = "zpool/RPOOL/NixOS/Persist/var";
+  fileSystems."/home" =
+    { device = "zpool/DPOOL/Home/NixOS";
       fsType = "zfs";
     };
 
@@ -51,6 +56,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s20f0u5.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

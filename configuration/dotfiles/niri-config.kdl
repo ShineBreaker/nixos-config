@@ -2,6 +2,8 @@ spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-at-startup "waypaper" "--random"
 spawn-at-startup "fcitx5" "-d"
+spawn-at-startup "poweralertd"
+spawn-at-startup "xwayland-satellite"
 prefer-no-csd
 
 hotkey-overlay {

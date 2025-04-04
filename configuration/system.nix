@@ -13,7 +13,7 @@
       ./config/zramSwap.nix
     ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "BrokenShine-Desktop";
   
   system = {
     stateVersion = "21.11";

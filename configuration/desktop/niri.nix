@@ -9,13 +9,16 @@
   ];
  
   environment.systemPackages = with pkgs; [
-    niri nemo-with-extensions alacritty mate.engrampa
-    pavucontrol gtklock xwayland-run swaybg waypaper openbox cage
-    mako fuzzel waybar brightnessctl
+    nemo-with-extensions alacritty mate.engrampa
+    pavucontrol gtklock
+    swaybg waypaper
+    xwayland-satellite xwayland-run cage labwc
+    poweralertd lxappearance-gtk2 mako fuzzel waybar brightnessctl
   ];
 
   programs.xwayland.enable = true;
-
+  programs.niri.enable = true;
+  
   security = {
     polkit = {
       enable = true;
@@ -36,7 +39,7 @@
     seatd.enable = true;
   };
 
-  programs.fish.shellAbbrs = { xwayland = "Xwayland & env DISPLAY=:0 openbox"; };
+  # programs.fish.shellAbbrs = { xwayland = "Xwayland & env DISPLAY=:0 openbox"; };
   
   systemd.user.services = {
     swaybg = {
@@ -58,12 +61,7 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      wlr.enable = true;
       config.common.default = "*";
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-gnome
-      ];
     };
     terminal-exec = {
       enable = true;
