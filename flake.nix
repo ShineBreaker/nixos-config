@@ -10,10 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }:
 
     (let
       system = "x86_64-linux";
@@ -32,17 +32,21 @@
         inherit system;
 
         modules = [
-          ./configuration/system.nix
-          ./configuration/user.nix
-          ./configuration/programs.nix
-          ./configuration/desktop/niri.nix
+          ./configuration/00-main/system.nix
+          ./configuration/00-main/services.nix
           ./configuration/device/RBP162024.nix
 
           home-manager.nixosModules.home-manager
      	    {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.brokenshine = import ./configuration/home.nix;
+            home-manager.users."brokenshine".imports = [
+              ./configuration/00-main/home.nix
+
+              nix-flatpak.homeManagerModules.nix-flatpak
+              ./configuration/home/flatpak.nix
+            ];
+            
             home-manager.backupFileExtension = "backup";
            }
 
