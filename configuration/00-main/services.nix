@@ -31,6 +31,7 @@
     ../services/user/mako.nix
     ../services/user/xwayland-satellite.nix
     ../services/user/poweralertd.nix
+    ../services/user/plasma-polkit-agent.nix
 
   ];
   
