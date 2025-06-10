@@ -10,10 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
 
     (let
       system = "x86_64-linux";
@@ -42,9 +41,6 @@
             home-manager.useUserPackages = true;
             home-manager.users."brokenshine".imports = [
               ./configuration/00-main/home.nix
-
-              nix-flatpak.homeManagerModules.nix-flatpak
-              ./configuration/home/flatpak.nix
             ];
             
             home-manager.backupFileExtension = "backup";

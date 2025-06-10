@@ -6,8 +6,6 @@
     heroic
     lutris
 
-    brave
-
     kdePackages.kdenlive
 
     mpv
