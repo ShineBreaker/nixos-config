@@ -11,11 +11,14 @@
       sarasa-gothic
       twemoji-color-font
     ];
-    fontconfig.defaultFonts = {
-      serif  = [ "Sarasa Gothic SC regular" ];
-      sansSerif = [ "Sarasa Gothic SC regular" ];
-      monospace = [ "Sarasa Mono SC" ];
-      emoji = [ "Twitter Color Emoji Regular" ];
+    fontconfig = {
+      useEmbeddedBitmaps = true;
+      defaultFonts = {
+        serif  = [ "Sarasa Gothic SC" ];
+        sansSerif = [ "Sarasa Gothic SC" ];
+        monospace = [ "IosevkaTerm Nerd Font Mono" "Sarasa Mono SC" ];
+        emoji = [ "Twitter Color Emoji" "Font Awesome 6 Free" ];
+      };
     };
   };
 }
