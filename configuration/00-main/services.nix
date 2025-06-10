@@ -27,7 +27,7 @@
     ../services/user/firefox.nix
 
     ../services/user/swaybg.nix
-    ../services/user/waybar.nix
+    # ../services/user/waybar.nix
     ../services/user/mako.nix
     ../services/user/xwayland-satellite.nix
     ../services/user/poweralertd.nix

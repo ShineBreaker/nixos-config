@@ -1,6 +1,8 @@
 {config, pkgs, ...}:
 {
   environment.systemPackages = [ pkgs.kdePackages.polkit-kde-agent-1 ];
+
+  security.polkit.enable = true;
   
   systemd.user.services = {
     plasma-polkit-agent = {

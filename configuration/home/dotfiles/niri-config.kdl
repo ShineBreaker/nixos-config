@@ -1,6 +1,6 @@
 spawn-at-startup "waypaper" "--random"
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "connman-gtk" "--tray"
+spawn-at-startup "waybar"
 prefer-no-csd
 
 hotkey-overlay {

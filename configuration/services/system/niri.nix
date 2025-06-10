@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     nemo-with-extensions alacritty mate.engrampa
     pavucontrol gtklock
-    waypaper
+    waypaper waybar
     xwayland-run cage
     fuzzel brightnessctl
   ];
@@ -11,19 +11,7 @@
   programs.xwayland.enable = true;
   programs.niri.enable = true;
   
-  security = {
-    soteria.enable = true;
-    polkit = {
-      enable = true;
-      ## extraConfig = ''
-      ##   /* Allow any local user to do anything (dangerous!). */
-      ##   polkit.addRule(function(action, subject) {
-      ##     if (subject.local) return "yes";
-      ##   });
-      ## '';
-    };
-    pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
-  };
+  security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
   services = {
     gnome.gnome-keyring.enable = true;
@@ -37,7 +25,7 @@
       enable = true;
       xdgOpenUsePortal = true;
       config.common.default = "*";
-      extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     };
     terminal-exec = {
       enable = true;
