@@ -45,14 +45,14 @@
 
     "clock": {
         "interval": 1,
-        "format": "\uf017 {:%H:%M:%S}",
+        "format": " {:%H:%M:%S}",
         "tooltip": true,
-        "tooltip-format": "\uf133 {:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": " {:%Y-%m-%d %H:%M:%S}",
     },
 
     "cpu": {
         "interval": 1,
-        "format": "\uf2db {usage}%",
+        "format": " {usage}%",
         "tooltip": true
     },
 
@@ -73,7 +73,7 @@
     "backlight": {
         "scroll-step": 5,
         "format": "{percent}% {icon}",
-        "format-icons": [""],
+        "format-icons": ["󰛩","󱩎","󱩏","󱩐","󱩑","󱩒","󱩓","󱩔","󱩕","󱩖","󰛨"],
         "min-length": 3,
         "on-click": "brightnessctl set 5%+",
         "on-click-right": "brightnessctl set 5%-",
@@ -89,10 +89,10 @@
     
     "network": {
         "interval": 1,
-        "format-wifi": "\uf1eb {essid} ({signalStrength}%)",
-        "format-ethernet": "\uf6ff {ipaddr}/{cidr}",
-        "format-linked": "\uf059 No IP ({ifname})",
-        "format-disconnected": "\uf071 Disconnected",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": " No IP ({ifname})",
+        "format-disconnected": " Disconnected",
         "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
         "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
         "on-click": "connman-gtk",
