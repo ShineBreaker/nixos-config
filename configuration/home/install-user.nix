@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   home.packages = with pkgs; [
     wineWowPackages.stagingFull
@@ -16,6 +16,7 @@
     bleachbit
 
     gh
+    linux-wallpaperengine
 
     qq
     telegram-desktop
@@ -33,7 +34,52 @@
     plugins = with pkgs.obs-studio-plugins; [
       obs-pipewire-audio-capture
       obs-text-pthread
+      wlrobs
     ];
   };
 
+  programs.keepassxc = {
+    enable = true;
+    settings = {
+      Browser.Enabled = true;
+      GUI = {
+        AdvancedSettings = true;
+        ApplicationTheme = "dark";
+        CompactMode = true;
+        HidePasswords = true;
+      };
+      SSHAgent.Enabled = true;
+    };
+  };
+
+  programs.helix = {
+    enable = true;
+      settings = {
+        theme = "autumn_night_transparent";
+        editor.cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+        };
+        languages.language = [{
+          name = "nix";
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+        }];
+        themes = {
+          autumn_night_transparent = {
+           "inherits" = "autumn_night";
+           "ui.background" = { };
+        };
+      };
+    };
+
+    programs.alacritty = {
+      enable = true;
+      settings = {
+        window.decorations = "None";
+        window.opacity = "0.8";
+      };
+    };
 }

@@ -25,7 +25,10 @@
       enable = true;
       xdgOpenUsePortal = true;
       config.common.default = "*";
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      extraPortals = [ 
+        pkgs.xdg-desktop-portal-gnome
+        pkgs.xdg-desktop-portal-gtk
+      ];
     };
     terminal-exec = {
       enable = true;

@@ -3,21 +3,16 @@
 {
   services.greetd = {
     enable = true;
-    package = pkgs.greetd.tuigreet;
     settings = rec {
-      default_session = {
+      initial_session = {
         command = "${pkgs.niri}/bin/niri-session";
         user = "brokenshine";
       };
-      # default_session = initial_session;
+      default_session = initial_session;
     };
   };
 
   environment.etc."greetd/environments".text = ''
     niri-session
-    cage
-    steam-gamescope
-    fish
-    bash
   '';
 }

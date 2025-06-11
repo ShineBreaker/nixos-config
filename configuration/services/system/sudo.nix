@@ -2,6 +2,6 @@
 {
   security.sudo = {
     enable = true;
-    wheelNeedsPassword = lib.mkForce false;
+    wheelNeedsPassword = lib.mkForce true;
   };
 }

@@ -16,9 +16,9 @@
     ../services/system/others.nix
 
     ../services/system/niri.nix
-    ../services/system/fcitx5.nix
+    ../services/user/fcitx5.nix
     ../services/system/greetd.nix
-    ../services/system/qt6ct.nix
+    ../services/user/qt6ct.nix
 
     ../services/user/flatpak.nix
     ../services/user/virtualisation.nix

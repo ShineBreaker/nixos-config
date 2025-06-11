@@ -5,7 +5,6 @@
     fontconfig.enable = true;
     fontDir.enable = true;
     packages = with pkgs; [
-      font-awesome
       nerd-fonts.iosevka
       nerd-fonts.iosevka-term
       sarasa-gothic
@@ -14,10 +13,10 @@
     fontconfig = {
       useEmbeddedBitmaps = true;
       defaultFonts = {
-        serif  = [ "Sarasa Gothic SC" ];
-        sansSerif = [ "Sarasa Gothic SC" ];
+        serif  = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
+        sansSerif = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
         monospace = [ "IosevkaTerm Nerd Font Mono" "Sarasa Mono SC" ];
-        emoji = [ "Twitter Color Emoji" "Font Awesome 6 Free" ];
+        emoji = [ "Twitter Color Emoji" ];
       };
     };
   };

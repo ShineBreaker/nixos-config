@@ -3,12 +3,13 @@
   security.sudo.enable = lib.mkForce false;
   security.doas = {
     enable = true;
-    wheelNeedsPassword = false;
+    wheelNeedsPassword = true;
     extraRules = [
       {
         users = [ "brokenshine" ];
-        noPass = true;
+        noPass = false;
         keepEnv = true;
+        persist = true;
       }
     ];
   };
