@@ -28,13 +28,13 @@
       fsType = "zfs";
     };
 
-  fileSystems."/var/lib/flatpak" =
-    { device = "zpool/DPOOL/Data/Flatpak";
+  fileSystems."/var" =
+    { device = "zpool/RPOOL/NixOS/Persist/var";
       fsType = "zfs";
     };
 
-  fileSystems."/home/share.d" =
-    { device = "zpool/DPOOL/Data/Files";
+  fileSystems."/var/lib/flatpak" =
+    { device = "zpool/DPOOL/Data/Flatpak";
       fsType = "zfs";
     };
 
