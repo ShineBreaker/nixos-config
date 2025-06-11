@@ -1,6 +1,6 @@
-spawn-at-startup "waypaper" "--random"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "waybar"
+
 prefer-no-csd
 
 hotkey-overlay {
@@ -159,6 +159,7 @@ binds {
     Mod+Ctrl+J     { move-window-down; }
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
+    Mod+Ctrl+F     { switch-focus-between-floating-and-tiling; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }

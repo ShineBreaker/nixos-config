@@ -3,7 +3,7 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
-  
+
   nix = {
     package = pkgs.nixVersions.stable;
     gc = {
@@ -13,8 +13,15 @@
     };
     settings = {
       auto-optimise-store = true;
-      trusted-users = [ "root" "brokenshine" ];
-      experimental-features = [ "nix-command" "flakes" "ca-derivations" ];
+      trusted-users = [
+        "root"
+        "brokenshine"
+      ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+        "ca-derivations"
+      ];
       builders-use-substitutes = true;
       keep-derivations = true;
       substituters = [
@@ -23,7 +30,7 @@
         # "https://mirror.nju.edu.cn/nix-channels/store"
         "https://mirrors.sustech.edu.cn/nix-channels/store"
         "https://mirror.iscas.ac.cn/nix-channels/store"
-        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       ];
     };
   };

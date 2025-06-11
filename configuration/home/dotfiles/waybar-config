@@ -5,8 +5,8 @@
     "height": 42,
     "margin": "0 10 10 10",
     
-    "modules-left": ["group/power"],
-    "modules-center": ["wlr/taskbar"],
+    "modules-left": ["group/power","custom/search","wlr/taskbar"],
+    "modules-center": [],
     "modules-right": ["tray","group/status","clock"],
 
     "tray": {
@@ -48,7 +48,6 @@
         "format": "\uf017 {:%H:%M:%S}",
         "tooltip": true,
         "tooltip-format": "\uf133 {:%Y-%m-%d %H:%M:%S}",
-        "on-click": "fuzzel",
     },
 
     "cpu": {
@@ -82,7 +81,7 @@
     
     "memory": {
         "interval": 1,
-        "format": "\uf538 {used}G",
+        "format": " {used}G",
         "tooltip": true,
         "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G",
 		"on-click": "alacritty --command btop",
@@ -145,6 +144,12 @@
         "tooltip": true,
         "tooltip-format": "Reboot",
         "on-click": "systemctl reboot",
+    },
+
+    "custom/search": {
+    	"format" : "",
+        "tooltip": true,
+        "on-click": "fuzzel",
     },
 
 }

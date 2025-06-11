@@ -1,6 +1,5 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Sarasa Mono SC";
+    font-family: "Iosevka Nerd Font Propo";
     font-weight: 500;
     font-size: 16px;
 
@@ -30,6 +29,7 @@ window#waybar.hidden {
 #custom-lock,
 #custom-poweroff,
 #custom-reboot,
+#custom-search,
 #backlight,
 #taskbar,
 
@@ -145,6 +145,12 @@ window#waybar.hidden {
 
 #custom-reboot {
 	color: #e8c55d;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+
+#custom-search {
+	color: #ffffff;
     background-color: rgba(32, 32, 32, 0.6);
 }
 
