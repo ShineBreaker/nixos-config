@@ -18,6 +18,11 @@
     dbus.apparmor = "enabled";
     xserver.excludePackages = [ pkgs.xterm ];
 
+    usbguard.dbus.enable = true;
+    udisks2.enable = true;
+    upower.enable = true;
+    accounts-daemon.enable = true;
+
     thermald.enable = true;
   };
 }

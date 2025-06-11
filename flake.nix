@@ -52,7 +52,7 @@
                 ./configuration/00-main/home.nix
               ];
 
-              home-manager.backupFileExtension = "delete";
+              home-manager.backupFileExtension = "1";
             }
 
             genRev

@@ -39,7 +39,7 @@
     plugins = with pkgs.obs-studio-plugins; [
       obs-pipewire-audio-capture
       obs-text-pthread
-      wlrobs
+      obs-vkcapture
     ];
   };
 

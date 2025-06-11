@@ -26,5 +26,7 @@
       useTmpfs = true;
       cleanOnBoot = true;
     };
+
+    initrd.systemd.dbus.enable = true;
   };
 }
