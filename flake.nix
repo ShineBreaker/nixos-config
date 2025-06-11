@@ -9,45 +9,55 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
 
-    (let
-      system = "x86_64-linux";
-      genRev = {
-        system.configurationRevision = self.rev or null;
-        system.nixos.label =
-          with builtins;
-            if self.sourceInfo ? lastModifiedDate && self.sourceInfo ? shortRev
-            then "${substring 0 8 self.sourceInfo.lastModifiedDate}.${self.sourceInfo.shortRev}"
-            else "dirty";
-      };
+    (
+      let
+        system = "x86_64-linux";
+        genRev = {
+          system.configurationRevision = self.rev or null;
+          system.nixos.label =
+            with builtins;
+            if self.sourceInfo ? lastModifiedDate && self.sourceInfo ? shortRev then
+              "${substring 0 8 self.sourceInfo.lastModifiedDate}.${self.sourceInfo.shortRev}"
+            else
+              "dirty";
+        };
 
-    in {
-      nixosConfigurations.BrokenShine-Desktop = nixpkgs.lib.nixosSystem {
-      
-        inherit system;
+      in
+      {
+        nixosConfigurations.BrokenShine-Desktop = nixpkgs.lib.nixosSystem {
 
-        modules = [
-          ./configuration/00-main/system.nix
-          ./configuration/00-main/services.nix
-          ./configuration/device/RBP162024.nix
+          inherit system;
 
-          home-manager.nixosModules.home-manager
-     	    {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users."brokenshine".imports = [
-              ./configuration/00-main/home.nix
-            ];
-            
-            home-manager.backupFileExtension = "backup";
-           }
+          modules = [
+            ./configuration/00-main/system.nix
+            ./configuration/00-main/services.nix
+            ./configuration/device/RBP162024.nix
 
-          genRev
-        ];
-    };
-  });
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users."brokenshine".imports = [
+                ./configuration/00-main/home.nix
+              ];
+
+              home-manager.backupFileExtension = "delete";
+            }
+
+            genRev
+          ];
+        };
+      }
+    );
 }
