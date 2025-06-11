@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   home.packages = with pkgs; [
     wineWowPackages.stagingFull
@@ -20,7 +25,7 @@
 
     qq
     telegram-desktop
-    
+
     libreoffice-fresh
     vscode-fhs
 
@@ -54,32 +59,34 @@
 
   programs.helix = {
     enable = true;
-      settings = {
-        theme = "autumn_night_transparent";
-        editor.cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        };
-        languages.language = [{
-          name = "nix";
-          auto-format = true;
-          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-        }];
-        themes = {
-          autumn_night_transparent = {
-           "inherits" = "autumn_night";
-           "ui.background" = { };
-        };
+    settings = {
+      theme = "autumn_night_transparent";
+      editor.cursor-shape = {
+        normal = "block";
+        insert = "bar";
+        select = "underline";
       };
     };
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+      }
+    ];
+    themes = {
+      autumn_night_transparent = {
+        "inherits" = "autumn_night";
+        "ui.background" = { };
+      };
+    };
+  };
 
-    programs.alacritty = {
-      enable = true;
-      settings = {
-        window.decorations = "None";
-        window.opacity = "0.8";
-      };
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window.decorations = "None";
+      window.opacity = 0.8;
     };
+  };
 }
