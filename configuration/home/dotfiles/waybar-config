@@ -94,15 +94,15 @@
         "format-linked": " No IP ({ifname})",
         "format-disconnected": " Disconnected",
         "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
-        "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
-        "on-click": "connman-gtk",
+        "format-alt": " {ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "connman-gtk",
     },
     
     "wireplumber": {
         "scroll-step": 5,
         "format": "{icon} {volume}%",
-        "format-muted": "\uf6a9",
-        "format-bluetooth": "{icon}\uf294 {volume}%",
+        "format-muted": "",
+        "format-bluetooth": "{icon}󰂰 {volume}%",
         "format-bluetooth-muted": "\ufa69 {icon}\uf294",
         "format-icons": {
             "default": ["\uf026", "\uf027", "\uf028"]

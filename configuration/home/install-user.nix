@@ -4,6 +4,7 @@
   pkgs,
   ...
 }:
+
 {
   home.packages = with pkgs; [
     wineWowPackages.stagingFull
@@ -40,6 +41,7 @@
       obs-pipewire-audio-capture
       obs-text-pthread
       obs-vkcapture
+      wlrobs
     ];
   };
 

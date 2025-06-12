@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   services.greetd = {
@@ -14,5 +19,7 @@
 
   environment.etc."greetd/environments".text = ''
     niri-session
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
   '';
 }

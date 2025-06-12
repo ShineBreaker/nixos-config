@@ -14,37 +14,33 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "zpool/RPOOL/NixOS/Clean";
-      fsType = "zfs";
+    { device = "/dev/disk/by-uuid/e89a5d28-e0ba-404e-83e5-9692e74a2336";
+      fsType = "btrfs";
+      options = [ "subvol=@" "compress=zstd:6" ];
+    };
+
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/4e274dac-96f4-44e2-a128-50dbf6bd3953";
+
+  fileSystems."/var" =
+    { device = "/dev/disk/by-uuid/e89a5d28-e0ba-404e-83e5-9692e74a2336";
+      fsType = "btrfs";
+      options = [ "subvol=@var" "compress=zstd:6" ];
     };
 
   fileSystems."/etc" =
-    { device = "zpool/RPOOL/NixOS/Persist/etc";
-      fsType = "zfs";
-    };
-
-  fileSystems."/nix" =
-    { device = "zpool/RPOOL/NixOS/Persist/nix";
-      fsType = "zfs";
-    };
-
-  fileSystems."/var" =
-    { device = "zpool/RPOOL/NixOS/Persist/var";
-      fsType = "zfs";
-    };
-
-  fileSystems."/var/lib/flatpak" =
-    { device = "zpool/DPOOL/Data/Flatpak";
-      fsType = "zfs";
+    { device = "/dev/disk/by-uuid/e89a5d28-e0ba-404e-83e5-9692e74a2336";
+      fsType = "btrfs";
+      options = [ "subvol=@etc" "compress=zstd:6" ];
     };
 
   fileSystems."/home" =
-    { device = "zpool/DPOOL/Home/NixOS";
-      fsType = "zfs";
+    { device = "/dev/disk/by-uuid/e89a5d28-e0ba-404e-83e5-9692e74a2336";
+      fsType = "btrfs";
+      options = [ "subvol=@home" "compress=zstd:6" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/BE00-5508";
+    { device = "/dev/disk/by-uuid/CB28-43A8";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -56,7 +52,8 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s20f0u6.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

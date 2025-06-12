@@ -6,9 +6,9 @@
     # ../services/system/sudo.nix
     ../services/system/doas.nix
     ../services/system/fish.nix
-    ../services/system/grub.nix
+    # ../services/system/grub.nix
     ../services/system/nix.nix
-    ../services/system/zfs.nix
+    # ../services/system/zfs.nix
     ../services/system/plymouth.nix
     ../services/system/gnupg.nix
     ../services/system/proxy.nix
@@ -35,7 +35,7 @@
     ../services/user/plasma-polkit-agent.nix
 
   ];
-  
+
   nixpkgs.config.permittedInsecurePackages = [
 
   ];

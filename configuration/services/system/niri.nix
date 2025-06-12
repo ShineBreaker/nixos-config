@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [
@@ -31,11 +36,24 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      config.common.default = "*";
-      extraPortals = lib.mkForce [
+      config = {
+        preferred = {
+          default = [ "gtk" "gnome" ];
+          "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
+        };
+      };
+      extraPortals = [
         pkgs.xdg-desktop-portal-gnome
         pkgs.xdg-desktop-portal-gtk
       ];
+    };
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "Alacritty.desktop"
+        ];
+      };
     };
     autostart.enable = true;
   };
