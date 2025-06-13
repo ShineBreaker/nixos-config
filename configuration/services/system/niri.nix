@@ -35,13 +35,9 @@
   xdg = {
     portal = {
       enable = true;
-      xdgOpenUsePortal = true;
+      configPackages = [ pkgs.niri ];
       config = {
-        preferred = {
-          default = [
-            "gtk"
-            "gnome"
-          ];
+        niri = {
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
           "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
         };

@@ -16,7 +16,7 @@
 
     loader = {
       systemd-boot = {
-        enable = false;
+        enable = true;
         configurationLimit = 10;
       };
       efi = {
