@@ -38,7 +38,11 @@
       xdgOpenUsePortal = true;
       config = {
         preferred = {
-          default = [ "gtk" "gnome" ];
+          default = [
+            "gtk"
+            "gnome"
+          ];
+          "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
           "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
         };
       };

@@ -9,6 +9,7 @@
     ../home/dotfiles.nix
     ../home/theme.nix
     ../home/file.nix
+    ../home/xdg.nix
   ];
 
   programs.home-manager.enable = true;

@@ -1,12 +1,20 @@
 { config, pkgs, ... }:
 {
   users.defaultUserShell = pkgs.fish;
-  
+
   environment.systemPackages = with pkgs; [
-    btop bat tealdeer du-dust fd eza tokei duf
+    btop
+    bat
+    tealdeer
+    du-dust
+    fd
+    eza
+    tokei
+    duf
+    zoxide
     helix
   ];
-  
+
   programs.fish = {
     enable = true;
     shellAbbrs = {
@@ -25,6 +33,7 @@
       find = "fd";
       ls = "exa";
       df = "duf";
+      cd = "z";
 
       nvim = "hx";
       vim = "hx";
@@ -32,6 +41,7 @@
       helix = "hx";
     };
     interactiveShellInit = ''
+      zoxide init fish | source
       fastfetch
     '';
     vendor = {

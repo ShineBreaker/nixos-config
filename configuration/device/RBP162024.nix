@@ -20,5 +20,7 @@
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [ intel-vaapi-driver ];
     };
-  
+  boot.kernelParams = [ 
+    "acpi_backlight=native"
+  ];
 }
