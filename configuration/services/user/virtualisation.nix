@@ -10,33 +10,31 @@
 
   virtualisation.libvirtd = {
     enable = true;
+
     qemu = {
       package = pkgs.qemu_kvm;
-      runAsRoot = true;
+      runAsRoot = false;
       swtpm.enable = true;
       ovmf = {
         enable = true;
         packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
+          pkgs.OVMFFull.fd
         ];
       };
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
 
   programs.virt-manager.enable = true;
 
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableKvm = false;
-  # virtualisation.virtualbox.host.addNetworkInterface = true;
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   virtualisation.waydroid.enable = true;
 
   environment.systemPackages = with pkgs; [
     distrobox
-    boxbuddy
+    gnome-boxes
+    virglrenderer
   ];
 
   virtualisation.podman = {
