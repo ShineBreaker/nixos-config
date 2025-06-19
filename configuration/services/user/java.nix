@@ -2,12 +2,11 @@
 {
   programs.java = {
     enable = true;
-    package = pkgs.zulu17;
+    package = pkgs.zulu.override {
+      enableJavaFX = true;
+    };
   };
 
   environment.variables._JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
 
-  environment.systemPackages = with pkgs; [ openjdk8 ];
-
 }
-

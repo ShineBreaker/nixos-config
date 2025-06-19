@@ -37,7 +37,7 @@
       enable = true;
       configPackages = [ pkgs.niri ];
       config = {
-        niri = {
+        preferred = {
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
           "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
         };
