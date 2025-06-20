@@ -18,7 +18,7 @@
     nomacs
 
     coppwr
-    xclicker
+    wl-clicker
     bleachbit
 
     gh
