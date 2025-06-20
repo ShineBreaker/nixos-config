@@ -5,14 +5,6 @@
     userDirs.enable = true;
     userDirs.createDirectories = true;
 
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "inode/directory" = [ "nemo.desktop" ];
-        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
-      };
-    };
-
     desktopEntries = {
 
       qq = {

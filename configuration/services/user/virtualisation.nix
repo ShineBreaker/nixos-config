@@ -29,11 +29,8 @@
 
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
-  virtualisation.waydroid.enable = true;
-
   environment.systemPackages = with pkgs; [
     distrobox
-    gnome-boxes
     virglrenderer
   ];
 
