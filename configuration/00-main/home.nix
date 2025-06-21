@@ -1,9 +1,13 @@
-
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [
-    ../home/install-user.nix
+    ../home/programs.nix
     ../home/fonts.nix
     ../home/dconf.nix
     ../home/dotfiles.nix
@@ -13,7 +17,7 @@
   ];
 
   programs.home-manager.enable = true;
-  
+
   home = {
     username = "brokenshine";
     homeDirectory = "/home/brokenshine";
@@ -23,8 +27,8 @@
 
     activation.installPackages = {
       data = lib.mkForce "";
-      before = lib.mkForce [];
-      after = lib.mkForce [];
+      before = lib.mkForce [ ];
+      after = lib.mkForce [ ];
     };
   };
 }

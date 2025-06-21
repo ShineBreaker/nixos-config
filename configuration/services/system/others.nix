@@ -1,7 +1,6 @@
 { config, lib, ... }:
 {
   programs = {
-    command-not-found.enable = true;
     dconf.enable = true;
     adb.enable = true;
     git.enable = true;
