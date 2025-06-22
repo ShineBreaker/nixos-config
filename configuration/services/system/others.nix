@@ -13,6 +13,8 @@
       enable = true;
       binfmt = true;
     };
+
+    nix-index.enable = true;
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

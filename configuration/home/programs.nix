@@ -82,9 +82,8 @@
     };
   };
 
-  programs.nix-index = {
+  services.kdeconnect = {
     enable = true;
-    enableFishIntegration = true;
-    enableBashIntegration = true;
+    indicator = true;
   };
 }
