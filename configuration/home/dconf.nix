@@ -17,9 +17,6 @@
         accent-color = "teal";
       };
 
-      "org/cinnamon/desktop/applications/terminal" = {
-        exec = "alacritty";
-      };
       "org/gnome/desktop/applications/terminal" = {
         exec = "alacritty";
       };

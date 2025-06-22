@@ -7,7 +7,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    nemo-with-extensions
     alacritty
     mate.engrampa
     pavucontrol
@@ -18,10 +17,17 @@
     cage
     fuzzel
     brightnessctl
+    nautilus
   ];
 
-  programs.xwayland.enable = true;
-  programs.niri.enable = true;
+  programs = {
+    xwayland.enable = true;
+    niri.enable = true;
+    nautilus-open-any-terminal = {
+      enable = true;
+      terminal = "alacritty";
+    };
+  };
 
   security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
@@ -36,12 +42,6 @@
     portal = {
       enable = true;
       configPackages = [ pkgs.niri ];
-      config = {
-        preferred = {
-          "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-          "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
-        };
-      };
       extraPortals = [
         pkgs.xdg-desktop-portal-gnome
         pkgs.xdg-desktop-portal-gtk
