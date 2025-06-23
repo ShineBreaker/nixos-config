@@ -10,8 +10,11 @@
     wineWowPackages.waylandFull
     winetricks
     q4wine
+    icoutils
+
     heroic
     hmcl
+    mcpelauncher-ui-qt
 
     kdePackages.kdenlive
     gimp3-with-plugins
