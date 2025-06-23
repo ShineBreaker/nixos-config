@@ -18,7 +18,7 @@
         "format": "{icon}",
         "icon-size": 28,
         "spacing": 3,
-        "on-click-middle": "close",
+        "on-click-right": "close",
         "tooltip-format": "{title}",
         "ignore-list": [
            "Alacritty"
@@ -84,7 +84,7 @@
         "format": " {used}G",
         "tooltip": true,
         "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G",
-		"on-click": "alacritty --command btop",
+		"on-click": "missioncenter",
     },
     
     "network": {

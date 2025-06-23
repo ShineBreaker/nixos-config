@@ -3,7 +3,6 @@
   users.defaultUserShell = pkgs.fish;
 
   environment.systemPackages = with pkgs; [
-    btop
     bat
     tealdeer
     du-dust
@@ -27,7 +26,6 @@
       reboot = "systemctl reboot";
 
       cat = "bat";
-      htop = "btop";
       tldr = "tealdeer";
       du = "dust";
       find = "fd";

@@ -97,7 +97,6 @@ window-rule {
     match title="Xwayland"
     match title="cage"
     match app-id="exe"
-    match title="wine"
     match title="droid"
     match title="Heroic"
     open-maximized true
@@ -105,6 +104,7 @@ window-rule {
 
 window-rule {
     match title="gamemode"
+    match title="wine"
     open-fullscreen true
 }
 
@@ -121,12 +121,13 @@ window-rule {
 }
 
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Shift+C { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
-    Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
+    Mod+Shift+Slash   { show-hotkey-overlay; }
+    Mod+Shift+C       { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
+    Mod+Shift+V       { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
+    Mod+Ctrl+R        { spawn "waypaper" "--random"; }
 
-    Mod+T { spawn "alacritty"; }
-    Mod+D { spawn "fuzzel"; }
+    Mod+T       { spawn "alacritty"; }
+    Mod+D       { spawn "fuzzel"; }
     Super+Alt+L { spawn "gtklock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -148,9 +149,9 @@ binds {
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
     
-    Mod+Tab { toggle-column-tabbed-display; }
+    Mod+Tab      { toggle-column-tabbed-display; }
     Mod+Ctrl+Tab { consume-window-into-column; }
-    Mod+Alt+Tab { expel-window-from-column; }
+    Mod+Alt+Tab  { expel-window-from-column; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
