@@ -7,30 +7,26 @@
 
 {
   home.packages = with pkgs; [
-    wineWowPackages.stagingFull
+    wineWowPackages.waylandFull
     winetricks
+    q4wine
     heroic
-    lutris
+    hmcl
 
     kdePackages.kdenlive
-
-    mpv
+    gimp3-with-plugins
     nomacs
 
     coppwr
     wl-clicker
     bleachbit
-
-    gh
-    linux-wallpaperengine
+    mission-center
 
     qq
     telegram-desktop
 
     libreoffice-fresh
     vscode-fhs
-
-    hmcl
 
     adwaita-icon-theme
   ];
@@ -45,9 +41,9 @@
     ];
   };
 
-  programs.keepassxc = {
-    enable = true;
-  };
+  programs.keepassxc.enable = true;
+
+  services.pass-secret-service.enable = true;
 
   programs.helix = {
     enable = true;

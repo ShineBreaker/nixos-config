@@ -9,9 +9,4 @@
 
   environment.variables._JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
 
-  environment.systemPackages = with pkgs; [
-    zulu8
-    #  graalvmPackages.graalvm-ce
-  ];
-
 }

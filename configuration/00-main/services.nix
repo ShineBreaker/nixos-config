@@ -26,6 +26,7 @@
     ../services/user/java.nix
     ../services/user/firefox.nix
     ../services/user/nix-ld.nix
+    ../services/user/syncthing.nix
 
     ../services/user/swaybg.nix
     ../services/user/swayidle.nix

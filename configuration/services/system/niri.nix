@@ -8,7 +8,7 @@
 {
   environment.systemPackages = with pkgs; [
     alacritty
-    mate.engrampa
+    peazip
     pavucontrol
     gtklock
     waypaper
@@ -36,6 +36,7 @@
     xserver.desktopManager.runXdgAutostartIfNone = true;
     gvfs.enable = true;
     seatd.enable = true;
+    gnome.sushi.enable = true;
   };
 
   xdg = {
