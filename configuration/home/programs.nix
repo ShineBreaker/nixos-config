@@ -14,7 +14,6 @@
 
     heroic
     hmcl
-    mcpelauncher-ui-qt
 
     kdePackages.kdenlive
     gimp3-with-plugins
