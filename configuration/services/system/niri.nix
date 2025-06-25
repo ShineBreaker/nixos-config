@@ -8,7 +8,6 @@
 {
   environment.systemPackages = with pkgs; [
     alacritty
-    peazip
     pavucontrol
     gtklock
     waypaper
@@ -17,7 +16,9 @@
     cage
     fuzzel
     brightnessctl
+
     nautilus
+    file-roller
   ];
 
   programs = {
