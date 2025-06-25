@@ -10,7 +10,6 @@
 
   virtualisation.libvirtd = {
     enable = true;
-
     qemu = {
       package = pkgs.qemu_kvm;
       runAsRoot = true;
@@ -21,17 +20,24 @@
           pkgs.OVMFFull.fd
         ];
       };
-      vhostUserPackages = with pkgs; [ virtiofsd ];
+      vhostUserPackages = with pkgs; [
+        virtiofsd
+        virglrenderer
+        virtualgl
+      ];
     };
   };
 
   programs.virt-manager.enable = true;
 
+  users.users.brokenshine.extraGroups = [ "libvirtd" ];
+
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   environment.systemPackages = with pkgs; [
     distrobox
-    virglrenderer
+    distrobox-tui
+    virtualgl
   ];
 
   virtualisation.podman = {

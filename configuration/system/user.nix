@@ -11,7 +11,6 @@
         "uucp"
         "audio"
         "video"
-        "libvirtd"
         "kvm"
         "input"
         "seat"
