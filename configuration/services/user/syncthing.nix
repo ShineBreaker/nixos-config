@@ -3,10 +3,10 @@
   services = {
     syncthing = {
         enable = true;
+        openDefaultPorts = true;
         group = "users";
         user = "brokenshine";
-        dataDir = "/home/brokenshine/Documents";
-        configDir = "/home/brokenshine/.config/syncthing";
+        dataDir = "/home/brokenshine";
     };
   };
 

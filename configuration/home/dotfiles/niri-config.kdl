@@ -17,6 +17,12 @@ environment {
     // GTK_IM_MODULE null
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 cursor {
     xcursor-theme "graphite-dark"
     xcursor-size 24

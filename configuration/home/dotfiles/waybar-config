@@ -48,6 +48,7 @@
         "format": " {:%H:%M:%S}",
         "tooltip": true,
         "tooltip-format": " {:%Y-%m-%d %H:%M:%S}",
+        "on-clock-right": "makoctl reload",
     },
 
     "cpu": {

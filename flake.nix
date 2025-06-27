@@ -20,6 +20,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,6 +33,7 @@
       home-manager,
       lanzaboote,
       nix-ld,
+      chaotic,
       ...
     }:
 
@@ -55,6 +60,12 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
+
+            chaotic.nixosModules.default
+
+            {
+              chaotic.mesa-git.enable = true;
+            }
 
             lanzaboote.nixosModules.lanzaboote
 
