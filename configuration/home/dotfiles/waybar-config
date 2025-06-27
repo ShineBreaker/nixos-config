@@ -47,7 +47,7 @@
         "interval": 1,
         "format": " {:%H:%M:%S}",
         "tooltip": true,
-        "tooltip-format": " {:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": " {:%Y-%m-%d}，右键清除通知",
         "on-click-right": "makoctl reload",
     },
 
@@ -61,7 +61,7 @@
         "interval": 1,
         "states": {
             "warning": 30,
-            "critical": 15
+            "critical": 10,
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
@@ -92,9 +92,9 @@
         "interval": 1,
         "format-wifi": " {essid} ({signalStrength}%)",
         "format-ethernet": " {ipaddr}/{cidr}",
-        "format-linked": " No IP ({ifname})",
-        "format-disconnected": " Disconnected",
-        "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
+        "format-linked": " 无IP地址 ({ifname})",
+        "format-disconnected": " 断连",
+        "tooltip-format": "{ifname} {ipaddr}/{cidr}, IP: {gwaddr}",
         "format-alt": " {ifname}: {ipaddr}/{cidr}",
         "on-click-right": "connman-gtk",
     },
@@ -129,28 +129,30 @@
     "custom/lock": {
     	"format" : "",
         "tooltip": true,
-        "tooltip-format": "Lock",
+        "tooltip-format": "锁定",
         "on-click": "gtklock",
     },
 
     "custom/poweroff": {
     	"format" : "",
         "tooltip": true,
-        "tooltip-format": "Poweroff",
+        "tooltip-format": "关机",
         "on-click": "systemctl poweroff",
     },
 
     "custom/reboot": {
     	"format" : "",
         "tooltip": true,
-        "tooltip-format": "Reboot",
+        "tooltip-format": "重启",
         "on-click": "systemctl reboot",
     },
 
     "custom/search": {
     	"format" : "",
         "tooltip": true,
+        "tooltip-format": "左键搜索，右键随机更换壁纸",
         "on-click": "fuzzel",
+        "on-click-right": "waypaper --random",
     },
 
 }
