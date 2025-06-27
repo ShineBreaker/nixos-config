@@ -16,7 +16,6 @@
     prismlauncher
     # hmcl
 
-    kdePackages.kdenlive
     gimp3-with-plugins
     nomacs
 
