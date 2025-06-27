@@ -7,6 +7,9 @@
         group = "users";
         user = "brokenshine";
         dataDir = "/home/brokenshine";
+
+        overrideDevices = false;
+        overrideFolders = false;
     };
   };
 
