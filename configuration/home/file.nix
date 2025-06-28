@@ -1,4 +1,9 @@
-{config, pkgs, lib, ...}:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   home.file = {
     nix-profile = {
@@ -15,13 +20,9 @@
       target = ".local/share/themes";
     };
 
-    icon1 = {
+    icon = {
       source = "${config.home.path}/share/icons";
       target = ".icons";
-    };
-    icon2 = {
-      source = "${config.home.path}/share/icons";
-      target = ".local/share/icons";
     };
   };
 }
