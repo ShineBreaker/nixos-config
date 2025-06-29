@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
 
   environment.systemPackages = [
@@ -11,22 +16,12 @@
     capabilities = "cap_net_bind_service,cap_net_raw,cap_net_admin=+ep";
     source = lib.getExe pkgs.sparkle;
   };
-  
-  services.mihomo = {
-    enable = false;
-    tunMode = true;
-    webui = pkgs.metacubexd;
-    configFile = "/etc/mihomo.yaml";
-  };
-  
-  programs.proxychains = {
-    enable = true;
-    proxies = {
-      default = {
-        type = "http";
-        host = "127.0.0.1";
-        port = 20172;
-      };
-    };
-  };
+
+  # programs.clash-verge = {
+  #   enable = true;
+  #   autoStart = true;
+  #   tunMode = true;
+  #   serviceMode = true;
+  # };
+
 }
