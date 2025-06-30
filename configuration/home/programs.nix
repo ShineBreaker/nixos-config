@@ -16,6 +16,7 @@
     prismlauncher
     # hmcl
 
+    krita
     gimp3-with-plugins
     nomacs
 
@@ -25,7 +26,9 @@
     mission-center
 
     qq
+    wechat-uos
     telegram-desktop
+    thunderbird
 
     libreoffice-fresh
     vscode-fhs

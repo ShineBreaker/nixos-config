@@ -16,9 +16,10 @@
     cage
     fuzzel
     brightnessctl
+    labwc
 
     nautilus
-    file-roller
+    peazip
   ];
 
   programs = {

@@ -1,6 +1,5 @@
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "waybar"
-spawn-at-startup "sparkle"
 
 prefer-no-csd
 
