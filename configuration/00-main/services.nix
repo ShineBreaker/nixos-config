@@ -13,6 +13,7 @@
     ../services/system/gnupg.nix
     ../services/system/proxy.nix
     ../services/system/tlp.nix
+    ../services/system/hibernation.nix
     ../services/system/others.nix
 
     ../services/system/niri.nix

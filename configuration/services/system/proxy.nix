@@ -19,7 +19,7 @@
 
   programs.clash-verge = {
     enable = true;
-    autoStart = true;
+    autoStart = false;
     tunMode = true;
     serviceMode = true;
   };

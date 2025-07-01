@@ -27,6 +27,11 @@ cursor {
     xcursor-size 24
 }
 
+switch-events {
+    // lid-close { spawn "notify-send" "The laptop lid is closed!"; }
+    lid-open { spawn "gtklock"; }
+}
+
 input {
     keyboard {
         xkb {
