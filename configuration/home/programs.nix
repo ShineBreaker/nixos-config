@@ -104,7 +104,7 @@
     timeouts = [
       {
         timeout = 600;
-        command = "${pkgs.systemd}/bin/systemctl suspend-then-hibernate";
+        command = "${pkgs.systemd}/bin/systemctl suspend";
       }
     ];
   };
