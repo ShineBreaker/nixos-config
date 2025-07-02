@@ -13,8 +13,9 @@
     icoutils
 
     heroic
-    prismlauncher
+    # prismlauncher
     hmcl
+    graalvmPackages.graalvm-ce
 
     krita
     gimp3-with-plugins
@@ -53,7 +54,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "autumn_night_transparent";
+      theme = "tokyonight_transparent";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -68,18 +69,26 @@
       }
     ];
     themes = {
-      autumn_night_transparent = {
-        "inherits" = "autumn_night";
+      tokyonight_transparent = {
+        "inherits" = "tokyonight";
         "ui.background" = { };
+        "ui.text" = { };
+        "ui.help" = { };
+        "ui.menu" = { };
+        "ui.statusline" = { };
       };
     };
   };
 
   programs.alacritty = {
     enable = true;
+    theme = "tokyo_night";
     settings = {
       window.decorations = "None";
       window.opacity = 0.8;
+      window.blur = true;
+
+      cursor.style = "Beam";
     };
   };
 
