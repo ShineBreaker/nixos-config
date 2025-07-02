@@ -87,4 +87,25 @@
     enable = true;
     indicator = true;
   };
+
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+  };
+
+  services.swayidle = {
+    enable = true;
+    events = [
+      {
+        event = "after-resume";
+        command = "${pkgs.gtklock}/bin/gtklock";
+      }
+    ];
+    timeouts = [
+      {
+        timeout = 600;
+        command = "${pkgs.systemd}/bin/systemctl suspend-then-hibernate";
+      }
+    ];
+  };
 }

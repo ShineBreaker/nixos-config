@@ -1,22 +1,27 @@
-{ config, pkgs, lib, ... }:
 {
-  boot.kernelParams = ["resume_offset=60"];
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
-  boot.resumeDevice = "/swap/swapfile";
+{
+  boot.kernelParams = [
+    "resume_offset=55846144"
+  ];
+
+  boot.resumeDevice = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
 
   # Suspend first then hibernate when closing the lid
   services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.lidSwitchExternalPower = "suspend";
 
   # Hibernate on power button pressed
-  services.logind.powerKey = "hibernate";
+  services.logind.powerKey = "suspend-then-hibernate";
   services.logind.powerKeyLongPress = "poweroff";
-
-  # Suspend first
-  boot.kernelParams = ["mem_sleep_default=deep"];
 
   # Define time delay for hibernation
   systemd.sleep.extraConfig = ''
-    HibernateDelaySec=60m
-    SuspendState=mem
+    HibernateDelaySec=10m
   '';
 }

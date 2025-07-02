@@ -25,8 +25,6 @@
       };
     };
 
-    kernelParams = [ "nohibernate" ];
-
     tmp = {
       useTmpfs = true;
       cleanOnBoot = true;

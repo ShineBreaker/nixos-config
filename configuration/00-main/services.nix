@@ -12,7 +12,7 @@
     ../services/system/plymouth.nix
     ../services/system/gnupg.nix
     ../services/system/proxy.nix
-    ../services/system/tlp.nix
+    ../services/system/powerManagement.nix
     ../services/system/hibernation.nix
     ../services/system/others.nix
 
@@ -30,8 +30,6 @@
     ../services/user/syncthing.nix
 
     ../services/user/swaybg.nix
-    ../services/user/swayidle.nix
-    # ../services/user/waybar.nix
     ../services/user/mako.nix
     ../services/user/xwayland-satellite.nix
     ../services/user/poweralertd.nix

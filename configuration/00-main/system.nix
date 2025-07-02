@@ -10,7 +10,7 @@
     ../system/i18n.nix
     ../system/services.nix
     ../system/security.nix
-    ../system/zramSwap.nix
+    ../system/swap.nix
     ../system/install-system.nix
   ];
 

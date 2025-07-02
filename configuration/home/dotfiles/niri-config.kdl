@@ -1,5 +1,6 @@
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
+spawn-at-startup "clash-verge"
 
 prefer-no-csd
 
@@ -25,11 +26,6 @@ gestures {
 cursor {
     xcursor-theme "graphite-dark"
     xcursor-size 24
-}
-
-switch-events {
-    // lid-close { spawn "notify-send" "The laptop lid is closed!"; }
-    lid-open { spawn "gtklock"; }
 }
 
 input {
