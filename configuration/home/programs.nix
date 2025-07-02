@@ -14,7 +14,7 @@
 
     heroic
     prismlauncher
-    # hmcl
+    hmcl
 
     krita
     gimp3-with-plugins
