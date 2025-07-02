@@ -150,9 +150,8 @@
     "custom/search": {
     	"format" : "",
         "tooltip": true,
-        "tooltip-format": "左键搜索，右键随机更换壁纸",
+        "tooltip-format": "搜索应用",
         "on-click": "fuzzel",
-        "on-click-right": "waypaper --random",
     },
 
 }

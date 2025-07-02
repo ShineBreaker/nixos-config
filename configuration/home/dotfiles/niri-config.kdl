@@ -1,5 +1,6 @@
 spawn-at-startup "fcitx5" "-d"
 // spawn-at-startup "waybar"
+spawn-at-startup "waypaper" "--random"
 spawn-at-startup "clash-verge"
 
 prefer-no-csd
