@@ -5,7 +5,7 @@
   };
 
   nix = {
-    package = pkgs.nixVersions.stable;
+    package = pkgs.nixVersions.git;
     gc = {
       automatic = true;
       dates = "daily";
@@ -13,6 +13,7 @@
     };
     settings = {
       auto-optimise-store = true;
+      # lazy-trees = true;
       trusted-users = [
         "root"
         "brokenshine"
