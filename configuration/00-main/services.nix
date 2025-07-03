@@ -34,6 +34,7 @@
     ../services/user/xwayland-satellite.nix
     ../services/user/poweralertd.nix
     ../services/user/polkit-agent.nix
+    ../services/user/sunshine.nix
 
   ];
 

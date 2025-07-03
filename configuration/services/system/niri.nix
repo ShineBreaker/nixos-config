@@ -12,14 +12,11 @@
     gtklock
     waypaper
     waybar
-    xwayland-run
-    cage
     fuzzel
     brightnessctl
-    labwc
 
     nautilus
-    peazip
+    nemo-with-extensions
   ];
 
   programs = {

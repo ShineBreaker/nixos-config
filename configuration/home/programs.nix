@@ -25,13 +25,14 @@
     wl-clicker
     bleachbit
     mission-center
+    peazip
 
     qq
     wechat-uos
     telegram-desktop
     thunderbird
 
-    libreoffice-fresh
+    onlyoffice-desktopeditors
     vscode-fhs
 
     adwaita-icon-theme
