@@ -16,7 +16,6 @@
     brightnessctl
 
     nautilus
-    nemo-with-extensions
   ];
 
   programs = {
