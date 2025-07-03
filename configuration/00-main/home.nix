@@ -7,12 +7,12 @@
 
 {
   imports = [
-    ../home/programs.nix
-    ../home/fonts.nix
     ../home/dconf.nix
     ../home/dotfiles.nix
-    ../home/theme.nix
     ../home/file.nix
+    ../home/fonts.nix
+    ../home/programs.nix
+    ../home/theme.nix
     ../home/xdg.nix
   ];
 
