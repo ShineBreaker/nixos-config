@@ -119,7 +119,6 @@
 
             nix-index-database.nixosModules.nix-index
 
-            };
         };
       }
     );
