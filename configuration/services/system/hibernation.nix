@@ -14,7 +14,7 @@
 
   # Suspend first then hibernate when closing the lid
   services.logind.lidSwitch = "suspend-then-hibernate";
-  services.logind.lidSwitchExternalPower = "lock";
+  services.logind.lidSwitchExternalPower = "suspend";
 
   # Hibernate on power button pressed
   services.logind.powerKey = "suspend-then-hibernate";
