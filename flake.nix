@@ -67,16 +67,12 @@
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
 
-
-
             chaotic.nixosModules.default
-
             {
               chaotic.mesa-git.enable = true;
             }
 
             lanzaboote.nixosModules.lanzaboote
-
             (
               { pkgs, lib, ... }:
               {
@@ -100,7 +96,6 @@
             )
 
             home-manager.nixosModules.home-manager
-
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -112,22 +107,15 @@
             }
 
             nix-ld.nixosModules.nix-ld
-
             {
               programs.nix-ld.dev.enable = true;
             }
 
             nix-index-database.nixosModules.nix-index
-            ({ pkgs, lib, ... }:
-              {
-                programs.nix-index = {
-                  enable = true;
-                  package = pkg.nix-index-database:
-                };
-
+            {
+                programs.nix-index.enable = true;
                 programs.nix-index-database.comma.enable = true;
-
-              })
+            }
           ];
         };
       }
