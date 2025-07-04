@@ -1,11 +1,9 @@
 { config, lib, ... }:
 {
   programs = {
-    dconf.enable = true;
     adb.enable = true;
     git.enable = true;
 
-    coolercontrol.enable = true;
     gamemode.enable = true;
     wshowkeys.enable = false;
 

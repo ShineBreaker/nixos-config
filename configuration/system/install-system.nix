@@ -11,7 +11,6 @@
     unzip
     unrar
     p7zip
-    schroot
 
     sof-firmware
   ];

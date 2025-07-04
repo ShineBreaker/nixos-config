@@ -24,6 +24,11 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,6 +39,7 @@
       lanzaboote,
       nix-ld,
       chaotic,
+      nix-index-database,
       ...
     }:
 
@@ -60,6 +66,8 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
+
+
 
             chaotic.nixosModules.default
 
@@ -109,8 +117,9 @@
               programs.nix-ld.dev.enable = true;
             }
 
-            genRev
-          ];
+            nix-index-database.nixosModules.nix-index
+
+            };
         };
       }
     );
