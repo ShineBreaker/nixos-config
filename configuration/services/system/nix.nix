@@ -13,7 +13,6 @@
     };
     settings = {
       auto-optimise-store = true;
-      # lazy-trees = true;
       trusted-users = [
         "root"
         "brokenshine"
