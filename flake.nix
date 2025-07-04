@@ -118,7 +118,17 @@
             }
 
             nix-index-database.nixosModules.nix-index
+            ({ pkgs, lib, ... }:
+              {
+                programs.nix-index = {
+                  enable = true;
+                  package = pkg.nix-index-database:
+                };
 
+                programs.nix-index-database.comma.enable = true;
+
+              })
+          ];
         };
       }
     );

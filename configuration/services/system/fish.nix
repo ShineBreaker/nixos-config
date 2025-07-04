@@ -10,7 +10,6 @@
     eza
     tokei
     duf
-    zoxide
     helix
   ];
 
@@ -39,7 +38,6 @@
       helix = "hx";
     };
     interactiveShellInit = ''
-      zoxide init fish | source
       fastfetch
     '';
     vendor = {
