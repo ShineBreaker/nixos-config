@@ -8,7 +8,7 @@
 {
   environment.systemPackages = with pkgs; [
     alacritty
-    pavucontrol
+    pwvucontrol
     gtklock
     waypaper
     waybar
