@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   security.sudo.enable = lib.mkForce false;
   security.doas = {
@@ -7,13 +12,14 @@
     extraRules = [
       {
         users = [ "brokenshine" ];
-        noPass = false;
+        noPass = true;
         keepEnv = true;
-        persist = true;
       }
     ];
   };
 
   environment.systemPackages = with pkgs; [ doas-sudo-shim ];
-  programs.fish.shellAbbrs = { sudo = "doas"; };
+  programs.fish.shellAbbrs = {
+    sudo = "doas";
+  };
 }
