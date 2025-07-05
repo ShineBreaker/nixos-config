@@ -9,17 +9,15 @@
   services.greetd = {
     enable = true;
     settings = rec {
-      initial_session = {
-        command = "${pkgs.niri}/bin/niri-session";
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -r --user-menu --cmd niri-session --time --time-format '%Y-%m-%d %l:%M:%S'";
         user = "brokenshine";
       };
-      default_session = initial_session;
     };
   };
 
-  environment.etc."greetd/environments".text = ''
-    niri-session
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-gnome
-  '';
+  environment.systemPackages = [
+    pkgs.greetd.tuigreet
+  ];
+
 }
