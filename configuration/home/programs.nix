@@ -26,6 +26,7 @@
     bleachbit
     mission-center
     peazip
+    eww
 
     qq
     wechat-uos
