@@ -15,11 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-ld = {
-      url = "github:Mic92/nix-ld";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +32,6 @@
       nixpkgs,
       home-manager,
       lanzaboote,
-      nix-ld,
       chaotic,
       nix-index-database,
       ...
@@ -106,15 +100,10 @@
               home-manager.backupFileExtension = "backup";
             }
 
-            nix-ld.nixosModules.nix-ld
-            {
-              programs.nix-ld.dev.enable = true;
-            }
-
             nix-index-database.nixosModules.nix-index
             {
-                programs.nix-index.enable = true;
-                programs.nix-index-database.comma.enable = true;
+              programs.nix-index.enable = true;
+              programs.nix-index-database.comma.enable = true;
             }
           ];
         };

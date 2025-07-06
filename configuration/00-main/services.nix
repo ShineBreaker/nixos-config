@@ -23,7 +23,6 @@
     ../services/user/flatpak.nix
     ../services/user/java.nix
     ../services/user/mako.nix
-    ../services/user/nix-ld.nix
     ../services/user/poweralertd.nix
     ../services/user/polkit-agent.nix
     ../services/user/qt6ct.nix
