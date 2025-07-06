@@ -12,7 +12,7 @@
     gtklock
     waypaper
     waybar
-    fuzzel
+    ulauncher
     brightnessctl
 
     nautilus

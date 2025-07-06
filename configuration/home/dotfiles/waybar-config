@@ -150,8 +150,8 @@
     "custom/search": {
     	"format" : "",
         "tooltip": true,
-        "tooltip-format": "搜索应用",
-        "on-click": "fuzzel",
+        "tooltip-format": "搜索",
+        "on-click": "ulauncher",
     },
 
 }

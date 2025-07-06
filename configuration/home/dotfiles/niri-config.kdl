@@ -134,7 +134,7 @@ binds {
     Mod+Ctrl+R        { spawn "waypaper" "--random"; }
 
     Mod+T       { spawn "alacritty"; }
-    Mod+D       { spawn "fuzzel"; }
+    Mod+D       { spawn "ulauncher"; }
     Super+Alt+L { spawn "gtklock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
