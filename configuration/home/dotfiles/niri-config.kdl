@@ -1,5 +1,4 @@
 spawn-at-startup "fcitx5" "-d"
-// spawn-at-startup "waybar"
 spawn-at-startup "waypaper" "--random"
 spawn-at-startup "clash-verge"
 
@@ -60,13 +59,8 @@ input {
 layout {
     gaps 16
 
-    // When to center a column when changing focus, options are:
-    // - "never", default behavior, focusing an off-screen column will keep at the left
-    //   or right edge of the screen.
-    // - "always", the focused column will always be centered.
-    // - "on-overflow", focusing a column will center it if it doesn't fit
-    //   together with the previously focused column.
     center-focused-column "on-overflow"
+    always-center-single-column
 
     preset-column-widths {
         proportion 0.25
@@ -89,10 +83,23 @@ layout {
         active-color "#ffc87f"
         inactive-color "#7fc8ff"
     }
-
+    
+    shadow {
+        on
+        softness 20
+        spread 4
+        offset x=0 y=0
+        draw-behind-window false
+        color "#000000"
+    }
 }
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {
     geometry-corner-radius 18
@@ -101,11 +108,8 @@ window-rule {
 }
 
 window-rule {
-    match title="Xwayland"
-    match title="cage"
-    match app-id="exe"
-    match title="droid"
-    match title="Heroic"
+    match app-id="$exe$"
+    match app-id="waydroid"
     open-maximized true
 }
 
@@ -113,6 +117,23 @@ window-rule {
     match title="gamemode"
     match title="wine"
     open-fullscreen true
+}
+
+window-rule {
+    match app-id="ulauncher"
+
+    open-floating true
+    default-floating-position x=0 y=0 relative-to="top"
+    
+    border { 
+        off
+    }
+    focus-ring { 
+        off
+    }
+    shadow { 
+        off
+    }
 }
 
 window-rule {
