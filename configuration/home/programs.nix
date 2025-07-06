@@ -34,7 +34,7 @@
     thunderbird
 
     onlyoffice-desktopeditors
-    vscode-fhs
+    lapce
 
     adwaita-icon-theme
   ];

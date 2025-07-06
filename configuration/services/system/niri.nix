@@ -16,6 +16,7 @@
     brightnessctl
 
     nautilus
+    gnome-commander
   ];
 
   programs = {
