@@ -18,6 +18,7 @@
     krita
     gimp3-with-plugins
     nomacs
+    vlc
 
     coppwr
     wl-clicker
