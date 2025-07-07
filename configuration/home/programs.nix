@@ -13,9 +13,7 @@
     icoutils
 
     heroic
-    # prismlauncher
     hmcl
-    graalvmPackages.graalvm-ce
 
     krita
     gimp3-with-plugins
@@ -26,7 +24,7 @@
     bleachbit
     mission-center
     peazip
-    eww
+    junction
 
     qq
     wechat-uos
