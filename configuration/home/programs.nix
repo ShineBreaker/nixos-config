@@ -129,12 +129,17 @@
       };
       colors = {
         background = "2c2c2ccc";
+        
         text = "ffffffff";
         prompt = "4db6acff";
-        selection = "383838ff";
-        selection-text = "449088ff";
-        border = "#7fc8ffff";
         input = "4db6acff";
+        match = "f3777cff";
+        
+        selection = "383838cc";
+        selection-text = "8fc3a2ff";
+        selection-match = "f58e92ff";
+        
+        border = "#7fc8ffff";
       };
       border = {
         width = "6";
