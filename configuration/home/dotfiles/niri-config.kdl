@@ -119,19 +119,6 @@ window-rule {
     open-fullscreen true
 }
 
-layer-rule {
-    match namespace="^launcher$"
-
-    shadow {
-        on
-        softness 50
-        spread 3
-        offset x=0 y=0
-        draw-behind-window false
-        color "#000000"
-    }
-}
-
 window-rule {
     match is-active=false
     opacity 0.9
