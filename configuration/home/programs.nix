@@ -35,6 +35,7 @@
 
     onlyoffice-desktopeditors
     lapce
+    nil
 
     adwaita-icon-theme
   ];
