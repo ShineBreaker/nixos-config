@@ -2,7 +2,9 @@
 {
   programs.java = {
     enable = true;
-    package = pkgs.graalvmPackages.graalvm-ce;
+    package = pkgs.zulu.override {
+      enableJavaFX = true;
+    };
   };
 
   environment.variables._JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
