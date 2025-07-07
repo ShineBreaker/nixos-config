@@ -118,7 +118,7 @@
       }
     ];
   };
-  
+
   programs.fuzzel = {
     enable = true;
     settings = {
@@ -128,13 +128,17 @@
         layer = "overlay";
       };
       colors = {
-        background = "2c2c2cff";
+        background = "2c2c2ccc";
         text = "ffffffff";
         prompt = "4db6acff";
         selection = "383838ff";
         selection-text = "449088ff";
-        border = "2c2c2cff";
+        border = "#7fc8ffff";
         input = "4db6acff";
+      };
+      border = {
+        width = "6";
+        radius = "28";
       };
     };
   };

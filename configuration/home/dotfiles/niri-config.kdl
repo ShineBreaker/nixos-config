@@ -119,23 +119,17 @@ window-rule {
     open-fullscreen true
 }
 
-window-rule {
-    match app-id="onagre"
+layer-rule {
+    match namespace="^launcher$"
 
-    open-floating true
-    
-    border { 
-        off
-    }
-    focus-ring { 
-        off
-    }
-    shadow { 
+    shadow {
         on
         softness 50
+        spread 3
+        offset x=0 y=0
+        draw-behind-window false
+        color "#000000"
     }
-    
-    opacity 0.9
 }
 
 window-rule {
