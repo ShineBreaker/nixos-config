@@ -118,4 +118,24 @@
       }
     ];
   };
+  
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        icons-enabled = "no";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
+        layer = "overlay";
+      };
+      colors = {
+        background = "2c2c2cff";
+        text = "ffffffff";
+        prompt = "4db6acff";
+        selection = "383838ff";
+        selection-text = "449088ff";
+        border = "2c2c2cff";
+        input = "4db6acff";
+      };
+    };
+  };
 }

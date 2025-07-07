@@ -11,7 +11,6 @@
     pwvucontrol
     gtklock
     waypaper
-    ulauncher
     brightnessctl
 
     nautilus

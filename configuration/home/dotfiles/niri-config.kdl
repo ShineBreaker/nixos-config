@@ -108,7 +108,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="$exe$"
+    match app-id=r#"^exe$"#
     match app-id="waydroid"
     open-maximized true
 }
@@ -120,10 +120,9 @@ window-rule {
 }
 
 window-rule {
-    match app-id="ulauncher"
+    match app-id="onagre"
 
     open-floating true
-    default-floating-position x=0 y=0 relative-to="top"
     
     border { 
         off
@@ -132,8 +131,11 @@ window-rule {
         off
     }
     shadow { 
-        off
+        on
+        softness 50
     }
+    
+    opacity 0.9
 }
 
 window-rule {
@@ -148,6 +150,11 @@ window-rule {
     block-out-from "screen-capture"
 }
 
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
 binds {
     Mod+Shift+Slash   { show-hotkey-overlay; }
     Mod+Shift+C       { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
@@ -155,7 +162,7 @@ binds {
     Mod+Ctrl+R        { spawn "waypaper" "--random"; }
 
     Mod+T       { spawn "alacritty"; }
-    Mod+D       { spawn "ulauncher"; }
+    Mod+D       { spawn "fuzzel"; }
     Super+Alt+L { spawn "gtklock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
