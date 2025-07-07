@@ -24,7 +24,6 @@
     bleachbit
     mission-center
     peazip
-    junction
 
     qq
     wechat-uos

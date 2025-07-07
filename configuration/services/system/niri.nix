@@ -11,12 +11,10 @@
     pwvucontrol
     gtklock
     waypaper
-    waybar
     ulauncher
     brightnessctl
 
     nautilus
-    gnome-commander
   ];
 
   programs = {
