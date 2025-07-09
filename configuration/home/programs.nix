@@ -16,7 +16,7 @@
     hmcl
 
     gimp3-with-plugins
-    geeqie
+    mate.eom
     vlc
 
     coppwr
