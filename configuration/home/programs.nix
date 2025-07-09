@@ -14,7 +14,6 @@
 
     prismlauncher
     heroic
-    hmcl
 
     gimp3-with-plugins
     mate.eom
