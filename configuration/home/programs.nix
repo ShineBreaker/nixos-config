@@ -16,8 +16,7 @@
     hmcl
 
     gimp3-with-plugins
-    kdePackages.kdenlive
-    nomacs
+    geeqie
     vlc
 
     coppwr
@@ -30,7 +29,7 @@
     telegram-desktop
     thunderbird
 
-    onlyoffice-desktopeditors
+    wpsoffice-cn
     lapce
     nil
 
