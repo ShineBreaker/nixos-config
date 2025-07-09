@@ -7,11 +7,10 @@
 
 {
   home.packages = with pkgs; [
-    wineWowPackages.waylandFull
+    wineWow64Packages.stagingFull
     winetricks
-    q4wine
-    icoutils
 
+    prismlauncher
     heroic
     hmcl
 
