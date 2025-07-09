@@ -12,8 +12,16 @@
     mangohud
     mangojuice
 
-    prismlauncher
     heroic
+    (prismlauncher.override {
+      additionalPrograms = [ ffmpeg ];
+      jdks = [
+        graalvm-ce
+        zulu8
+       zulu17
+        zulu
+      ];
+    })
 
     gimp3-with-plugins
     mate.eom
