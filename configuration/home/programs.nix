@@ -15,13 +15,12 @@
     heroic
     hmcl
 
-    krita
     gimp3-with-plugins
+    kdePackages.kdenlive
     nomacs
     vlc
 
     coppwr
-    wl-clicker
     bleachbit
     mission-center
     peazip
@@ -129,16 +128,16 @@
       };
       colors = {
         background = "2c2c2ccc";
-        
+
         text = "ffffffff";
         prompt = "4db6acff";
         input = "4db6acff";
         match = "f3777cff";
-        
+
         selection = "383838cc";
         selection-text = "8fc3a2ff";
         selection-match = "f58e92ff";
-        
+
         border = "#7fc8ffff";
       };
       border = {
