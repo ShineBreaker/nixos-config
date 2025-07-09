@@ -17,7 +17,7 @@
 
     gimp3-with-plugins
     mate.eom
-    vlc
+    mpv
 
     coppwr
     bleachbit
