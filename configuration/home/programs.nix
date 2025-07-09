@@ -9,6 +9,8 @@
   home.packages = with pkgs; [
     wineWow64Packages.stagingFull
     winetricks
+    mangohud
+    mangojuice
 
     prismlauncher
     heroic
