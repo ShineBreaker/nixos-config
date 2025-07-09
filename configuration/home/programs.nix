@@ -29,7 +29,7 @@
     telegram-desktop
     thunderbird
 
-    wpsoffice-cn
+    onlyoffice-desktopeditors
     lapce
     nil
 
