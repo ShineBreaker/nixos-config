@@ -28,7 +28,6 @@
     mpv
 
     coppwr
-    bleachbit
     mission-center
 
     qq
