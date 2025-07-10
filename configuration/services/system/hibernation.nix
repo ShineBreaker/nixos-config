@@ -17,8 +17,8 @@
   services.logind.lidSwitchExternalPower = "suspend";
 
   # Hibernate on power button pressed
-  services.logind.powerKey = "suspend-then-hibernate";
-  services.logind.powerKeyLongPress = "poweroff";
+  services.logind.powerKey = "lock";
+  services.logind.powerKeyLongPress = "hibernate";
 
   # Define time delay for hibernation
   systemd.sleep.extraConfig = ''
