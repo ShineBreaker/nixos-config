@@ -17,6 +17,7 @@
     # ../services/system/sudo.nix
     # ../services/system/zfs.nix
 
+    ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
     ../services/user/firefox.nix
     ../services/user/flatpak.nix
@@ -25,7 +26,7 @@
     ../services/user/poweralertd.nix
     ../services/user/polkit-agent.nix
     ../services/user/qt6ct.nix
-    ../services/user/sparkle.nix
+    # ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix
     ../services/user/swaybg.nix
