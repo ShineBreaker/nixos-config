@@ -14,7 +14,6 @@
     ../services/system/others.nix
     ../services/system/plymouth.nix
     ../services/system/powerManagement.nix
-    ../services/system/proxy.nix
     # ../services/system/sudo.nix
     # ../services/system/zfs.nix
 
@@ -26,6 +25,7 @@
     ../services/user/poweralertd.nix
     ../services/user/polkit-agent.nix
     ../services/user/qt6ct.nix
+    ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix
     ../services/user/swaybg.nix
