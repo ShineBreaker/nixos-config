@@ -13,7 +13,7 @@
     brightnessctl
 
     nautilus
-    xfce.thunar
+    doublecmd
     mate.engrampa
   ];
 
