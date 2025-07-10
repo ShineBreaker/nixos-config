@@ -22,6 +22,7 @@
         zulu
       ];
     })
+    ungoogled-chromium
 
     gimp3-with-plugins
     mate.eom
