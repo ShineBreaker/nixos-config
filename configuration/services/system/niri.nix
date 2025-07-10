@@ -9,17 +9,18 @@
   environment.systemPackages = with pkgs; [
     alacritty
     pwvucontrol
-    gtklock
     waypaper
     brightnessctl
 
     nautilus
-    nemo-with-extensions
+    xfce.thunar
+    mate.engrampa
   ];
 
   programs = {
     xwayland.enable = true;
     niri.enable = true;
+    gtklock.enable = true;
     nautilus-open-any-terminal = {
       enable = true;
       terminal = "alacritty";

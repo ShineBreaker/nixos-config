@@ -10,11 +10,7 @@ hotkey-overlay {
 
 environment {
     DISPLAY ":0"
-    // QT_IM_MODULE "fcitx"
-    // QT_IM_MODULES "wayland;fcitx"
     XMODIFIERS "@im=fcitx"
-
-    // GTK_IM_MODULE null
 }
 
 gestures {
@@ -39,21 +35,13 @@ input {
         // dwt
         // dwtp
         natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "two-finger"
         // disabled-on-external-mouse
     }
 
     mouse {
-        // off
-        // natural-scroll
         accel-speed 0.6
         accel-profile "flat"
-        // scroll-method "no-scroll"
     }
-
-    // focus-follows-mouse
 }
 
 layout {

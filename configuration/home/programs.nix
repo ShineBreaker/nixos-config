@@ -18,7 +18,7 @@
       jdks = [
         graalvm-ce
         zulu8
-       zulu17
+        zulu17
         zulu
       ];
     })
@@ -30,7 +30,6 @@
     coppwr
     bleachbit
     mission-center
-    peazip
 
     qq
     wechat-uos
