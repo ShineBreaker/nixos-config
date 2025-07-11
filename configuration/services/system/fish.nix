@@ -20,7 +20,7 @@
       push = "git push";
       rebuild = "sudo nixos-rebuild switch --flake .#";
       rebuild-boot = "sudo nixos-rebuild boot --flake .#";
-      update = "nix flake update && git commit --a -m 'update.' && sudo nixos-rebuild switch --flake .#";
+      update = "nix flake update && git commit -a -m 'update.' && sudo nixos-rebuild switch --flake .#";
       clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       shutdown = "systemctl poweroff";
       reboot = "systemctl reboot";
