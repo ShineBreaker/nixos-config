@@ -20,6 +20,9 @@
       "org/gnome/desktop/applications/terminal" = {
         exec = "alacritty";
       };
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "alacritty";
+      };
     };
   };
 }
