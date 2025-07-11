@@ -16,6 +16,8 @@
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
+  
+  services.envfs.enable = true;
+  
   documentation.nixos.enable = false;
 }
