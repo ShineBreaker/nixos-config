@@ -12,8 +12,7 @@
     waypaper
     brightnessctl
 
-    nautilus
-    doublecmd
+    nemo-with-extensions
     mate.engrampa
   ];
 
@@ -40,7 +39,13 @@
   xdg = {
     portal = {
       enable = true;
-      configPackages = [ pkgs.niri ];
+      config = {
+        niri = {
+          default = [ "gnome" ];
+          "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+          "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+        };
+      };
       extraPortals = [
         pkgs.xdg-desktop-portal-gnome
         pkgs.xdg-desktop-portal-gtk
