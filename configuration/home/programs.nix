@@ -7,8 +7,8 @@
 
 {
   home.packages = with pkgs; [
-    wineWowPackages.stagingFull
-    winetricks
+    protonup-rs
+    protontricks
     mangohud
     mangojuice
 
