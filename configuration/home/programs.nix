@@ -7,7 +7,7 @@
 
 {
   home.packages = with pkgs; [
-    wineWow64Packages.stagingFull
+    wineWowPackages.stagingFull
     winetricks
     mangohud
     mangojuice
@@ -24,7 +24,7 @@
     })
 
     gimp3-with-plugins
-    mate.eom
+    nomacs
     mpv
 
     coppwr
