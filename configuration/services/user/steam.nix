@@ -29,6 +29,7 @@
   };
   
   programs.gamemode = {
+    enable = true;
     settings = {
       general = {
         renice = 10;
@@ -40,6 +41,8 @@
       };
     };
   };
+  
+  users.users.brokenshine.extraGroups = [ "gamemode" ];
   
   hardware.steam-hardware.enable = true;
 
