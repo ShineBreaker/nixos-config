@@ -1,5 +1,5 @@
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "waytrogen" "--restore"
+spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "clash-verge"
 prefer-no-csd
 
@@ -90,7 +90,6 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {
     match app-id="mpv"
-    match app-id="waytrogen"
     match app-id=r#"exe$"#
     open-floating true
 }

@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     pwvucontrol
-    waytrogen
+    waypaper
     brightnessctl
 
     nemo-with-extensions
