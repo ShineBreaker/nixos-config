@@ -90,6 +90,7 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {
     match app-id="mpv"
+    match app-id="waypaper"
     match app-id=r#"exe$"#
     open-floating true
 }
@@ -170,7 +171,7 @@ binds {
     Mod+Ctrl+J     { move-window-down; }
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
-    Mod+Ctrl+F     { switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+F     { toggle-window-floating; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
