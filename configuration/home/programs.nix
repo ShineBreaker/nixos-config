@@ -24,6 +24,7 @@
     })
 
     gimp3-with-plugins
+    ffmpeg-full
     nomacs
     mpv
 

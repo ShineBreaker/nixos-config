@@ -12,7 +12,8 @@
     extraPackages = with pkgs; [
       gamescope
       mangohud
-      openjdk8-bootstrap
+      ffmpeg
+      openjdk8
     ];
   };
 
