@@ -5,7 +5,7 @@
   };
 
   nix = {
-    package = pkgs.lix;
+    package = pkgs.lixPackageSets.git.lix;
     gc = {
       automatic = true;
       dates = "daily";
@@ -20,7 +20,6 @@
       experimental-features = [
         "nix-command"
         "flakes"
-        "ca-derivations"
       ];
       builders-use-substitutes = true;
       keep-derivations = true;
