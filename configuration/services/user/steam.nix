@@ -11,7 +11,8 @@
 
     extraPackages = with pkgs; [
       gamescope
-      zulu
+      mangohud
+      openjdk8-bootstrap
     ];
   };
 
