@@ -4,7 +4,7 @@
   
   systemd.user.services = {
     mako = {
-      description = "mako";
+      description = "Lightweight Wayland notification daemon.";
       wantedBy = [ "graphical-session.target" ];
       wants = [ "graphical-session.target" ];
       after = [ "graphical-session.target" ];

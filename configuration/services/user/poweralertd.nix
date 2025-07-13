@@ -4,7 +4,7 @@
   
   systemd.user.services = {
     poweralertd = {
-      description = "poweralertd";
+      description = "UPower-powered power alerter.";
       wantedBy = [ "graphical-session.target" ];
       wants = [ "graphical-session.target" ];
       after = [ "graphical-session.target" ];

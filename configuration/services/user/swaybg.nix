@@ -4,7 +4,7 @@
 
   systemd.user.services = {
     swaybg = {
-      description = "swaybg";
+      description = "Wallpaper tool for Wayland compositors.";
       wantedBy = [ "graphical-session.target" ];
       wants = [ "graphical-session.target" ];
       after = [ "graphical-session.target" ];

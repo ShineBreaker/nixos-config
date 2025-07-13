@@ -4,7 +4,7 @@
   
   systemd.user.services = {
     xwayland-satellite = {
-      description = "xwayland-satellite";
+      description = "Xwayland outside your Wayland compositor.";
       wantedBy = [ "graphical-session.target" ];
       wants = [ "graphical-session.target" ];
       after = [ "graphical-session.target" ];
