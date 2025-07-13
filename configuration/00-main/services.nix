@@ -29,7 +29,7 @@
     # ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix
-    ../services/user/swaybg.nix
+    # ../services/user/swaybg.nix
     ../services/user/swww.nix
     ../services/user/syncthing.nix
     ../services/user/virtualisation.nix
