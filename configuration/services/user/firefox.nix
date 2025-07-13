@@ -3,7 +3,7 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox;
+    package = pkgs.librewolf;
     preferences = {
       "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
