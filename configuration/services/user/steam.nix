@@ -32,7 +32,7 @@
     settings = {
       general = {
         renice = 10;
-        desiredgov = performance;
+        desiredgov = "performance";
       };
       custom = {
         start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启'";
