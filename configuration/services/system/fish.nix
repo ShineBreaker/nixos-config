@@ -10,7 +10,6 @@
     eza
     tokei
     duf
-    helix
   ];
 
   programs.fish = {

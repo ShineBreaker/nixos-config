@@ -30,5 +30,10 @@
       before = lib.mkForce [ ];
       after = lib.mkForce [ ];
     };
+    
+    sessionVariables = {
+      EDITOR = "hx";
+    };
+    
   };
 }
