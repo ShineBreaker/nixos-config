@@ -4,9 +4,6 @@
     adb.enable = true;
     git.enable = true;
 
-    gamemode.enable = true;
-    wshowkeys.enable = false;
-
     appimage = {
       enable = true;
       binfmt = true;
