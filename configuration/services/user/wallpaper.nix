@@ -1,8 +1,10 @@
 { config, pkgs, ... }:
 {
-  environment.systemPackages =  with pkgs; [ 
-    swww mpvpaper
+  environment.systemPackages = with pkgs; [
+    swww
+    mpvpaper
     waypaper
+    socat
   ];
 
   systemd.user.services = {
