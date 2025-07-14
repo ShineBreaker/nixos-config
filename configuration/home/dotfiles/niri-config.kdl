@@ -103,7 +103,6 @@ window-rule {
 
 window-rule {
     match app-id="zen"
-    match title="wine"
     open-maximized true
 }
 
