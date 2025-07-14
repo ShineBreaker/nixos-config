@@ -20,10 +20,6 @@
     xwayland.enable = true;
     niri.enable = true;
     gtklock.enable = true;
-    nautilus-open-any-terminal = {
-      enable = true;
-      terminal = "alacritty";
-    };
   };
 
   security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
@@ -33,7 +29,6 @@
     xserver.desktopManager.runXdgAutostartIfNone = true;
     gvfs.enable = true;
     seatd.enable = true;
-    gnome.sushi.enable = true;
   };
 
   xdg = {
