@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   environment.systemPackages = with pkgs; [ steam-run ];
 
@@ -19,15 +24,16 @@
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
     args = [
       "--fullscreen"
+      "--force-windows-fullscreen"
       "--backend sdl"
       "--force-grab-cursor"
-      "-W 3072" "-H 1920"
+      "-W 3072"
+      "-H 1920"
     ];
   };
-  
+
   programs.gamemode = {
     enable = true;
     settings = {
@@ -41,9 +47,9 @@
       };
     };
   };
-  
+
   users.users.brokenshine.extraGroups = [ "gamemode" ];
-  
+
   hardware.steam-hardware.enable = true;
 
 }
