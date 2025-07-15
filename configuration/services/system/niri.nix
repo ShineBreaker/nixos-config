@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     pwvucontrol
     brightnessctl
+    wl-clipboard
 
     nemo-with-extensions
     mate.engrampa
