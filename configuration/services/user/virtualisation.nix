@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  libs,
   ...
 }:
 {
@@ -23,7 +21,9 @@
       vhostUserPackages = with pkgs; [
         virtiofsd
         virglrenderer
+
         virtualgl
+        pkgsi686Linux.virtualgl
       ];
     };
   };
@@ -38,10 +38,6 @@
 
   environment.systemPackages = with pkgs; [
     distrobox
-    distrobox-tui
-
-    virtualgl
-
     waydroid-helper
   ];
 
