@@ -30,6 +30,7 @@
 
     coppwr
     mission-center
+    qtscrcpy
 
     qq
     wechat-uos
