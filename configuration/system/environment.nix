@@ -4,6 +4,7 @@
     git
     fastfetch
     uv
+    isd
 
     unzip
     unrar
@@ -11,9 +12,9 @@
 
     sof-firmware
   ];
-  
+
   environment.localBinInPath = true;
-  
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     EDITOR = "hx";
