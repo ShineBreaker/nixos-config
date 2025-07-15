@@ -29,6 +29,6 @@
     upower.enable = true;
     accounts-daemon.enable = true;
 
-    
+    envfs.enable = true;
   };
 }

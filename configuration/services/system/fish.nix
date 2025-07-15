@@ -39,6 +39,7 @@
     };
     interactiveShellInit = ''
       fastfetch
+      set -U fish_greeting 日々私たちが過ごしている日常は、実は、奇跡の連続なのかもしれない。
     '';
     vendor = {
       functions.enable = true;

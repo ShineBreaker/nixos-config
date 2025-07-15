@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     git
     fastfetch
-    pyenv
+    uv
 
     unzip
     unrar
@@ -11,4 +11,11 @@
 
     sof-firmware
   ];
+  
+  environment.localBinInPath = true;
+  
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    EDITOR = "hx";
+  };
 }
