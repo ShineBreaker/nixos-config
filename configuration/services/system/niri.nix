@@ -24,7 +24,6 @@
   security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
   services = {
-    gnome.gnome-keyring.enable = true;
     xserver.desktopManager.runXdgAutostartIfNone = true;
     gvfs.enable = true;
     seatd.enable = true;
