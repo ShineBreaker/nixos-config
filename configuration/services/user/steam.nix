@@ -15,9 +15,7 @@
     gamescopeSession.enable = true;
 
     extraPackages = with pkgs; [
-      gamescope
       mangohud
-      ffmpeg
       openjdk8
     ];
   };
