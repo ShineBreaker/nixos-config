@@ -5,6 +5,7 @@
     ../services/system/connman.nix
     ../services/system/doas.nix
     ../services/system/fish.nix
+    ../services/system/git.nix
     ../services/system/gnupg.nix
     ../services/system/greetd.nix
     # ../services/system/grub.nix
@@ -20,7 +21,6 @@
 
     ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
-    ../services/user/firefox.nix
     ../services/user/flatpak.nix
     ../services/user/java.nix
     ../services/user/mako.nix
