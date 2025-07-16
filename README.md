@@ -25,3 +25,6 @@ cp /mnt/etc/nixos/hardware-configuration.nix ./configuration/hardware-configurat
 ```
 nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
 ```
+
+#### WIP
+详细介绍配置文件的结构以及特性，以便他人以及未来的我更好的理解这份配置文件
