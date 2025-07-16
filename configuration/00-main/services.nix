@@ -33,7 +33,7 @@
     ../services/user/syncthing.nix
     ../services/user/virtualisation.nix
     ../services/user/wallpaper.nix
-    # ../services/user/xwayland-satellite.nix
+    ../services/user/xwayland-satellite.nix
 
   ];
 

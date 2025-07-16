@@ -8,11 +8,6 @@ hotkey-overlay {
     hide-not-bound
 }
 
-xwayland-satellite {
-    // off
-    path "/run/current-system/sw/bin/xwayland-satellite"
-}
-
 environment {
     DISPLAY ":0"
     XMODIFIERS "@im=fcitx"
