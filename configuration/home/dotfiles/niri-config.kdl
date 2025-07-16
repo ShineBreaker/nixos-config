@@ -10,7 +10,7 @@ hotkey-overlay {
 
 xwayland-satellite {
     // off
-    path "xwayland-satellite"
+    path "/run/current-system/sw/bin/xwayland-satellite"
 }
 
 environment {
