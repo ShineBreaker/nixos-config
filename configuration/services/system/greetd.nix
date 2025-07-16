@@ -10,7 +10,7 @@
     enable = true;
     settings = rec {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -r --user-menu --cmd niri-session --time --time-format '%Y-%m-%d %l:%M:%S'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -r --user-menu --remember-session --time --time-format '%Y-%m-%d %l:%M:%S'";
         user = "brokenshine";
       };
     };
