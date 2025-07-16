@@ -10,6 +10,7 @@
     pwvucontrol
     brightnessctl
     wl-clipboard
+    xwayland-satellite
 
     nemo-with-extensions
     mate.engrampa
@@ -17,7 +18,10 @@
 
   programs = {
     xwayland.enable = true;
-    niri.enable = true;
+    niri = {
+      enable = true;
+      package = pkgs.niri_git;
+    };
     gtklock.enable = true;
   };
 
