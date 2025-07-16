@@ -9,8 +9,6 @@
     unzip
     unrar
     p7zip
-
-    sof-firmware
   ];
 
   environment.localBinInPath = true;

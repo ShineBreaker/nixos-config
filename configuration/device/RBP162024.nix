@@ -32,6 +32,8 @@
   environment.systemPackages = with pkgs; [
     bluez
     blueman
+    
+    sof-firmware
   ];
 
   systemd.user.services.mpris-proxy = {
