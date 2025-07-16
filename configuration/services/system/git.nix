@@ -8,7 +8,7 @@
     enable = true;
     package = pkgs.gitFull;
     config.credential = {
-      helper = "manager";
+      # helper = "libsecret";
       "https://github.com".username = "ShineBreaker";
       "https://gitee.com".username = "BrokenShine";
       credentialStore = "cache";
