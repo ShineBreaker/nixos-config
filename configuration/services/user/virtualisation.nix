@@ -34,11 +34,8 @@
 
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
-  virtualisation.waydroid.enable = true;
-
   environment.systemPackages = with pkgs; [
     distrobox
-    waydroid-helper
   ];
 
   virtualisation.podman = {
