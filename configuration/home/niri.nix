@@ -84,7 +84,7 @@
       border-radius = 5;
       font = "Sarasa Gothic 10";
       icons = 1;
-      icon-path = "/home/brokenshine/.nix-profile/share/icons/Papirus-Dark";
+      icon-path = "~/.nix-profile/share/icons/Papirus-Dark";
       max-icon-size = 64;
       default-timeout = 5000;
       ignore-timeout = 1;
