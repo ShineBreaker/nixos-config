@@ -142,9 +142,10 @@ binds {
     Mod+Shift+V     hotkey-overlay-title="将wayland的剪切板的内容复制到xorg中" { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
     Mod+Ctrl+R      hotkey-overlay-title="随机壁纸"                            { spawn "waypaper" "--random"; }
 
-    Mod+T        hotkey-overlay-title="打开终端"   { spawn "alacritty"; }
-    Mod+D        hotkey-overlay-title="打开搜索"   { spawn "fuzzel"; }
-    Super+Alt+L  hotkey-overlay-title="锁屏"       { spawn "gtklock"; }
+    Mod+T        hotkey-overlay-title="打开终端"    repeat=false  { spawn "alacritty"; }
+    Mod+D        hotkey-overlay-title="打开搜索"    repeat=false  { spawn "fuzzel"; }
+    Mod+Escape   hotkey-overlay-title="总览"        repeat=false  { toggle-overview; }
+    Super+Alt+L  hotkey-overlay-title="锁屏"        repeat=false  { spawn "gtklock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
