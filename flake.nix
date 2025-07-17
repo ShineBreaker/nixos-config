@@ -24,6 +24,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,6 +39,7 @@
       lanzaboote,
       chaotic,
       nix-index-database,
+      niri-flake,
       ...
     }:
 
@@ -66,6 +72,12 @@
               chaotic.mesa-git.enable = true;
             }
 
+            niri-flake.nixosModules.niri
+            {
+              niri-flake.cache.enable = true;
+              nixpkgs.overlays = [ niri-flake.overlays.niri ]; 
+            }
+            
             lanzaboote.nixosModules.lanzaboote
             (
               { pkgs, lib, ... }:
@@ -86,6 +98,7 @@
                   enable = true;
                   pkiBundle = "/var/lib/sbctl";
                 };
+                
               }
             )
 

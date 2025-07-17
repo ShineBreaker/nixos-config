@@ -11,6 +11,7 @@
     ../home/dotfiles.nix
     ../home/file.nix
     ../home/fonts.nix
+    ../home/niri.nix
     ../home/programs.nix
     ../home/theme.nix
     ../home/xdg.nix

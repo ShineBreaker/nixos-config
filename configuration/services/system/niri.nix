@@ -1,5 +1,6 @@
 {
   config,
+  home, 
   pkgs,
   lib,
   ...
@@ -10,7 +11,7 @@
     pwvucontrol
     brightnessctl
     wl-clipboard
-    xwayland-satellite
+    xwayland-satellite-unstable
 
     nemo-with-extensions
     mate.engrampa
@@ -20,7 +21,7 @@
     xwayland.enable = true;
     niri = {
       enable = true;
-      package = pkgs.niri_git;
+      package = pkgs.niri-unstable;
     };
     gtklock.enable = true;
   };

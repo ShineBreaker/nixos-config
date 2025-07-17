@@ -25,7 +25,6 @@
     ../services/user/java.nix
     ../services/user/mako.nix
     ../services/user/poweralertd.nix
-    ../services/user/polkit-agent.nix
     ../services/user/qt6ct.nix
     # ../services/user/sparkle.nix
     ../services/user/steam.nix
