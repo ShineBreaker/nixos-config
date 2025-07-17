@@ -93,10 +93,11 @@
     indicator = true;
   };
 
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
     package = pkgs.librewolf;
     languagePacks = [ "zh-CN" ];
+    nativeMessagingHosts = [ pkgs.keepassxc ];
   };
 
   programs.firefoxpwa.enable = true;
