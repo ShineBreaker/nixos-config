@@ -9,7 +9,6 @@ hotkey-overlay {
 }
 
 environment {
-    DISPLAY ":0"
     XMODIFIERS "@im=fcitx"
 }
 
@@ -104,7 +103,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id="zen"
+    match app-id="librewolf"
+    match app-id="firefox"
     open-maximized true
 }
 
