@@ -12,6 +12,11 @@ environment {
     XMODIFIERS "@im=fcitx"
 }
 
+xwayland-satellite {
+    // off
+    path "/run/current-system/sw/bin/xwayland-satellite"
+}
+
 gestures {
     hot-corners {
         off
