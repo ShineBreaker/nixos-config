@@ -15,12 +15,6 @@
       interval = "weekly";
     };
 
-    scx = {
-      enable = true;
-      package = pkgs.scx_git.full;
-      scheduler = "scx_rusty";
-    };
-
     dbus.apparmor = "enabled";
     xserver.excludePackages = [ pkgs.xterm ];
 

@@ -8,7 +8,7 @@
   boot = {
     enableContainers = false;
 
-    kernelPackages = pkgs.linuxPackages_cachyos;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;

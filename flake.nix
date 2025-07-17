@@ -3,7 +3,7 @@
 
   inputs = {
 
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/9807714d6944a957c2e036f84b0ff8caf9930bc0";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,11 +12,6 @@
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -37,7 +32,6 @@
       nixpkgs,
       home-manager,
       lanzaboote,
-      chaotic,
       nix-index-database,
       niri-flake,
       ...
@@ -66,11 +60,6 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
-
-            chaotic.nixosModules.default
-            {
-              chaotic.mesa-git.enable = true;
-            }
 
             niri-flake.nixosModules.niri
             {
