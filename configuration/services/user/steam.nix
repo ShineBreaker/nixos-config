@@ -16,7 +16,7 @@
 
     extraPackages = with pkgs; [
       mangohud
-      openjdk8
+      zulu8
     ];
   };
 
