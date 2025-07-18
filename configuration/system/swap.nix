@@ -15,7 +15,7 @@
       encrypted = {
         enable = true;
         label = "root";
-        # keyFile = "/root.key";
+        keyFile = "/root.key";
         blkDev = "/dev/mapper/root";
       };
     }
