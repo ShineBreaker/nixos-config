@@ -16,11 +16,11 @@
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
 
-  boot.initrd.luks.devices."root" = {
-    keyFile = "/root.key";
-  };
+  # boot.initrd.luks.devices."root" = {
+  #   keyFile = "/root.key";
+  # };
 
-  boot.initrd.secrets = {
-    "/root.key" = /var/lib/secrets/root.key;
-  };
+  # boot.initrd.secrets = {
+  #   "/root.key" = /var/lib/secrets/root.key;
+  # };
 }
