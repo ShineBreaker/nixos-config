@@ -110,6 +110,9 @@ window-rule {
 window-rule {
     match app-id="librewolf"
     match app-id="firefox"
+    match app-id="lapce"
+    match app-id="gimp"
+    match app-id="krita"
     open-maximized true
 }
 
