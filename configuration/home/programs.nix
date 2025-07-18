@@ -24,7 +24,11 @@
     })
 
     gimp3-with-plugins
+    krita
+    
     ffmpeg-full
+    imagemagick
+    
     nomacs
     mpv
 
