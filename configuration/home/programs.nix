@@ -13,12 +13,11 @@
     mangojuice
 
     heroic
-    (prismlauncher.override {
-      additionalPrograms = [ ffmpeg ];
-      jdks = [
+    (hmcl.override {
+      hmclJdk = zulu17;
+      minecraftJdks = [
         graalvm-ce
         zulu8
-        zulu17
         zulu
       ];
     })
