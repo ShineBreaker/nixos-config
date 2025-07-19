@@ -108,7 +108,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="zen$"
+    match app-id=r#"zen*."#
     match title=r#".*Lapce$"#
     match app-id="gimp"
     match app-id="krita"
