@@ -13,14 +13,24 @@
     mangojuice
 
     heroic
-    (hmcl.override {
-      hmclJdk = zulu17;
-      minecraftJdks = [
+    # (hmcl.override {
+    #   hmclJdk = zulu17;
+    #   minecraftJdks = [
+    #     graalvm-ce
+    #     zulu8
+    #     zulu
+    #   ];
+    # })
+    (prismlauncher.override {
+      additionalPrograms = [ ffmpeg ];
+      jdks = [
         graalvm-ce
         zulu8
+        zulu17
         zulu
       ];
     })
+    
 
     gimp3-with-plugins
     krita
