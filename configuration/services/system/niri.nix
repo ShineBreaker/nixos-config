@@ -14,7 +14,7 @@
     xwayland-satellite-unstable
 
     nemo-with-extensions
-    mate.engrampa
+    peazip
   ];
 
   programs = {
