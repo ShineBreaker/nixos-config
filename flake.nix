@@ -29,6 +29,7 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs =
@@ -62,11 +63,11 @@
 
           inherit system;
 
-          modules = [
+          modules = [      
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
-
+            
             niri-flake.nixosModules.niri
             {
               niri-flake.cache.enable = true;
@@ -93,7 +94,6 @@
                   enable = true;
                   pkiBundle = "/var/lib/sbctl";
                 };
-
               }
             )
 
