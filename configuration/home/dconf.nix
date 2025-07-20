@@ -11,9 +11,9 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
 
-        monospace-font-name = "Iosevka Nerd Font Mono 11";
-        font-name = "更纱黑体 UI SC 11";
-        document-font-name = "等距更纱黑体 SC 11";
+        monospace-font-name = "Maple Mono NF CN 11";
+        font-name = "WenQuanYi Micro Hei 11";
+        document-font-name = "Maple Mono NF CN 11";
         accent-color = "teal";
       };
 
