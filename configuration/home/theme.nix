@@ -14,8 +14,11 @@
       package = pkgs.orchis-theme;
       name = "Orchis-Teal-Dark";
     };
+    font = {
+      package = pkgs.wqy_microhei;
+      name = "WenQuanYi Micro Hei";
+    };
     gtk2.extraConfig = ''
-      gtk-font-name = "Sans 10"
       gtk-cursor-theme-size = 0
       gtk-toolbar-style = GTK_TOOLBAR_BOTH_HORIZ
       gtk-toolbar-icon-size = GTK_ICON_SIZE_LARGE_TOOLBAR
@@ -28,7 +31,6 @@
       gtk-xft-hintstyle = "hintfull"
     '';
     gtk3.extraConfig = {
-      gtk-font-name = "Sans 10";
       gtk-cursor-theme-size = 0;
       gtk-toolbar-style = "GTK_TOOLBAR_BOTH_HORIZ";
       gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";

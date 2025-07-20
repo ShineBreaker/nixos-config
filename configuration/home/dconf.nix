@@ -10,9 +10,6 @@
 
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-
-        monospace-font-name = "Maple Mono NF CN 11";
-        font-name = "WenQuanYi Micro Hei 11";
         document-font-name = "Maple Mono NF CN 11";
         accent-color = "teal";
       };
