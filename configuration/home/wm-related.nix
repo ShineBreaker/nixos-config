@@ -82,7 +82,7 @@
       border-size = 0;
       border-color = "#285577";
       border-radius = 5;
-      font = "Sarasa Gothic 10";
+      font = "WenQuanYi Micro Hei 10";
       icons = 1;
       icon-path = "~/.nix-profile/share/icons/Papirus-Dark";
       max-icon-size = 64;

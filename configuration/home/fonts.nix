@@ -3,10 +3,10 @@
   fonts.fontconfig = {
     enable = true;
       defaultFonts = {
-        serif  = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
-        sansSerif = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
-        monospace = [ "IosevkaTerm Nerd Font Mono" "Sarasa Mono SC" ];
-        emoji = [ "Twitter Color Emoji" ];
-    };
+        serif  = [ "WenQuanYi Micro Hei" "NotoSerif Nerd Font" ];
+        sansSerif = [ "WenQuanYi Micro Hei" "NotoSans Nerd Font" ];
+        monospace = [ "Maple Mono NF CN" "WenQuanYi Micro Hei Mono" ];
+        emoji = [ "Blobmoji" ];
+      };
   };
 }

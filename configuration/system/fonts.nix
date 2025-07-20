@@ -5,18 +5,18 @@
     fontconfig.enable = true;
     fontDir.enable = true;
     packages = with pkgs; [
-      nerd-fonts.iosevka
-      nerd-fonts.iosevka-term
-      sarasa-gothic
-      twemoji-color-font
+      wqy_microhei
+      nerd-fonts.noto
+      maple-mono.NF-CN
+      noto-fonts-emoji-blob-bin
     ];
     fontconfig = {
-      useEmbeddedBitmaps = true;
+      useEmbeddedBitmaps = false;
       defaultFonts = {
-        serif  = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
-        sansSerif = [ "Iosevka Nerd Font" "Sarasa Gothic SC" ];
-        monospace = [ "IosevkaTerm Nerd Font Mono" "Sarasa Mono SC" ];
-        emoji = [ "Twitter Color Emoji" ];
+        serif  = [ "WenQuanYi Micro Hei" "NotoSerif Nerd Font" ];
+        sansSerif = [ "WenQuanYi Micro Hei" "NotoSans Nerd Font" ];
+        monospace = [ "Maple Mono NF CN" "WenQuanYi Micro Hei Mono" ];
+        emoji = [ "Blobmoji" ];
       };
     };
   };
