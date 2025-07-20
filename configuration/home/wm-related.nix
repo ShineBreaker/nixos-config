@@ -43,9 +43,10 @@
     enable = true;
     settings = {
       main = {
-        font = "WenQuanYi Micro Hei Mono:size=11";
+        font = "WenQuanYi Micro Hei Mono:size=10";
         icons-enabled = "no";
         layer = "overlay";
+        line-height = "16";
         terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {

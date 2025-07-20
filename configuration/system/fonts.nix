@@ -1,21 +1,34 @@
-{ config, pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 {
   fonts = lib.mkForce {
     enableDefaultPackages = false;
     fontconfig.enable = true;
     fontDir.enable = true;
     packages = with pkgs; [
-      wqy_microhei
-      nerd-fonts.noto
       maple-mono.NF-CN
+      nerd-fonts.meslo-lg
+      noto-fonts
       noto-fonts-emoji-blob-bin
+      wqy_microhei
     ];
     fontconfig = {
       useEmbeddedBitmaps = false;
       defaultFonts = {
-        serif  = [ "WenQuanYi Micro Hei" "NotoSerif Nerd Font" ];
-        sansSerif = [ "WenQuanYi Micro Hei" "NotoSans Nerd Font" ];
-        monospace = [ "Maple Mono NF CN" "WenQuanYi Micro Hei Mono" ];
+        serif = [
+          "MesloLGM Nerd Font"
+          "WenQuanYi Micro Hei"
+          "Noto Serif"
+        ];
+        sansSerif = [
+          "MesloLGM Nerd Font"
+          "WenQuanYi Micro Hei"
+          "Noto Sans"
+        ];
+        monospace = [ "Maple Mono NF CN" ];
         emoji = [ "Blobmoji" ];
       };
     };
