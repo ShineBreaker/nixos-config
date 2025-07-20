@@ -43,9 +43,10 @@
     enable = true;
     settings = {
       main = {
+        font = "WenQuanYi Micro Hei Mono:size=11";
         icons-enabled = "no";
-        terminal = "${pkgs.alacritty}/bin/alacritty";
         layer = "overlay";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {
         background = "2c2c2ccc";
