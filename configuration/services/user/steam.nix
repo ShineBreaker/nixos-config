@@ -15,7 +15,6 @@
     gamescopeSession.enable = true;
 
     extraPackages = with pkgs; [
-      mangohud
       zulu8
     ];
   };
@@ -25,10 +24,9 @@
     args = [
       "--fullscreen"
       "--force-windows-fullscreen"
-      "--backend sdl"
+      # "--backend sdl"
       "--force-grab-cursor"
-      "-W 3072"
-      "-H 1920"
+      "-W 3072" "-H 1920"
     ];
   };
 
