@@ -11,19 +11,19 @@
     packages = with pkgs; [
       maple-mono.NF-CN
       wqy_microhei
-      noto-fonts
+      nerd-fonts.noto
       noto-fonts-emoji-blob-bin
     ];
     fontconfig = {
-      useEmbeddedBitmaps = false;
+      useEmbeddedBitmaps = true;
       defaultFonts = {
         serif = [
           "WenQuanYi Micro Hei"
-          "Noto Serif"
+          "NotoSerif Nerd Font"
         ];
         sansSerif = [
           "WenQuanYi Micro Hei"
-          "Noto Sans"
+          "NotoSans Nerd Font"
         ];
         monospace = [ "Maple Mono NF CN" ];
         emoji = [ "Blobmoji" ];

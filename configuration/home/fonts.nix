@@ -5,11 +5,11 @@
       defaultFonts = {
         serif = [
           "WenQuanYi Micro Hei"
-          "Noto Serif"
+          "NotoSerif Nerd Font"
         ];
         sansSerif = [
           "WenQuanYi Micro Hei"
-          "Noto Sans"
+          "NotoSans Nerd Font"
         ];
         monospace = [ "Maple Mono NF CN" ];
         emoji = [ "Blobmoji" ];
