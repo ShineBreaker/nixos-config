@@ -10,4 +10,5 @@
     zoxide.enable = true;
   };
   documentation.nixos.enable = false;
+  xdg.portal.enable = true;
 }

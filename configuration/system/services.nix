@@ -17,6 +17,7 @@
 
     dbus.apparmor = "enabled";
     xserver.excludePackages = [ pkgs.xterm ];
+    flatpak.enable = true;
 
     usbguard.dbus.enable = true;
     udisks2.enable = true;

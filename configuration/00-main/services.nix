@@ -21,7 +21,6 @@
 
     ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
-    ../services/user/flatpak.nix
     ../services/user/java.nix
     ../services/user/mako.nix
     ../services/user/poweralertd.nix
