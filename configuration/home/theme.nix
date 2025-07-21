@@ -2,10 +2,6 @@
 {
   gtk = {
     enable = true;
-    cursorTheme = {
-      package = pkgs.graphite-cursors;
-      name = "Graphite dark Cursors";
-    };
     iconTheme = {
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
@@ -41,6 +37,19 @@
       gtk-xft-antialias = 1;
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintfull";
+    };
+  };
+  
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.graphite-cursors;
+    name = "Graphite dark Cursors";
+    
+    dotIcons.enable = false;
+    gtk.enable = true;
+    x11 = {
+      enable = true;
+      defaultCursor = "default";
     };
   };
 }
