@@ -1,13 +1,25 @@
 # NixOS配置
 
-#### 介绍
-个人的NixOS配置文件
+#### 特点：
+- 使用Lix来替代Nix以获得更快的build速度
+- 使用Doas替换Sudo来获得更好的安全性
+- 使用Fish作为Shell，使用Lanzaboote来提供Secure Boot支持
+- 桌面环境为Niri，使用Greetd作为Display Manager，桌面配套的设施为Waybar，GtkLock，Fuzzel，Mako，壁纸使用Waypaper进行管理，安装了swww和mpvpaper两个backend，文件管理器为Nemo，压缩包管理器为Peazip，默认的输入法为Fcitx5+Rime
+- 默认使用Orchis主题，Papirus图标包，Graphite鼠标指针。启用qt5ct, qt6ct以及Kvantum来实现对QT主题的支持
+- 尽量将目录树的结构理得比较清晰，以方便自己以及他人使用。
 
+#### 注意事项：
+Niri中的帮助按钮为Super+Alt+空格（Super即为win键）
+gamescope中按照自己目前的设备配置了分辨率以及一些使用的参数，但是
+- 游戏的分辨率仍然需要作为参数传到gamescope中（不传也可以，它会直接以屏幕的分辨率进行显示）
+- 捕获鼠标需要设置--backend sdl，但在本人测时的时候发现可能会导致部分steam中的游戏闪退（eg. 幻兽帕鲁），所以在其他游戏中需要捕获鼠标的话得自行添加该参数
+- 小技巧：将--cursor ./none参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）
 
 #### 使用说明
-不建议直接clone下来复用，建议选用部分代码并复制粘贴到你的配置文件里
-假如你非要直接克隆并使用的话，以下是步骤
+不建议直接clone下来复用
+建议选用部分代码并复制粘贴到你的配置文件里，本配置文件依照程序功能进行了目录的划分，services文件夹中都是以其中配置的应用命名，如果需要参考某个软件的配置方法的话直接打开相应的文件就好。
 
+假如你非要直接克隆并使用的话，以下是步骤
 首先先git clone下来并且cd到本仓库
 然后再运行
 
@@ -26,5 +38,4 @@ cp /mnt/etc/nixos/hardware-configuration.nix ./configuration/hardware-configurat
 nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
 ```
 
-#### WIP
-详细介绍配置文件的结构以及特性，以便他人以及未来的我更好的理解这份配置文件
+注意：本配置文件中多次直接硬编码了我本人的用户名，并且配置了相应的用户和密码，非常不推荐直接复用
