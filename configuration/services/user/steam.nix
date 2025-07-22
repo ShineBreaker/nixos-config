@@ -23,9 +23,8 @@
   programs.gamescope = {
     enable = true;
     args = [
-      "--fullscreen"
-      "--force-windows-fullscreen"
-      "--backend sdl"
+      "--borderless"
+      "--backend auto"
       "--force-grab-cursor"
       "-W 3072" "-H 1920"
     ];
