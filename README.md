@@ -14,6 +14,7 @@
  - Niri中的帮助按钮为`Super+Alt+空格`（Super即为win键）
  - gamescope中按照自己目前的设备配置了分辨率以及一些使用的参数，但是
    - 游戏的分辨率 **仍然需要作为参数传到gamescope中** （不传也可以，它会直接以屏幕的分辨率进行显示）
+   - 如果有部分游戏的鼠标捕获功能异常，那么请将`--backend sdl`传入gamescope中
 >~~小技巧：将`--cursor ./none`参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）~~ 这个问题我貌似已经通过`xdg.icons.fallbackCursorThemes`修好了
 
 #### 使用说明
