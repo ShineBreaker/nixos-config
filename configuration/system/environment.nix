@@ -5,11 +5,12 @@
     fastfetch
     uv
     isd
+    gcc
 
     unzip
     unrar
     p7zip
-    
+
     graphite-cursors
   ];
 
