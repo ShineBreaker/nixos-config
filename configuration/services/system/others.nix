@@ -9,6 +9,11 @@
     };
     zoxide.enable = true;
   };
+  
   documentation.nixos.enable = false;
-  xdg.portal.enable = true;
+  
+  xdg = {
+    portal.enable = true;
+    icons.fallbackCursorThemes = [ "graphite-dark" "Graphite dark Cursors" ];
+  };
 }
