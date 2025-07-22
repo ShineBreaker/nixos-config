@@ -20,18 +20,17 @@
   建议选用部分代码到你的配置文件里，本配置文件依照程序功能进行了目录的划分，services文件夹中都是以其中配置的应用命名，如果需要参考某个软件的配置方法的话直接打开相应的文件就好。
 
   假如你非要直接克隆并使用的话，以下是步骤
-  首先先git clone下来并且cd到本仓库
-  然后再运行
+  1. 首先先git clone下来并且cd到本仓库，然后再运行
     
     nixos-generate-config --root /mnt
     
     
-  将本仓库内的hardware-configuration.nix替换成刚刚生成的配置文件
+  2. 将本仓库内的hardware-configuration.nix替换成刚刚生成的配置文件
     
     cp /mnt/etc/nixos/hardware-configuration.nix ./configuration/hardware-configuration.nix
     
 
-  然后再
+  3. 然后再
 
     nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
     
