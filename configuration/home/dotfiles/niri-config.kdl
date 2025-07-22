@@ -2,9 +2,6 @@ spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "clash-verge"
 
-spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
-spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
-
 prefer-no-csd
 
 hotkey-overlay {
@@ -28,8 +25,8 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "graphite-dark"
-    xcursor-size 24
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 26
 }
 
 input {
@@ -93,19 +90,6 @@ layout {
 layer-rule {
     match namespace="^notifications$"
     block-out-from "screencast"
-}
-
-layer-rule {
-    match namespace="gtk-layer-shell"
-    geometry-corner-radius 18
-    shadow {
-        on
-        softness 20
-        spread 3
-        offset x=0 y=0
-        draw-behind-window false
-        color "#000000"
-    }
 }
 
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"

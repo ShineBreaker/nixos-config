@@ -11,7 +11,7 @@
     unrar
     p7zip
 
-    graphite-cursors
+    bibata-cursors
   ];
 
   environment.localBinInPath = true;

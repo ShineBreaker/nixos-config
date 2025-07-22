@@ -42,8 +42,9 @@
   
   home.pointerCursor = {
     enable = true;
-    package = pkgs.graphite-cursors;
-    name = "Graphite dark Cursors";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 26;
     
     dotIcons.enable = false;
     gtk.enable = true;

@@ -10,10 +10,7 @@
   environment.systemPackages = with pkgs; [
     pwvucontrol
     brightnessctl
-    
     wl-clipboard
-    cliphist
-    nwg-clipman
     
     xwayland-satellite-unstable
 

@@ -27,7 +27,7 @@
     },
 
     "group/status": {
-		"orientation": "inherit",
+		"orientation": "horizontal",
 		"modules": [
             "battery",
 			"cpu",
@@ -152,13 +152,6 @@
         "tooltip": true,
         "tooltip-format": "搜索",
         "on-click": "fuzzel",
-    },
-    
-    "custom/clipboard": {
-    	"format" : "",
-        "tooltip": true,
-        "tooltip-format": "剪切板",
-        "on-click": "nwg-clipman",
     },
 
 }

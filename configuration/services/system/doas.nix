@@ -12,8 +12,9 @@
     extraRules = [
       {
         users = [ "brokenshine" ];
-        noPass = true;
+        noPass = false;
         keepEnv = true;
+        persist = true;
       }
     ];
   };

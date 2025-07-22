@@ -14,6 +14,6 @@
   
   xdg = {
     portal.enable = true;
-    icons.fallbackCursorThemes = [ "Graphite dark Cursors" ];
+    icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
   };
 }
