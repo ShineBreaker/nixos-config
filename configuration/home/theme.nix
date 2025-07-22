@@ -11,6 +11,7 @@
       name = "Orchis-Teal-Dark";
     };
     font = {
+      package = pkgs.noto-fonts-cjk-sans;
       name = "Noto Sans CJK SC";
     };
     gtk2.extraConfig = ''
