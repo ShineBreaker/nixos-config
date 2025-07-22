@@ -5,7 +5,7 @@
  - 使用`Lix`来替代`Nix`以获得更快的build速度
  - 使用`Doas`替换`Sudo`来获得更好的安全性
  - 使用`Fish`作为Shell，使用`Lanzaboote`来提供Secure Boot支持
- - 桌面环境为`Niri`，使用`Greetd`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`Peazip`，默认的输入法为`Fcitx5+Rime`
+ - 桌面环境为`Niri`，使用`Greetd`搭配`TuiGreeter`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`Peazip`，默认的输入法为`Fcitx5+Rime`
  - 默认使用`Orchis`主题，`Papirus`图标包，`Graphite`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
  - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解。
 
