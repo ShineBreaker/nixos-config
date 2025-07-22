@@ -6,7 +6,7 @@
  - 使用`Doas`替换`Sudo`来获得更好的安全性
  - 使用`Fish`作为Shell，使用`Lanzaboote`来提供Secure Boot支持
  - 桌面环境为`Niri`，使用`Greetd`搭配`TuiGreeter`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`Peazip`，默认的输入法为`Fcitx5+Rime`
- - 默认使用`Orchis`主题，`Papirus`图标包，`Graphite`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
+ - 默认使用`Orchis`主题，`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
  - 内置了几个蛮好用的TUI小工具，比如说用于管理Systemd服务的`isd`，以及`Btop`
  - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解。
 
@@ -14,7 +14,7 @@
  - Niri中的帮助按钮为`Super+Alt+空格`（Super即为win键）
  - gamescope中按照自己目前的设备配置了分辨率以及一些使用的参数，但是
    - 游戏的分辨率 **仍然需要作为参数传到gamescope中** （不传也可以，它会直接以屏幕的分辨率进行显示）
->小技巧：将`--cursor ./none`参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）
+>~~小技巧：将`--cursor ./none`参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）~~ 这个问题我貌似已经通过`xdg.icons.fallbackCursorThemes`修好了
 
 #### 使用说明
    **不建议直接clone下来复用** 
