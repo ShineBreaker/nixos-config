@@ -11,8 +11,7 @@
       name = "Orchis-Teal-Dark";
     };
     font = {
-      package = pkgs.wqy_microhei;
-      name = "WenQuanYi Micro Hei";
+      name = "Noto Sans CJK SC";
     };
     gtk2.extraConfig = ''
       gtk-cursor-theme-size = 0

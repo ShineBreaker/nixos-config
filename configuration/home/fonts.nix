@@ -2,17 +2,17 @@
 {
   fonts.fontconfig = {
     enable = true;
-      defaultFonts = {
-        serif = [
-          "WenQuanYi Micro Hei"
-          "NotoSerif Nerd Font"
-        ];
-        sansSerif = [
-          "WenQuanYi Micro Hei"
-          "NotoSans Nerd Font"
-        ];
-        monospace = [ "Maple Mono NF CN" ];
-        emoji = [ "Blobmoji" ];
-      };
+    defaultFonts = {
+      serif = [
+        "NotoSerif Nerd Font"
+        "Noto Serif CJK SC"
+      ];
+      sansSerif = [
+        "NotoSans Nerd Font"
+        "Noto Sans CJK SC"
+      ];
+      monospace = [ "Maple Mono NF CN" ];
+      emoji = [ "Noto Color Emoji" "Blobmoji" ];
+    };
   };
 }

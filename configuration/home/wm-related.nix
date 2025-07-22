@@ -43,7 +43,7 @@
     enable = true;
     settings = {
       main = {
-        font = "WenQuanYi Micro Hei Mono:size=10";
+        font = "monospace:size=10";
         icons-enabled = "no";
         layer = "overlay";
         line-height = "16";
@@ -84,7 +84,7 @@
       border-size = 0;
       border-color = "#285577";
       border-radius = 5;
-      font = "WenQuanYi Micro Hei 10";
+      font = "Sans 10";
       icons = 1;
       icon-path = "~/.nix-profile/share/icons/Papirus-Dark";
       max-icon-size = 64;
