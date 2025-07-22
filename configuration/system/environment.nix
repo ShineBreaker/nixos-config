@@ -9,6 +9,8 @@
     unzip
     unrar
     p7zip
+    
+    graphite-cursors
   ];
 
   environment.localBinInPath = true;

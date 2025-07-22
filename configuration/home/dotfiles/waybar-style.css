@@ -30,6 +30,7 @@ window#waybar.hidden {
 #custom-poweroff,
 #custom-reboot,
 #custom-search,
+#custom-clipboard,
 #backlight,
 #taskbar,
 
@@ -154,4 +155,8 @@ window#waybar.hidden {
     background-color: rgba(32, 32, 32, 0.6);
 }
 
+#custom-clipboard {
+	color: #68de97;
+    background-color: rgba(32, 32, 32, 0.6);
+}
 

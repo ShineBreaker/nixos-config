@@ -14,6 +14,6 @@
   
   xdg = {
     portal.enable = true;
-    icons.fallbackCursorThemes = [ "graphite-dark" "Graphite dark Cursors" ];
+    icons.fallbackCursorThemes = [ "Graphite dark Cursors" ];
   };
 }

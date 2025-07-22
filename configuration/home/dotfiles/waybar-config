@@ -5,7 +5,7 @@
     "height": 42,
     "margin": "0 10 10 10",
     
-    "modules-left": ["group/power","custom/search","wlr/taskbar"],
+    "modules-left": ["group/power","custom/search","custom/clipboard","wlr/taskbar"],
     "modules-center": [],
     "modules-right": ["tray","group/status","clock"],
 
@@ -152,6 +152,13 @@
         "tooltip": true,
         "tooltip-format": "搜索",
         "on-click": "fuzzel",
+    },
+    
+    "custom/clipboard": {
+    	"format" : "",
+        "tooltip": true,
+        "tooltip-format": "剪切板",
+        "on-click": "nwg-clipman",
     },
 
 }
