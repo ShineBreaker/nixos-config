@@ -12,7 +12,7 @@
     Niri中的帮助按钮为Super+Alt+空格（Super即为win键）
     gamescope中按照自己目前的设备配置了分辨率以及一些使用的参数，但是
     - 游戏的分辨率仍然需要作为参数传到gamescope中（不传也可以，它会直接以屏幕的分辨率进行显示）
-    - 小技巧：将--cursor ./none参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）
+    - 小技巧：将```--cursor ./none```参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用（eg. Minecraft）
 
 #### 使用说明
     不建议直接clone下来复用
@@ -21,18 +21,16 @@
     假如你非要直接克隆并使用的话，以下是步骤
     首先先git clone下来并且cd到本仓库
     然后再运行
-
     ```
     nixos-generate-config --root /mnt
     ```
+    
     将本仓库内的hardware-configuration.nix替换成刚刚生成的配置文件
-
     ```
     cp /mnt/etc/nixos/hardware-configuration.nix ./configuration/hardware-configuration.nix
     ```
 
     然后再
-
     ```
     nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
     ```
