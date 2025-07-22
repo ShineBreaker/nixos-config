@@ -112,6 +112,7 @@ window-rule {
     match title=r#".*Lapce$"#
     match app-id="gimp"
     match app-id="krita"
+    match app-id=r#"steam_app*."#
     open-maximized true
 }
 
