@@ -36,6 +36,10 @@
 
   environment.systemPackages = with pkgs; [
     distrobox
+    
+    virglrenderer
+    virtualgl
+    pkgsi686Linux.virtualgl
   ];
 
   virtualisation.podman = {
