@@ -30,14 +30,18 @@
         zulu
       ];
     })
-    
+    (mcaselector.override {
+      jre = zulu.override {
+        enableJavaFX = true;
+      };
+    })
 
     gimp3-with-plugins
     krita
-    
+
     ffmpeg-full
     imagemagick
-    
+
     nomacs
     mpv
 
@@ -100,7 +104,6 @@
     };
   };
 
-
   services.kdeconnect = {
     enable = true;
     indicator = true;
@@ -109,13 +112,14 @@
   programs.zen-browser = {
     enable = true;
     languagePacks = [ "zh-CN" ];
-    nativeMessagingHosts = with pkgs; [ 
-      keepassxc firefoxpwa
+    nativeMessagingHosts = with pkgs; [
+      keepassxc
+      firefoxpwa
     ];
     policies = {
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
-      
+
       DisableAppUpdate = true;
       DisableFeedbackCommands = true;
       DisableFirefoxStudies = true;
@@ -123,14 +127,14 @@
       DisableTelemetry = true;
       DontCheckDefaultBrowser = false;
       DefaultDownloadDirectory = "\${home}/Downloads";
-      
+
       EnableTrackingProtection = {
         Value = true;
         Locked = true;
         Cryptomining = true;
         Fingerprinting = true;
       };
-      
+
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
       PasswordManagerEnabled = false;
