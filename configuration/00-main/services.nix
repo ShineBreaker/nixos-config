@@ -12,7 +12,7 @@
     ../services/system/hibernation.nix
     ../services/system/niri.nix
     ../services/system/nix.nix
-    ../services/system/nix-ld.nix
+    # ../services/system/nix-ld.nix
     ../services/system/others.nix
     ../services/system/plymouth.nix
     ../services/system/powerManagement.nix
@@ -36,7 +36,7 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    
+
   ];
 
 }
