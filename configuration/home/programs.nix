@@ -41,6 +41,8 @@
 
     ffmpeg-full
     imagemagick
+    
+    varia
 
     nomacs
     mpv
