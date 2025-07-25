@@ -52,7 +52,6 @@
       intel-media-driver
       intel-vaapi-driver
       vpl-gpu-rt
-      intel-media-sdk
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [ intel-vaapi-driver ];
   };
