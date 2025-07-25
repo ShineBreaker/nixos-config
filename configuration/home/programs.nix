@@ -39,7 +39,7 @@
     gimp3-with-plugins
     inkscape-with-extensions
 
-    ffmpeg-full
+    ffmpeg
     imagemagick
     
     varia

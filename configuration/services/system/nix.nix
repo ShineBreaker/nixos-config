@@ -2,6 +2,7 @@
 {
   nixpkgs.config = {
     allowUnfree = true;
+    allowBroken = true;
   };
 
   nix = {

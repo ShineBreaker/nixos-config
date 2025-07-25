@@ -4,7 +4,6 @@
     git
     fastfetch
     uv
-    isd
     gcc
 
     unzip
