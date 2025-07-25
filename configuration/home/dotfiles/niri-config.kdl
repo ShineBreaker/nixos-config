@@ -99,6 +99,7 @@ window-rule {
     match app-id="waypaper"
     match app-id=r#".*\.exe$"#
     match app-id="QtScrcpy"
+    match app-id="xdg-desktop-portal-gtk"
     open-floating true
 }
 
