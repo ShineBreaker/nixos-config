@@ -37,7 +37,7 @@
     })
 
     gimp3-with-plugins
-    krita
+    inkscape-with-extensions
 
     ffmpeg-full
     imagemagick
