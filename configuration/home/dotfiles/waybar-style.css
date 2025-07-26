@@ -1,7 +1,7 @@
 * {
     font-family: "NotoSans Nerd Font Propo";
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
 
     border-radius: 16px;
     text-shadow: none;
@@ -21,17 +21,17 @@ window#waybar.hidden {
 
 .modules-left {
     background-color: rgba(32, 32, 32, 0.75);
-    padding: 12px 3px;
+    padding: 12px 6px;
 }
 
 .modules-center {
     background-color: rgba(32, 32, 32, 0.75);
-    padding: 12px 3px;
+    padding: 12px 6px;
 }
 
 .modules-right {
     background-color: rgba(32, 32, 32, 0.75);
-    padding: 12px 3px;
+    padding: 12px 6px;
 }
 
 #custom-lock,
