@@ -1,9 +1,9 @@
 * {
     font-family: "NotoSans Nerd Font Propo";
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: normal;
+    font-size: 14px;
 
-    border-radius:24px;
+    border-radius: 16px;
     text-shadow: none;
     
     transition-property: background;
@@ -12,151 +12,71 @@
 
 window#waybar {
     background-color: transparent;
+
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-#clock,
+.modules-left {
+    background-color: rgba(32, 32, 32, 0.75);
+    padding: 12px 3px;
+}
+
+.modules-center {
+    background-color: rgba(32, 32, 32, 0.75);
+    padding: 12px 3px;
+}
+
+.modules-right {
+    background-color: rgba(32, 32, 32, 0.75);
+    padding: 12px 3px;
+}
+
+#custom-lock,
+#custom-poweroff,
+#custom-reboot,
+
+#custom-search,
+
+#workspaces button,
+
+#tray,
+#backlight,
+#battery,
 #cpu,
 #memory,
 #network,
 #wireplumber,
-#tray,
-#window,
-#battery,
-#custom-lock,
-#custom-poweroff,
-#custom-reboot,
-#custom-search,
-#custom-clipboard,
-#backlight,
-#taskbar,
-
-#battery {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #93abbe;
-    background-color: rgba(32, 32, 32, 0.6);
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > * {
+#clock
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
     margin-left: 12px;
+    padding: 5px 2px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > * {
-    margin-right: 12px;
-}
+#battery { color: #93abbe; }
 
-#clock {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #eefff1;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#clock { color: #eefff1; }
 
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #FE968B;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#cpu { color: #FE968B; }
 
-#backlight {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #FFD700;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#backlight { color: #FFD700;}
 
-#memory {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #FFEAAA;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#memory { color: #FFEAAA; }
 
-#wireplumber {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #b0f5e5;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#wireplumber { color: #b0f5e5; }
 
-#network {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    color: #8eb1f2;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#network { color: #8eb1f2; }
 
-#tray {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#custom-lock { color: #B5E8E0; }
 
-#taskbar {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#custom-poweroff { color: #df6a76; }
 
-#window {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    font-family: 'Sarasa Mono SC', sans-serif;
-    font-weight: 400;
-    color: #cbecff;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#custom-reboot { color: #e8c55d; }
 
-#custom-lock {
-	color: #B5E8E0;
-    background-color: rgba(32, 32, 32, 0.6);
-}
+#custom-search { color: #ffffff; }
 
-#custom-poweroff {
-	color: #df6a76;
-    background-color: rgba(32, 32, 32, 0.6);
-}
-
-#custom-reboot {
-	color: #e8c55d;
-    background-color: rgba(32, 32, 32, 0.6);
-}
-
-
-#custom-search {
-	color: #ffffff;
-    background-color: rgba(32, 32, 32, 0.6);
-}
-
-#custom-clipboard {
-	color: #68de97;
-    background-color: rgba(32, 32, 32, 0.6);
-}
 

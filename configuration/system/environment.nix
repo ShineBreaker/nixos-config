@@ -1,8 +1,9 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    git
     fastfetch
+    git
+    uv
 
     unzip
     unrar

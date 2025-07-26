@@ -41,8 +41,6 @@
 
     ffmpeg
     imagemagick
-    
-    varia
 
     nomacs
     mpv
@@ -50,6 +48,7 @@
     coppwr
     mission-center
     qtscrcpy
+    varia
 
     qq
     wechat-uos
@@ -59,6 +58,7 @@
     onlyoffice-desktopeditors
     lapce
     nil
+    yazi
 
     adwaita-icon-theme
   ];
