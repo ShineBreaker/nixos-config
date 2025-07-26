@@ -3,8 +3,6 @@
   environment.systemPackages = with pkgs; [
     git
     fastfetch
-    uv
-    gcc
 
     unzip
     unrar
