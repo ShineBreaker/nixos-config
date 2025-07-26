@@ -93,6 +93,11 @@ layer-rule {
     block-out-from "screencast"
 }
 
+layer-rule {
+    match namespace="niriswitcher"
+    shadow { off; }
+}
+
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {

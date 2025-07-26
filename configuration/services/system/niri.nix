@@ -13,7 +13,6 @@
     wl-clipboard
     
     xwayland-satellite-unstable
-    crystal-dock
 
     nemo-with-extensions
     peazip
