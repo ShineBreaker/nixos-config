@@ -15,14 +15,10 @@
       source = "${config.home.path}/share/themes";
       target = ".themes";
     };
+    
     theme2 = {
       source = "${config.home.path}/share/themes";
       target = ".local/share/themes";
-    };
-
-    icon = {
-      source = "${config.home.path}/share/icons";
-      target = ".icons";
     };
   };
 }
