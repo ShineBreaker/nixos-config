@@ -46,7 +46,7 @@
     name = "Bibata-Modern-Classic";
     size = 26;
     
-    dotIcons.enable = false;
+    dotIcons.enable = true;
     gtk.enable = true;
     x11 = {
       enable = true;

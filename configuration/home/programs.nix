@@ -38,6 +38,7 @@
 
     gimp3-with-plugins
     inkscape-with-extensions
+    openshot-qt
 
     ffmpeg
     imagemagick
@@ -56,10 +57,12 @@
     thunderbird
 
     onlyoffice-desktopeditors
-    lapce
-    nil
     yazi
 
+    lapce
+    nil
+    biome
+    
     adwaita-icon-theme
   ];
 
