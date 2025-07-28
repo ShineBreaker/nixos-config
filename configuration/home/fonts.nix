@@ -12,7 +12,10 @@
         "NotoSans Nerd Font"
       ];
       monospace = [ "Maple Mono NF CN" ];
-      emoji = [ "Noto Color Emoji" "Blobmoji" ];
+      emoji = [
+        "Noto Color Emoji"
+        "Blobmoji"
+      ];
     };
   };
 }

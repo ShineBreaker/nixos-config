@@ -9,7 +9,7 @@
     pwvucontrol
     brightnessctl
     wl-clipboard
-    
+
     xwayland-satellite-unstable
 
     nemo-with-extensions
@@ -52,7 +52,7 @@
       enable = true;
       settings = {
         default = [
-          "foot.desktop"
+          "kitty.desktop"
         ];
       };
     };

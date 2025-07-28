@@ -2,6 +2,7 @@
   pkgs,
   ...
 }:
+
 {
   # imports = [ ./pci-passthrough.nix ];
   virtualisation.spiceUSBRedirection.enable = true;
@@ -36,7 +37,7 @@
 
   environment.systemPackages = with pkgs; [
     distrobox_git
-    
+
     virglrenderer
     virtualgl
     pkgsi686Linux.virtualgl

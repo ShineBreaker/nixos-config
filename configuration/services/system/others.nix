@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ ... }:
 {
   programs = {
     adb.enable = true;
@@ -9,9 +9,9 @@
     };
     zoxide.enable = true;
   };
-  
+
   documentation.nixos.enable = false;
-  
+
   xdg = {
     portal.enable = true;
     icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];

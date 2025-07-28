@@ -1,6 +1,4 @@
 {
-  config,
-  pkgs,
   lib,
   ...
 }:
@@ -30,7 +28,7 @@
       data = lib.mkForce "";
       before = lib.mkForce [ ];
       after = lib.mkForce [ ];
-    }; 
+    };
   };
-  
+
 }

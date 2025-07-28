@@ -48,7 +48,6 @@
     coppwr
     mission-center
     qtscrcpy
-    varia
 
     qq
     wechat-uos
@@ -60,7 +59,7 @@
     lapce
     nil
     biome
-    
+
     adwaita-icon-theme
   ];
 
@@ -75,8 +74,6 @@
   };
 
   programs.keepassxc.enable = true;
-
-  services.pass-secret-service.enable = true;
 
   programs.helix = {
     enable = true;
@@ -159,7 +156,7 @@
   };
 
   programs.firefoxpwa.enable = true;
-  
+
   programs.kitty = {
     enable = true;
     enableGitIntegration = true;

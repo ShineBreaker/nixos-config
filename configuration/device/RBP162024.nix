@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -32,7 +30,7 @@
   environment.systemPackages = with pkgs; [
     bluez
     blueman
-    
+
     sof-firmware
   ];
 
@@ -58,5 +56,6 @@
 
   boot.kernelParams = [
     "acpi_backlight=native"
+    "intel_iommu=on"
   ];
 }

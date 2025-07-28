@@ -55,7 +55,7 @@
       };
     };
   };
-  
+
   services.mako = {
     enable = true;
     settings = {
@@ -88,9 +88,9 @@
       };
     };
   };
-  
+
   services.polkit-gnome.enable = true;
-  
+
   programs.niriswitcher = {
     enable = true;
     settings = {
@@ -107,6 +107,5 @@
       };
     };
   };
-    
-  
+
 }

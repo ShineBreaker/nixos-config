@@ -1,7 +1,7 @@
-{ 
-  lib, 
-  pkgs, 
-  ... 
+{
+  lib,
+  pkgs,
+  ...
 }:
 
 {
@@ -20,13 +20,12 @@
       interval = "weekly";
     };
 
-    scx ={
+    scx = {
       enable = false;
       package = pkgs.scx_git.full;
       scheduler = "scx_rusty";
     };
-    
-    dbus.apparmor = "enabled";
+
     xserver.excludePackages = [ pkgs.xterm ];
     flatpak.enable = true;
 

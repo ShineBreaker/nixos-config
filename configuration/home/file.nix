@@ -1,7 +1,5 @@
 {
   config,
-  pkgs,
-  lib,
   ...
 }:
 {
@@ -15,7 +13,7 @@
       source = "${config.home.path}/share/themes";
       target = ".themes";
     };
-    
+
     theme2 = {
       source = "${config.home.path}/share/themes";
       target = ".local/share/themes";

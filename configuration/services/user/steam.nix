@@ -2,6 +2,7 @@
   pkgs,
   ...
 }:
+
 {
   environment.systemPackages = with pkgs; [ steam-run ];
 
@@ -26,7 +27,8 @@
       "--borderless"
       "--backend auto"
       "--force-grab-cursor"
-      "-W 3072" "-H 1920"
+      "-W 3072"
+      "-H 1920"
     ];
   };
 

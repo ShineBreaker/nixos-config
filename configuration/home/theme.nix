@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   gtk = {
     enable = true;
@@ -39,13 +39,13 @@
       gtk-xft-hintstyle = "hintfull";
     };
   };
-  
+
   home.pointerCursor = {
     enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 26;
-    
+
     dotIcons.enable = true;
     gtk.enable = true;
     x11 = {
