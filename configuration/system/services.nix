@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ 
+  lib, 
+  pkgs, 
+  ... 
+}:
+
 {
   services = {
     pipewire = lib.mkForce {
@@ -15,6 +20,12 @@
       interval = "weekly";
     };
 
+    scx ={
+      enable = true;
+      package = pkgs.scx_git.full;
+      scheduler = "scx_rusty";
+    };
+    
     dbus.apparmor = "enabled";
     xserver.excludePackages = [ pkgs.xterm ];
     flatpak.enable = true;

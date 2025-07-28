@@ -29,7 +29,11 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -41,6 +45,7 @@
       nix-index-database,
       niri-flake,
       zen-browser, 
+      chaotic,
       ...
     }:
 
@@ -114,7 +119,12 @@
               programs.nix-index.enable = true;
               programs.nix-index-database.comma.enable = true;
             }
-
+            
+            chaotic.nixosModules.default
+            {
+              chaotic.mesa-git.enable = true;
+            }
+            
             genRev
           ];
         };

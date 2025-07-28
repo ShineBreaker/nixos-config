@@ -1,23 +1,9 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
 {
-  programs.alacritty = {
-    enable = true;
-    theme = "tokyo_night";
-    settings = {
-      window.decorations = "None";
-      window.opacity = 0.8;
-      window.blur = true;
-
-      cursor.style = "Beam";
-    };
-  };
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;

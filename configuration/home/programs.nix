@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   pkgs,
   ...
@@ -9,7 +8,7 @@
   home.packages = with pkgs; [
     protonup-rs
     protontricks
-    mangohud
+    mangohud_git
     mangojuice
 
     heroic
@@ -82,6 +81,7 @@
 
   programs.helix = {
     enable = true;
+    package = pkgs.helix_git;
     settings = {
       theme = "tokyonight_transparent";
       editor.cursor-shape = {
@@ -160,4 +160,20 @@
   };
 
   programs.firefoxpwa.enable = true;
+  
+  programs.kitty = {
+    enable = true;
+    enableGitIntegration = true;
+    font = {
+      package = pkgs.maple-mono.NF-CN;
+      name = "Maple Mono NF CN";
+      size = 11;
+    };
+    themeFile = "tokyo_night_night";
+    settings = {
+      cursor_shape = "beam";
+      background_opacity = 0.8;
+      background_blur = 10;
+    };
+  };
 }

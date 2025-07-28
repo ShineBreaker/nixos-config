@@ -35,7 +35,7 @@
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   environment.systemPackages = with pkgs; [
-    distrobox
+    distrobox_git
     
     virglrenderer
     virtualgl

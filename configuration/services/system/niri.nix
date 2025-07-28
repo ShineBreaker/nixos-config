@@ -1,6 +1,4 @@
 {
-  config,
-  home, 
   pkgs,
   lib,
   ...
@@ -54,7 +52,7 @@
       enable = true;
       settings = {
         default = [
-          "Alacritty.desktop"
+          "foot.desktop"
         ];
       };
     };

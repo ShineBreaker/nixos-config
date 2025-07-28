@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 {
@@ -15,13 +13,15 @@
     gamescopeSession.enable = true;
 
     extraPackages = with pkgs; [
-      mangohud
+      mangohud_git
+      proton-cachyos_x86_64_v3
       zulu8
     ];
   };
 
   programs.gamescope = {
     enable = true;
+    package = pkgs.gamescope_git;
     args = [
       "--borderless"
       "--backend auto"

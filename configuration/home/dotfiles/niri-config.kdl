@@ -120,7 +120,7 @@ window-rule {
 
 workspace "Code"
 window-rule {
-    match app-id="Alacritty"
+    match app-id="kitty"
     match title=r#".*Lapce$"#
     
     open-on-workspace "Code"
@@ -163,20 +163,17 @@ window-rule {
     match app-id="gimp"
     match app-id="krita"
     
-    match title=r#".*Lapce$"#
-    match app-id=r#"steam_app*."#
+    match title=r#".*Lapce$"#  
+
     open-maximized true
 }
 
 window-rule {
     match app-id="waydroid"
     match app-id=".gamescope-wrapped"
+    match app-id=r#"steam_app*."#
+    
     open-fullscreen true
-}
-
-window-rule {
-    match app-id="Alacritty"
-    default-column-width { proportion 0.5; }
 }
 
 window-rule {
@@ -197,7 +194,7 @@ binds {
     Mod+Shift+V     hotkey-overlay-title="将wayland的剪切板的内容复制到xorg中" { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
     Mod+Ctrl+R      hotkey-overlay-title="随机壁纸"                            { spawn "waypaper" "--random"; }
 
-    Mod+T        hotkey-overlay-title="打开终端"    repeat=false  { spawn "alacritty"; }
+    Mod+T        hotkey-overlay-title="打开终端"    repeat=false  { spawn "kitty"; }
     Mod+D        hotkey-overlay-title="打开搜索"    repeat=false  { spawn "fuzzel"; }
     Mod+Escape   hotkey-overlay-title="总览"        repeat=false  { toggle-overview; }
     Super+Alt+L  hotkey-overlay-title="锁屏"        repeat=false  { spawn "gtklock"; }

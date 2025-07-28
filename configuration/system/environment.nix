@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     git
+    isd
     uv
 
     unzip

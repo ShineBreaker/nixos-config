@@ -7,7 +7,7 @@
  - 使用`Fish`作为Shell，使用`Lanzaboote`来提供Secure Boot支持
  - 桌面环境为`Niri`，使用`Greetd`搭配`TuiGreeter`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`Peazip`，默认的输入法为`Fcitx5+Rime`
  - 默认使用`Orchis`主题，`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
- - 内置了几个蛮好用的TUI小工具，比如说`Btop`
+ - 内置了几个蛮好用的TUI小工具，比如说管理任务用的`Btop`和管理Proton用的`protonup-rs`
  - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解。
 
 #### 注意事项：
