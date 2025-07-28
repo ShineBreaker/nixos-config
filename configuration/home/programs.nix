@@ -80,7 +80,7 @@
 
   programs.helix = {
     enable = true;
-    package = pkgs.helix_git;
+    # package = pkgs.helix_git;
     settings = {
       theme = "tokyonight_transparent";
       editor.cursor-shape = {
