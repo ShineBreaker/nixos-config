@@ -56,7 +56,6 @@
     thunderbird
 
     onlyoffice-desktopeditors
-    yazi
 
     lapce
     nil
