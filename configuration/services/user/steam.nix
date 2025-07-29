@@ -15,8 +15,10 @@
 
     extraPackages = with pkgs; [
       mangohud_git
-      proton-cachyos_x86_64_v3
       zulu8
+    ];
+    extraCompatPackages = with pkgs; [
+      proton-cachyos_x86_64_v3
     ];
   };
 
