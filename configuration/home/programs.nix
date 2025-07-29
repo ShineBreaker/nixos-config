@@ -6,6 +6,7 @@
 
 {
   home.packages = with pkgs; [
+    proton-cachyos_x86_64_v3
     protonup-rs
     protontricks
     mangohud_git
