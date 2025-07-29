@@ -58,7 +58,7 @@
     onlyoffice-desktopeditors
 
     lapce
-    nil
+    nixd
     biome
 
     adwaita-icon-theme
