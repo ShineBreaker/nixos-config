@@ -51,7 +51,7 @@
     qtscrcpy
 
     qq
-    wechat-uos
+    wechat
     telegram-desktop
     thunderbird
 
