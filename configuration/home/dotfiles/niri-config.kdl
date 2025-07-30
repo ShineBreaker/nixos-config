@@ -172,7 +172,7 @@ window-rule {
 
 window-rule {
     match app-id="waydroid"
-    match app-id=".gamescope-wrapped"
+    match app-id="gamescope"
     match app-id=r#"steam_app*."#
     
     open-fullscreen true
