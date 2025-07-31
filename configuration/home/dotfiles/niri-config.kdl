@@ -142,6 +142,7 @@ window-rule {
     match app-id=".gamescope-wrapped"
     match app-id="org.prismlauncher.PrismLauncher"
     match app-id="steam"
+    match app-id="heroic"
     match app-id=r#"steam_app*."#
     match app-id="osu!"
     
@@ -154,6 +155,7 @@ window-rule {
     match app-id=r#".*\.exe$"#
     match app-id="QtScrcpy"
     match app-id="xdg-desktop-portal-gtk"
+    match app-id="org.gnome.FileRoller"
     open-floating true
 }
 

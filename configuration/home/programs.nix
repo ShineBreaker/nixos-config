@@ -12,15 +12,21 @@
     mangohud_git
     mangojuice
 
-    heroic
-    # (hmcl.override {
-    #   hmclJdk = zulu17;
-    #   minecraftJdks = [
-    #     graalvm-ce
-    #     zulu8
-    #     zulu
-    #   ];
-    # })
+    (heroic.override {
+      extraPkgs = pkgs: [
+        pkgs.proton-cachyos_x86_64_v3
+      ];
+    })
+
+    (hmcl.override {
+      hmclJdk = zulu17;
+      minecraftJdks = [
+        graalvm-ce
+        zulu8
+        zulu
+      ];
+    })
+
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
       jdks = [
@@ -30,6 +36,7 @@
         zulu
       ];
     })
+
     (mcaselector.override {
       jre = zulu.override {
         enableJavaFX = true;
@@ -51,7 +58,7 @@
     qtscrcpy
 
     qq
-    wechat
+    # wechat
     telegram-desktop
     thunderbird
 
