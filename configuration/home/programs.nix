@@ -45,7 +45,6 @@
 
     gimp3-with-plugins
     inkscape-with-extensions
-    openshot-qt
 
     ffmpeg
     imagemagick
@@ -85,7 +84,6 @@
 
   programs.helix = {
     enable = true;
-    package = pkgs.helix_git;
     settings = {
       theme = "tokyonight_transparent";
       editor.cursor-shape = {
