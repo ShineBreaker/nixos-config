@@ -48,6 +48,7 @@
 
     ffmpeg
     imagemagick
+    lazygit
 
     nomacs
     mpv
@@ -116,9 +117,8 @@
     indicator = true;
   };
 
-  programs.firefox = {
+  programs.zen-browser = {
     enable = true;
-    package = pkgs.firedragon;
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc

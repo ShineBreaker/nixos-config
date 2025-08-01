@@ -2,9 +2,12 @@
   description = "self-using configuration.";
 
   inputs = {
-
     nixpkgs.url = "nixpkgs/nixos-unstable";
-
+    
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    };
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,7 +17,7 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+        
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,20 +28,23 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
     {
-      self,
-      nixpkgs,
+      chaotic,
+
       home-manager,
       lanzaboote,
-      nix-index-database,
       niri-flake,
-      chaotic,
+      nix-index-database,
+      nixpkgs,
+      self,
+      zen-browser,
       ...
     }:
 
@@ -100,6 +106,8 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
+                zen-browser.homeModules.beta
+                
                 ./configuration/00-main/home.nix
               ];
 
