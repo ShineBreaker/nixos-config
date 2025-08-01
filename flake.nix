@@ -25,11 +25,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
@@ -43,7 +38,6 @@
       lanzaboote,
       nix-index-database,
       niri-flake,
-      zen-browser, 
       chaotic,
       ...
     }:
@@ -107,7 +101,6 @@
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
                 ./configuration/00-main/home.nix
-                zen-browser.homeModules.default
               ];
 
               home-manager.backupFileExtension = "backup";

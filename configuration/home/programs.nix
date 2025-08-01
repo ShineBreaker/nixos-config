@@ -18,14 +18,14 @@
       ];
     })
 
-    (hmcl.override {
-      hmclJdk = zulu17;
-      minecraftJdks = [
-        graalvm-ce
-        zulu8
-        zulu
-      ];
-    })
+    # (hmcl.override {
+    #   hmclJdk = zulu17;
+    #   minecraftJdks = [
+    #     graalvm-ce
+    #     zulu8
+    #     zulu
+    #   ];
+    # })
 
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
@@ -116,8 +116,9 @@
     indicator = true;
   };
 
-  programs.zen-browser = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.firedragon;
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc
