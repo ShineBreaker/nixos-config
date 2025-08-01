@@ -4,6 +4,7 @@
     fastfetch
     git
     uv
+    gcc
 
     unzip
     unrar
