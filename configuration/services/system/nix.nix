@@ -6,7 +6,7 @@
   };
 
   nix = {
-    package = pkgs.lixPackageSets.git.lix;
+    package = pkgs.lixPackageSets.latest.lix;
     gc = {
       automatic = true;
       dates = "daily";
