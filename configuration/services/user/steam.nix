@@ -34,21 +34,21 @@
     ];
   };
 
-  programs.gamemode = {
-    enable = true;
-    settings = {
-      general = {
-        renice = 10;
-        desiredgov = "performance";
-      };
-      custom = {
-        start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启'";
-        end = "${pkgs.libnotify}/bin/notify-send '游戏模式已关闭'";
-      };
-    };
-  };
+  # programs.gamemode = {
+  #   enable = true;
+  #   settings = {
+  #     general = {
+  #       renice = 10;
+  #       desiredgov = "performance";
+  #     };
+  #     custom = {
+  #       start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启'";
+  #       end = "${pkgs.libnotify}/bin/notify-send '游戏模式已关闭'";
+  #     };
+  #   };
+  # };
 
-  users.users.brokenshine.extraGroups = [ "gamemode" ];
+  # users.users.brokenshine.extraGroups = [ "gamemode" ];
 
   hardware.steam-hardware.enable = true;
 
