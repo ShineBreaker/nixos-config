@@ -1,5 +1,4 @@
 { 
-  lib, 
   ... 
 }:
 
@@ -10,7 +9,4 @@
     enableExtraSocket = true;
     enableBrowserSocket = true;
   };
-  
-  services.gnome.gnome-keyring.enable = lib.mkForce false;
-
 }

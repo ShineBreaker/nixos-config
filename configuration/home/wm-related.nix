@@ -89,8 +89,6 @@
     };
   };
 
-  services.polkit-gnome.enable = true;
-
   programs.niriswitcher = {
     enable = true;
     settings = {

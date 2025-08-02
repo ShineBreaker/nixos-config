@@ -72,10 +72,16 @@
             ./configuration/device/RBP162024.nix
             
             niri-flake.nixosModules.niri
-            {
-              niri-flake.cache.enable = true;
-              nixpkgs.overlays = [ niri-flake.overlays.niri ];
-            }
+            ( 
+              { lib, ... }:
+              {
+                niri-flake.cache.enable = true;
+                nixpkgs.overlays = [ niri-flake.overlays.niri ];
+              
+                # Shit niri-flake.
+                services.gnome.gnome-keyring.enable = lib.mkForce false;
+              }
+            )
 
             lanzaboote.nixosModules.lanzaboote
             (
