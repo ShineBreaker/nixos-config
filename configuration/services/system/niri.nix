@@ -40,7 +40,6 @@
         niri = {
           default = [ "gnome" ];
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-          "org.freedesktop.impl.portal.Secret" = [ "libsecret" ];
         };
       };
       extraPortals = [

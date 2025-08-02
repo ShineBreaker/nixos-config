@@ -105,7 +105,8 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
-                zen-browser.homeModules.beta
+                zen-browser.homeModules.default
+                
                 ./configuration/00-main/home.nix
               ];
 

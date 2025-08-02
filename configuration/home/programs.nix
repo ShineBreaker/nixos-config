@@ -80,6 +80,7 @@
       wlrobs
     ];
   };
+  
   services.pass-secret-service.enable = true;
   programs.keepassxc.enable = true;
 
@@ -124,6 +125,7 @@
       keepassxc
       firefoxpwa
     ];
+    
     policies = {
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
