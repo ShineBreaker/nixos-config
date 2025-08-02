@@ -1,4 +1,8 @@
-{ ... }:
+{ 
+  lib, 
+  ... 
+}:
+
 {
   programs.gnupg.agent = {
     enable = true;
@@ -6,8 +10,7 @@
     enableExtraSocket = true;
     enableBrowserSocket = true;
   };
+  
+  services.gnome.gnome-keyring.enable = lib.mkForce false;
 
-  security.pam.services.brokenshine.enableGnomeKeyring = true;
-
-  services.passSecretService.enable = true;
 }

@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ 
+  pkgs, 
+  ... 
+}:
+
 {
   environment.systemPackages = with pkgs; [
     fastfetch
@@ -11,6 +15,7 @@
     p7zip
 
     bibata-cursors
+    adwaita-icon-theme
   ];
 
   environment.localBinInPath = true;

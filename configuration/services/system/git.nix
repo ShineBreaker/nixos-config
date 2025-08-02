@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ 
+  pkgs, 
+  ... 
+}:
+
 {
   environment.systemPackages = [
     pkgs.git-credential-keepassxc

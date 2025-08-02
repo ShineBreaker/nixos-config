@@ -22,7 +22,6 @@
     ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
-    # ../services/user/mako.nix
     ../services/user/poweralertd.nix
     ../services/user/qt6ct.nix
     # ../services/user/sparkle.nix
@@ -36,7 +35,7 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    # "intel-media-sdk-23.2.2"
+
   ];
 
 }

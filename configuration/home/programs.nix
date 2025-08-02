@@ -80,7 +80,7 @@
       wlrobs
     ];
   };
-
+  services.pass-secret-service.enable = true;
   programs.keepassxc.enable = true;
 
   programs.helix = {

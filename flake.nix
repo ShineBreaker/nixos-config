@@ -37,7 +37,6 @@
   outputs =
     {
       chaotic,
-
       home-manager,
       lanzaboote,
       niri-flake,
@@ -107,7 +106,6 @@
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
                 zen-browser.homeModules.beta
-                
                 ./configuration/00-main/home.nix
               ];
 
