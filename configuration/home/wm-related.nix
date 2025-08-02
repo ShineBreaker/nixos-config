@@ -86,6 +86,10 @@
         default-timeout = 2000;
         group-by = "category";
       };
+      
+      "mode=do-not-disturb" = {
+        invisible = 1;
+      };
     };
   };
 

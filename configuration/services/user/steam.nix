@@ -41,8 +41,8 @@
         desiredgov = "performance";
       };
     custom = {
-        start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启'";
-        end = "${pkgs.libnotify}/bin/notify-send '游戏模式已关闭'";
+        start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启' && ${pkgs.mako}/bin/makoctl mode -a do-not-disturb";
+        end = "${pkgs.mako}/bin/makoctl mode -r do-not-disturb && ${pkgs.libnotify}/bin/notify-send '游戏模式已关闭'";
       };
     };
   };
