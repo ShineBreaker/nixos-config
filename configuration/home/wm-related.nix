@@ -47,7 +47,7 @@
         selection-text = "ffffffff";
         selection-match = "f7768eff";
 
-        border = "#00897Bff";
+        border = "4791dbff";
       };
       border = {
         width = "6";
@@ -62,14 +62,14 @@
       anchor = "top-right";
       sort = "-time";
       layer = "overlay";
-      background-color = "#ffffff95";
+      background-color = "#ffffffcc";
       width = 300;
       height = 500;
       padding = 10;
       margin = "10,10,10,10";
-      border-size = 6;
-      border-color = "#00897B";
-      border-radius = 28;
+      border-size = 4;
+      border-color = "#4791db";
+      border-radius = 16;
       font = "Sans 10";
       text-color = "#000000";
       icons = 1;
