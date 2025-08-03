@@ -19,10 +19,10 @@
       };
 
       "org/gnome/desktop/applications/terminal" = {
-        exec = "alacritty";
+        exec = "kitty";
       };
       "org/cinnamon/desktop/applications/terminal" = {
-        exec = "alacritty";
+        exec = "kitty";
       };
     };
   };
