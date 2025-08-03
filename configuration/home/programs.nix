@@ -87,7 +87,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "tokyonight_transparent";
+      theme = "tokyonight_light_transparent";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -102,8 +102,8 @@
       }
     ];
     themes = {
-      tokyonight_transparent = {
-        "inherits" = "tokyonight";
+      tokyonight_light_transparent = {
+        "inherits" = "tokyonight_day";
         "ui.background" = { };
         "ui.text" = { };
         "ui.help" = { };
@@ -174,10 +174,10 @@
       name = "Maple Mono NF CN";
       size = 11;
     };
-    themeFile = "tokyo_night_night";
+    themeFile = "tokyo_night_day";
     settings = {
       cursor_shape = "beam";
-      background_opacity = 0.8;
+      background_opacity = 0.95;
       background_blur = 10;
     };
   };

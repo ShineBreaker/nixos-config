@@ -8,11 +8,11 @@
     enable = true;
     iconTheme = {
       package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
+      name = "Papirus";
     };
     theme = {
       package = pkgs.orchis-theme;
-      name = "Orchis-Teal-Dark";
+      name = "Orchis-Teal";
     };
     font = {
       package = pkgs.noto-fonts-cjk-sans;

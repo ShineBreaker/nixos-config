@@ -12,7 +12,7 @@
       };
 
       "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
+        color-scheme = "prefer-light";
         document-font-name = "Maple Mono NF CN 11";
         monospace-font-name = "Maple Mono NF CN 11";
         accent-color = "teal";

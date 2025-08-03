@@ -36,18 +36,18 @@
         terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {
-        background = "2c2c2ccc";
+        background = "ffffffcc";
 
-        text = "ffffffff";
-        prompt = "4db6acff";
-        input = "4db6acff";
-        match = "f3777cff";
+        text = "000000ff";
+        prompt = "0f4b6eff";
+        input = "343B58ff";
+        match = "8c4351ff";
 
-        selection = "383838cc";
-        selection-text = "8fc3a2ff";
-        selection-match = "f58e92ff";
+        selection = "343b58cc";
+        selection-text = "ffffffff";
+        selection-match = "f7768eff";
 
-        border = "#7fc8ffff";
+        border = "#00897Bff";
       };
       border = {
         width = "6";
@@ -62,17 +62,18 @@
       anchor = "top-right";
       sort = "-time";
       layer = "overlay";
-      background-color = "#32323295";
+      background-color = "#ffffff95";
       width = 300;
       height = 500;
       padding = 10;
       margin = "10,10,10,10";
-      border-size = 0;
-      border-color = "#285577";
-      border-radius = 5;
+      border-size = 6;
+      border-color = "#00897B";
+      border-radius = 28;
       font = "Sans 10";
+      text-color = "#000000";
       icons = 1;
-      icon-path = "~/.nix-profile/share/icons/Papirus-Dark";
+      icon-path = "~/.nix-profile/share/icons/Papirus";
       max-icon-size = 64;
       default-timeout = 5000;
       ignore-timeout = 1;
@@ -104,7 +105,7 @@
         };
       };
       appearance = {
-        system_theme = "dark";
+        system_theme = "light";
         icon_size = 48;
       };
     };
