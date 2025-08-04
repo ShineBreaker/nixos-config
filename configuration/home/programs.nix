@@ -177,7 +177,7 @@
     themeFile = "tokyo_night_day";
     settings = {
       cursor_shape = "beam";
-      background_opacity = 0.95;
+      background_opacity = 0.8;
       background_blur = 10;
     };
   };

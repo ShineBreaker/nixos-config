@@ -19,17 +19,17 @@ window#waybar.hidden  {
 }
  
 .modules-left {
-    background-color: rgba(255, 255, 255, 0.85); /* 提高不透明度增强背景 */
+    background-color: rgba(255, 255, 255, 0.8); /* 提高不透明度增强背景 */
     padding: 12px 6px;
 }
  
 .modules-center {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 12px 6px;
 }
  
 .modules-right {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 12px 6px;
 }
  
@@ -52,17 +52,15 @@ window#waybar.hidden  {
     margin-left: 12px;
     padding: 5px 2px;
 }
- 
-/* ========== 颜色修正 ========== */
-/* 原始浅色 -> 修正后深色（保持色相，提高对比度）*/
-#battery { color: #2c5a7a; }       /* 原 #7a9ab0 -> 深海蓝 */
-#clock { color: #222222; }          /* 原 #000000 -> 深灰（避免纯黑刺眼）*/
-#cpu { color: #c0392b; }            /* 原 #e57368 -> 深红 */
-#backlight { color: #b8860b; }      /* 原 #e6b800 -> 暗金 */
-#memory { color: #b6953c; }         /* 原 #f0d07a -> 橄榄金 */
-#wireplumber { color: #2a796d; }    /* 原 #80c9bc -> 深青 */
-#network { color: #3a6bc7; }        /* 原 #6e96d8 -> 宝石蓝 */
-#custom-lock { color: #2a796d; }    /* 原 #8bc9bf -> 深青（同音量）*/
-#custom-poweroff { color: #a83246; }/* 原 #c95563 -> 酒红 */
-#custom-reboot { color: #b8860b; }  /* 原 #d4ab40 -> 暗金（同背光）*/
-#custom-search { color: #5e5e5e; }  /* 原 #e0e0e0 -> 中灰（重要修正）*/
+
+#battery { color: #00b8a9; }
+#clock { color: #222222; }
+#cpu { color: #c0392b; }
+#backlight { color: #ff7c38; }
+#memory { color: #f8b195; }
+#wireplumber { color: #2a796d; }
+#network { color: #3a6bc7; }
+#custom-lock { color: #2a796d; }
+#custom-poweroff { color: #f06868; }
+#custom-reboot { color: #ffaa64; }
+#custom-search { color: #5e5e5e; }
