@@ -136,7 +136,7 @@
     	"format" : "",
         "tooltip": true,
         "tooltip-format": "锁定",
-        "on-click": "gtklock",
+        "on-click": "niri msg action power-off-monitors && gtklock -d",
     },
 
     "custom/poweroff": {

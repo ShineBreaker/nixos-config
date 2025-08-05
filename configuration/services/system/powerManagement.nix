@@ -36,4 +36,13 @@
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-rules-cachyos_git;
   };
+    
+  services.logind = {
+    lidSwitch = "suspend-then-hibernate";
+    lidSwitchExternalPower = "lock";
+    lidSwitchDocked = "ignore";
+    
+    powerKey = "lock";
+    powerKeyLongPress = "hibernate";
+  };
 }
