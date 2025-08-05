@@ -11,6 +11,11 @@
     protontricks
     mangohud_git
     mangojuice
+    (bottles-unwrapped.override {
+      removeWarningPopup = true;
+      gamescope = gamescope_git;
+      mangohud = mangohud_git;
+    })
 
     (heroic.override {
       extraPkgs = pkgs: [
@@ -45,6 +50,8 @@
 
     gimp3-with-plugins
     inkscape-with-extensions
+    kdePackages.kdenlive
+    krita
 
     ffmpeg
     imagemagick
@@ -56,9 +63,11 @@
     coppwr
     mission-center
     qtscrcpy
+    baobab
+    filezilla
 
     qq
-    # wechat
+    wechat-uos
     telegram-desktop
     thunderbird
 
@@ -80,7 +89,7 @@
       wlrobs
     ];
   };
-  
+
   services.pass-secret-service.enable = true;
   programs.keepassxc.enable = true;
 
@@ -125,7 +134,7 @@
       keepassxc
       firefoxpwa
     ];
-    
+
     policies = {
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
