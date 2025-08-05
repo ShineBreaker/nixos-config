@@ -4,6 +4,8 @@
 }:
 
 {
+  qt.platformTheme.name = "qt5ct";
+  
   gtk = {
     enable = true;
     iconTheme = {
@@ -57,4 +59,5 @@
       defaultCursor = "default";
     };
   };
+  
 }
