@@ -195,6 +195,10 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
+switch-events {
+    lid-open  { spawn "sh" "-c" "niri msg action power-on-monitors"; }
+}
+
 binds {
     Mod+Alt+Space   hotkey-overlay-title="显示提示"                            { show-hotkey-overlay; }
     Mod+Shift+C     hotkey-overlay-title="将xorg的剪切板的内容复制到wayland中" { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
