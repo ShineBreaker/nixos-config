@@ -23,14 +23,14 @@
       ];
     })
 
-    # (hmcl.override {
-    #   hmclJdk = zulu17;
-    #   minecraftJdks = [
-    #     graalvm-ce
-    #     zulu8
-    #     zulu
-    #   ];
-    # })
+    (hmcl.override {
+      hmclJdk = zulu17;
+      minecraftJdks = [
+        graalvm-ce
+        zulu8
+        zulu
+      ];
+    })
 
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
@@ -51,6 +51,7 @@
     gimp3-with-plugins
     inkscape-with-extensions
     kdePackages.kdenlive
+    openshot-qt
     krita
 
     ffmpeg
