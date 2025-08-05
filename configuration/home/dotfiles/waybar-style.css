@@ -19,17 +19,17 @@ window#waybar.hidden  {
 }
  
 .modules-left {
-    background-color: rgba(255, 255, 255, 0.8); /* 提高不透明度增强背景 */
+    background-color: rgba(32, 32, 32, 0.8);
     padding: 12px 6px;
 }
  
 .modules-center {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(32, 32, 32, 0.8);
     padding: 12px 6px;
 }
  
 .modules-right {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(32, 32, 32, 0.8);
     padding: 12px 6px;
 }
  
@@ -53,14 +53,25 @@ window#waybar.hidden  {
     padding: 5px 2px;
 }
 
-#battery { color: #00b8a9; }
-#clock { color: #222222; }
-#cpu { color: #c0392b; }
-#backlight { color: #ff7c38; }
-#memory { color: #f8b195; }
-#wireplumber { color: #2a796d; }
-#network { color: #3a6bc7; }
-#custom-lock { color: #2a796d; }
-#custom-poweroff { color: #f06868; }
-#custom-reboot { color: #ffaa64; }
-#custom-search { color: #5e5e5e; }
+
+#battery { color: #93abbe; }
+
+#clock { color: #eefff1; }
+
+#cpu { color: #FE968B; }
+
+#backlight { color: #FFD700;}
+
+#memory { color: #FFEAAA; }
+
+#wireplumber { color: #b0f5e5; }
+
+#network { color: #8eb1f2; }
+
+#custom-lock { color: #B5E8E0; }
+
+#custom-poweroff { color: #df6a76; }
+
+#custom-reboot { color: #e8c55d; }
+
+#custom-search { color: #ffffff; }

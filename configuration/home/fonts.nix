@@ -7,12 +7,12 @@
     enable = true;
     defaultFonts = {
       serif = [
-        "Noto Serif CJK SC"
         "NotoSerif Nerd Font"
+        "Noto Serif CJK SC"
       ];
       sansSerif = [
-        "Noto Sans CJK SC"
         "NotoSans Nerd Font"
+        "Noto Sans CJK SC"
       ];
       monospace = [ "Maple Mono NF CN" ];
       emoji = [

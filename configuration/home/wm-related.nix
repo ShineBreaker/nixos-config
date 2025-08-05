@@ -36,18 +36,18 @@
         terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {
-        background = "ffffffcc";
+        background = "2c2c2ccc";
 
-        text = "000000ff";
-        prompt = "0f4b6eff";
-        input = "343B58ff";
-        match = "8c4351ff";
+        text = "ffffffff";
+        prompt = "4db6acff";
+        input = "4db6acff";
+        match = "f3777cff";
 
-        selection = "343b58cc";
-        selection-text = "ffffffff";
-        selection-match = "f7768eff";
+        selection = "383838cc";
+        selection-text = "8fc3a2ff";
+        selection-match = "f58e92ff";
 
-        border = "4791dbff";
+        border = "#7fc8ffff";
       };
       border = {
         width = "6";
@@ -62,7 +62,7 @@
       anchor = "top-right";
       sort = "-time";
       layer = "overlay";
-      background-color = "#ffffffcc";
+      background-color = "#32323295";
       width = 300;
       height = 500;
       padding = 10;
@@ -71,7 +71,6 @@
       border-color = "#4791db";
       border-radius = 16;
       font = "Sans 10";
-      text-color = "#000000";
       icons = 1;
       icon-path = "~/.nix-profile/share/icons/Papirus";
       max-icon-size = 64;
