@@ -9,6 +9,7 @@
     git
     uv
     gcc
+    nix-output-monitor
 
     unzip
     unrar
