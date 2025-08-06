@@ -30,7 +30,7 @@ gestures {
 
 cursor {
     // xcursor-theme "Bibata-Modern-Classic"
-    xcursor-size 26
+    // xcursor-size 26
 }
 
 input {
@@ -153,12 +153,16 @@ window-rule {
 }
 
 window-rule {
+    match app-id="connman-gtk"
     match app-id="mpv"
     match app-id="waypaper"
     match app-id=r#".*\.exe$"#
     match app-id="QtScrcpy"
+    
     match app-id="xdg-desktop-portal-gtk"
     match app-id="org.gnome.FileRoller"
+    match app-id="org.kde.polkit-kde-authentication-agent-1"
+    
     open-floating true
 }
 
