@@ -11,10 +11,8 @@
     protontricks
     mangohud_git
     mangojuice
-    (bottles-unwrapped.override {
+    (bottles.override {
       removeWarningPopup = true;
-      gamescope = gamescope_git;
-      mangohud = mangohud_git;
     })
 
     (heroic.override {
