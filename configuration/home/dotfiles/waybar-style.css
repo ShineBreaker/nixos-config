@@ -75,3 +75,5 @@ window#waybar.hidden  {
 #custom-reboot { color: #e8c55d; }
 
 #custom-search { color: #ffffff; }
+
+#workspaces button.focused { color: #36d792; }
