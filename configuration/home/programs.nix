@@ -71,7 +71,6 @@
     thunderbird
 
     onlyoffice-desktopeditors
-    wpsoffice-cn
 
     lapce
     nixd
