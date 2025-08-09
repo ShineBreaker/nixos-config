@@ -9,7 +9,6 @@
     proton-cachyos_x86_64_v3
     protonup-rs
     protontricks
-    mangohud_git
     mangojuice
     (bottles.override {
       removeWarningPopup = true;
@@ -21,14 +20,14 @@
       ];
     })
 
-    (hmcl.override {
-      hmclJdk = zulu17;
-      minecraftJdks = [
-        graalvm-ce
-        zulu8
-        zulu
-      ];
-    })
+    # (hmcl.override {
+    #   hmclJdk = zulu17;
+    #   minecraftJdks = [
+    #     graalvm-ce
+    #     zulu8
+    #     zulu
+    #   ];
+    # })
 
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
@@ -54,7 +53,6 @@
 
     ffmpeg
     imagemagick
-    lazygit
 
     nomacs
     mpv
@@ -71,7 +69,6 @@
     thunderbird
 
     onlyoffice-desktopeditors
-    openutau
 
     lapce
     nixd
