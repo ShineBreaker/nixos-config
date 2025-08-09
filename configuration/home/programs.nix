@@ -71,6 +71,7 @@
     thunderbird
 
     onlyoffice-desktopeditors
+    openutau
 
     lapce
     nixd
