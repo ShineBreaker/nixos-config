@@ -175,6 +175,10 @@
   programs.kitty = {
     enable = true;
     enableGitIntegration = true;
+    shellIntegration = {
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+    };
     font = {
       package = pkgs.maple-mono.NF-CN;
       name = "Maple Mono NF CN";
@@ -186,6 +190,7 @@
       background_opacity = 0.8;
       background_blur = 10;
       cursor_trail = 1;
+      cursor_trail_start_threshold = 0;
     };
   };
 }

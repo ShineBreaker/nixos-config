@@ -1,6 +1,6 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
@@ -11,7 +11,6 @@
     tealdeer
     du-dust
     fd
-    eza
     tokei
     duf
   ];
@@ -32,7 +31,6 @@
       tldr = "tealdeer";
       du = "dust";
       find = "fd";
-      ls = "exa";
       df = "duf";
       cd = "z";
 
@@ -43,7 +41,7 @@
     };
     interactiveShellInit = ''
       fastfetch
-      set -U fish_greeting 日々私たちが過ごしている日常は、実は、奇跡の連続なのかもしれない。
+      set --global fish_greeting 日々私たちが過ごしている日常は、実は、奇跡の連続なのかもしれない。
     '';
     vendor = {
       functions.enable = true;
