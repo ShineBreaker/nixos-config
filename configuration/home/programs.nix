@@ -46,7 +46,9 @@
     })
     
     onlyoffice-desktopeditors
+    wpsoffice-cn
     openutau
+    
     gimp3-with-plugins
     inkscape-with-extensions
     kdePackages.kdenlive
