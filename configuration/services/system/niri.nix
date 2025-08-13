@@ -9,6 +9,7 @@
     pwvucontrol
     brightnessctl
     wl-clipboard
+    cage
 
     xwayland-satellite-unstable
 
