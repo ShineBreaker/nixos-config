@@ -44,11 +44,12 @@
         enableJavaFX = true;
       };
     })
-
+    
+    onlyoffice-desktopeditors
+    openutau
     gimp3-with-plugins
     inkscape-with-extensions
     kdePackages.kdenlive
-    openshot-qt
     krita
 
     ffmpeg
@@ -67,9 +68,6 @@
     wechat-uos
     telegram-desktop
     thunderbird
-
-    onlyoffice-desktopeditors
-    wpsoffice-cn
 
     lapce
     nixd
