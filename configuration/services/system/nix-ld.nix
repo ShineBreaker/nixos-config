@@ -1,6 +1,6 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
@@ -8,6 +8,7 @@
     enable = true;
     libraries = with pkgs; [
       ffmpeg
+      icu
     ];
   };
 }

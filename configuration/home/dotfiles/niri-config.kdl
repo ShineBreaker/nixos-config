@@ -173,7 +173,7 @@ window-rule {
     match app-id="org.inkscape.Inkscape"
     match app-id="gimp"
     match app-id="krita"
-    match app-id="wlroots"
+    match app-id="labwc"
     
     match title=r#".*Lapce$"#  
     match app-id="Code"
@@ -185,7 +185,7 @@ window-rule {
     match app-id="waydroid"
     match app-id="gamescope"
     match app-id=r#"steam_app*."#
-    
+
     open-fullscreen true
 }
 
