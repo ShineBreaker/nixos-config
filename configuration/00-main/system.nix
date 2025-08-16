@@ -11,6 +11,7 @@
     ../system/security.nix
     ../system/services.nix
     ../system/swap.nix
+    ../system/tpm2.nix
     ../system/user.nix
   ];
 

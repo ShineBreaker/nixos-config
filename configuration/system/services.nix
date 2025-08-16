@@ -34,5 +34,7 @@
     upower.enable = true;
 
     envfs.enable = true;
+    
+    speechd.enable = lib.mkForce false;
   };
 }
