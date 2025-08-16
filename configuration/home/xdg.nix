@@ -19,6 +19,11 @@
         comment = "轻松做自己";
       };
 
+      labwc = {
+        name = "labwc";
+        exec = "${pkgs.labwc}/bin/labwc";
+      };
+
     };
   };
 }
