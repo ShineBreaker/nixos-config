@@ -18,8 +18,7 @@
       encrypted = {
         enable = true;
         label = "root";
-        keyFile = "/root.key";
-        blkDev = "/dev/mapper/root";
+        blkDev = "/dev/disk/by-uuid/eb063fae-136d-476c-9b90-83d1056b513d";
       };
     }
   ];
