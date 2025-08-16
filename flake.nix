@@ -13,10 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # lanzaboote = {
-    #   url = "github:nix-community/lanzaboote/v0.4.2";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
@@ -38,7 +38,7 @@
     {
       chaotic,
       home-manager,
-      # lanzaboote,
+      lanzaboote,
       niri-flake,
       nix-index-database,
       nixpkgs,
@@ -70,6 +70,8 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
+            
+            (import ./overlays)
 
             niri-flake.nixosModules.niri
             (
@@ -83,28 +85,25 @@
               }
             )
 
-            # lanzaboote.nixosModules.lanzaboote
-            # (
-            #   { pkgs, lib, ... }:
-            #   {
+            lanzaboote.nixosModules.lanzaboote
+            (
+              { pkgs, lib, ... }:
+              {
 
-            #     environment.systemPackages = [
-            #       # For debugging and troubleshooting Secure Boot.
-            #       pkgs.sbctl
-            #     ];
+                environment.systemPackages = with pkgs; [
+                  sbctl
+                  tpm2-tools
+                  tpm2-tss
+                ];
 
-            # Lanzaboote currently replaces the systemd-boot module.
-            # This setting is usually set to true in configuration.nix
-            # generated at installation time. So we force it to false
-            # for now.
-            #     boot.loader.systemd-boot.enable = lib.mkForce false;
+                boot.loader.systemd-boot.enable = lib.mkForce false;
 
-            #     boot.lanzaboote = {
-            #       enable = true;
-            #       pkiBundle = "/var/lib/sbctl";
-            #     };
-            #   }
-            #  )
+                boot.lanzaboote = {
+                  enable = true;
+                  pkiBundle = "/var/lib/sbctl";
+                };
+              }
+            )
 
             home-manager.nixosModules.home-manager
             {
