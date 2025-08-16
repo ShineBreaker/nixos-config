@@ -121,6 +121,7 @@
     "group/power": {
 		"orientation": "inherit",
 		"modules": [
+		    "custom/caffeine",
             "custom/lock",
 			"custom/poweroff",
 			"custom/reboot",
@@ -158,6 +159,14 @@
         "tooltip": true,
         "tooltip-format": "搜索",
         "on-click": "fuzzel",
+    },
+    
+    "custom/caffeine": {
+    	"format" : "",
+        "tooltip": true,
+        "tooltip-format": "左键禁用自动休眠，右键启用自动休眠",
+        "on-click": "systemctl stop --user swayidle.service && notify-send '自动休眠已禁用'",
+        "on-click-right": "systemctl start --user swayidle.service && notify-send '自动休眠已启用'",
     },
 
 }

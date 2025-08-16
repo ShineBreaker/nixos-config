@@ -9,6 +9,7 @@
     pwvucontrol
     brightnessctl
     wl-clipboard
+    libnotify
     labwc
 
     xwayland-satellite-unstable
