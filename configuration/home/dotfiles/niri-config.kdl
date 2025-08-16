@@ -118,6 +118,9 @@ window-rule {
 workspace "Browser"
 window-rule {
     match app-id=r#"zen*."#
+    match app-id="brave-browser"
+    match app-id="librewolf"
+    
     open-maximized true
     open-on-workspace "Browser"
 }

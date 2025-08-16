@@ -28,11 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
   outputs =
@@ -44,7 +39,6 @@
       nix-index-database,
       nixpkgs,
       self,
-      zen-browser,
       ...
     }:
 
@@ -111,8 +105,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
-                zen-browser.homeModules.default
-
                 ./configuration/00-main/home.nix
               ];
 

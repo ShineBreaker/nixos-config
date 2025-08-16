@@ -44,11 +44,11 @@
         enableJavaFX = true;
       };
     })
-    
+
     onlyoffice-desktopeditors
     wpsoffice-cn
     openutau
-    
+
     gimp3-with-plugins
     inkscape-with-extensions
     kdePackages.kdenlive
@@ -70,6 +70,7 @@
     wechat-uos
     telegram-desktop
     thunderbird
+    brave
 
     lapce
     nixd
@@ -125,8 +126,9 @@
     indicator = true;
   };
 
-  programs.zen-browser = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.librewolf;
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc
@@ -145,12 +147,12 @@
       DontCheckDefaultBrowser = false;
       DefaultDownloadDirectory = "\${home}/Downloads";
 
-      EnableTrackingProtection = {
-        Value = true;
-        Locked = true;
-        Cryptomining = true;
-        Fingerprinting = true;
-      };
+      # EnableTrackingProtection = {
+      #   Value = true;
+      #   Locked = true;
+      #   Cryptomining = true;
+      #   Fingerprinting = true;
+      # };
 
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
