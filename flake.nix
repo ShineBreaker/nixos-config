@@ -3,21 +3,21 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    
+
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-        
+    # lanzaboote = {
+    #   url = "github:nix-community/lanzaboote/v0.4.2";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +27,7 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,7 +38,7 @@
     {
       chaotic,
       home-manager,
-      lanzaboote,
+      # lanzaboote,
       niri-flake,
       nix-index-database,
       nixpkgs,
@@ -66,45 +66,45 @@
 
           inherit system;
 
-          modules = [      
+          modules = [
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
-            
+
             niri-flake.nixosModules.niri
-            ( 
+            (
               { lib, ... }:
               {
                 niri-flake.cache.enable = true;
                 nixpkgs.overlays = [ niri-flake.overlays.niri ];
-              
+
                 # Shit niri-flake.
                 services.gnome.gnome-keyring.enable = lib.mkForce false;
               }
             )
 
-            lanzaboote.nixosModules.lanzaboote
-            (
-              { pkgs, lib, ... }:
-              {
+            # lanzaboote.nixosModules.lanzaboote
+            # (
+            #   { pkgs, lib, ... }:
+            #   {
 
-                environment.systemPackages = [
-                  # For debugging and troubleshooting Secure Boot.
-                  pkgs.sbctl
-                ];
+            #     environment.systemPackages = [
+            #       # For debugging and troubleshooting Secure Boot.
+            #       pkgs.sbctl
+            #     ];
 
-                # Lanzaboote currently replaces the systemd-boot module.
-                # This setting is usually set to true in configuration.nix
-                # generated at installation time. So we force it to false
-                # for now.
-                boot.loader.systemd-boot.enable = lib.mkForce false;
+            # Lanzaboote currently replaces the systemd-boot module.
+            # This setting is usually set to true in configuration.nix
+            # generated at installation time. So we force it to false
+            # for now.
+            #     boot.loader.systemd-boot.enable = lib.mkForce false;
 
-                boot.lanzaboote = {
-                  enable = true;
-                  pkiBundle = "/var/lib/sbctl";
-                };
-              }
-            )
+            #     boot.lanzaboote = {
+            #       enable = true;
+            #       pkiBundle = "/var/lib/sbctl";
+            #     };
+            #   }
+            #  )
 
             home-manager.nixosModules.home-manager
             {
@@ -112,7 +112,7 @@
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
                 zen-browser.homeModules.default
-                
+
                 ./configuration/00-main/home.nix
               ];
 
@@ -124,12 +124,12 @@
               programs.nix-index.enable = true;
               programs.nix-index-database.comma.enable = true;
             }
-            
+
             chaotic.nixosModules.default
             {
               chaotic.mesa-git.enable = true;
             }
-            
+
             genRev
           ];
         };
