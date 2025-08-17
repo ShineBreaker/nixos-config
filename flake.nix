@@ -13,11 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +29,6 @@
     {
       chaotic,
       home-manager,
-      lanzaboote,
       niri-flake,
       nix-index-database,
       nixpkgs,
@@ -77,26 +71,6 @@
 
                 # Shit niri-flake.
                 services.gnome.gnome-keyring.enable = lib.mkForce false;
-              }
-            )
-
-            lanzaboote.nixosModules.lanzaboote
-            (
-              { pkgs, lib, ... }:
-              {
-
-                environment.systemPackages = with pkgs; [
-                  sbctl
-                  tpm2-tools
-                  tpm2-tss
-                ];
-
-                boot.loader.systemd-boot.enable = lib.mkForce false;
-
-                boot.lanzaboote = {
-                  enable = true;
-                  pkiBundle = "/var/lib/sbctl";
-                };
               }
             )
 

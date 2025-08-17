@@ -10,6 +10,7 @@
     ../services/system/greetd.nix
     # ../services/system/grub.nix
     ../services/system/hibernation.nix
+    ../services/system/limine.nix
     ../services/system/niri.nix
     ../services/system/nix.nix
     ../services/system/nix-ld.nix
