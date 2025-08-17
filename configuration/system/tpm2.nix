@@ -1,9 +1,15 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
+  environment.systemPackages = with pkgs; [
+    tpm2-tools
+    tpm2-tss
+  ];
+  
   boot.initrd = {
     availableKernelModules =  [
     "tpm_tis"
