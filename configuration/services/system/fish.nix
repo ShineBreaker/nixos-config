@@ -28,7 +28,6 @@
       reboot = "systemctl reboot";
 
       cat = "bat";
-      tldr = "tealdeer";
       du = "dust";
       find = "fd";
       df = "duf";
