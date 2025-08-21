@@ -20,14 +20,14 @@
       ];
     })
 
-    # (hmcl.override {
-    #   hmclJdk = zulu17;
-    #   minecraftJdks = [
-    #     graalvm-ce
-    #     zulu8
-    #     zulu
-    #   ];
-    # })
+    (hmcl.override {
+      hmclJdk = zulu17;
+      minecraftJdks = [
+        graalvm-ce
+        zulu8
+        zulu
+      ];
+    })
 
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];

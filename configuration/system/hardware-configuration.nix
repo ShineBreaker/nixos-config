@@ -33,7 +33,7 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@"
+      "subvol=SYSTEM/NixOS/@"
       "compress=zstd:6"
     ];
   };
@@ -46,7 +46,7 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@var"
+      "subvol=SYSTEM/NixOS/@var"
       "compress=zstd:6"
     ];
   };
@@ -55,7 +55,7 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@nix"
+      "subvol=SYSTEM/NixOS/@nix"
       "compress=zstd:6"
     ];
   };
@@ -64,7 +64,7 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@etc"
+      "subvol=SYSTEM/NixOS/@etc"
       "compress=zstd:6"
     ];
   };
@@ -73,7 +73,16 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@home"
+      "subvol=DATA/@home"
+      "compress=zstd:6"
+    ];
+  };
+  
+  fileSystems."/var/lib/sbctl" = {
+    device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
+    fsType = "btrfs";
+    options = [
+      "subvol=DATA/@sbctl"
       "compress=zstd:6"
     ];
   };
@@ -82,7 +91,7 @@
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
     options = [
-      "subvol=@swap"
+      "subvol=DATA/@swap"
       "compress=none"
     ];
   };
