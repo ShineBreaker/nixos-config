@@ -26,7 +26,11 @@
       scheduler = "scx_rusty";
     };
 
-    xserver.excludePackages = [ pkgs.xterm ];
+    xserver = {
+      excludePackages = [ pkgs.xterm ];
+      upscaleDefaultCursor = true;
+    };
+    
     flatpak.enable = true;
 
     usbguard.dbus.enable = true;
