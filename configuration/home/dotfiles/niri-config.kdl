@@ -146,12 +146,15 @@ window-rule {
 
 workspace "Game"
 window-rule {
-    match app-id=".gamescope-wrapped"
-    match app-id="org.prismlauncher.PrismLauncher"
-    match app-id="steam"
     match app-id="heroic"
+    match app-id="steam"
     match app-id=r#"steam_app*."#
+    match app-id=".gamescope-wrapped"
+
     match app-id="osu!"
+    
+    match app-id="org.prismlauncher.PrismLauncher"
+    match app-id="org.jackhuang.hmcl.Launcher"
     
     open-on-workspace "Game"
 }

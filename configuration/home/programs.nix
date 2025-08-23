@@ -21,7 +21,7 @@
     })
 
     (hmcl.override {
-      hmclJdk = zulu17;
+      hmclJdk = graalvm-ce;
       minecraftJdks = [
         graalvm-ce
         zulu8
@@ -30,7 +30,6 @@
     })
 
     (prismlauncher.override {
-      additionalPrograms = [ ffmpeg ];
       jdks = [
         graalvm-ce
         zulu8
@@ -132,7 +131,6 @@
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc
-      firefoxpwa
     ];
 
     policies = {
@@ -172,8 +170,6 @@
       SearchEngines_Default = "Bing";
     };
   };
-
-  programs.firefoxpwa.enable = true;
 
   programs.kitty = {
     enable = true;
