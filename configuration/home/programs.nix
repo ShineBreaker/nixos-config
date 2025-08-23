@@ -69,13 +69,10 @@
     wechat-uos
     telegram-desktop
     thunderbird
-    brave
 
     lapce
     nixd
-    biome
-
-    adwaita-icon-theme
+    jujutsu_git
   ];
 
   programs.obs-studio = {
@@ -192,4 +189,5 @@
       cursor_trail_start_threshold = 0;
     };
   };
+
 }
