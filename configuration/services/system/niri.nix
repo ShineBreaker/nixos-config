@@ -11,11 +11,12 @@
     wl-clipboard
     libnotify
     labwc
+    cliphist
 
     xwayland-satellite-unstable
 
     nemo-with-extensions
-    peazip
+    file-roller
   ];
 
   programs = {
