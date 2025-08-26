@@ -38,6 +38,7 @@
   environment.systemPackages = with pkgs; [
     distrobox_git
     distroshelf
+    pods
 
     virglrenderer
     virtualgl
