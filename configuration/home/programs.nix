@@ -73,7 +73,6 @@
     lapce
     nixd
     jujutsu_git
-    zed-editor-fhs_git
   ];
 
   programs.obs-studio = {
