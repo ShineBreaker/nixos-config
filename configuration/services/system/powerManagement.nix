@@ -37,10 +37,10 @@
     rulesProvider = pkgs.ananicy-rules-cachyos_git;
   };
     
-  services.logind = {
-    lidSwitch = "suspend-then-hibernate";
-    lidSwitchExternalPower = "lock";
-    lidSwitchDocked = "ignore";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "suspend-then-hibernate";
+    HandleLidSwitchExternalPower = "lock";
+    HandleLidSwitchDocked = "ignore";
     
     powerKey = "lock";
     powerKeyLongPress = "hibernate";
