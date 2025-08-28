@@ -19,6 +19,8 @@
     ];
     extraCompatPackages = with pkgs; [
       proton-cachyos_x86_64_v3
+      proton-ge-custom
+      luxtorpeda
     ];
   };
 
@@ -40,7 +42,7 @@
       general = {
         desiredgov = "performance";
       };
-    custom = {
+      custom = {
         start = "${pkgs.libnotify}/bin/notify-send '游戏模式已开启' && ${pkgs.mako}/bin/makoctl mode -a do-not-disturb";
         end = "${pkgs.mako}/bin/makoctl mode -r do-not-disturb && ${pkgs.libnotify}/bin/notify-send '游戏模式已关闭'";
       };

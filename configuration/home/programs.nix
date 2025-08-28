@@ -6,17 +6,16 @@
 
 {
   home.packages = with pkgs; [
-    proton-cachyos_x86_64_v3
-    protonup-rs
-    protontricks
     mangojuice
     (bottles.override {
       removeWarningPopup = true;
     })
 
     (heroic.override {
-      extraPkgs = pkgs: [
-        pkgs.proton-cachyos_x86_64_v3
+      extraPkgs = pkgs: with pkgs; [
+        proton-cachyos_x86_64_v3
+        proton-ge-custom
+        luxtorpeda
       ];
     })
 
@@ -64,6 +63,7 @@
     qtscrcpy
     baobab
     filezilla
+    bazaar_git
 
     qq
     wechat-uos
@@ -73,6 +73,7 @@
     lapce
     nixd
     jujutsu_git
+    zed-editor-fhs_git
   ];
 
   programs.obs-studio = {

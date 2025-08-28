@@ -131,6 +131,7 @@ window-rule {
     match app-id="kitty"
     match title=r#".*Lapce$"#
     match app-id="Code"
+    match app-id="dev.zed.Zed-Dev"
     
     open-on-workspace "Code"
 }
