@@ -63,7 +63,6 @@
     qtscrcpy
     baobab
     filezilla
-    bazaar_git
 
     qq
     wechat-uos
