@@ -10,6 +10,7 @@
     uv
     gcc
     nix-output-monitor
+    duperemove
 
     unzip
     unrar
