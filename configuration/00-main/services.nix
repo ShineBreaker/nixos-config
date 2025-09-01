@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../services/system/beesd.nix
     ../services/system/connman.nix
     ../services/system/doas.nix
     ../services/system/fish.nix
