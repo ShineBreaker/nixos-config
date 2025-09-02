@@ -11,6 +11,7 @@
     gcc
     nix-output-monitor
     duperemove
+    btop
 
     unzip
     unrar

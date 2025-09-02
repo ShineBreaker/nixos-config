@@ -59,7 +59,6 @@
     mpv
 
     coppwr
-    mission-center
     qtscrcpy
     baobab
     filezilla
