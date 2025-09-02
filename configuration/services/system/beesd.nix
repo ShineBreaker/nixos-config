@@ -10,8 +10,8 @@
   ];
   
   services.beesd.filesystems."default" = {
-    spec = "/";
-    hashTableSizeMB = 2048;
+    spec = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
+    hashTableSizeMB = 4096;
     verbosity = "crit";
     extraOptions = [ "--loadavg-target" "5.0" "--thread-count" "4" ];
   };
