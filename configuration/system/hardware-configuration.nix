@@ -77,7 +77,7 @@
       "compress=zstd:6"
     ];
   };
-  
+
   fileSystems."/var/lib/sbctl" = {
     device = "/dev/disk/by-uuid/d8b51e69-ff95-4e60-8373-9581da1d6c7d";
     fsType = "btrfs";
@@ -97,7 +97,7 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/CB28-43A8";
+    device = "/dev/disk/by-uuid/0C54-13CC";
     fsType = "vfat";
     options = [
       "fmask=0022"
