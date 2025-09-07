@@ -44,7 +44,7 @@
         terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {
-        background = "2c2c2cff";
+        background = "2c2c2ccc";
 
         text = "ffffffff";
         prompt = "4db6acff";
@@ -55,7 +55,7 @@
         selection-text = "8fc3a2ff";
         selection-match = "f58e92ff";
 
-        border = "#6E8495ff";
+        border = "#7fc8ffff";
       };
       border = {
         width = "3";
