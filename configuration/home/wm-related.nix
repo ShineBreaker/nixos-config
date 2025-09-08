@@ -44,21 +44,21 @@
         terminal = "${pkgs.alacritty}/bin/alacritty";
       };
       colors = {
-        background = "2c2c2ccc";
+        background = "#2c2c2ccc";
 
-        text = "ffffffff";
-        prompt = "4db6acff";
-        input = "4db6acff";
-        match = "f3777cff";
+        text = "#ffffffff";
+        prompt = "#4db6acff";
+        input = "#4db6acff";
+        match = "#f3777cff";
 
-        selection = "383838cc";
-        selection-text = "8fc3a2ff";
-        selection-match = "f58e92ff";
+        selection = "#383838cc";
+        selection-text = "#8fc3a2ff";
+        selection-match = "#f58e92ff";
 
-        border = "#7fc8ffff";
+        border = "#699583ff";
       };
       border = {
-        width = "3";
+        width = "4";
         radius = "28";
       };
     };
