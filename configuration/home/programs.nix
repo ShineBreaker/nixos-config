@@ -60,8 +60,7 @@
     mpv
 
     coppwr
-    qtscrcpy
-    baobab
+    dutree
     filezilla
 
     qq
@@ -123,7 +122,6 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.librewolf;
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc
@@ -141,12 +139,12 @@
       DontCheckDefaultBrowser = false;
       DefaultDownloadDirectory = "\${home}/Downloads";
 
-      # EnableTrackingProtection = {
-      #   Value = true;
-      #   Locked = true;
-      #   Cryptomining = true;
-      #   Fingerprinting = true;
-      # };
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
 
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
