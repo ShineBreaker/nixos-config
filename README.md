@@ -4,10 +4,9 @@
 #### 特点：
  - 使用`Lix`来替代`Nix`以获得更快的build速度
  - 使用`Doas`替换`Sudo`来获得更好的安全性
- - 使用`Fish`作为Shell，使用`Lanzaboote`来提供Secure Boot支持
- - 桌面环境为`Niri`，使用`Greetd`搭配`TuiGreeter`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`Peazip`，默认的输入法为`Fcitx5+Rime`
+ - 使用`Fish`作为Shell，使用`Limine`作为bootloader来提供Secure Boot支持
+ - 桌面环境为`Niri`，使用`Greetd`搭配`TuiGreeter`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`File-Roller`，默认的输入法为`Fcitx5+Rime`，Rime默认使用`rime-ice`方案
  - 默认使用`Orchis`主题，`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
- - 内置了几个蛮好用的TUI小工具，比如说管理任务用的`Btop`和管理Proton用的`protonup-rs`，以及一个可以监控nix-build时的软件包的程序，用法为`原本的nix代码 &| nom --json`
  - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解。
 
 #### 注意事项：
@@ -19,7 +18,11 @@
  - ~~将`--cursor ./none`参数传入gamescope后游戏内的鼠标会显示为一个“X”，适合在无论如何鼠标图案都不正常的情况下使用 (eg. `Minecraft`) ~~
    这个问题我貌似已经通过`xdg.icons.fallbackCursorThemes`修好了,但如果你还是遇到了一些无法无天的软件的话就可以用这招
  - 对于一些缩放不正常的软件(eg. `WPS`), 可以通过在`labwc`中运行来解决问题
- - 可以利用`duperemove`来实现重复文件的清理, 例如`duperemove -dhr /`
+#### 实用命令行小工具
+ - `duperemove`：可以实现重复文件的清理, 例如`duperemove -dhr /`可以将根目录以下的所有文件进行查重并清理
+ - `dutree`：可以查看占用情况，用法为`dutree (directory)`
+ - `btop`: 方便的TUI任务管理器
+ - `nix-output-monitor`：可以监控nix-build时的软件包的程序，用法为`原本的nix代码 &| nom --json`
 #### 使用说明
    **不建议直接clone下来复用** 
   建议选用部分代码到你的配置文件里，本配置文件依照程序功能进行了目录的划分，services文件夹中都是以其中配置的应用命名，如果需要参考某个软件的配置方法的话直接打开相应的文件就好。
