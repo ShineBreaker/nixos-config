@@ -45,7 +45,6 @@
     })
 
     onlyoffice-desktopeditors
-    wpsoffice-cn
     openutau
 
     gimp3-with-plugins
@@ -60,7 +59,6 @@
     mpv
 
     coppwr
-    dutree
     filezilla
 
     qq
