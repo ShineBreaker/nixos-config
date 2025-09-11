@@ -55,11 +55,11 @@
         selection-text = "#8fc3a2ff";
         selection-match = "#f58e92ff";
 
-        border = "#699583ff";
+        border = "#4db6acff";
       };
       border = {
-        width = "4";
-        radius = "28";
+        width = "3";
+        radius = "12";
       };
     };
   };
