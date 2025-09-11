@@ -8,16 +8,17 @@
   home.packages = with pkgs; [
     mangojuice
     mangohud_git
-    
+
     (bottles.override {
       removeWarningPopup = true;
     })
 
     (heroic.override {
-      extraPkgs = pkgs: with pkgs; [
-        proton-cachyos_x86_64_v3
-        proton-ge-custom
-      ];
+      extraPkgs =
+        pkgs: with pkgs; [
+          proton-cachyos_x86_64_v3
+          proton-ge-custom
+        ];
     })
 
     (hmcl.override {
@@ -62,11 +63,9 @@
     filezilla
 
     qq
-    wechat-uos
     telegram-desktop
     thunderbird
 
-    lapce
     nixd
     jujutsu_git
   ];
@@ -94,13 +93,22 @@
         select = "underline";
       };
     };
-    languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-        formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-      }
-    ];
+    languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          language-servers = [
+            "nixd"
+            "nil"
+          ];
+        }
+      ];
+      language-server = {
+          nixd.command = "${pkgs.nixd}/bin/nixd";
+      };
+    };
     themes = {
       tokyonight_transparent = {
         "inherits" = "tokyonight";
