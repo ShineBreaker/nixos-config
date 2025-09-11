@@ -20,12 +20,10 @@
     shellAbbrs = {
       commit = "git commit --all";
       push = "git push";
-      rebuild = "sudo sh -c 'nixos-rebuild switch --flake .# --log-format internal-json -v |& nom --json'";
-      rebuild-boot = "sudo nixos-rebuild boot --flake .#";
-      rebuilds = "sudo nixos-rebuild switch --flake .#";
+      rebuild = "nh os switch .";
+      rebuild-boot = "nh os boot .";
       
-      update = "nix flake update && git commit -a -m 'update.' && sudo sh -c 'nixos-rebuild switch --flake .# --log-format internal-json -v |& nom --json'";
-      clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
+      update = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
       shutdown = "systemctl poweroff";
       reboot = "systemctl reboot";
 

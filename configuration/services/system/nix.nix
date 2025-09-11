@@ -11,11 +11,6 @@
 
   nix = {
     package = pkgs.lixPackageSets.latest.lix;
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
     settings = {
       auto-optimise-store = true;
       trusted-users = [
@@ -43,5 +38,15 @@
       ];
     };
   };
+
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--delete-older-than 7d --keep 5";
+    };
+    flake = "/home/brokenshine/Documents/Git/nixos-configs";
+  };  
 
 }
