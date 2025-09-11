@@ -21,7 +21,7 @@
 #### 实用命令行小工具
  - `duperemove`：可以实现重复文件的清理, 例如`duperemove -dhr /`可以将根目录以下的所有文件进行查重并清理
  - `btop`: 方便的TUI任务管理器
- - `nix-output-monitor`：可以监控nix-build时的软件包的程序，用法为`原本的nix代码 &| nom --json`
+ - `nix-output-monitor`：可以监控nix-build时的软件包的程序，用法为`原本的nix代码 &| nom --json`, 目前已经在rebuild时默认启用
 #### 使用说明
    **不建议直接clone下来复用** 
   建议选用部分代码到你的配置文件里，本配置文件依照程序功能进行了目录的划分，services文件夹中都是以其中配置的应用命名，如果需要参考某个软件的配置方法的话直接打开相应的文件就好。
