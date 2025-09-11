@@ -78,7 +78,7 @@ layout {
 
     border {
         off
-        width 4
+        width 3
         active-color "#ffc87f"
         inactive-color "#7fc8ff"
     }
@@ -86,7 +86,7 @@ layout {
     shadow {
         on
         softness 20
-        spread 3
+        spread 2
         offset x=0 y=0
         draw-behind-window false
         color "#000000"
@@ -111,7 +111,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 18
+    geometry-corner-radius 10
     clip-to-geometry true
     draw-border-with-background false
 }

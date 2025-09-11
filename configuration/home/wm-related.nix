@@ -75,9 +75,9 @@
       height = 500;
       padding = 10;
       margin = "10,10,10,10";
-      border-size = 4;
+      border-size = 3;
       border-color = "#4791db";
-      border-radius = 16;
+      border-radius = 10;
       font = "Sans 10";
       icons = 1;
       icon-path = "~/.nix-profile/share/icons/Papirus";
