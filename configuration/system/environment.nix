@@ -1,6 +1,6 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
@@ -12,6 +12,7 @@
     nix-output-monitor
     duperemove
     btop
+    wget
 
     unzip
     unrar
