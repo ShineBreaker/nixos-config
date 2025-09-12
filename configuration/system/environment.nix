@@ -10,7 +10,6 @@
     uv
     gcc
     nix-output-monitor
-    duperemove
     btop
     wget
 

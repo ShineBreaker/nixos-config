@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../services/system/beesd.nix
+    # ../services/system/beesd.nix
     ../services/system/connman.nix
     ../services/system/doas.nix
     ../services/system/fish.nix
@@ -10,7 +10,6 @@
     ../services/system/gnupg.nix
     ../services/system/greetd.nix
     # ../services/system/grub.nix
-    ../services/system/hibernation.nix
     ../services/system/limine.nix
     ../services/system/niri.nix
     ../services/system/nix.nix
