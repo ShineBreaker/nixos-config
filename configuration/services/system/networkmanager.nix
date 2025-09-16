@@ -11,8 +11,6 @@
     };
   };
 
-  programs.nm-applet.enable = true;
-
   environment.systemPackages = [
     pkgs.nmgui
   ];

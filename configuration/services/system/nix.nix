@@ -1,5 +1,5 @@
-{ 
-  pkgs, 
+{
+  pkgs,
   ...
 }:
 
@@ -10,7 +10,7 @@
   };
 
   nix = {
-    package = pkgs.lixPackageSets.latest.lix;
+    package = pkgs.lixPackageSets.git.lix;
     settings = {
       auto-optimise-store = true;
       trusted-users = [
@@ -47,6 +47,6 @@
       extraArgs = "--delete-older-than 7d --keep 5";
     };
     flake = "/home/brokenshine/Documents/Git/nixos-configs";
-  };  
+  };
 
 }
