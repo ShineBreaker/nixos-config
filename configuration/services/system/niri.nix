@@ -8,10 +8,13 @@
   environment.systemPackages = with pkgs; [
     pwvucontrol
     brightnessctl
+    better-control
+
     wl-clipboard
     libnotify
-    labwc
     cliphist
+    labwc
+    cage
 
     xwayland-satellite-unstable
 

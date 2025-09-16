@@ -19,7 +19,6 @@
    这个问题我貌似已经通过`xdg.icons.fallbackCursorThemes`修好了,但如果你还是遇到了一些无法无天的软件的话就可以用这招
  - 对于一些缩放不正常的软件(eg. `WPS`), 可以通过在`labwc`中运行来解决问题
 #### 实用命令行小工具
- - `duperemove`：可以实现重复文件的清理, 例如`duperemove -dhr /`可以将根目录以下的所有文件进行查重并清理
  - `btop`: 方便的TUI任务管理器
  - `nix-output-monitor`：可以监控nix-build时的软件包的程序，用法为`原本的nix代码 &| nom --json`
  - `nh`(yet-another-nix-helper): 目前已经在rebuild时默认启用，是上述命令的包装

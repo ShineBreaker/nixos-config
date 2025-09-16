@@ -45,7 +45,7 @@
       };
     })
 
-    onlyoffice-desktopeditors
+    libreoffice
     openutau
 
     gimp3-with-plugins
@@ -106,7 +106,7 @@
         }
       ];
       language-server = {
-          nixd.command = "${pkgs.nixd}/bin/nixd";
+        nixd.command = "${pkgs.nixd}/bin/nixd";
       };
     };
     themes = {

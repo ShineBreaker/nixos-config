@@ -1,6 +1,6 @@
-{ 
-  pkgs, 
-  lib, 
+{
+  pkgs,
+  lib,
   ...
 }:
 
@@ -23,5 +23,5 @@
     ";
   };
 
-  environment.systemPackages = with pkgs; [ connman-gtk ];
+  environment.systemPackages = with pkgs; [ cmst ];
 }
