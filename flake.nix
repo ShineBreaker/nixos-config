@@ -23,6 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -31,6 +37,7 @@
       home-manager,
       niri-flake,
       nix-index-database,
+      dankMaterialShell,
       nixpkgs,
       self,
       ...
@@ -74,11 +81,15 @@
               }
             )
 
+
             home-manager.nixosModules.home-manager
+
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
+                dankMaterialShell.homeModules.dankMaterialShell
+
                 ./configuration/00-main/home.nix
               ];
 

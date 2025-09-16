@@ -11,7 +11,7 @@
     ../home/fonts.nix
     ../home/programs.nix
     ../home/theme.nix
-    ../home/wm-related.nix
+    # ../home/wm-related.nix
     ../home/xdg.nix
   ];
 

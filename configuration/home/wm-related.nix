@@ -9,30 +9,6 @@
     systemd.enable = true;
   };
 
-  services.swayidle = {
-    enable = true;
-    events = [
-      {
-        event = "lock";
-        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
-      }
-      {
-        event = "unlock";
-        command = "${pkgs.niri}/bin/niri msg action power-on-monitors";
-      }
-      {
-        event = "after-resume";
-        command = "${pkgs.gtklock}/bin/gtklock -d";
-      }
-    ];
-    timeouts = [
-      {
-        timeout = 600;
-        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
-      }
-    ];
-  };
-
   programs.fuzzel = {
     enable = true;
     settings = {
@@ -97,23 +73,6 @@
       
       "mode=do-not-disturb" = {
         invisible = 1;
-      };
-    };
-  };
-
-  programs.niriswitcher = {
-    enable = true;
-    settings = {
-      keys = {
-        modifier = "Alt";
-        switch = {
-          next = "Tab";
-          prev = "Shift+Tab";
-        };
-      };
-      appearance = {
-        system_theme = "light";
-        icon_size = 48;
       };
     };
   };
