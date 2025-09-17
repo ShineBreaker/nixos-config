@@ -13,8 +13,8 @@
       name = "Papirus-Dark";
     };
     theme = {
-      package = pkgs.orchis-theme;
-      name = "Orchis-Teal-Dark";
+      package = pkgs.colloid-gtk-theme;
+      name = "Colloid-Dark";
     };
     font = {
       package = pkgs.noto-fonts-cjk-sans;
