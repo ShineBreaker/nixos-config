@@ -21,7 +21,8 @@
       commit = "git commit --all";
       push = "git push";
       rebuild = "nh os switch .";
-      rebuild-boot = "nh os boot .";
+      rebuildb = "nh os boot .";
+      rebuildc = "nh os switch . && nh clean all && nh os switch .";
       
       update = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
       shutdown = "systemctl poweroff";
