@@ -14,8 +14,6 @@
   hardware.cpu.intel.updateMicrocode = true;
   hardware.intel-gpu-tools.enable = true;
 
-  services.blueman.enable = true;
-
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -29,7 +27,6 @@
 
   environment.systemPackages = with pkgs; [
     bluez
-    blueman
 
     sof-firmware
   ];
