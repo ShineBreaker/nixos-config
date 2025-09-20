@@ -30,8 +30,8 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Classic"
-    xcursor-size 26
+    // xcursor-theme "Bibata-Modern-Classic"
+    // xcursor-size 26
 }
 
 input {
