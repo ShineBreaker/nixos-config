@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }:
 
@@ -38,5 +39,12 @@
       options v4l2loopback devices=1 video_nr=2 exclusive_caps=1 card_label="OBS Virtual Camera"
     '';
 
+    supportedFilesystems = {
+      f2fs = true;
+      ext4 = true;
+      ntfs = true;
+
+      zfs = lib.mkForce false;
+    };
   };
 }
