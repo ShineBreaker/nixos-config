@@ -4,7 +4,7 @@
 }:
 
 {
-  qt.platformTheme.name = "qt5ct";
+  qt.platformTheme.name = "qtct";
   
   gtk = {
     enable = true;
