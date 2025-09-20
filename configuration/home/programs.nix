@@ -46,6 +46,7 @@
     })
 
     libreoffice
+    wpsoffice-cn
     openutau
 
     gimp3-with-plugins
@@ -58,11 +59,13 @@
 
     nomacs
     mpv
+    ungoogled-chromium
 
     coppwr
     filezilla
 
     qq
+    wechat
     telegram-desktop
     thunderbird
 
