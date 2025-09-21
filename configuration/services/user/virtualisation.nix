@@ -40,10 +40,7 @@
     distrobox_git
     distroshelf
     pods
-
-    virglrenderer
-    virtualgl
-    pkgsi686Linux.virtualgl
+    podman-compose
   ];
 
   virtualisation.podman = {
