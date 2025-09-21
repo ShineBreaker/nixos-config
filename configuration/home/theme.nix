@@ -1,11 +1,22 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
-  qt.platformTheme.name = "qtct";
-  
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+  };
+
+  home.packages = with pkgs; [
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct
+    adwaita-icon-theme
+  ];
+
   gtk = {
     enable = true;
     iconTheme = {
@@ -59,6 +70,4 @@
       defaultCursor = "default";
     };
   };
-  
-  home.packages = with pkgs; [ adwaita-icon-theme ];
 }

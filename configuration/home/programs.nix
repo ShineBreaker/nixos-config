@@ -206,7 +206,7 @@
     events = [
       {
         event = "lock";
-        command = "dms ipc call lock lock && ${pkgs.niri}/bin/niri msg action power-off-monitors";
+        command = "dms ipc call lock lock";
       }
       {
         event = "unlock";
@@ -227,6 +227,5 @@
 
   programs.dankMaterialShell = {
     enable = true;
-    enableSystemd = true;
   };
 }

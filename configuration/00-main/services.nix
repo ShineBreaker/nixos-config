@@ -25,7 +25,6 @@
     ../services/user/fcitx5.nix
     ../services/user/java.nix
     ../services/user/poweralertd.nix
-    ../services/user/qt6ct.nix
     # ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix

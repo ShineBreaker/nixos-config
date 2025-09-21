@@ -1,7 +1,8 @@
+spawn-at-startup "dms" "run"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "clash-verge"
-
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
 prefer-no-csd
 
@@ -213,6 +214,7 @@ window-rule {
 }
 
 switch-events {
+    lid-close { spawn "sh" "-c" "niri msg action power-off-monitors"; }
     lid-open  { spawn "sh" "-c" "niri msg action power-on-monitors"; }
 }
 
