@@ -20,6 +20,7 @@
         ];
       };
       vhostUserPackages = with pkgs; [
+        virtio-win
         virtiofsd
         virglrenderer
 
