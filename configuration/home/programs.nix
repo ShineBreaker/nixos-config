@@ -46,12 +46,9 @@
     })
 
     libreoffice
-    wpsoffice-cn
-    openutau
 
     gimp3-with-plugins
     inkscape-with-extensions
-    kdePackages.kdenlive
     krita
 
     ffmpeg
@@ -63,6 +60,7 @@
 
     coppwr
     filezilla
+    freerdp
 
     qq
     wechat
@@ -227,5 +225,6 @@
 
   programs.dankMaterialShell = {
     enable = true;
+    enableSystemd = false;
   };
 }

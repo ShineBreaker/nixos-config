@@ -29,15 +29,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
     {
       chaotic,
+      dankMaterialShell,
       home-manager,
       niri-flake,
       nix-index-database,
-      dankMaterialShell,
+      winapps,
+
       nixpkgs,
       self,
       ...
@@ -66,6 +73,15 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
+
+            (
+              {
+                environment.systemPackages = [
+                  winapps.packages."${system}".winapps
+                  winapps.packages."${system}".winapps-launcher # optional
+                ];
+              }
+            )
             
             (import ./overlays)
 
