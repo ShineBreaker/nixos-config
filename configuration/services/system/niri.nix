@@ -29,7 +29,10 @@
       enable = true;
       package = pkgs.niri-unstable;
     };
+    gtklock.enable = true;
   };
+
+  security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
   services = {
     xserver.desktopManager.runXdgAutostartIfNone = true;

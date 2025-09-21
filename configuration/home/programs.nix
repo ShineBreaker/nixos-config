@@ -204,7 +204,7 @@
     events = [
       {
         event = "lock";
-        command = "dms ipc call lock lock";
+        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
       }
       {
         event = "unlock";
@@ -212,19 +212,15 @@
       }
       {
         event = "after-resume";
-        command = "dms ipc call lock lock";
+        command = "${pkgs.gtklock}/bin/gtklock -d";
       }
     ];
     timeouts = [
       {
         timeout = 600;
-        command = "dms ipc call lock lock && ${pkgs.niri}/bin/niri msg action power-off-monitors";
+        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
       }
     ];
   };
 
-  programs.dankMaterialShell = {
-    enable = true;
-    enableSystemd = false;
-  };
 }

@@ -1,4 +1,4 @@
-spawn-at-startup "dms" "run"
+spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
 spawn-at-startup "fcitx5" "-d"
@@ -186,6 +186,8 @@ window-rule {
     match title=r#".*Lapce$"#  
     match app-id="code"
 
+    match app-id="Microsoft Windows"
+    
     open-maximized true
 }
 
@@ -224,17 +226,18 @@ binds {
     Mod+Ctrl+R      hotkey-overlay-title="随机壁纸"                            { spawn "waypaper" "--random"; }
 
     Mod+T        hotkey-overlay-title="打开终端"      repeat=false  { spawn "kitty"; }
-    // Mod+D        hotkey-overlay-title="打开搜索"      repeat=false  { spawn "fuzzel"; }
+    Mod+D        hotkey-overlay-title="打开搜索"      repeat=false  { spawn "fuzzel"; }
+    Mod+C        hotkey-overlay-title="打开剪切板"    repeat=false  { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     Mod+Escape   hotkey-overlay-title="总览"          repeat=false  { toggle-overview; }
-    // Super+Alt+L  hotkey-overlay-title="锁屏"          repeat=false  { spawn "gtklock"; }
+    Super+Alt+L  hotkey-overlay-title="锁屏"          repeat=false  { spawn "gtklock"; }
 
-    // XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    // XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    // XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    // XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
-    // XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
 	
     Mod+Q  hotkey-overlay-title="关闭窗口"   { close-window; }
 
@@ -328,50 +331,4 @@ binds {
     Ctrl+Print hotkey-overlay-title=null   { screenshot-screen; }
     Alt+Print  hotkey-overlay-title=null   { screenshot-window; }
 
-    Alt+Tab       repeat=false hotkey-overlay-title="显示当前窗口"    { spawn "niriswitcherctl" "show" "--window"; }
-    Alt+Shift+Tab repeat=false hotkey-overlay-title="显示当前工作区"  { spawn "niriswitcherctl" "show" "--workspace"; }
-
-   Mod+D hotkey-overlay-title="应用菜单" {
-      spawn "dms" "ipc" "call" "spotlight" "toggle";
-   }
-   Mod+C hotkey-overlay-title="剪切板管理器" {
-      spawn "dms" "ipc" "call" "clipboard" "toggle";
-   }
-   Mod+M hotkey-overlay-title="任务管理器" {
-      spawn "dms" "ipc" "call" "processlist" "toggle";
-   }
-   Mod+N hotkey-overlay-title="通知中心" {
-      spawn "dms" "ipc" "call" "notifications" "toggle";
-   }
-   Mod+Comma hotkey-overlay-title="设置" {
-      spawn "dms" "ipc" "call" "settings" "toggle";
-   }
-   Mod+P hotkey-overlay-title="记事本" {
-      spawn "dms" "ipc" "call" "notepad" "toggle";
-   }
-   Super+Alt+L hotkey-overlay-title="锁屏" {
-      spawn "dms" "ipc" "call" "lock" "lock";
-   }
-   Mod+X hotkey-overlay-title="电源菜单" {
-      spawn "dms" "ipc" "call" "powermenu" "toggle";
-   }
-   XF86AudioRaiseVolume allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "increment" "3";
-   }
-   XF86AudioLowerVolume allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "decrement" "3";
-   }
-   XF86AudioMute allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "mute";
-   }
-   XF86AudioMicMute allow-when-locked=true {
-      spawn "dms" "ipc" "call" "audio" "micmute";
-   }
-   XF86MonBrightnessUp allow-when-locked=true {
-      spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
-   }
-   // You can override the default device for e.g. keyboards by adding the device name to the last param
-   XF86MonBrightnessDown allow-when-locked=true {
-      spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
-   }
 }

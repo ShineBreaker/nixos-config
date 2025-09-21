@@ -23,12 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +33,6 @@
   outputs =
     {
       chaotic,
-      dankMaterialShell,
       home-manager,
       niri-flake,
       nix-index-database,
@@ -74,15 +67,13 @@
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
 
-            (
-              {
-                environment.systemPackages = [
-                  winapps.packages."${system}".winapps
-                  winapps.packages."${system}".winapps-launcher # optional
-                ];
-              }
-            )
-            
+            ({
+              environment.systemPackages = [
+                winapps.packages."${system}".winapps
+                winapps.packages."${system}".winapps-launcher
+              ];
+            })
+
             (import ./overlays)
 
             niri-flake.nixosModules.niri
@@ -97,15 +88,12 @@
               }
             )
 
-
             home-manager.nixosModules.home-manager
 
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
-                dankMaterialShell.homeModules.dankMaterialShell
-
                 ./configuration/00-main/home.nix
               ];
 
