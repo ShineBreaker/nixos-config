@@ -31,10 +31,10 @@
         selection-text = "#8fc3a2ff";
         selection-match = "#f58e92ff";
 
-        border = "#4db6acff";
+        border = "#85c7d5ff";
       };
       border = {
-        width = "3";
+        width = "4";
         radius = "12";
       };
     };
@@ -52,7 +52,7 @@
       padding = 10;
       margin = "10,10,10,10";
       border-size = 3;
-      border-color = "#4791db";
+      border-color = "#ddbc7d";
       border-radius = 10;
       font = "Sans 10";
       icons = 1;
