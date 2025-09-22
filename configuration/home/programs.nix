@@ -46,10 +46,7 @@
     })
 
     libreoffice
-
-    gimp3-with-plugins
     inkscape-with-extensions
-    krita
 
     ffmpeg
     imagemagick
@@ -61,9 +58,12 @@
     coppwr
     filezilla
     freerdp
+    baobab
 
     qq
     wechat
+    wemeet
+    
     telegram-desktop
     thunderbird
 
