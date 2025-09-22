@@ -12,7 +12,6 @@
     wl-clipboard
     libnotify
     cliphist
-    geoclue2
 
     labwc
     cage
