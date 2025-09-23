@@ -15,8 +15,5 @@
 
   documentation.nixos.enable = false;
 
-  xdg = {
-    portal.enable = true;
-    icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
-  };
+
 }

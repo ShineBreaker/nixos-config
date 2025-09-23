@@ -62,6 +62,7 @@
       };
     };
     autostart.enable = true;
+    icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
   };
 
   qt = {
