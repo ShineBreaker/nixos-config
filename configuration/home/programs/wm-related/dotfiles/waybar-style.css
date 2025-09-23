@@ -1,9 +1,9 @@
 * {
     font-family: "NotoSans Nerd Font Propo";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
  
-    border-radius: 16px;
+    border-radius: 12px;
     text-shadow: none;
  
     transition-property: background;
@@ -20,17 +20,17 @@ window#waybar.hidden  {
  
 .modules-left {
     background-color: rgba(32, 32, 32, 0.8);
-    padding: 6px 4px;
+    padding: 6px 0px;
 }
  
 .modules-center {
     background-color: rgba(32, 32, 32, 0.8);
-    padding: 6px 4px;
+    padding: 6px 0px;
 }
  
 .modules-right {
     background-color: rgba(32, 32, 32, 0.8);
-    padding: 6px 4px;
+    padding: 6px 0px;
 }
 
 #custom-lock,
@@ -49,16 +49,19 @@ window#waybar.hidden  {
 #wireplumber,
 #clock 
 {
-    margin-top: 2px;
-    margin-bottom: 2px;
     margin-left: 30px;
-    padding: 5px 2px;
+    margin-right: 0px;
+    padding: 4px 2px;
 }
 
 
 #battery { color: #93abbe; }
 
-#clock { color: #eefff1; }
+#clock { 
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+}
 
 #cpu { color: #FE968B; }
 

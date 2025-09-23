@@ -5,12 +5,11 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gcc
-    yad
-
     fastfetch
     git
     uv
+    gcc
+    
     nix-output-monitor
     btop
     wget

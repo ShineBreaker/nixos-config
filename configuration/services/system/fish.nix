@@ -20,8 +20,8 @@
     shellAbbrs = {
       commit = "git commit --all";
       push = "git push";
-      rebuild = "nh os switch .";
-      rebuildb = "nh os boot .";
+      rebuild = "nh os switch . --ask";
+      rebuildb = "nh os boot . --ask";
       rebuildc = "nh os switch . && nh clean all && nh os switch .";
       
       update = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";

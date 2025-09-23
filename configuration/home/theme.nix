@@ -70,4 +70,16 @@
       defaultCursor = "default";
     };
   };
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        document-font-name = "Maple Mono NF CN 11";
+        monospace-font-name = "Maple Mono NF CN 11";
+        accent-color = "teal";
+      };
+    };
+  };
 }

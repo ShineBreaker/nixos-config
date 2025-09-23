@@ -3,7 +3,6 @@ spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "clash-verge"
-spawn-at-startup "winapps-launcher"
 
 prefer-no-csd
 
@@ -140,6 +139,8 @@ window-rule {
     match app-id="wechat"
     match app-id="org.telegram.desktop"
     match app-id="QQ"
+    match app-id="com.alibabainc.dingtalk"
+    match app-id="wemeetapp"
     
     open-on-workspace "Chat"
 }
