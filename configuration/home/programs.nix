@@ -6,11 +6,12 @@
 
 {
   imports = [
+    ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/niri/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
-    ./programs/wm-related/default.nix
+    # ./programs/wm-related/default.nix
 
     ./programs/firefox.nix
     ./programs/helix.nix

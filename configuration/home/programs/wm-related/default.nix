@@ -4,6 +4,14 @@
 }:
 
 {
+  home.packages = with pkgs; [
+    swww
+    mpvpaper
+    waypaper
+    
+    socat
+  ];
+  
   programs.waybar = {
     enable = true;
     systemd.enable = true;
