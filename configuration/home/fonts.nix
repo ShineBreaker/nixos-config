@@ -7,14 +7,17 @@
     enable = true;
     defaultFonts = {
       serif = [
-        "NotoSerif Nerd Font"
-        "Noto Serif CJK SC"
+        "Sarasa Gothic SC"
+        "Iosevka Nerd Font"
       ];
       sansSerif = [
-        "NotoSans Nerd Font"
-        "Noto Sans CJK SC"
+        "Sarasa Gothic SC"
+        "Iosevka Nerd Font"
       ];
-      monospace = [ "Maple Mono NF CN" ];
+      monospace = [ 
+        "Maple Mono NF CN" 
+        "Iosevka Nerd Font Mono"
+      ];
       emoji = [
         "Noto Color Emoji"
         "Blobmoji"
