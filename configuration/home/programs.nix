@@ -6,6 +6,7 @@
 
 {
   imports = [
+    ./programs/conda/default.nix
     ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/niri/default.nix
@@ -13,7 +14,7 @@
     ./programs/winapps/default.nix
     # ./programs/wm-related/default.nix
 
-    ./programs/conda.nix
+
     ./programs/firefox.nix
     ./programs/helix.nix
     ./programs/kdeconnect.nix

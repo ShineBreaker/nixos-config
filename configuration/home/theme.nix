@@ -28,8 +28,8 @@
       name = "Colloid-Dark";
     };
     font = {
-      package = pkgs.noto-fonts-cjk-sans;
-      name = "Noto Sans CJK SC";
+      package = pkgs.sarasa-gothic;
+      name = "Sarasa Gothic SC";
     };
     gtk2.extraConfig = ''
       gtk-cursor-theme-size = 0
@@ -76,7 +76,7 @@
     settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        document-font-name = "Maple Mono NF CN 11";
+        document-font-name = "Sarasa Mono SC 11";
         monospace-font-name = "Maple Mono NF CN 11";
         accent-color = "teal";
       };

@@ -16,4 +16,8 @@ custom_channels:
   bioconda: https://mirrors.ustc.edu.cn/anaconda/cloud
     ";
   };
+
+  xdg.configFile = {
+    "fish/conf.d/conda.fish".source = ./dotfiles/config.fish;
+  };
 }

@@ -17,7 +17,6 @@
       noto-fonts-color-emoji
       noto-fonts-emoji-blob-bin
       sarasa-gothic
-      wqy_microhei
     ];
   };
 }
