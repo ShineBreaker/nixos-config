@@ -7,8 +7,7 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     git
-    uv
-    gcc
+    conda
     
     nix-output-monitor
     btop
