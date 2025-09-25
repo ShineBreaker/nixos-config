@@ -3,7 +3,7 @@
     "position": "left",
     "spacing": 0,
     "weight": 24,
-    "margin": "12 0 12 -32",
+    "margin": "12 -2 12 8",
     
     "modules-left": ["custom/search","group/power","niri/workspaces"],
     "modules-center": ["clock"],
@@ -11,7 +11,7 @@
 
     "tray": {
         "icon-size": 14,
-        "spacing": 14
+        "spacing": 12
     },
     
     "niri/workspaces": {
@@ -101,7 +101,7 @@
         "format-linked": "",
         "format-disconnected": "",
         "tooltip-format": "{ifname} {ipaddr}/{cidr}\nIP: {gwaddr}\n信号强度: {signalStrength}%",
-        "on-click": "connman-gtk",
+        "on-click": "nmgui",
     },
     
     "wireplumber": {

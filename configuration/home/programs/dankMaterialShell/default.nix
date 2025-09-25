@@ -1,11 +1,19 @@
-{ config, pkgs, lib, ... }:
 {
-  xdg.configFile =  {
+  pkgs,
+  lib,
+  ...
+}:
+
+{
+
+  xdg.configFile = {
     "niri/config.kdl".source = lib.mkForce ./dotfiles/config.kdl;
   };
-  
+
   programs.dankMaterialShell = {
     enable = true;
+    enableSystemd = true;
+    enableCalendarEvents = false;
   };
 
   services.swayidle = {

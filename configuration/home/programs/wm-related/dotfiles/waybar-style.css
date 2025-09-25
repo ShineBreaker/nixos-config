@@ -1,9 +1,9 @@
 * {
-    font-family: "Iosevka Nerd Font Mono Propo";
+    font-family: "Iosevka Nerd Font Propo";
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
  
-    border-radius: 12px;
+    border-radius: 64px;
     text-shadow: none;
  
     transition-property: background;
@@ -12,12 +12,23 @@
  
 window#waybar {
     background-color: transparent;
+    font-family: inherit;
 }
  
 window#waybar.hidden  {
     opacity: 0.2;
 }
- 
+
+tooltip {
+    background: @theme_base_color;
+    border-bottom: 1px solid @unfocused_borders;
+    color: @theme_text_color;
+}
+
+tooltip label {
+  color: white;
+}
+
 .modules-left {
     background-color: rgba(32, 32, 32, 0.8);
     padding: 6px 0px;
@@ -49,19 +60,13 @@ window#waybar.hidden  {
 #wireplumber,
 #clock 
 {
-    margin-left: 30px;
-    margin-right: 0px;
-    padding: 4px 2px;
+    padding: 4px 0px;
 }
 
 
 #battery { color: #93abbe; }
 
-#clock { 
-    font-weight: 400;
-    font-size: 14px;
-    color: #ffffff;
-}
+#clock { color: #eefff1; }
 
 #cpu { color: #FE968B; }
 

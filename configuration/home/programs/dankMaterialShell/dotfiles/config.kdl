@@ -1,4 +1,4 @@
-spawn-at-startup "dms" "run"
+// spawn-at-startup "dms" "run"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
 spawn-at-startup "fcitx5" "-d"
