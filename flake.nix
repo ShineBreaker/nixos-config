@@ -4,6 +4,13 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
+
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
@@ -11,6 +18,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     nix-index-database = {
@@ -26,12 +34,21 @@
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
+
+    linyaps-flake = {
+      url = "github:nix-community/linyaps-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
 
   };
 
@@ -40,6 +57,7 @@
       chaotic,
       dankMaterialShell,
       home-manager,
+      linyaps-flake,
       niri-flake,
       nix-index-database,
       winapps,
@@ -115,6 +133,11 @@
             chaotic.nixosModules.default
             {
               chaotic.mesa-git.enable = true;
+            }
+
+            linyaps-flake.nixosModules.linyaps
+            {
+              services.linyaps.enable = true;
             }
 
             genRev

@@ -121,11 +121,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
@@ -194,6 +194,29 @@
       "original": {
         "owner": "Jovian-Experiments",
         "repo": "Jovian-NixOS",
+        "type": "github"
+      }
+    },
+    "linyaps-flake": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757577478,
+        "narHash": "sha256-vnYBeIxnV5ZzSBlD3AEsQHg5aFfdYFRUBqi1ns+vmwk=",
+        "owner": "nix-community",
+        "repo": "linyaps-flake",
+        "rev": "e17edb507b2675bbc69f53dde72cb39d54e365f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "linyaps-flake",
         "type": "github"
       }
     },
@@ -385,7 +408,9 @@
       "inputs": {
         "chaotic": "chaotic",
         "dankMaterialShell": "dankMaterialShell",
+        "flake-utils": "flake-utils",
         "home-manager": "home-manager_2",
+        "linyaps-flake": "linyaps-flake",
         "niri-flake": "niri-flake",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",
@@ -431,7 +456,9 @@
     "winapps": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-utils": "flake-utils",
+        "flake-utils": [
+          "flake-utils"
+        ],
         "nix-filter": "nix-filter",
         "nixpkgs": [
           "nixpkgs"

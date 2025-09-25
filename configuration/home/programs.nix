@@ -80,10 +80,6 @@
     freerdp
     baobab
 
-    qq
-    wechat
-    wemeet
-    
     telegram-desktop
     thunderbird
 
