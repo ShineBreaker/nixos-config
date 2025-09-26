@@ -1,6 +1,6 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
@@ -23,7 +23,7 @@
         name = "labwc";
         exec = "${pkgs.labwc}/bin/labwc";
       };
-      
+
       mcaselector = {
         name = "mcaselector";
         exec = "mcaselector";

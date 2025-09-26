@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{
+  ...
+}:
+
 {
   home.file.condarc = {
     enable = true;

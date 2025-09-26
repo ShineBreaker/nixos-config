@@ -8,10 +8,10 @@
     swww
     mpvpaper
     waypaper
-    
+
     socat
   ];
-  
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -85,13 +85,13 @@
         default-timeout = 2000;
         group-by = "category";
       };
-      
+
       "mode=do-not-disturb" = {
         invisible = 1;
       };
     };
   };
-  
+
   services.swayidle = {
     enable = true;
     events = [

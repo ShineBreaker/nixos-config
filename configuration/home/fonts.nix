@@ -14,8 +14,8 @@
         "Sarasa Gothic SC"
         "Iosevka Nerd Font"
       ];
-      monospace = [ 
-        "Maple Mono NF CN" 
+      monospace = [
+        "Maple Mono NF CN"
         "Iosevka Nerd Font Mono"
       ];
       emoji = [

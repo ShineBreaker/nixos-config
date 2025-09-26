@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }:
 
@@ -21,7 +20,7 @@
         rebuild = "nh os switch . --ask";
         rebuildb = "nh os boot . --ask";
         rebuildc = "nh os switch . && nh clean all && nh os switch .";
-      
+
         update = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";

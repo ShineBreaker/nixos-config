@@ -2,6 +2,7 @@
   config,
   ...
 }:
+
 {
   home.file = {
     nix-profile = {
