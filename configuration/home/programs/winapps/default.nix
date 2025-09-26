@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{
+  ...
+}:
+
 {
   xdg.configFile = {
     "winapps/winapps.conf".source = ./dotfiles/winapps.conf;
