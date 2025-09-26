@@ -21,7 +21,7 @@
     enable = true;
     iconTheme = {
       package = pkgs.papirus-icon-theme;
-      name = "Papirus";
+      name = "Papirus-Dark";
     };
     theme = {
       package = pkgs.colloid-gtk-theme;
