@@ -21,7 +21,7 @@
     enable = true;
     iconTheme = {
       package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
+      name = "Papirus";
     };
     theme = {
       package = pkgs.colloid-gtk-theme;
@@ -78,7 +78,6 @@
         color-scheme = "prefer-dark";
         document-font-name = "Sarasa Mono SC 11";
         monospace-font-name = "Maple Mono NF CN 11";
-        accent-color = "teal";
       };
     };
   };

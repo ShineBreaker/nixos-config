@@ -19,7 +19,9 @@
 
   xdg.configFile = {
     "waybar/config.jsonc".source = ./dotfiles/waybar-config.jsonc;
-    "waybar/style.css".source = ./dotfiles/waybar-style.css;
+
+    "waybar/style.css".source = ./dotfiles/waybar-style-dark.css;
+    # "waybar/style.css".source = ./dotfiles/waybar-style-light.css;
   };
 
   programs.fuzzel = {

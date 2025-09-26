@@ -1,9 +1,14 @@
-{ config, pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
+
 {
   programs.helix = {
     enable = true;
     settings = {
-      theme = "tokyonight_transparent";
+      theme = "transparent";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -27,8 +32,8 @@
       };
     };
     themes = {
-      tokyonight_transparent = {
-        "inherits" = "tokyonight";
+      transparent = {
+        "inherits" = "ayu_mirage";
         "ui.background" = { };
         "ui.text" = { };
         "ui.help" = { };

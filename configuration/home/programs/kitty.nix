@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{
+  pkgs,
+  ...
+}:
 {
   dconf = {
     settings = {
@@ -23,7 +26,7 @@
       name = "Maple Mono NF CN";
       size = 11;
     };
-    themeFile = "tokyo_night_night";
+    themeFile = "ayu_mirage";
     settings = {
       cursor_shape = "beam";
       background_opacity = 0.8;
