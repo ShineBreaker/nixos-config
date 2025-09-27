@@ -19,6 +19,7 @@
     ./programs/kdeconnect.nix
     ./programs/keepass.nix
     ./programs/kitty.nix
+    ./programs/lapce.nix
     ./programs/obs-studio.nix
     ./programs/virt-manager.nix
   ];

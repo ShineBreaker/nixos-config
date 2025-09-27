@@ -5,8 +5,6 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
-
-
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
@@ -42,7 +40,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
-
 
   };
 

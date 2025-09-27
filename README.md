@@ -40,6 +40,6 @@
 
   3. 然后再
 
-    nixos-install --flake .#nixos --substituters https://mirror.sjtu.edu.cn/nix-channels/store
+    nixos-install --flake .#BrokenShine-Desktop --substituters https://mirror.sjtu.edu.cn/nix-channels/store
     
   > 注意：本配置文件中多次直接硬编码了我本人的用户名，并且配置了相应的用户 **和密码** ，非常不推荐直接复用

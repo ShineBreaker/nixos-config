@@ -14,21 +14,51 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/524aa238-ab9a-4394-868b-f5c42c68d756";
-      fsType = "f2fs";
-      options = [ "compress_algorithm=zstd:6" "compress_chksum" "atgc" "gc_merge" "lazytime" ];
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=SYSTEM/NixOS/@" "compress=zstd:6" ];
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/9235c10c-9d31-4fb2-8846-dae1a20a767a";
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/327f2e02-1e4f-48b2-87f0-797c481850c9";
+
+  fileSystems."/var" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=SYSTEM/NixOS/@var" "compress=zstd:6" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=SYSTEM/NixOS/@nix" "compress=zstd:6" ];
+    };
+
+  fileSystems."/etc" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=SYSTEM/NixOS/@etc" "compress=zstd:6" ];
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/Home/NixOS" "compress=zstd:6" ];
+    };
+
+  fileSystems."/data" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/Share" "compress=zstd:6" ];
+    };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3625-82FA";
+    { device = "/dev/disk/by-uuid/9699-52A2";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/63c2a69a-bfa0-47f8-85cd-7f30402b6151"; }
+    [ { device = "/dev/disk/by-uuid/7c5f1768-bf41-4349-9b92-4b53880a8e05"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

@@ -46,7 +46,7 @@
     powerKeyLongPress = "hibernate";
   };
 
-  boot.resumeDevice = "/dev/disk/by-uuid/63c2a69a-bfa0-47f8-85cd-7f30402b6151";
+  boot.resumeDevice = "/dev/disk/by-uuid/7c5f1768-bf41-4349-9b92-4b53880a8e05";
 
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=15m

@@ -8,10 +8,11 @@
     fastfetch
     git
     conda
-    
+
     nix-output-monitor
     btop
     wget
+    sbctl
 
     unzip
     unrar
