@@ -15,6 +15,12 @@
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct
     adwaita-icon-theme
+
+    maple-mono.NF-CN
+    nerd-fonts.iosevka
+    noto-fonts-color-emoji
+    noto-fonts-emoji-blob-bin
+    sarasa-gothic
   ];
 
   gtk = {
