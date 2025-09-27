@@ -9,8 +9,24 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    linyaps-flake = {
+      url = "github:nix-community/linyaps-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -19,24 +35,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri-flake = {
-      url = "github:sodiboo/niri-flake";
+    solaar = {
+      url = "github:Svenum/Solaar-Flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     winapps = {
       url = "github:winapps-org/winapps";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    linyaps-flake = {
-      url = "github:nix-community/linyaps-flake";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
@@ -51,6 +56,7 @@
       linyaps-flake,
       niri-flake,
       nix-index-database,
+      solaar,
       winapps,
 
       nixpkgs,
@@ -129,6 +135,15 @@
             linyaps-flake.nixosModules.linyaps
             {
               services.linyaps.enable = true;
+            }
+
+            solaar.nixosModules.solaar
+            {
+              services.solaar = {
+                enable = true;
+                window = "hide";
+                batteryIcons = "symbolic";
+              };
             }
 
             genRev

@@ -128,8 +128,10 @@ workspace "Code"
 window-rule {
     match title=r#".*Lapce$"#
     match app-id="code"
+    match app-id="Code"
     match app-id="dev.zed.Zed-Dev"
     
+    open-maximized true
     open-on-workspace "Code"
 }
 
