@@ -8,18 +8,18 @@
     ./programs/conda/default.nix
     # ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
+    ./programs/fish/default.nix
     ./programs/niri/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
     ./programs/wm-related/default.nix
 
     ./programs/firefox.nix
-    ./programs/fish.nix
     ./programs/helix.nix
     ./programs/kdeconnect.nix
     ./programs/keepass.nix
     ./programs/kitty.nix
-    ./programs/lapce.nix
+    # ./programs/lapce.nix
     ./programs/obs-studio.nix
     ./programs/virt-manager.nix
   ];

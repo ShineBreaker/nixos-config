@@ -35,7 +35,7 @@
         terminal = "kitty";
       };
       colors = {
-        background = "#2c2c2ce6";
+        background = "#222930cc";
 
         text = "#ffffffff";
         prompt = "#4db6acff";
@@ -61,7 +61,7 @@
       anchor = "top-right";
       sort = "-time";
       layer = "overlay";
-      background-color = "#2c2c2ce6";
+      background-color = "#222930cc";
       width = 300;
       height = 500;
       padding = 10;

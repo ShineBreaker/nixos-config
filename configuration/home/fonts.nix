@@ -16,7 +16,6 @@
       ];
       monospace = [
         "Maple Mono NF CN"
-        "Iosevka Nerd Font Mono"
       ];
       emoji = [
         "Noto Color Emoji"

@@ -51,6 +51,30 @@
       options = [ "subvol=DATA/Share" "compress=zstd:6" ];
     };
 
+  fileSystems."/var/lib/flatpak" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/Flatpak" "compress=zstd:6" ];
+    };
+
+  fileSystems."/var/lib/linglong" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/LingLong" "compress=zstd:6" ];
+    };
+
+  fileSystems."/var/lib/libvirt" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/LibVirt" "compress=zstd:6" ];
+    };
+
+  fileSystems."/var/lib/sbctl" =
+    { device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+      fsType = "btrfs";
+      options = [ "subvol=DATA/sbctl" "compress=zstd:6" ];
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/9699-52A2";
       fsType = "vfat";
