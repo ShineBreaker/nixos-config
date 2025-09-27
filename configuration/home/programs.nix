@@ -24,6 +24,17 @@
     ./programs/virt-manager.nix
   ];
 
+  dconf = {
+    settings = {
+      "org/gnome/desktop/applications/terminal" = {
+        exec = "foot";
+      };
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "foot";
+      };
+    };
+  };
+
   home.packages = with pkgs; [
     mangojuice
     mangohud_git

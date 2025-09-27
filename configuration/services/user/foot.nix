@@ -5,12 +5,11 @@
 {
   programs.foot = {
     enable = true;
-    theme = "ayu-mirage";
+    theme = "tokyonight-storm";
     settings = {
       main = {
         term = "xterm-256color";
-        font = "Maple Mono NF CN:size=8";
-        dpi-aware = "yes";
+        font = "Maple Mono NF CN:size=11";
       };
       cursor = {
         style = "beam";

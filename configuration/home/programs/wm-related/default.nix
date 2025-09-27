@@ -32,7 +32,7 @@
         icons-enabled = "no";
         layer = "overlay";
         line-height = "16";
-        terminal = "kitty";
+        terminal = "foot";
       };
       colors = {
         background = "#222930cc";

@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 
@@ -7,10 +8,10 @@
   dconf = {
     settings = {
       "org/gnome/desktop/applications/terminal" = {
-        exec = "kitty";
+        exec = lib.mkForce "kitty";
       };
       "org/cinnamon/desktop/applications/terminal" = {
-        exec = "kitty";
+        exec = lib.mkForce "kitty";
       };
     };
   };

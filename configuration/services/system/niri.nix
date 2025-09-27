@@ -57,7 +57,7 @@
       enable = true;
       settings = {
         default = [
-          "kitty.desktop"
+          "foot.desktop"
         ];
       };
     };
