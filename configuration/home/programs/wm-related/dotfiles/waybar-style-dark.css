@@ -26,24 +26,24 @@ tooltip label {
 
 .modules-left {
     background-color: rgba(34, 41, 48, 0.9);
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 0px;
     padding-right: 6px;
 }
  
 .modules-center {
     background-color: rgba(34, 41, 48, 0.9);
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 0px;
     padding-right: 6px;
 }
  
 .modules-right {
     background-color: rgba(34, 41, 48, 0.9);
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 0px;
     padding-right: 6px;
 }
