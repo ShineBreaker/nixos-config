@@ -24,8 +24,8 @@
       name = "Papirus-Dark";
     };
     theme = {
-      package = pkgs.colloid-gtk-theme;
-      name = "Colloid-Dark";
+      package = pkgs.orchis-theme;
+      name = "Orchis-Teal-Dark";
     };
     font = {
       package = pkgs.sarasa-gothic;
@@ -76,8 +76,9 @@
     settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        document-font-name = "Sarasa Mono SC 11";
+        document-font-name = "Maple Mono NF CN 11";
         monospace-font-name = "Maple Mono NF CN 11";
+        accent-color = "teal";
       };
     };
   };
