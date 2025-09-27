@@ -25,6 +25,7 @@
 
     ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
+    ../services/user/foot.nix
     ../services/user/java.nix
     ../services/user/poweralertd.nix
     # ../services/user/sparkle.nix

@@ -18,7 +18,7 @@
     ./programs/helix.nix
     ./programs/kdeconnect.nix
     ./programs/keepass.nix
-    ./programs/kitty.nix
+    # ./programs/kitty.nix
     ./programs/lapce.nix
     ./programs/obs-studio.nix
     ./programs/virt-manager.nix
@@ -84,6 +84,12 @@
 
     nixd
     jujutsu_git
+
+    maple-mono.NF-CN
+    nerd-fonts.iosevka
+    noto-fonts-color-emoji
+    noto-fonts-emoji-blob-bin
+    sarasa-gothic
   ];
 
 }

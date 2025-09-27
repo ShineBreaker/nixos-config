@@ -12,8 +12,14 @@
       enable = true;
       enableFishIntegration = true;
     };
+
     direnv = {
       enable = true;
+    };
+
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
     };
 
     fish = {
@@ -40,6 +46,7 @@
         vi = "hx";
         helix = "hx";
       };
+      
       interactiveShellInit = ''
         fastfetch
         set --global fish_greeting 日々私たちが過ごしている日常は、実は、奇跡の連続なのかもしれない。

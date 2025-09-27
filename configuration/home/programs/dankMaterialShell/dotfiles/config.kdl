@@ -199,7 +199,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="kitty"
+    match app-id="foot"
     default-column-width { proportion 0.5; }
 }
 
@@ -223,7 +223,7 @@ switch-events {
 binds {
     Mod+Alt+Space   hotkey-overlay-title="显示提示"                            { show-hotkey-overlay; }
 
-    Mod+T        hotkey-overlay-title="打开终端"      repeat=false  { spawn "kitty"; }
+    Mod+T        hotkey-overlay-title="打开终端"      repeat=false  { spawn "foot"; }
     Mod+Escape   hotkey-overlay-title="总览"          repeat=false  { toggle-overview; }
 	
     Mod+Q  hotkey-overlay-title="关闭窗口"   { close-window; }

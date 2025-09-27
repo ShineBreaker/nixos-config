@@ -9,10 +9,10 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dankMaterialShell = {
+    #   url = "github:AvengeMedia/DankMaterialShell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -51,7 +51,7 @@
   outputs =
     {
       chaotic,
-      dankMaterialShell,
+      # dankMaterialShell,
       home-manager,
       linyaps-flake,
       niri-flake,
@@ -114,7 +114,8 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine".imports = [
-                dankMaterialShell.homeModules.dankMaterialShell
+                # dankMaterialShell.homeModules.dankMaterialShell
+
                 ./configuration/00-main/home.nix
               ];
 

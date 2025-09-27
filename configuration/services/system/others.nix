@@ -10,7 +10,6 @@
       enable = true;
       binfmt = true;
     };
-    zoxide.enable = true;
   };
 
   documentation.nixos.enable = false;

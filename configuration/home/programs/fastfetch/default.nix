@@ -5,6 +5,6 @@
 {
   xdg.configFile = {
     "fastfetch/config.jsonc".source = ./dotfiles/fastfetch-config.jsonc;
-    "fastfetch/nix-corner.png".source = ./dotfiles/nix-corner.png;
+    # "fastfetch/nix-corner.png".source = ./dotfiles/nix-corner.png;
   };
 }
