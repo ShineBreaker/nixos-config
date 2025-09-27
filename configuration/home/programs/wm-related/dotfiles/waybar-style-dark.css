@@ -1,7 +1,7 @@
 * {
     font-family: "Iosevka Nerd Font Propo";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
  
     border-radius: 12px;
     text-shadow: none;
@@ -19,29 +19,33 @@ window#waybar.hidden  {
     opacity: 0.2;
 }
 
-tooltip {
-    background: @theme_base_color;
-    border-bottom: 1px solid @unfocused_borders;
-    color: @theme_text_color;
-}
-
 tooltip label {
   color: white;
+  font-size: 14px;
 }
 
 .modules-left {
-    background-color: rgba(34, 41, 48, 0.8);
-    padding: 6px 0px;
+    background-color: rgba(34, 41, 48, 0.9);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
  
 .modules-center {
-    background-color: rgba(34, 41, 48, 0.8);
-    padding: 6px 0px;
+    background-color: rgba(34, 41, 48, 0.9);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
  
 .modules-right {
-    background-color: rgba(34, 41, 48, 0.8);
-    padding: 6px 0px;
+    background-color: rgba(34, 41, 48, 0.9);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
 
 #custom-lock,
@@ -60,13 +64,18 @@ tooltip label {
 #wireplumber,
 #clock 
 {
-    padding: 4px 0px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 3px;
 }
-
 
 #battery { color: #93abbe; }
 
-#clock { color: #ffffff; }
+#clock { 
+    font-size: 16px;
+    color: #ffffff; 
+}
 
 #cpu { color: #FE968B; }
 
@@ -90,4 +99,7 @@ tooltip label {
 
 #custom-caffeine { color: #deb49f; }
 
-#workspaces button.focused { color: #36d792; }
+#workspaces button.focused { 
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #36d792; 
+}

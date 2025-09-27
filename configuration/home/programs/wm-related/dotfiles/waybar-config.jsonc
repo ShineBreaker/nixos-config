@@ -3,15 +3,15 @@
     "position": "left",
     "spacing": 0,
     "weight": 24,
-    "margin": "12 -2 12 8",
+    "margin": "12 -2 12 -10",
     
     "modules-left": ["custom/search","group/power","niri/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray","group/status"],
 
     "tray": {
-        "icon-size": 14,
-        "spacing": 12
+        "icon-size": 16,
+        "spacing": 16
     },
     
     "niri/workspaces": {

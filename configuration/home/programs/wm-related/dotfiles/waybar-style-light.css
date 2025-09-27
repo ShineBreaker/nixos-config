@@ -26,22 +26,32 @@ tooltip {
 }
 
 tooltip label {
-  color: rgb(0, 0, 0);
+  color: white;
+  font-size: 14px;
 }
 
 .modules-left {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 6px 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
  
 .modules-center {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 6px 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
  
 .modules-right {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 6px 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
 
 #custom-lock,
@@ -60,15 +70,20 @@ tooltip label {
 #wireplumber,
 #clock 
 {
-    padding: 4px 0px;
-    color: #222222;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 3px;
 }
 
 #backlight { color: #ff7c38; }
 
 #battery { color: #00b8a9; }
 
-#clock { color: #222222; }
+#clock { 
+    font-size: 16px;
+    color: #222222; 
+}
 
 #cpu { color: #c0392b; }
 
@@ -78,7 +93,10 @@ tooltip label {
 
 #wireplumber { color: #2a796d; }
 
-#workspaces button.focused { color: #27907d; }
+#workspaces button.focused { 
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #27907d;
+}
 
 #custom-caffeine { color: #4ea47e; }
 #custom-lock { color: #5e5e5e; }
