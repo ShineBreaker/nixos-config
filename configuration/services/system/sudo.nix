@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  security.sudo = {
+  security.sudo-rs = {
     enable = true;
     wheelNeedsPassword = lib.mkForce true;
   };
