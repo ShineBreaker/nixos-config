@@ -13,5 +13,9 @@
   networking = {
     nftables.enable = true;
     firewall.enable = true;
+    hosts."127.0.0.1" = [
+      # Block this domain to prevent QQ from auto-updating.
+      "qqpatch.gtimg.cn"
+    ];
   };
 }

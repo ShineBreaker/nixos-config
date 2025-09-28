@@ -8,7 +8,7 @@
     git.enable = true;
     appimage = {
       enable = true;
-      binfmt = true;
+      binfmt = false;
     };
   };
 

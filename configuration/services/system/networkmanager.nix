@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   networking = {
-    modemmanager.enable = true;
+    modemmanager.enable = false;
     networkmanager = {
       enable = true;
       wifi = {
