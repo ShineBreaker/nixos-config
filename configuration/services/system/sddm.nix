@@ -6,9 +6,10 @@
 {
   environment.systemPackages = [
     (pkgs.sddm-astronaut.override {
+      embeddedTheme = "hyprland_kath";
       themeConfig = {
         General = ''
-          HeaderText = "扫描指纹或输入密码解锁"
+          HeaderText="请使用指纹或密码解锁"
         '';
       };
     })
@@ -32,14 +33,5 @@
     };
   };
 
-  security.pam.services = {
-    sddm.text = ''
-      auth sufficient ${pkgs.linux-pam}/lib/security/pam_unix.so try_first_pass likeauth nullok
-      auth sufficient ${pkgs.fprintd}/lib/security/pam_fprintd.so
-      auth      substack      login
-      account   include       login
-      password  substack      login
-      session   include       login
-    '';
-  };
+
 }
