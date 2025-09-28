@@ -14,6 +14,7 @@
     ./programs/winapps/default.nix
     ./programs/wm-related/default.nix
 
+    ./programs/code.nix
     ./programs/firefox.nix
     ./programs/helix.nix
     ./programs/kdeconnect.nix
@@ -80,10 +81,11 @@
 
     ffmpeg
     imagemagick
-
     nomacs
     mpv
-    ungoogled-chromium
+
+    qq
+    wechat
 
     coppwr
     filezilla
