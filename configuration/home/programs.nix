@@ -40,6 +40,8 @@
     mangojuice
     mangohud_git
 
+    upscayl-ncnn
+
     (bottles.override {
       removeWarningPopup = true;
     })
