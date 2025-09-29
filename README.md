@@ -8,7 +8,8 @@
  - 使用`linyaps`来提供国产软件支持
  - 使用`FprintD`来提供指纹识别支持，目前系统登录、解锁、sudo提权均可以使用指纹识别进行
  - 桌面环境为`Niri`，使用`sddm`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`File-Roller`，默认的输入法为`Fcitx5+Rime`，Rime默认使用`rime-ice`方案
- - 默认使用`Orchis`主题，`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
+ - 默认使用`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
+ - 利用`Stylix`来管理系统主题
  - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解
 
 #### 注意事项：
