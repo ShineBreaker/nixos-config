@@ -33,7 +33,7 @@
     };
     themes = {
       transparent = {
-        "inherits" = "tokyo_night_storm";
+        "inherits" = "ayu_mirage";
         "ui.background" = { };
         "ui.text" = { };
         "ui.help" = { };
