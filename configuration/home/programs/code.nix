@@ -58,9 +58,11 @@
         "workbench.iconTheme" = "vs-seti";
         "window.autoDetectColorScheme" = true;
         "C_Cpp.autocompleteAddParentheses" = true;
+        "nixfmt.path" = lib.getExe pkgs.nixfmt-rfc-style;
         "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
         "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
         "nix.enableLanguageServer" = true;
+        "terminal.integrated.inheritEnv" = false;
       };
     };
   };
