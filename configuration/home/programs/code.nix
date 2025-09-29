@@ -63,6 +63,7 @@
         "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
         "nix.enableLanguageServer" = true;
         "terminal.integrated.inheritEnv" = false;
+        "git.confirmSync" = false;
       };
     };
   };
