@@ -36,7 +36,6 @@
         skyapps.fish-vscode
         shopify.ruby-lsp
         tamasfe.even-better-toml
-        teabyii.ayu
         techtheawesome.rust-yew
         tekumara.typos-vscode
         xaver.clang-format
@@ -47,15 +46,12 @@
 
       userSettings = {
         "locale" = "zh-cn";
-        "editor.fontFamily" = "'Maple Mono NF CN', 'monospace', monospace";
         "files.autoSave" = "onFocusChange";
         "editor.formatOnSave" = true;
         "editor.autoIndentOnPaste" = true;
         "editor.tabSize" = "2";
         "terminal.integrated.defaultProfile.linux" = "fish (2)";
-        "workbench.colorTheme" = "Ayu Mirage Bordered";
-        "workbench.preferredDarkColorTheme" = "Ayu Mirage Bordered";
-        "workbench.preferredLightColorTheme" = "Ayu Light Bordered";
+        "workbench.preferredDarkColorTheme" = "Stylix";
         "workbench.iconTheme" = "vs-seti";
         "window.autoDetectColorScheme" = true;
         "C_Cpp.autocompleteAddParentheses" = true;

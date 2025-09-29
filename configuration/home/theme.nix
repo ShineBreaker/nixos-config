@@ -29,14 +29,6 @@
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
     };
-    theme = {
-      package = pkgs.orchis-theme;
-      name = "Orchis-Teal-Dark";
-    };
-    font = {
-      package = pkgs.sarasa-gothic;
-      name = "Sarasa Gothic SC";
-    };
     gtk2.extraConfig = ''
       gtk-cursor-theme-size = 0
       gtk-toolbar-style = GTK_TOOLBAR_BOTH_HORIZ
@@ -82,8 +74,6 @@
     settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        document-font-name = "Maple Mono NF CN 11";
-        monospace-font-name = "Maple Mono NF CN 11";
         accent-color = "teal";
       };
     };

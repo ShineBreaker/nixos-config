@@ -28,25 +28,10 @@
     enable = true;
     settings = {
       main = {
-        font = "monospace:size=10";
         icons-enabled = "no";
         layer = "overlay";
         line-height = "16";
         terminal = "foot";
-      };
-      colors = {
-        background = "#222930cc";
-
-        text = "#ffffffff";
-        prompt = "#4db6acff";
-        input = "#4db6acff";
-        match = "#f3777cff";
-
-        selection = "#383838cc";
-        selection-text = "#8fc3a2ff";
-        selection-match = "#f58e92ff";
-
-        border = "#85c7d5ff";
       };
       border = {
         width = "4";
@@ -61,15 +46,12 @@
       anchor = "top-right";
       sort = "-time";
       layer = "overlay";
-      background-color = "#222930cc";
       width = 300;
       height = 500;
       padding = 10;
       margin = "10,10,10,10";
       border-size = 3;
-      border-color = "#ddbc7d";
       border-radius = 10;
-      font = "Sans 10";
       icons = 1;
       icon-path = "~/.nix-profile/share/icons/Papirus";
       max-icon-size = 64;
@@ -77,7 +59,6 @@
       ignore-timeout = 1;
 
       "urgency=high" = {
-        border-color = "#bf616a";
         default-timeout = 0;
       };
 

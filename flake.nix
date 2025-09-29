@@ -40,6 +40,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,6 +62,7 @@
       niri-flake,
       nix-index-database,
       solaar,
+      stylix,
       winapps,
 
       nixpkgs,
@@ -113,11 +119,19 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users."brokenshine".imports = [
-                # dankMaterialShell.homeModules.dankMaterialShell
+              home-manager.users."brokenshine" = {
+                imports = [
+                  # dankMaterialShell.homeModules.dankMaterialShell
 
-                ./configuration/00-main/home.nix
-              ];
+                  ./configuration/00-main/home.nix
+                ];
+
+                stylix.targets = {
+                  niri.enable = false;
+                  waybar.enable = false;
+                  firefox.profileNames = [ "default" ];
+                };
+              };
 
               home-manager.backupFileExtension = "backup";
             }
@@ -146,6 +160,14 @@
                 batteryIcons = "symbolic";
               };
             }
+
+            stylix.nixosModules.stylix
+            (
+              { ... }:
+              {
+                imports = [ ./configuration/system/stylix.nix ];
+              }
+            )
 
             genRev
           ];

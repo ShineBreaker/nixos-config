@@ -8,7 +8,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "transparent";
+      theme = lib.mkDefault "transparent";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
