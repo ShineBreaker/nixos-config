@@ -81,6 +81,8 @@
 
     ffmpeg
     imagemagick
+
+    gimp3-with-plugins
     nomacs
     mpv
 
