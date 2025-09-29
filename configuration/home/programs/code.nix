@@ -51,6 +51,7 @@
         "files.autoSave" = "onFocusChange";
         "editor.formatOnSave" = true;
         "editor.autoIndentOnPaste" = true;
+        "editor.tabSize" = "2";
         "terminal.integrated.defaultProfile.linux" = "fish (2)";
         "workbench.colorTheme" = "Ayu Mirage Bordered";
         "workbench.preferredDarkColorTheme" = "Ayu Mirage Bordered";
