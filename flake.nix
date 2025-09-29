@@ -94,11 +94,11 @@
             ./configuration/00-main/services.nix
             ./configuration/device/RBP162024.nix
 
-            ({
+            {
               environment.systemPackages = [
                 winapps.packages."${system}".winapps
               ];
-            })
+            }
 
             (import ./overlays)
 
