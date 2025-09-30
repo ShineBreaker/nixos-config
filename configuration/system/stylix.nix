@@ -7,9 +7,10 @@
 {
   stylix = {
     enable = true;
+    overlays.enable = false;
     targets.plymouth.logoAnimated = false;
     
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
     polarity = "dark";
 
     fonts = {
@@ -43,6 +44,12 @@
 
       dark = "Papirus-Dark";
       light = "Papirus-Light";
+    };
+
+    opacity = {
+      desktop = 0.9;
+      popups = 0.95;
+      terminal = 0.9;
     };
   };
 }
