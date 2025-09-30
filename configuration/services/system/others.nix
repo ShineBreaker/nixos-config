@@ -13,6 +13,4 @@
   };
 
   documentation.nixos.enable = false;
-
-
 }
