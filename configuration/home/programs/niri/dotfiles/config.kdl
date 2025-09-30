@@ -55,8 +55,12 @@ input {
     }
 }
 
+output "*" {
+    variable-refresh-rate on-demand=true
+}
+
 layout {
-    gaps 16
+    gaps 6
 
     center-focused-column "on-overflow"
     always-center-single-column
@@ -70,7 +74,7 @@ layout {
     default-column-width { proportion 0.75; }
 
     focus-ring {
-        // off
+        off
         width 4
         active-gradient from="#85c7d5" to="#ddbc7d" angle=45
         inactive-color "#505050"
@@ -85,8 +89,8 @@ layout {
     
     shadow {
         on
-        softness 20
-        spread 2
+        softness 10
+        spread 0
         offset x=0 y=0
         draw-behind-window false
         color "#000000"
@@ -99,21 +103,38 @@ layer-rule {
 }
 
 layer-rule {
-    match namespace="niriswitcher"
-    shadow { off; }
+    match namespace="waybar"
+    shadow {
+        on
+        softness 5
+        spread 0
+        offset x=0 y=0
+        draw-behind-window false
+        color "#000000"
+    }
 }
+
 
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {
-    match is-active=false
-    opacity 0.9
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+    variable-refresh-rate true
 }
 
 window-rule {
-    geometry-corner-radius 10
-    clip-to-geometry true
-    draw-border-with-background false
+    match is-active=false
+    opacity 0.8
+    shadow {
+        off
+    }
+}
+
+window-rule {
+    match is-floating=true
+    default-floating-position x=0 y=0
 }
 
 workspace "Browser"
