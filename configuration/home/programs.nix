@@ -16,6 +16,7 @@
 
     ./programs/code.nix
     ./programs/firefox.nix
+    ./programs/foot.nix
     ./programs/helix.nix
     ./programs/kdeconnect.nix
     ./programs/keepass.nix

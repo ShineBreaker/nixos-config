@@ -5,7 +5,7 @@
 {
   programs.foot = {
     enable = true;
-    theme = "tokyonight-storm";
+    server.enable = true;
     settings = {
       main = {
         term = "xterm-256color";
