@@ -51,6 +51,7 @@
         "editor.formatOnSave" = true;
         "editor.tabSize" = "2";
         "git.confirmSync" = false;
+        "git.enableSmartCommit" = true;
         "locale" = "zh-cn";
         "nix.enableLanguageServer" = true;
         "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
