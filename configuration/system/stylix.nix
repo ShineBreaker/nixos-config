@@ -33,7 +33,7 @@
 
       sizes = {
         applications = 11;
-        popups = 8;
+        popups = 10;
         terminal = 11;
       };
     };
