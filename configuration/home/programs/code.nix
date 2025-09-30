@@ -54,6 +54,9 @@
         "locale" = "zh-cn";
         "nix.enableLanguageServer" = true;
         "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
+        "nix.hiddenLanguageServerErrors" = [
+          "textDocument/definition"
+        ];
         "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
         "nixfmt.path" = lib.getExe pkgs.nixfmt-rfc-style;
         "terminal.integrated.defaultProfile.linux" = "fish (2)";
