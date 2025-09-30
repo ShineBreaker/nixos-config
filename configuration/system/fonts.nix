@@ -13,6 +13,7 @@
     fontDir.enable = true;
     packages = with pkgs; [
       sarasa-gothic
+      nerd-fonts.iosevka
     ];
   };
 }

@@ -65,8 +65,4 @@
     icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "qt5ct";
-  };
 }

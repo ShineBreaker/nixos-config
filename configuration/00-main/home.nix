@@ -27,5 +27,10 @@
       after = lib.mkForce [ ];
     };
   };
-
+  
+  stylix.targets = {
+    niri.enable = false;
+    waybar.enable = false;
+    firefox.profileNames = [ "default" ];
+  };
 }

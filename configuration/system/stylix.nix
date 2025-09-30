@@ -7,8 +7,9 @@
 {
   stylix = {
     enable = true;
-
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
+    targets.plymouth.logoAnimated = false;
+    
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
     polarity = "dark";
 
     fonts = {
@@ -44,5 +45,4 @@
       light = "Papirus-Light";
     };
   };
-
 }

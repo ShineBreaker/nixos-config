@@ -125,12 +125,6 @@
 
                   ./configuration/00-main/home.nix
                 ];
-
-                stylix.targets = {
-                  niri.enable = false;
-                  waybar.enable = false;
-                  firefox.profileNames = [ "default" ];
-                };
               };
 
               home-manager.backupFileExtension = "backup";

@@ -45,22 +45,22 @@
       ];
 
       userSettings = {
-        "locale" = "zh-cn";
+        "C_Cpp.autocompleteAddParentheses" = true;
         "files.autoSave" = "onFocusChange";
-        "editor.formatOnSave" = true;
         "editor.autoIndentOnPaste" = true;
+        "editor.formatOnSave" = true;
         "editor.tabSize" = "2";
+        "git.confirmSync" = false;
+        "locale" = "zh-cn";
+        "nix.enableLanguageServer" = true;
+        "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
+        "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
+        "nixfmt.path" = lib.getExe pkgs.nixfmt-rfc-style;
         "terminal.integrated.defaultProfile.linux" = "fish (2)";
+        "terminal.integrated.inheritEnv" = false;
+        "window.autoDetectColorScheme" = true;
         "workbench.preferredDarkColorTheme" = "Stylix";
         "workbench.iconTheme" = "vs-seti";
-        "window.autoDetectColorScheme" = true;
-        "C_Cpp.autocompleteAddParentheses" = true;
-        "nixfmt.path" = lib.getExe pkgs.nixfmt-rfc-style;
-        "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
-        "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
-        "nix.enableLanguageServer" = true;
-        "terminal.integrated.inheritEnv" = false;
-        "git.confirmSync" = false;
       };
     };
   };
