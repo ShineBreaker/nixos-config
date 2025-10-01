@@ -32,6 +32,10 @@ window#waybar.hidden  {
     opacity: 0.2;
 }
 
+tooltip {
+    border-radius: 12px;
+}
+
 tooltip label {
   color: white;
   font-size: 14px;
