@@ -7,7 +7,7 @@
 {
   stylix = {
     enable = true;
-    overlays.enable = false;
+    overlays.enable = true;
     targets.plymouth.logoAnimated = false;
     
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
@@ -33,6 +33,7 @@
 
       sizes = {
         applications = 11;
+        desktop = 10;
         popups = 10;
         terminal = 11;
       };
