@@ -16,4 +16,7 @@
     source = lib.getExe pkgs.sparkle;
   };
 
+  networking.proxy.default = "http://127.0.0.1:7890";
+
+  networking.firewall.trustedInterfaces = [ "mihomo" ];
 }
