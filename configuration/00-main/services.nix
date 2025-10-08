@@ -25,11 +25,11 @@
     ../services/system/sudo.nix
     # ../services/system/zfs.nix
 
-    ../services/user/clash-verge.nix
+    # ../services/user/clash-verge.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
     ../services/user/poweralertd.nix
-    # ../services/user/sparkle.nix
+    ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix
     ../services/user/syncthing.nix
