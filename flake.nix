@@ -142,9 +142,6 @@
             }
 
             linyaps-flake.nixosModules.linyaps
-            {
-              services.linyaps.enable = true;
-            }
 
             solaar.nixosModules.solaar
             {
