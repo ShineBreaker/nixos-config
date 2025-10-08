@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }:
@@ -55,7 +54,7 @@
     input = {
       mouse = {
         enable = true;
-        accel-speed = "0.6";
+        accel-speed = 0.6;
         accel-profile = "flat";
       };
       touchpad = {
@@ -67,7 +66,7 @@
     };
 
     layout = {
-      gaps = "16";
+      gaps = 6;
 
       center-focused-column = "on-overflow";
       always-center-single-column = true;
@@ -75,13 +74,13 @@
       preset-column-widths = [
         { proportion = 1. / 2.; }
         { proportion = 3. / 4.; }
-        { proportion = 1; }
+        { proportion = 1.; }
       ];
 
 
-      default-column-width = [
-        { proportion = 3. / 4.; }
-      ];
+      default-column-width = {
+        proportion = 3. / 4.; 
+      };
 
       focus-ring  = {
         enable = false;
@@ -103,13 +102,6 @@
       border = {
         enable = false;
         width = 3;
-          active = {
-            color = "#ffc87f";
-          };
-          inactive = {
-            color = "#7fc8ff";
-          };
-        };
       };
     
       shadow = {
@@ -123,10 +115,11 @@
         draw-behind-window = false;
         color = "#000000";
       };
+    };
 
     switch-events = {
-      lid-close = { sh = "niri msg action power-off-monitors"; };
-      lid-open = { sh = "niri msg action power-on-monitors"; };
+      lid-close.action.spawn = [ "niri msg action power-off-monitors" ];
+      lid-open.action.spawn = [ "niri msg action power-on-monitors" ];
     };
   };
 

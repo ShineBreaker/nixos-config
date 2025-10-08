@@ -1,7 +1,4 @@
 {
-  pkgs,
-  config,
-  lib,
   ...
 }:
 
@@ -12,7 +9,27 @@
         matches = [
           { namespace = "^notifications$"; }
         ];
+
         block-out-from = "screencast";
+      }
+
+      {
+        matches = [
+          { namespace = "waybar"; }
+        ];
+
+        shadow = {
+          enable = true;
+          softness = 5;
+          spread = 0;
+
+          offset = {
+            x = 0;
+            y = 0;
+          };
+          draw-behind-window = false;
+          color = "#000000";
+        };
       }
     ];
 
@@ -26,7 +43,14 @@
     window-rules = [
       {
         matches = [{}];
-        geometry-corner-radius = 0;
+
+        geometry-corner-radius = {
+          top-left = 0.0;
+          top-right = 0.0;
+          bottom-left = 0.0;
+          bottom-right = 0.0;
+        };
+
         clip-to-geometry = true;
         draw-border-with-background = false;
       }
@@ -42,9 +66,9 @@
       }
 
       {
-        matches = {
-          app-id = "firefox";
-        };
+        matches = [
+          { app-id = "firefox"; }
+        ];
     
         open-maximized = true;
         open-on-workspace = "Browser";
@@ -143,9 +167,9 @@
           { app-id = "foot"; }
         ];
 
-        default-column-width = [
-          { proportion = 1. / 2.; }
-        ];
+        default-column-width = {
+          proportion = 1. / 2.;
+        };
       }
 
       {
