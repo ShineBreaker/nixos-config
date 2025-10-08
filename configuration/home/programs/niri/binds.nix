@@ -170,12 +170,12 @@
     "Mod+Shift+Ctrl+L".action.move-column-to-monitor-right = { };
 
     # relative navigation across workspaces
-    "Mod+BracketLeft".action.focus-workspace-up = { };
-    "Mod+BracketRight".action.focus-workspace-down = { };
+    "Mod+Page_Up".action.focus-workspace-up = { };
+    "Mod+Page_Down".action.focus-workspace-down = { };
 
     # relative moving across workspaces
-    "Mod+Shift+BracketLeft".action.move-column-to-workspace-up = { };
-    "Mod+Shift+BracketRight".action.move-column-to-workspace-down = { };
+    "Mod+Shift+Page_Up".action.move-column-to-workspace-up = { };
+    "Mod+Shift+Page_Down".action.move-column-to-workspace-down = { };
 
     # relative navigation inside workspace using mouse
     "Mod+WheelScrollRight" = {
