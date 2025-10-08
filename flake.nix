@@ -19,12 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    linyaps-flake = {
-      url = "github:nix-community/linyaps-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-
     niri-flake = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -58,7 +52,6 @@
       chaotic,
       # dankMaterialShell,
       home-manager,
-      linyaps-flake,
       niri-flake,
       nix-index-database,
       solaar,
@@ -140,8 +133,6 @@
             {
               chaotic.mesa-git.enable = true;
             }
-
-            linyaps-flake.nixosModules.linyaps
 
             solaar.nixosModules.solaar
             {

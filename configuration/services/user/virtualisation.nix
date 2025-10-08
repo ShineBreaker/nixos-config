@@ -17,9 +17,6 @@
         virtio-win
         virtiofsd
         virglrenderer
-
-        virtualgl
-        pkgsi686Linux.virtualgl
       ];
     };
   };

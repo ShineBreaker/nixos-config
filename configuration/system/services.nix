@@ -40,5 +40,7 @@
     envfs.enable = false;
 
     speechd.enable = lib.mkForce false;
+
+    linyaps.enable = false;
   };
 }

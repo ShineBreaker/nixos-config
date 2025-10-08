@@ -338,29 +338,6 @@
         "type": "github"
       }
     },
-    "linyaps-flake": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757577478,
-        "narHash": "sha256-vnYBeIxnV5ZzSBlD3AEsQHg5aFfdYFRUBqi1ns+vmwk=",
-        "owner": "nix-community",
-        "repo": "linyaps-flake",
-        "rev": "e17edb507b2675bbc69f53dde72cb39d54e365f6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "linyaps-flake",
-        "type": "github"
-      }
-    },
     "niri-flake": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -554,7 +531,6 @@
         "chaotic": "chaotic",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager_2",
-        "linyaps-flake": "linyaps-flake",
         "niri-flake": "niri-flake",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",

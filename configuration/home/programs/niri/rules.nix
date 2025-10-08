@@ -1,0 +1,175 @@
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+
+{
+  programs.niri.settings = {
+    layer-rules = [
+      {
+        matches = [
+          { namespace = "^notifications$"; }
+        ];
+        block-out-from = "screencast";
+      }
+    ];
+
+    workspaces = {
+      "Browser" = {};
+      "Code" = {};
+      "Chat" = {};
+      "Game" = {};
+    };
+
+    window-rules = [
+      {
+        matches = [{}];
+        geometry-corner-radius = 0;
+        clip-to-geometry = true;
+        draw-border-with-background = false;
+      }
+
+      {
+        matches = [
+          { is-active = false; }
+        ];
+
+        opacity = 0.9;
+
+        shadow.enable = false;
+      }
+
+      {
+        matches = {
+          app-id = "firefox";
+        };
+    
+        open-maximized = true;
+        open-on-workspace = "Browser";
+      }
+
+      {
+        matches = [
+          { title = "r#'.*Lapce$'#"; }
+          { app-id = "code"; }
+          { app-id = "Code"; }
+          { app-id = "codium"; }
+          { app-id = "dev.zed.Zed-Dev"; }
+        ];
+    
+        open-maximized = true;
+        open-on-workspace = "Code";
+      }
+
+      {
+        matches = [
+          { app-id = "thunderbird"; }
+          { app-id = "wechat";}
+          { app-id = "org.telegram.desktop";}
+          { app-id = "QQ";}
+          { app-id = "com.alibabainc.dingtalk";}
+          { app-id = "wemeetapp";}
+        ];
+    
+        open-on-workspace = "Chat";
+      }
+
+      {
+        matches = [
+          {app-id = "heroic";}
+          {app-id = "steam";}
+          {app-id = "r#'steam_app*.'#"; }
+          {app-id = ".gamescope-wrapped";}
+
+          {app-id = "osu!";}
+    
+          {app-id = "org.prismlauncher.PrismLauncher";}
+          {app-id = "org.jackhuang.hmcl.Launcher";}
+        ];
+    
+        open-on-workspace = "Game";
+      }
+
+      {
+        matches = [
+          { app-id = "connman-gtk"; }
+          { app-id = "mpv"; }
+          { app-id = "waypaper"; }
+          { app-id = "r#'.*\.exe$'#"; }
+          { app-id = "QtScrcpy"; }
+    
+          { app-id = "xdg-desktop-portal-gtk"; }
+          { app-id = "org.gnome.FileRoller"; }
+          { app-id = "org.kde.polkit-kde-authentication-agent-1"; }
+          { app-id = "org.keepassxc.KeePassXC"; }
+          { app-id = "fcitx"; }
+        ];
+    
+        open-floating = true;
+      }
+
+
+      {
+        matches = [
+          { app-id = "org.kde.kdenlive"; }
+          { app-id = "org.inkscape.Inkscape"; }
+          { app-id = "gimp"; }
+          { app-id = "krita"; }
+          { app-id = "labwc"; }
+    
+          { title = "r#'.*Lapce$'#"; }
+          { app-id = "code"; }
+
+          { app-id = "Microsoft Windows"; }
+        ];
+    
+        open-maximized = true;
+      }
+
+      {
+        matches = [
+          { app-id = "waydroid"; }
+          { app-id = "gamescope"; }
+          { app-id = "r#'steam_app*.'#"; }
+        ];
+
+        open-fullscreen = true;
+      }
+
+      {
+        matches = [
+          { app-id = "foot"; }
+        ];
+
+        default-column-width = [
+          { proportion = 1. / 2.; }
+        ];
+      }
+
+      {
+        matches = [
+          { app-id = "r#'^org\.keepassxc\.KeePassXC$'#"; }
+          { app-id = "r#'^org\.gnome\.World\.Secrets$'#"; }
+        ];
+
+        block-out-from = "screen-capture";
+      }
+
+      {
+        matches = [
+          { app-id = "steam";}
+          { title = "r#'^notificationtoasts_\d+_desktop$'#"; }
+        ];
+
+        default-floating-position = {
+          x = 10;
+          y = 10;
+          relative-to = "bottom-right";
+        };
+      }
+    ];
+  };
+
+}

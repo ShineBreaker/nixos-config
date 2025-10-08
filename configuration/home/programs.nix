@@ -79,7 +79,7 @@
       };
     })
 
-    libreoffice
+    # libreoffice
     inkscape-with-extensions
 
     ffmpeg
