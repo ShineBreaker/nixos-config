@@ -1,5 +1,5 @@
-{ 
-  ... 
+{
+  ...
 }:
 
 {
@@ -9,11 +9,6 @@
     appimage = {
       enable = true;
       binfmt = false;
-    };
-
-    dankMaterialShell.greeter = {
-      enable = true;
-      compositor.name = "niri";
     };
   };
 

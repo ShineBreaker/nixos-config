@@ -114,7 +114,8 @@
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine" = {
                 imports = [
-                  dankMaterialShell.homeModules.dankMaterialShell
+                  dankMaterialShell.homeModules.dankMaterialShell.default
+                  dankMaterialShell.homeModules.dankMaterialShell.niri
 
                   ./configuration/00-main/home.nix
                 ];
@@ -122,8 +123,6 @@
 
               home-manager.backupFileExtension = "backup";
             }
-
-            dankMaterialShell.nixosModules.greeter
 
             nix-index-database.nixosModules.nix-index
             {

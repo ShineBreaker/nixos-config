@@ -83,7 +83,7 @@
 
       focus-ring  = {
         enable = false;
-        width = "4";
+        width = 4;
 
         active = { 
           gradient = {
@@ -100,7 +100,7 @@
 
       border = {
         enable = false;
-        width = 3;
+        width = 4;
       };
     
       shadow = {

@@ -4,124 +4,124 @@
 }:
 
 {
-  programs.niri.settings.binds = lib.mkDefault {
+  programs.niri.settings.binds = {
     # original parts.
-    "Mod+Ctrl+R"=  {
+    "Mod+Ctrl+R" = lib.mkDefault {
       hotkey-overlay.title = "随机壁纸";
       action.spawn = [ "waypaper" "--random" ];
     };
 
-    "Mod+T" = {
+    "Mod+T" = lib.mkDefault {
       hotkey-overlay.title = "打开终端";
       repeat = false;
       action.spawn = [ "foot" ];
     };
 
-    "Mod+D" = {
+    "Mod+D" = lib.mkDefault {
       hotkey-overlay.title = "打开搜索";
       repeat = false;
       action.spawn = [ "fuzzel" ];
     };
 
-    "Mod+C" = {
+    "Mod+C" = lib.mkDefault {
       hotkey-overlay.title = "打开剪切板";
       repeat = false;
       action.spawn = [ "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy" ];
     };
 
-    "Super+Alt+L" = {
+    "Super+Alt+L" = lib.mkDefault {
       hotkey-overlay.title = "锁屏";
       repeat = false;
       action.spawn = [ "gtklock" ];
     };
 
-    "Mod+Escape" = {
+    "Mod+Escape" = lib.mkDefault {
       hotkey-overlay.title = "总览";
       repeat=false;
       action.toggle-overview = { };
     };
 
-    "Mod+R" = {
+    "Mod+R" = lib.mkDefault {
       hotkey-overlay.title = "更改窗口大小";
       action.switch-preset-column-width = { };
     };
 
-    "Mod+F" = {
+    "Mod+F" = lib.mkDefault {
       hotkey-overlay.title = "窗口最大化";
       action.maximize-column = { };
     };
-    "Mod+Shift+F" = {
+    "Mod+Shift+F" = lib.mkDefault {
       hotkey-overlay.title = "窗口全屏";
       action.fullscreen-window = { }; 
     };
 
-    "Mod+Ctrl+C" = {
+    "Mod+Ctrl+C" = lib.mkDefault {
       hotkey-overlay.title = "将窗口移至中央";
       action.center-column = { }; 
     };
 
-    "Mod+Minus" = {
+    "Mod+Minus" = lib.mkDefault {
       hotkey-overlay.title = "减小窗口宽度";
       action.set-column-width = "-5%"; 
     };
 
-    "Mod+Equal" = {
+    "Mod+Equal" = lib.mkDefault {
       hotkey-overlay.title = "增大窗口宽度";
       action.set-column-width = "+5%"; 
     };
 
-    "Mod+Shift+Minus" = {
+    "Mod+Shift+Minus" = lib.mkDefault {
       hotkey-overlay.title = "减小窗口高度";
       action.set-window-height = "-5%"; 
     };
 
-    "Mod+Shift+Equal" = {
+    "Mod+Shift+Equal" = lib.mkDefault {
       hotkey-overlay.title = "增大窗口高度";
       action.set-window-height = "+5%"; 
     };
 
-    "Mod+Ctrl+F" = {
+    "Mod+Ctrl+F" = lib.mkDefault {
       hotkey-overlay.title = "使窗口悬浮";
       action.toggle-window-floating = { };
     };
 
     # quick help
-    "Mod+Alt+Space" = {
+    "Mod+Alt+Space" = lib.mkDefault {
       hotkey-overlay.title = "显示提示";
       action.show-hotkey-overlay = { };
     };
 
     # player control
-    "XF86AudioRaiseVolume" = {
+    "XF86AudioRaiseVolume" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" ];
     };
 
-    "XF86AudioLowerVolume" = {
+    "XF86AudioLowerVolume" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-" ];
     };
-    "XF86AudioMute" = {
+    "XF86AudioMute" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
     };
-    "XF86AudioMicMute" = {
+    "XF86AudioMicMute" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle" ];
     };
 
-    "XF86MonBrightnessDown" = {
+    "XF86MonBrightnessDown" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "brightnessctl" "set" "5%-" ];
     };
 
-    "XF86MonBrightnessUp" = {
+    "XF86MonBrightnessUp" = lib.mkDefault {
       allow-when-locked = true;
       action.spawn = [ "brightnessctl" "set" "5%+" ];
     };
 
     # close window
-    "Mod+Q" = {
+    "Mod+Q" = lib.mkDefault {
       hotkey-overlay.title = "关闭窗口";
       repeat = false;
       action.close-window = { };
@@ -180,33 +180,33 @@
     "Mod+Shift+Page_Down".action.move-column-to-workspace-down = { };
 
     # relative navigation inside workspace using mouse
-    "Mod+WheelScrollRight" = {
+    "Mod+WheelScrollRight" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-column-right = { };
     };
 
-    "Mod+WheelScrollLeft" = {
+    "Mod+WheelScrollLeft" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-column-left = { };
     };
 
-    "Mod+Shift+WheelScrollDown" = {
+    "Mod+Shift+WheelScrollDown" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-column-right = { };
     };
 
-    "Mod+Shift+WheelScrollUp" = {
+    "Mod+Shift+WheelScrollUp" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-column-left = { };
     };
 
     # relative navigation across workspaces using mouse
-    "Mod+WheelScrollDown" = {
+    "Mod+WheelScrollDown" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-workspace-down = { };
     };
 
-    "Mod+WheelScrollUp" = {
+    "Mod+WheelScrollUp" = lib.mkDefault {
       cooldown-ms = 150;
       action.focus-workspace-up = { };
     };

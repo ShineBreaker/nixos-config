@@ -9,7 +9,7 @@
     ../services/system/fprintd.nix
     ../services/system/git.nix
     ../services/system/gnupg.nix
-    # ../services/system/greetd.nix
+    ../services/system/greetd.nix
     # ../services/system/grub.nix
     ../services/system/limine.nix
     # ../services/system/ly.nix
