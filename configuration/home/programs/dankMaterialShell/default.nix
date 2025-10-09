@@ -6,14 +6,18 @@
 
 {
 
-  xdg.configFile = {
-    "niri/config.kdl".source = lib.mkForce ./dotfiles/config.kdl;
-  };
+  imports = [
+    ./niri-config.nix
+  ];
 
   programs.dankMaterialShell = {
     enable = true;
     enableSystemd = true;
     enableCalendarEvents = false;
+
+    niri = {
+      enableKeybinds = true;
+    };
   };
 
   services.swayidle = {

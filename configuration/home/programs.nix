@@ -6,7 +6,7 @@
 {
   imports = [
     ./programs/conda/default.nix
-    # ./programs/dankMaterialShell/default.nix
+    ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
     ./programs/niri/default.nix

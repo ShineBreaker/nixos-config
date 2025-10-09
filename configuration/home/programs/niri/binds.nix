@@ -1,9 +1,11 @@
 {
+  lib,
   ...
 }:
 
 {
-  programs.niri.settings.binds = {
+  programs.niri.settings.binds = lib.mkDefault {
+    # original parts.
     "Mod+Ctrl+R"=  {
       hotkey-overlay.title = "随机壁纸";
       action.spawn = [ "waypaper" "--random" ];
@@ -236,7 +238,12 @@
     "Mod+Shift+9".action.move-column-to-workspace = 9;
     "Mod+Shift+0".action.move-column-to-workspace = 0;
 
-    # Exit
+    # screenshot.
+    "Print".action.screenshot = { }; 
+    "Ctrl+Print".action.screenshot-screen = { }; 
+    "Alt+Print".action.screenshot-window = { }; 
+
+    # exit
     "Mod+Shift+E".action.quit = { };
   };
 }

@@ -9,10 +9,10 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
-    # dankMaterialShell = {
-    #   url = "github:AvengeMedia/DankMaterialShell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -50,7 +50,7 @@
   outputs =
     {
       chaotic,
-      # dankMaterialShell,
+      dankMaterialShell,
       home-manager,
       niri-flake,
       nix-index-database,
@@ -114,7 +114,7 @@
               home-manager.useUserPackages = true;
               home-manager.users."brokenshine" = {
                 imports = [
-                  # dankMaterialShell.homeModules.dankMaterialShell
+                  dankMaterialShell.homeModules.dankMaterialShell
 
                   ./configuration/00-main/home.nix
                 ];
@@ -122,6 +122,8 @@
 
               home-manager.backupFileExtension = "backup";
             }
+
+            dankMaterialShell.nixosModules.greeter
 
             nix-index-database.nixosModules.nix-index
             {
