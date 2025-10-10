@@ -65,14 +65,14 @@
       ];
     })
 
-    (prismlauncher.override {
-      jdks = [
-        graalvm-ce
-        zulu8
-        zulu17
-        zulu
-      ];
-    })
+    # (prismlauncher.override {
+    #   jdks = [
+    #     graalvm-ce
+    #     zulu8
+    #     zulu17
+    #     zulu
+    #   ];
+    # })
 
     (mcaselector.override {
       jre = zulu.override {
