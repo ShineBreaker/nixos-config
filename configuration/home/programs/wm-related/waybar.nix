@@ -48,16 +48,8 @@ window#waybar.hidden  {
 }
 
 tooltip {
-    color: @base07;
-    background-color: @base02;
-    border-radius: 12px;
-}
-
-tooltip label {
-    color: @base07;
-    background-color: @base02;
-    border-radius: 12px;
-    font-size: 14px;
+    color: @base02;
+    font-size: 12px;
 }
 
 #custom-lock,
