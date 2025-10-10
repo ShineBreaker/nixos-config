@@ -110,18 +110,22 @@
             home-manager.nixosModules.home-manager
 
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users."brokenshine" = {
-                imports = [
-                  # dankMaterialShell.homeModules.dankMaterialShell.default
-                  # dankMaterialShell.homeModules.dankMaterialShell.niri
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users."brokenshine" = {
+                  imports = [
+                    # dankMaterialShell.homeModules.dankMaterialShell.default
+                    # dankMaterialShell.homeModules.dankMaterialShell.niri
 
-                  ./configuration/00-main/home.nix
-                ];
+                    ./configuration/00-main/home.nix
+                  ];
+                };
+
+                backupFileExtension = "backup";
+                overwriteBackup = true;
+                verbose = true;
               };
-
-              home-manager.backupFileExtension = "backup";
             }
 
             nix-index-database.nixosModules.nix-index
