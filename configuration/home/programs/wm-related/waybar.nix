@@ -49,7 +49,8 @@ window#waybar.hidden  {
 
 tooltip {
     color: @base02;
-    font-size: 12px;
+    font-size: 10px;
+    border-radius: 12px;
 }
 
 #custom-lock,
@@ -78,7 +79,6 @@ tooltip {
 
 #clock { 
     font-size: 16px;
-    color: @base07; 
 }
 
 #cpu { color: @base08; }
@@ -96,8 +96,6 @@ tooltip {
 #custom-poweroff { color: @base08; }
 
 #custom-reboot { color: @base0C; }
-
-#custom-search { color: @base07; }
 
 #custom-hibernate { color: @base0B; }
 
