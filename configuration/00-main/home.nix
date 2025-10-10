@@ -29,7 +29,7 @@
   };
   
   stylix.targets = {
-    waybar.enable = false;
+    waybar.addCss = false;
     firefox.profileNames = [ "default" ];
   };
 }
