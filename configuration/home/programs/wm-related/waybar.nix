@@ -82,7 +82,7 @@ tooltip label {
     margin: 2px 5px;
 }
 
-#battery { color: @base0D; }
+#battery { color: @base0C; }
 
 #clock { 
     font-size: 16px;
@@ -113,7 +113,7 @@ tooltip label {
 
 #workspaces button.focused { 
     background-color: alpha(@base07, 0.2);
-    color: @base0C; 
+    color: @base0D; 
 }
     '';
   };
