@@ -6,6 +6,8 @@
 }:
 
 {
+  system.nixos-init.enable = true;
+  
   boot = {
     enableContainers = false;
 
