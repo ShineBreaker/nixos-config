@@ -176,8 +176,8 @@
     "Mod+Page_Down".action.focus-workspace-down = { };
 
     # relative moving across workspaces
-    "Mod+Shift+Page_Up".action.move-column-to-workspace-up = { };
-    "Mod+Shift+Page_Down".action.move-column-to-workspace-down = { };
+    "Mod+Ctrl+Page_Up".action.move-column-to-workspace-up = { };
+    "Mod+Ctrl+Page_Down".action.move-column-to-workspace-down = { };
 
     # relative navigation inside workspace using mouse
     "Mod+WheelScrollRight" = lib.mkDefault {

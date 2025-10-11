@@ -8,19 +8,10 @@
   };
 
   programs = {
-    eza = {
-      enable = true;
-      enableFishIntegration = true;
-    };
-
-    direnv = {
-      enable = true;
-    };
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+    eza.enable = true;
+    direnv.enable = true;
+    zoxide.enable = true;
+    fzf.enable = true;
 
     fish = {
       enable = true;

@@ -33,7 +33,6 @@
 
       XDG_SESSION_TYPE = "wayland";
       XDG_CURRENT_DESKTOP = "niri";
-      DISPLAY = ":0";
 
       XMODIFIERS = "@im=fcitx";
       GLFW_IM_MODULE = "fcitx";
@@ -105,8 +104,8 @@
     
       shadow = {
         enable = true;
-        softness = 20;
-        spread = 2;
+        softness = 15;
+        spread = 1;
         offset = {
           x = 0;
           y = 0;
