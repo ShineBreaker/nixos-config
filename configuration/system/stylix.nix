@@ -8,7 +8,7 @@
   stylix = {
     enable = true;
     overlays.enable = true;
-    targets.plymouth.logoAnimated = false;
+    targets.plymouth.enable = false;
     
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
     polarity = "dark";
