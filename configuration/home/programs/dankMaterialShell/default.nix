@@ -12,10 +12,10 @@
 
   programs.dankMaterialShell = {
     enable = true;
-    enableSystemd = true;
-    enableCalendarEvents = false;
+    enableSystemd = false;
 
     niri = {
+      enableSpawn = true;
       enableKeybinds = true;
     };
   };

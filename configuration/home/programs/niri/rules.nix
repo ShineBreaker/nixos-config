@@ -12,25 +12,6 @@
 
         block-out-from = "screencast";
       }
-
-      {
-        matches = [
-          { namespace = "waybar"; }
-        ];
-
-        shadow = {
-          enable = true;
-          softness = 5;
-          spread = 0;
-
-          offset = {
-            x = 0;
-            y = 0;
-          };
-          draw-behind-window = false;
-          color = "#000000";
-        };
-      }
     ];
 
     workspaces = {
@@ -41,6 +22,20 @@
     };
 
     window-rules = [
+      {
+        matches = [{}];
+
+        geometry-corner-radius = {
+          top-left = 12.0;
+          top-right = 12.0;
+          bottom-left = 12.0;
+          bottom-right = 12.0;
+        };
+
+        clip-to-geometry = true;
+        draw-border-with-background = false;
+      }
+      
       {
         matches = [
           { is-active = false; }
@@ -90,7 +85,7 @@
         matches = [
           {app-id = "heroic";}
           {app-id = "steam";}
-          {app-id = "r#'steam_app*.'#"; }
+          {app-id = "r#'^steam_app'#"; }
           {app-id = ".gamescope-wrapped";}
 
           {app-id = "osu!";}

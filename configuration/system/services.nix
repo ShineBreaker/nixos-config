@@ -41,6 +41,6 @@
 
     speechd.enable = lib.mkForce false;
 
-    linyaps.enable = false;
+    linyaps.enable = true;
   };
 }

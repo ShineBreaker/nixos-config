@@ -5,26 +5,32 @@
 
 {
   programs.niri.settings = {
-    layout = {
-      gaps = lib.mkForce 12;
-      border  = {
-        enable = lib.mkForce true;
-      };
+    environment = {
+      DMS_DISABLE_MATUGEN = "1";
     };
 
-    window-rules = [
+    layout = {
+      gaps = lib.mkForce 12;
+    };
+
+    layer-rules = [
       {
-        matches = [{}];
+        matches = [
+          { namespace = "r'^quickshell*.'"; }
+        ];
 
-        geometry-corner-radius = {
-          top-left = 12.0;
-          top-right = 12.0;
-          bottom-left = 12.0;
-          bottom-right = 12.0;
+        shadow = {
+          enable = true;
+          softness = 4;
+          spread = 0;
+
+          offset = {
+            x = 0;
+            y = 0;
+          };
+          draw-behind-window = false;
+          color = "#000000";
         };
-
-        clip-to-geometry = true;
-        draw-border-with-background = false;
       }
     ];
 

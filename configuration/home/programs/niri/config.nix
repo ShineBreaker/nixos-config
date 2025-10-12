@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }:
 
@@ -82,7 +83,7 @@
 
       focus-ring  = {
         enable = false;
-        width = 4;
+        width = config.programs.niri.settings.layout.border.width;
 
         active = { 
           gradient = {
@@ -98,14 +99,14 @@
       };
 
       border = {
-        enable = false;
-        width = 4;
+        enable = true;
+        width = 2;
       };
     
       shadow = {
         enable = true;
-        softness = 15;
-        spread = 1;
+        softness = 4;
+        spread = 0;
         offset = {
           x = 0;
           y = 0;
