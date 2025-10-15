@@ -49,6 +49,8 @@
       {
         matches = [
           { app-id = "firefox"; }
+          { app-id = "librewolf"; }
+          { app-id = "chromium-browser"; }
         ];
     
         open-maximized = true;
