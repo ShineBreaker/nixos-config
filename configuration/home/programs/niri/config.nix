@@ -99,7 +99,7 @@
       };
 
       border = {
-        enable = true;
+        enable = false;
         width = 2;
       };
     
