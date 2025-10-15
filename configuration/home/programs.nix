@@ -6,13 +6,13 @@
 {
   imports = [
     ./programs/conda/default.nix
-    ./programs/dankMaterialShell/default.nix
+    # ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
     ./programs/niri/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
-    # ./programs/wm-related/default.nix
+    ./programs/wm-related/default.nix
 
     ./programs/code.nix
     ./programs/firefox.nix
@@ -26,6 +26,12 @@
     ./programs/virt-manager.nix
   ];
 
+  xdg = {
+    enable = true;
+    userDirs.enable = true;
+    userDirs.createDirectories = true;
+  };
+  
   dconf = {
     settings = {
       "org/gnome/desktop/applications/terminal" = {
@@ -89,8 +95,11 @@
     nomacs
     mpv
 
-    qq
+    (qq.override{
+      commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3"; 
+    })
     wechat
+    wpsoffice-cn
 
     coppwr
     filezilla
@@ -99,6 +108,7 @@
 
     telegram-desktop
     thunderbird
+    ungoogled-chromium
 
     nixd
   ];
