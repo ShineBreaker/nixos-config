@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
+{ 
+  ... 
+}:
+
 {
-  hardware opentabletdriver = {
+  hardware.opentabletdriver = {
     enable = true;
     daemon.enable = true;
     blacklistedKernelModules = [
