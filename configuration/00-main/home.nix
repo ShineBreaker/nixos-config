@@ -5,11 +5,11 @@
 
 {
   imports = [
+    ../home/desktopEntries.nix
     ../home/file.nix
     ../home/fonts.nix
     ../home/programs.nix
     ../home/theme.nix
-    ../home/xdg.nix
   ];
 
   programs.home-manager.enable = true;
