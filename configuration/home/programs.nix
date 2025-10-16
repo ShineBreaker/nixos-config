@@ -24,6 +24,7 @@
     # ./programs/lapce.nix
     ./programs/obs-studio.nix
     ./programs/virt-manager.nix
+    ./programs/zed.nix
   ];
 
   xdg = {
