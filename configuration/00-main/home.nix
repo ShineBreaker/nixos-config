@@ -31,6 +31,5 @@
   stylix.targets = {
     niri.enable = true;
     waybar.addCss = false;
-    firefox.profileNames = [ "default" ];
   };
 }
