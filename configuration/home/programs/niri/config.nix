@@ -8,12 +8,17 @@
 {
   programs.niri.settings = {
     spawn-at-startup = [
-      { argv = [ "fcitx5" "-d" ]; }
+      {
+        argv = [
+          "fcitx5"
+          "-d"
+        ];
+      }
       { argv = [ "sparkle" ]; }
 
       { sh = "wl-paste --watch cliphist store &"; }
     ];
-    
+
     prefer-no-csd = true;
 
     hotkey-overlay = {
@@ -41,7 +46,7 @@
       INPUT_METHOD = "fcitx";
     };
 
-    xwayland-satellite  = {
+    xwayland-satellite = {
       enable = true;
       path = lib.getExe pkgs.xwayland-satellite-unstable;
     };
@@ -76,20 +81,19 @@
         { proportion = 1.; }
       ];
 
-
       default-column-width = {
-        proportion = 3. / 4.; 
+        proportion = 3. / 4.;
       };
 
-      focus-ring  = {
+      focus-ring = {
         enable = false;
         width = config.programs.niri.settings.layout.border.width;
 
-        active = { 
+        active = {
           gradient = {
             from = "#85c7d5";
             to = "#ddbc7d";
-            angle=45;
+            angle = 45;
           };
         };
 
@@ -102,7 +106,7 @@
         enable = false;
         width = 2;
       };
-    
+
       shadow = {
         enable = true;
         softness = 4;

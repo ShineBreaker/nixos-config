@@ -15,15 +15,15 @@
     ];
 
     workspaces = {
-      "Browser" = {};
-      "Code" = {};
-      "Chat" = {};
-      "Game" = {};
+      "Browser" = { };
+      "Code" = { };
+      "Chat" = { };
+      "Game" = { };
     };
 
     window-rules = [
       {
-        matches = [{}];
+        matches = [ { } ];
 
         geometry-corner-radius = {
           top-left = 12.0;
@@ -35,7 +35,7 @@
         clip-to-geometry = true;
         draw-border-with-background = false;
       }
-      
+
       {
         matches = [
           { is-active = false; }
@@ -52,7 +52,7 @@
           { app-id = "librewolf"; }
           { app-id = "chromium-browser"; }
         ];
-    
+
         open-maximized = true;
         open-on-workspace = "Browser";
       }
@@ -63,9 +63,9 @@
           { app-id = "code"; }
           { app-id = "Code"; }
           { app-id = "codium"; }
-          { app-id = "dev.zed.Zed-Dev"; }
+          { app-id = "dev.zed.Zed"; }
         ];
-    
+
         open-maximized = true;
         open-on-workspace = "Code";
       }
@@ -73,29 +73,29 @@
       {
         matches = [
           { app-id = "thunderbird"; }
-          { app-id = "wechat";}
-          { app-id = "org.telegram.desktop";}
-          { app-id = "QQ";}
-          { app-id = "com.alibabainc.dingtalk";}
-          { app-id = "wemeetapp";}
+          { app-id = "wechat"; }
+          { app-id = "org.telegram.desktop"; }
+          { app-id = "QQ"; }
+          { app-id = "com.alibabainc.dingtalk"; }
+          { app-id = "wemeetapp"; }
         ];
-    
+
         open-on-workspace = "Chat";
       }
 
       {
         matches = [
-          {app-id = "heroic";}
-          {app-id = "steam";}
-          {app-id = "r#'^steam_app'#"; }
-          {app-id = ".gamescope-wrapped";}
+          { app-id = "heroic"; }
+          { app-id = "steam"; }
+          { app-id = "r#'^steam_app'#"; }
+          { app-id = ".gamescope-wrapped"; }
 
-          {app-id = "osu!";}
-    
-          {app-id = "org.prismlauncher.PrismLauncher";}
-          {app-id = "org.jackhuang.hmcl.Launcher";}
+          { app-id = "^osu"; }
+
+          { app-id = "org.prismlauncher.PrismLauncher"; }
+          { app-id = "org.jackhuang.hmcl.Launcher"; }
         ];
-    
+
         open-on-workspace = "Game";
       }
 
@@ -106,17 +106,17 @@
           { app-id = "waypaper"; }
           { app-id = "r#'.*\.exe$'#"; }
           { app-id = "QtScrcpy"; }
-    
+
           { app-id = "xdg-desktop-portal-gtk"; }
           { app-id = "org.gnome.FileRoller"; }
           { app-id = "org.kde.polkit-kde-authentication-agent-1"; }
           { app-id = "org.keepassxc.KeePassXC"; }
+          { app-id = "com.network.manager"; }
           { app-id = "fcitx"; }
         ];
-    
+
         open-floating = true;
       }
-
 
       {
         matches = [
@@ -125,21 +125,23 @@
           { app-id = "gimp"; }
           { app-id = "krita"; }
           { app-id = "labwc"; }
-    
+
           { title = "r#'.*Lapce$'#"; }
           { app-id = "code"; }
 
           { app-id = "Microsoft Windows"; }
         ];
-    
+
         open-maximized = true;
       }
 
       {
         matches = [
+          { app-id = "^osu"; }
           { app-id = "waydroid"; }
           { app-id = "gamescope"; }
-          { app-id = "r#'steam_app*.'#"; }
+          { app-id = "r#'^steam_app'#"; }
+          { app-id = ".gamescope-wrapped"; }
         ];
 
         open-fullscreen = true;
@@ -166,7 +168,7 @@
 
       {
         matches = [
-          { app-id = "steam";}
+          { app-id = "steam"; }
           { title = "r#'^notificationtoasts_\d+_desktop$'#"; }
         ];
 

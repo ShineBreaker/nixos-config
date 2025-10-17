@@ -5,6 +5,8 @@
 }:
 
 {
+  home.packages = [ pkgs.nixd ];
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;

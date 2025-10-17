@@ -1,4 +1,6 @@
-{ ... }:
+{
+  ...
+}:
 
 {
   imports = [
@@ -13,6 +15,9 @@
     ../system/swap.nix
     ../system/tpm2.nix
     ../system/user.nix
+
+    ../device/hardware/sayodevice.nix
+    # ../device/hardware/opentabletdriver.nix
   ];
 
   networking.hostName = "BrokenShine-Desktop";

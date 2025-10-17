@@ -10,11 +10,13 @@
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
     ./programs/niri/default.nix
+    ./programs/noctalia/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
-    ./programs/wm-related/default.nix
+    # ./programs/wm-related/default.nix
 
-    ./programs/code.nix
+    ./programs/chromium.nix
+    # ./programs/code.nix
     ./programs/firefox.nix
     ./programs/foot.nix
     ./programs/helix.nix
@@ -31,17 +33,6 @@
     enable = true;
     userDirs.enable = true;
     userDirs.createDirectories = true;
-  };
-  
-  dconf = {
-    settings = {
-      "org/gnome/desktop/applications/terminal" = {
-        exec = "foot";
-      };
-      "org/cinnamon/desktop/applications/terminal" = {
-        exec = "foot";
-      };
-    };
   };
 
   home.packages = with pkgs; [
@@ -96,8 +87,8 @@
     nomacs
     mpv
 
-    (qq.override{
-      commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3"; 
+    (qq.override {
+      commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
     })
     wechat
     wpsoffice-cn
@@ -108,10 +99,6 @@
     baobab
 
     telegram-desktop
-    thunderbird
-    ungoogled-chromium
-
-    nixd
   ];
 
 }

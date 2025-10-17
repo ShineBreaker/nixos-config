@@ -4,9 +4,8 @@
 }:
 
 {
-
   imports = [
-    ./niri-config.nix
+    ./niri.nix
   ];
 
   programs.dankMaterialShell = {

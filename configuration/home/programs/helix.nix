@@ -5,6 +5,8 @@
 }:
 
 {
+  home.packages = [ pkgs.nixd ];
+
   programs.helix = {
     enable = true;
     settings = {

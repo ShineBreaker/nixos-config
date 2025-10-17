@@ -3,6 +3,17 @@
 }:
 
 {
+  dconf = {
+    settings = {
+      "org/gnome/desktop/applications/terminal" = {
+        exec = "foot";
+      };
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "foot";
+      };
+    };
+  };
+
   programs.foot = {
     enable = true;
     server.enable = true;
@@ -19,5 +30,5 @@
       };
     };
   };
-  
+
 }

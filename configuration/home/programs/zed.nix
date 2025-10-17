@@ -5,6 +5,8 @@
 }:
 
 {
+  home.packages = [ pkgs.nixd ];
+
   programs.zed-editor = {
     enable = true;
     installRemoteServer = true;

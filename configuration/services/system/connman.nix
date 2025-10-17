@@ -23,5 +23,5 @@
     ";
   };
 
-  environment.systemPackages = with pkgs; [ cmst ];
+  environment.systemPackages = with pkgs; [ connman-gtk ];
 }

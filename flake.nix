@@ -9,10 +9,11 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dankMaterialShell = {
+    #   url = "github:AvengeMedia/DankMaterialShell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.quickshell.follows = "quickshell";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -26,6 +27,17 @@
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -50,10 +62,12 @@
   outputs =
     {
       chaotic,
-      dankMaterialShell,
+      # dankMaterialShell,
       home-manager,
       niri-flake,
       nix-index-database,
+      noctalia,
+      quickshell,
       solaar,
       stylix,
       winapps,
@@ -77,6 +91,7 @@
         };
 
       in
+
       {
         nixosConfigurations.BrokenShine-Desktop = nixpkgs.lib.nixosSystem {
 
@@ -85,11 +100,13 @@
           modules = [
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
-            ./configuration/device/RBP162024.nix
+            ./configuration/device/platform/RBP162024.nix
 
             {
               environment.systemPackages = [
                 winapps.packages."${system}".winapps
+                noctalia.packages."${system}".default
+                quickshell.packages."${system}".default
               ];
             }
 
@@ -115,8 +132,10 @@
                 useUserPackages = true;
                 users."brokenshine" = {
                   imports = [
-                    dankMaterialShell.homeModules.dankMaterialShell.default
-                    dankMaterialShell.homeModules.dankMaterialShell.niri
+                    # dankMaterialShell.homeModules.dankMaterialShell.default
+                    # dankMaterialShell.homeModules.dankMaterialShell.niri
+
+                    noctalia.homeModules.default
 
                     ./configuration/00-main/home.nix
                   ];

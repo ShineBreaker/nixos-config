@@ -8,7 +8,10 @@
     # original parts.
     "Mod+Ctrl+R" = lib.mkDefault {
       hotkey-overlay.title = "随机壁纸";
-      action.spawn = [ "waypaper" "--random" ];
+      action.spawn = [
+        "waypaper"
+        "--random"
+      ];
     };
 
     "Mod+T" = lib.mkDefault {
@@ -26,7 +29,11 @@
     "Mod+C" = lib.mkDefault {
       hotkey-overlay.title = "打开剪切板";
       repeat = false;
-      action.spawn = [ "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy" ];
+      action.spawn = [
+        "sh"
+        "-c"
+        "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
+      ];
     };
 
     "Super+Alt+L" = lib.mkDefault {
@@ -37,7 +44,7 @@
 
     "Mod+Escape" = lib.mkDefault {
       hotkey-overlay.title = "总览";
-      repeat=false;
+      repeat = false;
       action.toggle-overview = { };
     };
 
@@ -52,32 +59,32 @@
     };
     "Mod+Shift+F" = lib.mkDefault {
       hotkey-overlay.title = "窗口全屏";
-      action.fullscreen-window = { }; 
+      action.fullscreen-window = { };
     };
 
     "Mod+Ctrl+C" = lib.mkDefault {
       hotkey-overlay.title = "将窗口移至中央";
-      action.center-column = { }; 
+      action.center-column = { };
     };
 
     "Mod+Minus" = lib.mkDefault {
       hotkey-overlay.title = "减小窗口宽度";
-      action.set-column-width = "-5%"; 
+      action.set-column-width = "-5%";
     };
 
     "Mod+Equal" = lib.mkDefault {
       hotkey-overlay.title = "增大窗口宽度";
-      action.set-column-width = "+5%"; 
+      action.set-column-width = "+5%";
     };
 
     "Mod+Shift+Minus" = lib.mkDefault {
       hotkey-overlay.title = "减小窗口高度";
-      action.set-window-height = "-5%"; 
+      action.set-window-height = "-5%";
     };
 
     "Mod+Shift+Equal" = lib.mkDefault {
       hotkey-overlay.title = "增大窗口高度";
-      action.set-window-height = "+5%"; 
+      action.set-window-height = "+5%";
     };
 
     "Mod+Ctrl+F" = lib.mkDefault {
@@ -94,30 +101,58 @@
     # player control
     "XF86AudioRaiseVolume" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" ];
+      action.spawn = [
+        "wpctl"
+        "set-volume"
+        "@DEFAULT_AUDIO_SINK@"
+        "0.1+"
+      ];
     };
 
     "XF86AudioLowerVolume" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-" ];
+      action.spawn = [
+        "wpctl"
+        "set-volume"
+        "@DEFAULT_AUDIO_SINK@"
+        "0.1-"
+      ];
     };
     "XF86AudioMute" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
+      action.spawn = [
+        "wpctl"
+        "set-mute"
+        "@DEFAULT_AUDIO_SINK@"
+        "toggle"
+      ];
     };
     "XF86AudioMicMute" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle" ];
+      action.spawn = [
+        "wpctl"
+        "set-mute"
+        "@DEFAULT_AUDIO_SOURCE@"
+        "toggle"
+      ];
     };
 
     "XF86MonBrightnessDown" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "brightnessctl" "set" "5%-" ];
+      action.spawn = [
+        "brightnessctl"
+        "set"
+        "5%-"
+      ];
     };
 
     "XF86MonBrightnessUp" = lib.mkDefault {
       allow-when-locked = true;
-      action.spawn = [ "brightnessctl" "set" "5%+" ];
+      action.spawn = [
+        "brightnessctl"
+        "set"
+        "5%+"
+      ];
     };
 
     # close window
@@ -239,9 +274,9 @@
     "Mod+Shift+0".action.move-column-to-workspace = 0;
 
     # screenshot.
-    "Print".action.screenshot = { }; 
-    "Ctrl+Print".action.screenshot-screen = { }; 
-    "Alt+Print".action.screenshot-window = { }; 
+    "Print".action.screenshot = { };
+    "Ctrl+Print".action.screenshot-screen = { };
+    "Alt+Print".action.screenshot-window = { };
 
     # exit
     "Mod+Shift+E".action.quit = { };
