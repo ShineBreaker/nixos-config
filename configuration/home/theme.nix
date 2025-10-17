@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }:
@@ -7,6 +8,10 @@
   home.packages = with pkgs; [
     adwaita-icon-theme
   ];
+
+  home.sessionVariables = {
+    QS_ICON_THEME = config.gtk.iconTheme.name;
+  };
 
   gtk = {
     enable = true;

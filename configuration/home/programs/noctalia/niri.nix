@@ -5,11 +5,23 @@
 {
   programs.niri.settings = {
     spawn-at-startup = [
+
       {
         argv = [
           "noctalia-shell"
         ];
       }
+
+      {
+        argv = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "wallpaper"
+          "random"
+        ];
+      }
+
     ];
 
     layer-rules = [

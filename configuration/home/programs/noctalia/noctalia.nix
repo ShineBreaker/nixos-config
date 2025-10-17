@@ -20,22 +20,21 @@
         widgets = {
           left = [
             {
+              id = "ControlCenter";
+              useDistroLogo = true;
+            }
+
+            { id = "NotificationHistory"; }
+
+            { id = "ScreenRecorder"; }
+
+            {
               hideMode = "hidden";
               id = "MediaMini";
               scrollingMode = "hover";
               showAlbumArt = false;
               showVisualizer = false;
               visualizerType = "linear";
-            }
-
-            {
-              id = "SystemMonitor";
-              showCpuTemp = true;
-              showCpuUsage = true;
-              showDiskUsage = false;
-              showMemoryAsPercent = true;
-              showMemoryUsage = true;
-              showNetworkStats = false;
             }
 
             {
@@ -64,12 +63,7 @@
           ];
 
           right = [
-
             { id = "Tray"; }
-
-            { id = "ScreenRecorder"; }
-
-            { id = "NotificationHistory"; }
 
             { id = "Battery"; }
 
@@ -78,8 +72,13 @@
             { id = "Brightness"; }
 
             {
-              id = "ControlCenter";
-              useDistroLogo = true;
+              id = "SystemMonitor";
+              showCpuTemp = true;
+              showCpuUsage = true;
+              showDiskUsage = false;
+              showMemoryAsPercent = true;
+              showMemoryUsage = true;
+              showNetworkStats = false;
             }
           ];
         };
@@ -268,11 +267,6 @@
       };
       hooks = {
         enabled = false;
-        wallpaperChange = "";
-        darkModeChange = "";
-      };
-      battery = {
-        chargingMode = 0;
       };
     };
   };
