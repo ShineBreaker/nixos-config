@@ -146,18 +146,12 @@
               id = "Bluetooth";
             }
             {
-              id = "ScreenRecorder";
-            }
-            {
               id = "WallpaperSelector";
             }
           ];
           right = [
             {
               id = "Notifications";
-            }
-            {
-              id = "PowerProfile";
             }
             {
               id = "KeepAwake";
@@ -264,7 +258,7 @@
         enableUserTemplates = false;
       };
       nightLight = {
-        enabled = true;
+        enabled = false;
         forced = false;
         autoSchedule = true;
         nightTemp = "4000";
