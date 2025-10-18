@@ -26,6 +26,7 @@
     # ./programs/lapce.nix
     ./programs/obs-studio.nix
     ./programs/virt-manager.nix
+    ./programs/waypaper.nix
     ./programs/zed.nix
   ];
 

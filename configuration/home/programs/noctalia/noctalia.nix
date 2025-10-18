@@ -6,6 +6,25 @@
 {
   programs.noctalia-shell = {
     enable = true;
+
+    colors = {
+      mOnError = "#282c34"; # base00
+      mOnPrimary = config.programs.noctalia-shell.colors.mOnError; # base00
+      mOnSecondary = config.programs.noctalia-shell.colors.mOnError; # base00
+      mOnTertiary = config.programs.noctalia-shell.colors.mOnError; # base00
+      mShadow = config.programs.noctalia-shell.colors.mOnError; # base00
+      mSurface = config.programs.noctalia-shell.colors.mOnError; # base00
+
+      mSurfaceVariant = "#3e4451"; # base02
+      mOutline = "#545862"; # base03
+      mOnSurfaceVariant = "#abb2bf"; # base05
+      mOnSurface = "#b6bdca"; # base06
+      mPrimary = "#c8ccd4"; # base07
+      mError = "#e06c75"; # base08
+      mTertiary = "#56b6c2"; # base0C
+      mSecondary = "#61afef"; # base0D
+    };
+
     settings = {
       settingsVersion = 16;
       setupCompleted = true;
@@ -113,17 +132,7 @@
         videoSource = "portal";
       };
       wallpaper = {
-        enabled = true;
-        directory = "${config.home.homeDirectory}/Pictures/wallpaper";
-        enableMultiMonitorDirectories = false;
-        setWallpaperOnAllMonitors = true;
-        fillMode = "crop";
-        fillColor = "#000000";
-        randomEnabled = false;
-        randomIntervalSec = 300;
-        transitionDuration = 1500;
-        transitionType = "random";
-        transitionEdgeSmoothness = 0.05;
+        enabled = false;
       };
       appLauncher = {
         enableClipboardHistory = true;
@@ -233,10 +242,10 @@
         brightnessStep = 5;
       };
       colorSchemes = {
-        useWallpaperColors = true;
+        useWallpaperColors = false;
+        predefinedScheme = "Noctalia (default)";
         darkMode = true;
-        matugenSchemeType = "scheme-tonal-spot";
-        generateTemplatesForPredefined = true;
+        generateTemplatesForPredefined = false;
       };
       templates = {
         gtk = false;
