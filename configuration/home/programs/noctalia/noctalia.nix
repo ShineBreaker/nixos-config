@@ -21,8 +21,9 @@
       mOnSurface = "#b6bdca"; # base06
       mPrimary = "#c8ccd4"; # base07
       mError = "#e06c75"; # base08
-      mTertiary = "#56b6c2"; # base0C
-      mSecondary = "#61afef"; # base0D
+      mSecondary = "#56b6c2"; # base0C
+      mTertiary = "#61afef"; # base0D
+
     };
 
     settings = {
