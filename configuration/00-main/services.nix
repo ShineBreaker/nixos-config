@@ -31,7 +31,7 @@
     ../services/user/poweralertd.nix
     ../services/user/sparkle.nix
     ../services/user/steam.nix
-    ../services/user/sunshine.nix
+    # ../services/user/sunshine.nix
     ../services/user/syncthing.nix
     ../services/user/virtualisation.nix
     # ../services/user/xwayland-satellite.nix

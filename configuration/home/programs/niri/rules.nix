@@ -149,6 +149,16 @@
 
       {
         matches = [
+          { app-id = "foot"; }
+        ];
+
+        default-column-width = {
+          proportion = 0.49995;
+        };
+      }
+
+      {
+        matches = [
           { app-id = "r#'^org\.keepassxc\.KeePassXC$'#"; }
           { app-id = "r#'^org\.gnome\.World\.Secrets$'#"; }
         ];

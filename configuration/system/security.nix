@@ -1,5 +1,5 @@
-{ 
-  ... 
+{
+  ...
 }:
 
 {
@@ -12,10 +12,24 @@
 
   networking = {
     nftables.enable = true;
-    
+
     firewall = {
       enable = true;
       checkReversePath = false;
+
+      # needed fot kdeconnect.
+      allowedTCPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
+      allowedUDPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
     };
 
     hosts."127.0.0.1" = [
