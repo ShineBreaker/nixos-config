@@ -76,8 +76,8 @@
       always-center-single-column = true;
 
       preset-column-widths = [
-        { proportion = 1. / 2.; }
-        { proportion = 3. / 4.; }
+        { proportion = 0.4999; }
+        { proportion = config.programs.niri.settings.layout.default-column-width.proportion; }
         { proportion = 1.; }
       ];
 
