@@ -8,6 +8,7 @@
     fastfetch
     git
     conda
+    nodejs
 
     nix-output-monitor
     btop
