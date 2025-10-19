@@ -17,6 +17,7 @@
 
       mSurfaceVariant = "#3e4451"; # base02
       mOutline = "#545862"; # base03
+
       mOnSurfaceVariant = "#abb2bf"; # base05
       mOnSurface = "#b6bdca"; # base06
       mPrimary = "#c8ccd4"; # base07
