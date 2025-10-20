@@ -1,5 +1,5 @@
 {
-  pkgs, 
+  pkgs,
   ...
 }:
 
@@ -36,12 +36,12 @@
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-rules-cachyos_git;
   };
-    
+
   services.logind.settings.Login = {
     HandleLidSwitch = "suspend-then-hibernate";
     HandleLidSwitchExternalPower = "lock";
     HandleLidSwitchDocked = "ignore";
-    
+
     powerKey = "lock";
     powerKeyLongPress = "hibernate";
   };
