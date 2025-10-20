@@ -76,7 +76,7 @@
 
           center = [
             {
-              formatVertical = "HH mm ss";
+              formatVertical = "HH  mm  ss";
               id = "Clock";
               useCustomFont = false;
               usePrimaryColor = true;

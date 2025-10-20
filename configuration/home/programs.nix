@@ -83,6 +83,7 @@
 
     ffmpeg
     imagemagick
+    hexo-cli
 
     gimp3-with-plugins
     nomacs
