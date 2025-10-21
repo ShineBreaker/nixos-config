@@ -6,8 +6,11 @@
 }:
 
 {
-  system.nixos-init.enable = true;
-  
+  system = {
+    nixos-init.enable = true;
+    etc.overlay.enable = true;
+  };
+
   boot = {
     enableContainers = false;
 

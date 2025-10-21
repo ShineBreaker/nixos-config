@@ -36,11 +36,8 @@
     usbguard.dbus.enable = true;
     udisks2.enable = true;
     upower.enable = true;
-
-    envfs.enable = false;
-
     speechd.enable = lib.mkForce false;
-
     linyaps.enable = true;
+    userborn.enable = true;
   };
 }
