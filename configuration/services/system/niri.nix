@@ -48,9 +48,9 @@
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
         };
       };
-      extraPortals = [
-        pkgs.xdg-desktop-portal-gnome
-        pkgs.xdg-desktop-portal-gtk
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gnome
+        # xdg-desktop-portal-gtk
       ];
     };
     terminal-exec = {
