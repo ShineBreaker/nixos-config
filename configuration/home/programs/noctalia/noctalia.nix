@@ -47,8 +47,6 @@
 
             { id = "NotificationHistory"; }
 
-            { id = "ScreenRecorder"; }
-
             {
               hideMode = "hidden";
               id = "MediaMini";
@@ -156,7 +154,7 @@
               id = "Bluetooth";
             }
             {
-              id = "WallpaperSelector";
+              id = "ScreenRecorder";
             }
           ];
           right = [
@@ -189,7 +187,7 @@
             id = "weather-card";
           }
           {
-            enabled = true;
+            enabled = false;
             id = "media-sysmon-card";
           }
         ];

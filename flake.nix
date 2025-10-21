@@ -9,11 +9,11 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
-    };
+    # dankMaterialShell = {
+    #   url = "github:AvengeMedia/DankMaterialShell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.quickshell.follows = "quickshell";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -30,11 +30,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # noctalia = {
-    #   url = "github:noctalia-dev/noctalia-shell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.quickshell.follows = "quickshell";
-    # };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+    };
 
     quickshell = {
       url = "github:outfoxxed/quickshell";
@@ -62,11 +62,11 @@
   outputs =
     {
       chaotic,
-      dankMaterialShell,
+      # dankMaterialShell,
       home-manager,
       niri-flake,
       nix-index-database,
-      # noctalia,
+      noctalia,
       quickshell,
       solaar,
       stylix,
@@ -105,7 +105,7 @@
             {
               environment.systemPackages = [
                 winapps.packages."${system}".winapps
-                # noctalia.packages."${system}".default
+                noctalia.packages."${system}".default
                 quickshell.packages."${system}".default
               ];
             }
@@ -132,10 +132,10 @@
                 useUserPackages = true;
                 users."brokenshine" = {
                   imports = [
-                    dankMaterialShell.homeModules.dankMaterialShell.default
-                    dankMaterialShell.homeModules.dankMaterialShell.niri
+                    # dankMaterialShell.homeModules.dankMaterialShell.default
+                    # dankMaterialShell.homeModules.dankMaterialShell.niri
 
-                    # noctalia.homeModules.default
+                    noctalia.homeModules.default
 
                     ./configuration/00-main/home.nix
                   ];
