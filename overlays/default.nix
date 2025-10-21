@@ -32,18 +32,20 @@
         }
       );
 
-    # HACK: no more gtk2
-    gnome-themes-extra = (prev.gnome-themes-extra.override { gtk2 = null; }).overrideAttrs {
-      configureFlags = [ "--disable-gtk2-engine" ];
-    };
+      # HACK: no more gtk2
+      gnome-themes-extra = (prev.gnome-themes-extra.override { gtk2 = null; }).overrideAttrs {
+        configureFlags = [ "--disable-gtk2-engine" ];
+      };
 
-    # HACK:
-    xdg-desktop-portal-gtk =
-      (prev.xdg-desktop-portal-gtk.override {
-        gnome-settings-daemon = null;
-        gnome-desktop = null;
-        gsettings-desktop-schemas = null;
-      }).overrideAttrs
-        { mesonFlags = [ (prev.lib.mesonEnable "wallpaper" false) ]; };
-    })];
+      # HACK:
+      xdg-desktop-portal-gtk =
+        (prev.xdg-desktop-portal-gtk.override {
+          # unused since 31131db0670a0bbfea92fe2ee54ece2758e9e91e.
+          # gnome-settings-daemon = null;
+          gnome-desktop = null;
+          gsettings-desktop-schemas = null;
+        }).overrideAttrs
+          { mesonFlags = [ (prev.lib.mesonEnable "wallpaper" false) ]; };
+    })
+  ];
 }
