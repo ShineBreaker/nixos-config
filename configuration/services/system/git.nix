@@ -1,11 +1,12 @@
-{ 
-  pkgs, 
-  ... 
+{
+  pkgs,
+  ...
 }:
 
 {
-  environment.systemPackages = [
-    pkgs.git-credential-keepassxc
+  environment.systemPackages = with pkgs; [
+    git-credential-keepassxc
+    gitui
   ];
 
   programs.git = {
@@ -16,5 +17,5 @@
       credentialStore = "cache";
     };
   };
-
+  users.users.brokenshine.extraGroups = [ "networkmanager" ];
 }
