@@ -38,6 +38,5 @@
     upower.enable = true;
     speechd.enable = lib.mkForce false;
     linyaps.enable = true;
-    userborn.enable = true;
   };
 }

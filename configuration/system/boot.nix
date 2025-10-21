@@ -6,11 +6,6 @@
 }:
 
 {
-  system = {
-    nixos-init.enable = true;
-    etc.overlay.enable = true;
-  };
-
   boot = {
     enableContainers = false;
 
@@ -45,7 +40,7 @@
     '';
 
     supportedFilesystems = {
-      f2fs = true;
+      btrfs = true;
       ext4 = true;
       ntfs = true;
 
