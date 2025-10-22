@@ -80,6 +80,7 @@
 
     libreoffice
     inkscape-with-extensions
+    kdePackages.kdenlive
 
     ffmpeg
     imagemagick
