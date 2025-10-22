@@ -35,8 +35,9 @@
     ];
 
     userSettings = {
-      agent = {
-        enabled = false;
+      active_pane_modifiers = {
+        border_size = 2.0;
+        inactive_opacity = 0.8;
       };
 
       collaboration_panel = {
@@ -119,14 +120,19 @@
         shell = "system";
       };
 
-      base_keymap = "VSCode";
       auto_update = false;
       autosave = "on_focus_change";
+      base_keymap = "VSCode";
+      buffer_font_weight = 400.0;
+      buffer_font_size = lib.mkForce 14;
       current_line_highlight = "all";
+      disable_ai = true;
       format_on_save = "on";
       icon_theme = "Catppuccin Frappé";
       lsp_highlight_debounce = 75;
       restore_on_startup = "last_session";
+      ui_font_weight = 500.0;
+      ui_font_size = lib.mkForce 15;
       unnecessary_code_fade = 0.7;
       vim_mode = false;
     };
