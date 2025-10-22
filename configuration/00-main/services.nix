@@ -6,7 +6,7 @@
     # ../services/system/connman.nix
     # ../services/system/doas.nix
     ../services/system/fish.nix
-    ../services/system/fprintd.nix
+    # ../services/system/fprintd.nix
     ../services/system/git.nix
     ../services/system/gnupg.nix
     ../services/system/greetd.nix
