@@ -125,6 +125,7 @@
           { app-id = "gimp"; }
           { app-id = "krita"; }
           { app-id = "labwc"; }
+          { app-id = "resolve"; }
 
           { title = "r#'.*Lapce$'#"; }
           { app-id = "code"; }
