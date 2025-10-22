@@ -24,7 +24,6 @@
       mError = "#e06c75"; # base08
       mSecondary = "#56b6c2"; # base0C
       mTertiary = "#61afef"; # base0D
-
     };
 
     settings = {
