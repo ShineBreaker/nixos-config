@@ -9,8 +9,8 @@
     enable = true;
     overlays.enable = true;
     targets.plymouth.enable = false;
-    
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/material-darker.yaml";
     polarity = "dark";
 
     fonts = {

@@ -7,23 +7,21 @@
   programs.noctalia-shell = {
     enable = true;
 
-    colors = {
-      mOnError = "#282c34"; # base00
-      mOnPrimary = config.programs.noctalia-shell.colors.mOnError; # base00
-      mOnSecondary = config.programs.noctalia-shell.colors.mOnError; # base00
-      mOnTertiary = config.programs.noctalia-shell.colors.mOnError; # base00
-      mShadow = config.programs.noctalia-shell.colors.mOnError; # base00
-      mSurface = config.programs.noctalia-shell.colors.mOnError; # base00
-
-      mSurfaceVariant = "#3e4451"; # base02
-      mOutline = "#545862"; # base03
-
-      mOnSurfaceVariant = "#abb2bf"; # base05
-      mOnSurface = "#b6bdca"; # base06
-      mPrimary = "#c8ccd4"; # base07
-      mError = "#e06c75"; # base08
-      mSecondary = "#56b6c2"; # base0C
-      mTertiary = "#61afef"; # base0D
+    colors = with config.lib.stylix.colors; {
+      mError = "#${base08}";
+      mOnError = "#${base00}";
+      mOnPrimary = "#${base00}";
+      mOnSecondary = "#${base00}";
+      mOnSurface = "#${base04}";
+      mOnSurfaceVariant = "#${base04}";
+      mOnTertiary = "#${base00}";
+      mOutline = "#${base02}";
+      mPrimary = "#${base0B}";
+      mSecondary = "#${base0A}";
+      mShadow = "#${base00}";
+      mSurface = "#${base00}";
+      mSurfaceVariant = "#${base01}";
+      mTertiary = "#${base0D}";
     };
 
     settings = {
