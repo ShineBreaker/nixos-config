@@ -40,8 +40,6 @@
     mangojuice
     mangohud_git
 
-    upscayl-ncnn
-
     (bottles.override {
       removeWarningPopup = true;
     })
@@ -79,12 +77,14 @@
     })
 
     libreoffice
+    wpsoffice-cn
     inkscape-with-extensions
     kdePackages.kdenlive
 
     ffmpeg
     imagemagick
     hexo-cli
+    upscayl-ncnn
 
     gimp3-with-plugins
     nomacs
@@ -94,14 +94,15 @@
       commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
     })
     wechat
-    wpsoffice-cn
+    telegram-desktop
 
     coppwr
     filezilla
     freerdp
     baobab
 
-    telegram-desktop
+    lxqt.pcmanfm-qt
+    peazip
   ];
 
 }
