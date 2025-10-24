@@ -103,7 +103,6 @@
         matches = [
           { app-id = "connman-gtk"; }
           { app-id = "mpv"; }
-          { app-id = "waypaper"; }
           { app-id = "r#'.*\.exe$'#"; }
           { app-id = "QtScrcpy"; }
 

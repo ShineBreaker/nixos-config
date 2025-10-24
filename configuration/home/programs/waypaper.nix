@@ -21,5 +21,13 @@
         ];
       }
     ];
+    window-rules = [
+      {
+        matches = [
+          { app-id = "waypaper"; }
+        ];
+        open-floating = true;
+      }
+    ];
   };
 }

@@ -102,7 +102,7 @@
     baobab
 
     lxqt.pcmanfm-qt
-    peazip
+    lxqt.lxqt-archiver
   ];
 
 }

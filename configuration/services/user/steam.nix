@@ -32,7 +32,6 @@
     package = pkgs.gamescope_git;
     args = [
       "--borderless"
-      "--backend auto"
       "--force-grab-cursor"
       "-W 3072"
       "-H 1920"

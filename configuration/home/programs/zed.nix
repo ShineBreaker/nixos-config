@@ -24,7 +24,6 @@
       "make"
       "neocmake"
       "nix"
-      "pylsp"
       "scss"
       "sinppets"
     ];
