@@ -15,6 +15,7 @@
     cliphist
 
     labwc
+    nautilus
   ];
 
   programs = {
@@ -38,9 +39,9 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
+      configPackages = [ pkgs.niri-unstable ];
       config = {
-        common = {
-          default = [ "gnome" ];
+        preferred = {
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
         };
       };
