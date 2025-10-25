@@ -105,12 +105,20 @@
             {
               environment.systemPackages = [
                 winapps.packages."${system}".winapps
-                noctalia.packages."${system}".default
-                quickshell.packages."${system}".default
               ];
             }
 
             (import ./overlays)
+
+            noctalia.nixosModules.default
+            {
+              environment.systemPackages = [
+                noctalia.packages."${system}".default
+                quickshell.packages."${system}".default
+              ];
+
+              services.noctalia-shell.enable = true;
+            }
 
             niri-flake.nixosModules.niri
             (
