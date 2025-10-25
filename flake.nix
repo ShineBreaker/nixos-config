@@ -163,7 +163,10 @@
 
             chaotic.nixosModules.default
             {
-              chaotic.mesa-git.enable = true;
+              chaotic.mesa-git = {
+                enable = true;
+                replaceBasePackage = true;
+              };
             }
 
             solaar.nixosModules.solaar
