@@ -59,7 +59,7 @@
     portal = {
       enable = true;
       config = {
-        niri = {
+        common = {
           default = [ "gnome" ];
           "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
         };
