@@ -53,23 +53,23 @@
         ];
     })
 
-    (hmcl.override {
-      hmclJdk = graalvm-ce;
-      minecraftJdks = [
-        graalvm-ce
-        zulu8
-        zulu17
-      ];
-    })
-
-    # (prismlauncher.override {
-    #   jdks = [
+    # (hmcl.override {
+    #   hmclJdk = graalvm-ce;
+    #   minecraftJdks = [
     #     graalvm-ce
     #     zulu8
     #     zulu17
-    #     zulu
     #   ];
     # })
+
+    (prismlauncher.override {
+      jdks = [
+        graalvm-ce
+        zulu8
+        zulu17
+        zulu
+      ];
+    })
 
     (mcaselector.override {
       jre = zulu.override {
