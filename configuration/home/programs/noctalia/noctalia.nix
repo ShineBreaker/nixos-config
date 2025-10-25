@@ -32,7 +32,7 @@
         backgroundOpacity = 0.9;
         density = "comfortable";
         showCapsule = true;
-        floating = true;
+        floating = false;
         marginVertical = 0.25;
         marginHorizontal = 0.25;
         widgets = {
