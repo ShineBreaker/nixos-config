@@ -21,8 +21,7 @@
       zulu8
     ];
     extraCompatPackages = with pkgs; [
-      proton-cachyos_x86_64_v3
-      proton-ge-custom
+      proton-cachyos_x86_64_v4
       luxtorpeda
     ];
   };
