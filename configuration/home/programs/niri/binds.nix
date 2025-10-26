@@ -48,6 +48,11 @@
       action.toggle-overview = { };
     };
 
+    "Mod+Shift+S" = {
+      hotkey-overlay.title = "截图";
+      action.screenshot = { };
+    };
+
     "Mod+R" = lib.mkDefault {
       hotkey-overlay.title = "更改窗口大小";
       action.switch-preset-column-width = { };
