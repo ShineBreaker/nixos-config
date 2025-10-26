@@ -99,7 +99,6 @@
     coppwr
     filezilla
     freerdp
-    baobab
 
     lxqt.pcmanfm-qt
     lxqt.lxqt-archiver

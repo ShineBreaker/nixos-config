@@ -22,7 +22,8 @@
         rebuildb = "nh os boot . --ask";
         rebuildc = "nh os switch . && nh clean all && nh os switch .";
 
-        update = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
+        upgrade = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
+        update = "sudo ll-cli upgrade && sudo flatpak upgrade && distrobox upgrade --all";
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";
 
@@ -37,7 +38,7 @@
         vi = "hx";
         helix = "hx";
       };
-      
+
       interactiveShellInit = ''
         fastfetch
         set --global fish_greeting 日々私たちが過ごしている日常は、実は、奇跡の連続なのかもしれない。
