@@ -84,6 +84,7 @@
     imagemagick
     hexo-cli
     upscayl-ncnn
+    gh
 
     gimp3-with-plugins
     nomacs
