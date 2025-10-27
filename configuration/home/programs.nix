@@ -9,6 +9,7 @@
     # ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
+    # ./programs/linux-wallpaperengine/default.nix
     ./programs/niri/default.nix
     ./programs/noctalia/default.nix
     ./programs/rime/default.nix
@@ -33,6 +34,7 @@
 
   xdg = {
     enable = true;
+    autostart.enable = true;
     userDirs.enable = true;
     userDirs.createDirectories = true;
   };
