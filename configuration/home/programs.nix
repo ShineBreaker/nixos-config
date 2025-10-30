@@ -5,7 +5,7 @@
 
 {
   imports = [
-    ./programs/conda/default.nix
+    # ./programs/conda/default.nix
     # ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
@@ -15,7 +15,7 @@
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
     # ./programs/wm-related/default.nix
-    ./programs/wps-office/default.nix
+    # ./programs/wps-office/default.nix
 
     ./programs/chromium.nix
     # ./programs/code.nix
@@ -79,7 +79,6 @@
     })
 
     libreoffice
-    inkscape-with-extensions
     kdePackages.kdenlive
 
     ffmpeg
@@ -92,10 +91,10 @@
     nomacs
     mpv
 
-    (qq.override {
-      commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
-    })
-    wechat
+    # (qq.override {
+    #   commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
+    # })
+    # wechat
     telegram-desktop
 
     coppwr

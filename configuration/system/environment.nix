@@ -7,7 +7,10 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     git
-    conda
+
+    python3
+    uv
+
     nodejs
     pnpm
 

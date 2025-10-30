@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 
@@ -23,4 +24,6 @@ custom_channels:
   xdg.configFile = {
     "fish/conf.d/conda.fish".source = ./dotfiles/config.fish;
   };
+
+  home.packages = with pkgs; [ conda ];
 }
