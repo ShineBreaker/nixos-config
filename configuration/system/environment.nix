@@ -18,6 +18,7 @@
     btop
     wget
     sbctl
+    wayvnc
 
     unzip
     unrar
