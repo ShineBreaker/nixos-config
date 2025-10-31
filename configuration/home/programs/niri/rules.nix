@@ -121,6 +121,7 @@
             { app-id = "gimp"; }
             { app-id = "krita"; }
             { app-id = "resolve"; }
+            { app-id = "affinity.exe"; }
           ];
 
           open-maximized = true;

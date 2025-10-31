@@ -17,7 +17,6 @@
     gamescopeSession.enable = true;
 
     extraPackages = with pkgs; [
-      mangohud_git
       zulu8
     ];
     extraCompatPackages = with pkgs; [
@@ -28,7 +27,6 @@
 
   programs.gamescope = {
     enable = true;
-    package = pkgs.gamescope_git;
     args = [
       "--borderless"
       "--force-grab-cursor"

@@ -190,11 +190,11 @@
         ];
       };
       dock = {
-        displayMode = "always_visible";
-        backgroundOpacity = 1;
-        floatingRatio = 1;
+        displayMode = "auto_hide";
+        backgroundOpacity = 0.9;
+        floatingRatio = 0;
         onlySameOutput = true;
-        monitors = [ ];
+        monitors = [ "eDP-1" ];
         pinnedApps = [ ];
         colorizeIcons = false;
       };

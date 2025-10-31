@@ -5,7 +5,7 @@
 
 {
   imports = [
-    # ./programs/conda/default.nix
+    ./programs/conda/default.nix
     # ./programs/dankMaterialShell/default.nix
     ./programs/fastfetch/default.nix
     ./programs/fish/default.nix
@@ -40,18 +40,10 @@
   };
 
   home.packages = with pkgs; [
-    mangojuice
-    mangohud_git
-
-    (bottles.override {
-      removeWarningPopup = true;
-    })
-
     (heroic.override {
-      extraPkgs =
-        pkgs: with pkgs; [
-          proton-cachyos_x86_64_v4
-        ];
+      extraPkgs = pkgs: [
+        pkgs.proton-cachyos_x86_64_v4
+      ];
     })
 
     # (hmcl.override {
@@ -78,16 +70,16 @@
       };
     })
 
-    libreoffice
-    kdePackages.kdenlive
-
-    ffmpeg
-    imagemagick
+    mangohud_git
     hexo-cli
     upscayl-ncnn
     gh
 
-    gimp3-with-plugins
+    libreoffice
+
+    ffmpeg
+    imagemagick
+
     nomacs
     mpv
 

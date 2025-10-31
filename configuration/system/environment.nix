@@ -8,9 +8,6 @@
     fastfetch
     git
 
-    python3
-    uv
-
     nodejs
     pnpm
 
