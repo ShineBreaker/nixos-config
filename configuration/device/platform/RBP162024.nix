@@ -27,6 +27,7 @@
 
   environment.systemPackages = with pkgs; [
     bluez
+    intel-ocl
 
     sof-firmware
   ];
