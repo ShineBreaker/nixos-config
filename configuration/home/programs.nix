@@ -47,9 +47,9 @@
     })
 
     # (hmcl.override {
-    #   hmclJdk = graalvm-ce;
+    #   hmclJdk = graalvmPackages.graalvm-ce;
     #   minecraftJdks = [
-    #     graalvm-ce
+    #     graalvmPackages.graalvm-ce
     #     zulu8
     #     zulu17
     #   ];
@@ -57,7 +57,7 @@
 
     (prismlauncher.override {
       jdks = [
-        graalvm-ce
+        graalvmPackages.graalvm-ce
         zulu8
         zulu17
         zulu

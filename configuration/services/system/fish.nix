@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     bat
     tealdeer
-    du-dust
+    dust
     fd
     tokei
     duf
@@ -17,18 +17,18 @@
 
   programs.fish = {
     enable = true;
-      shellAbbrs = {
-        cat = "bat";
-        du = "dust";
-        find = "fd";
-        df = "duf";
-        cd = "z";
+    shellAbbrs = {
+      cat = "bat";
+      du = "dust";
+      find = "fd";
+      df = "duf";
+      cd = "z";
 
-        nvim = "hx";
-        vim = "hx";
-        vi = "hx";
-        helix = "hx";
-      };
+      nvim = "hx";
+      vim = "hx";
+      vi = "hx";
+      helix = "hx";
+    };
     vendor = {
       functions.enable = true;
       config.enable = true;
