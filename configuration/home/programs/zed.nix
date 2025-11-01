@@ -79,6 +79,33 @@
         };
       };
 
+      lsp = {
+        rust-analyzer = {
+          binary = {
+            path = lib.getExe pkgs.rust-analyzer;
+            path_lookup = true;
+          };
+        };
+
+        nix = {
+          binary = {
+            path_lookup = true;
+          };
+        };
+
+        pylsp = {
+          binary = {
+            path = lib.getExe pkgs.python312Packages.python-lsp-server;
+            path_lookup = true;
+          };
+        };
+      };
+
+      node = {
+        path = lib.getExe pkgs.nodejs;
+        npm_path = lib.getExe' pkgs.nodejs "npm";
+      };
+
       outline_panel = {
         button = true;
       };

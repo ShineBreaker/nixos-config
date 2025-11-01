@@ -10,7 +10,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = lib.mkDefault "transparent";
+      # theme = lib.mkDefault "transparent";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -25,23 +25,31 @@
           formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
           language-servers = [
             "nixd"
-            "nil"
+          ];
+        }
+        {
+          name = "python";
+          auto-format = true;
+          language-servers = [
+            "pylsp"
           ];
         }
       ];
       language-server = {
-        nixd.command = "${pkgs.nixd}/bin/nixd";
+        nixd.command = lib.getExe pkgs.nixd;
+        pylsp.command = lib.getExe pkgs.python312Packages.python-lsp-server;
       };
     };
-    themes = {
-      transparent = {
-        "inherits" = "ayu_mirage";
-        "ui.background" = { };
-        "ui.text" = { };
-        "ui.help" = { };
-        "ui.menu" = { };
-        "ui.statusline" = { };
-      };
-    };
+
+    # themes = {
+    #   transparent = {
+    #     "inherits" = "ayu_mirage";
+    #     "ui.background" = { };
+    #     "ui.text" = { };
+    #     "ui.help" = { };
+    #     "ui.menu" = { };
+    #     "ui.statusline" = { };
+    #   };
+    # };
   };
 }
