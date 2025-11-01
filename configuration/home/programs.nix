@@ -70,6 +70,8 @@
       };
     })
 
+    lutris
+
     mangohud_git
     hexo-cli
     upscayl-ncnn
