@@ -194,7 +194,7 @@
         backgroundOpacity = 0.9;
         floatingRatio = 0;
         onlySameOutput = true;
-        monitors = [ "eDP-1" ];
+        monitors = [ ];
         pinnedApps = [ ];
         colorizeIcons = false;
       };
