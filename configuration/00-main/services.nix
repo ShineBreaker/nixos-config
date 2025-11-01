@@ -4,7 +4,7 @@
   imports = [
     ../services/system/beesd.nix
     # ../services/system/connman.nix
-    # ../services/system/doas.nix
+    ../services/system/doas.nix
     ../services/system/fish.nix
     # ../services/system/fprintd.nix
     ../services/system/git.nix
@@ -22,10 +22,11 @@
     ../services/system/plymouth.nix
     ../services/system/powerManagement.nix
     ../services/system/sddm.nix
-    ../services/system/sudo.nix
+    # ../services/system/sudo.nix
     # ../services/system/zfs.nix
 
     # ../services/user/clash-verge.nix
+    ../services/user/externalPackageManager.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
     ../services/user/poweralertd.nix
