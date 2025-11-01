@@ -9,11 +9,11 @@
     events = [
       {
         event = "lock";
-        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
+        command = "niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
       }
       {
         event = "unlock";
-        command = "${pkgs.niri}/bin/niri msg action power-on-monitors";
+        command = "niri msg action power-on-monitors";
       }
       {
         event = "after-resume";
@@ -23,7 +23,7 @@
     timeouts = [
       {
         timeout = 600;
-        command = "${pkgs.niri}/bin/niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
+        command = "niri msg action power-off-monitors && ${pkgs.gtklock}/bin/gtklock -d";
       }
     ];
   };

@@ -23,7 +23,7 @@
     "Mod+D" = lib.mkDefault {
       hotkey-overlay.title = "打开搜索";
       repeat = false;
-      action.spawn = [ "fuzzel" ];
+      action.spawn = [ "vicinae" ];
     };
 
     "Mod+C" = lib.mkDefault {
