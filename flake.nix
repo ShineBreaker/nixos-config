@@ -30,16 +30,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
-    };
+    # noctalia = {
+    #   url = "github:noctalia-dev/noctalia-shell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.quickshell.follows = "quickshell";
+    # };
 
-    quickshell = {
-      url = "github:outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # quickshell = {
+    #   url = "github:outfoxxed/quickshell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";
@@ -66,8 +66,8 @@
       home-manager,
       niri-flake,
       nix-index-database,
-      noctalia,
-      quickshell,
+      # noctalia,
+      # quickshell,
       solaar,
       stylix,
       winapps,
@@ -110,15 +110,15 @@
 
             (import ./overlays)
 
-            noctalia.nixosModules.default
-            {
-              environment.systemPackages = [
-                noctalia.packages."${system}".default
-                quickshell.packages."${system}".default
-              ];
+            # noctalia.nixosModules.default
+            #  {
+            #   environment.systemPackages = [
+            #     noctalia.packages."${system}".default
+            #     quickshell.packages."${system}".default
+            #   ];
 
-              services.noctalia-shell.enable = false;
-            }
+            #   services.noctalia-shell.enable = false;
+            # }
 
             niri-flake.nixosModules.niri
             (
@@ -143,7 +143,7 @@
                     # dankMaterialShell.homeModules.dankMaterialShell.default
                     # dankMaterialShell.homeModules.dankMaterialShell.niri
 
-                    noctalia.homeModules.default
+                    # noctalia.homeModules.default
 
                     ./configuration/00-main/home.nix
                   ];
