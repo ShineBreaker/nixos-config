@@ -117,7 +117,7 @@
                 quickshell.packages."${system}".default
               ];
 
-              services.noctalia-shell.enable = true;
+              services.noctalia-shell.enable = false;
             }
 
             niri-flake.nixosModules.niri

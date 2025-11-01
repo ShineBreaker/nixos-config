@@ -4,11 +4,17 @@
 
 (
   let
-    Browser = "󰆋";
-    Chat = "";
-    Code = "";
-    Game = "󰺵";
-    Work = "";
+    # Browser = "󰆋";
+    # Chat = "";
+    # Code = "";
+    # Game = "󰺵";
+    # Work = "";
+
+    Browser = "Browser";
+    Chat = "Chat";
+    Code = "Code";
+    Game = "Game";
+    Work = "Work";
   in
 
   {

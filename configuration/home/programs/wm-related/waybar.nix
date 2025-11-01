@@ -12,99 +12,94 @@
     enable = true;
     systemd.enable = true;
     style = lib.mkAfter ''
-* {
-    font-family: "Iosevka Nerd Font Propo";
-    font-weight: 500;
-    font-size: 17px;
- 
-    border-radius: 0px;
-    text-shadow: none;
- 
-    transition-property: background;
-    transition-duration: 0.2s;
-}
- 
-window#waybar {
-    background-color: alpha(@base00, 0.95);
-    padding-left: 0px;
-    padding-right: 6px;
+      * {
+          font-family: "Iosevka Nerd Font Propo";
+          font-weight: 500;
+          font-size: 14px;
+          border-radius: 16px;
+          text-shadow: none;
+          transition: background 0.2s ease, color 0.2s ease;
+      }
 
-    font-family: inherit;
-}
+      window#waybar {
+          background-color: alpha(@base00, 0.92);
+          padding: 4px 10px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          border-bottom: none;
+          font-family: inherit;
+      }
 
-.modules-left {
-    background-color: transparent;
-    padding-top: 4px;
-}
- 
- 
-.modules-right {
-    background-color: transparent;
-    padding-bottom: 4px;
-}
+      .modules-left,
+      .modules-center,
+      .modules-right {
+          background: transparent;
+          padding: 0 6px;
+          margin: 0;
+      }
 
-window#waybar.hidden  {
-    opacity: 0.2;
-}
+      window#waybar.hidden {
+          opacity: 0.2;
+      }
 
-tooltip {
-    color: @base02;
-    font-size: 10px;
-    border-radius: 12px;
-}
+      tooltip {
+          color: @base02;
+          font-family: "Sarasa Gothic SC";
+          font-size: 10px;
+          border-radius: 8px;
+          padding: 6px 8px;
+          background-color: alpha(@base00, 0.9);
+      }
 
-#custom-lock,
-#custom-poweroff,
-#custom-reboot,
-#custom-search,
-#custom-hibernate,
-#custom-caffeine,
-#workspaces button,
-#tray,
-#backlight,
-#battery,
-#cpu,
-#memory,
-#network,
-#wireplumber,
-#clock 
-{
-    color: @base07;
-    border-radius: 12px;
-    padding: 3px;
-    margin: 2px 5px;
-}
+      /* 通用模块样式 */
+      #custom-lock,
+      #custom-poweroff,
+      #custom-reboot,
+      #custom-search,
+      #custom-hibernate,
+      #custom-caffeine,
+      #workspaces button,
+      #tray,
+      #backlight,
+      #battery,
+      #cpu,
+      #memory,
+      #network,
+      #wireplumber,
+      #wlr-taskbar,
+      #clock {
+          color: @base07;
+          padding: 6px 4px;
+          margin: 0 2px;
+      }
 
-#battery { color: @base0C; }
+      #battery { color: @base0C; }
+      #clock { color: @base05; }
+      #cpu { color: @base08; }
+      #backlight { color: @base0A; }
+      #memory { color: @base0E; }
+      #wireplumber { color: @base0B; }
+      #network { color: @base0C; }
+      #custom-lock { color: @base0A; }
+      #custom-poweroff { color: @base08; }
+      #custom-reboot { color: @base0C; }
+      #custom-hibernate { color: @base0B; }
+      #custom-caffeine { color: @base09; }
 
-#clock { 
-    font-size: 16px;
-}
+      /* 工作区按钮样式 */
+      #workspaces button {
+          background: transparent;
+          transition: background 0.2s ease, color 0.2s ease;
+      }
 
-#cpu { color: @base08; }
+      #workspaces button:hover {
+          background-color: alpha(@base07, 0.1);
+      }
 
-#backlight { color: @base0A;}
-
-#memory { color: @base0E; }
-
-#wireplumber { color: @base0B; }
-
-#network { color: @base0C; }
-
-#custom-lock { color: @base0A; }
-
-#custom-poweroff { color: @base08; }
-
-#custom-reboot { color: @base0C; }
-
-#custom-hibernate { color: @base0B; }
-
-#custom-caffeine { color: @base09; }
-
-#workspaces button.focused { 
-    background-color: alpha(@base07, 0.2);
-    color: @base0D; 
-}
+      #workspaces button.focused {
+          background-color: alpha(@base07, 0.2);
+          color: @base0D;
+      }
     '';
   };
 }
