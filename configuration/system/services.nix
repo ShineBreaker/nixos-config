@@ -31,12 +31,9 @@
       upscaleDefaultCursor = true;
     };
 
-    flatpak.enable = true;
-
     usbguard.dbus.enable = true;
     udisks2.enable = true;
     upower.enable = true;
     speechd.enable = lib.mkForce false;
-    linyaps.enable = true;
   };
 }

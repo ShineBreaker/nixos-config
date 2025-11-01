@@ -20,9 +20,8 @@
     };
   };
 
-  # === 3. 服务：ll-cli 自动更新（00:05）===
-  systemd.services.llcli-nightly-upgrade = {
-    description = "Nightly ll-cli Upgrade";
+  systemd.services.linyaps-nightly-upgrade = {
+    description = "Nightly linyaps Upgrade";
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.linyaps}/bin/ll-cli upgrade";
@@ -32,7 +31,6 @@
     };
   };
 
-  # === 5. Timer：分别触发两个更新 ===
   systemd.timers.flatpak-nightly-upgrade = {
     wantedBy = [ "timers.target" ];
     timerConfig = {
@@ -42,12 +40,12 @@
     };
   };
 
-  systemd.timers.llcli-nightly-upgrade = {
+  systemd.timers.linyaps-nightly-upgrade = {
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "*-*-* 00:05:00";
       Persistent = true;
-      Unit = "llcli-nightly-upgrade.service";
+      Unit = "linyaps-nightly-upgrade.service";
     };
   };
 }
