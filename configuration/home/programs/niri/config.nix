@@ -36,8 +36,12 @@
         ];
       }
       { argv = [ "sparkle" ]; }
-
-      { sh = "wl-paste --watch cliphist store &"; }
+      {
+        argv = [
+          "vicinae"
+          "server"
+        ];
+      }
     ];
 
     prefer-no-csd = true;
@@ -71,7 +75,7 @@
     };
 
     layout = {
-      gaps = 6;
+      gaps = 8;
 
       center-focused-column = "on-overflow";
       always-center-single-column = true;
