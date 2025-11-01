@@ -5,7 +5,7 @@
 
 {
   imports = [
-    ./fuzzel.nix
+    # ./fuzzel.nix
     ./mako.nix
     ./swayidle.nix
     ./waybar.nix
