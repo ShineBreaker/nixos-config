@@ -33,6 +33,10 @@
 
       window-rules = [
         {
+          # open-maximized-to-edges = true;
+        }
+
+        {
           matches = [ { } ];
 
           geometry-corner-radius = {
@@ -198,6 +202,5 @@
         }
       ];
     };
-
   }
 )
