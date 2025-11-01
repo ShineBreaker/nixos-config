@@ -32,6 +32,8 @@
         }
       );
 
+      podman = prev.podman.override { iptables = final.nftables; };
+
       # HACK: no more gtk2
       gnome-themes-extra = (prev.gnome-themes-extra.override { gtk2 = null; }).overrideAttrs {
         configureFlags = [ "--disable-gtk2-engine" ];
