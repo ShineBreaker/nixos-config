@@ -121,16 +121,10 @@
             # }
 
             niri-flake.nixosModules.niri
-            (
-              { lib, ... }:
-              {
-                niri-flake.cache.enable = true;
-                nixpkgs.overlays = [ niri-flake.overlays.niri ];
-
-                # Shit niri-flake.
-                services.gnome.gnome-keyring.enable = lib.mkForce false;
-              }
-            )
+            {
+              niri-flake.cache.enable = true;
+              nixpkgs.overlays = [ niri-flake.overlays.niri ];
+            }
 
             home-manager.nixosModules.home-manager
 

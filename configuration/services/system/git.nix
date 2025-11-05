@@ -5,7 +5,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    git-credential-keepassxc
     gitui
   ];
 
