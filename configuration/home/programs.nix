@@ -16,7 +16,7 @@
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
     ./programs/wm-related/default.nix
-    # ./programs/wps-office/default.nix
+    ./programs/wps-office/default.nix
 
     ./programs/chromium.nix
     # ./programs/code.nix
