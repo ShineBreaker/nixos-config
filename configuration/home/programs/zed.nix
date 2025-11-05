@@ -15,7 +15,6 @@
       "basher"
       "catppuccin-icons"
       "csharp"
-      "codebook"
       "colorizer"
       "git-firefly"
       "html"
@@ -26,6 +25,7 @@
       "nix"
       "scss"
       "sinppets"
+      "toml"
     ];
 
     extraPackages = with pkgs; [
