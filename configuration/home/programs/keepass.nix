@@ -42,4 +42,9 @@
       "https://gitee.com"
     ];
   };
+  programs.niri.settings = {
+    spawn-at-startup = [
+      { argv = [ "keepassxc" ]; }
+    ];
+  };
 }
