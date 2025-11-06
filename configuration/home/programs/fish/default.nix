@@ -22,8 +22,8 @@
         rebuildb = "nh os boot . --ask";
         rebuildc = "nh os switch . && nh clean all && nh os switch .";
 
-        upgrade = "nix flake update && git commit -a -m 'update.' && nh os boot . --ask";
-        update = "sudo ll-cli upgrade && sudo flatpak upgrade && distrobox upgrade --all";
+        upgrade = "nix flake update && git commit -a -m 'upgrade flake.nix' && nh os boot . --ask";
+        update = "sudo ll-cli upgrade && sudo flatpak upgrade";
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";
 
