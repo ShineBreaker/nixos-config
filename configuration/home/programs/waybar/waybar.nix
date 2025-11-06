@@ -4,9 +4,6 @@
 }:
 
 {
-  xdg.configFile = {
-    "waybar/config.jsonc".source = ./dotfiles/waybar-config.jsonc;
-  };
 
   programs.waybar = {
     enable = true;

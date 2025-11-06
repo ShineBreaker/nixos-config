@@ -15,20 +15,24 @@
     ./programs/python/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
-    ./programs/wm-related/default.nix
+    ./programs/waybar/default.nix
     ./programs/wps-office/default.nix
 
     ./programs/chromium.nix
     # ./programs/code.nix
     ./programs/firefox.nix
     ./programs/foot.nix
+    ./programs/fuzzel.nix
     ./programs/helix.nix
     ./programs/kdeconnect.nix
     ./programs/keepass.nix
     # ./programs/kitty.nix
     # ./programs/lapce.nix
+    ./programs/mako.nix
     ./programs/obs-studio.nix
+    ./programs/swayidle.nix
     ./programs/virt-manager.nix
+    # ./programs/vicinae.nix
     ./programs/waypaper.nix
     ./programs/zed.nix
   ];

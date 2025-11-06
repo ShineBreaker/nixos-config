@@ -1,6 +1,4 @@
 {
-  lib,
-  config,
   ...
 }:
 
@@ -9,7 +7,6 @@
     enable = true;
     settings = {
       anchor = "top-right";
-      # background-color = lib.mkForce config.programs.fuzzel.settings.colors.background;
       sort = "-time";
       layer = "overlay";
       width = 300;

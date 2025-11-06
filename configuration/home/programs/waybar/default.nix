@@ -1,13 +1,9 @@
 {
-  pkgs,
   ...
 }:
 
 {
   imports = [
-    # ./fuzzel.nix
-    ./mako.nix
-    ./swayidle.nix
     ./waybar.nix
   ];
 
@@ -23,5 +19,9 @@
         };
       }
     ];
+  };
+
+  xdg.configFile = {
+    "waybar/config.jsonc".source = ./dotfiles/waybar-config.jsonc;
   };
 }
