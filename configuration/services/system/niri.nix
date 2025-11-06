@@ -13,8 +13,6 @@
     wl-clipboard
     libnotify
     cliphist
-
-    labwc
   ];
 
   programs = {

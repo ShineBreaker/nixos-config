@@ -7,7 +7,7 @@
 
   programs.keepassxc = {
     enable = true;
-    autostart = true;
+    autostart = false;
     settings = {
       Browser = {
         Enabled = true;

@@ -97,7 +97,7 @@
     freerdp
 
     lxqt.pcmanfm-qt
-    lxqt.lxqt-archiver
+    peazip
   ];
 
 }
