@@ -20,25 +20,6 @@
       action.spawn = [ "foot" ];
     };
 
-    "Mod+D" = lib.mkDefault {
-      hotkey-overlay.title = "打开搜索";
-      repeat = false;
-      action.spawn = [
-        "vicinae"
-        "open"
-      ];
-    };
-
-    # "Mod+C" = lib.mkDefault {
-    #   hotkey-overlay.title = "打开剪切板";
-    #   repeat = false;
-    #   action.spawn = [
-    #     "sh"
-    #     "-c"
-    #     "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
-    #   ];
-    # };
-
     "Super+Alt+L" = lib.mkDefault {
       hotkey-overlay.title = "锁屏";
       repeat = false;

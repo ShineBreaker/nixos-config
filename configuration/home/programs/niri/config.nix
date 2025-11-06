@@ -36,12 +36,6 @@
         ];
       }
       { argv = [ "sparkle" ]; }
-      {
-        argv = [
-          "vicinae"
-          "server"
-        ];
-      }
     ];
 
     prefer-no-csd = true;
