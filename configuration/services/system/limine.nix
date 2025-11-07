@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   lib,
   ...
@@ -7,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     sbctl
   ];
-  
+
   boot.loader = {
     systemd-boot.enable = lib.mkForce false;
     limine = {
@@ -28,5 +29,14 @@
           image_path: uuid(C432755D-2F67-448E-AB75-4255DA581DC0):/EFI/Microsoft/Boot/bootmgfw.efi\
       ";
     };
+  };
+
+  fileSystems."/var/lib/sbctl" = {
+    device = config.fileSystems."/".device;
+    fsType = config.fileSystems."/".fsType;
+    options = [
+      "subvol=DATA/sbctl"
+      "compress=zstd:6"
+    ];
   };
 }

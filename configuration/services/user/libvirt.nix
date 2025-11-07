@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }:
@@ -27,16 +28,12 @@
 
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
-  environment.systemPackages = with pkgs; [
-    distrobox_git
-
-    podman-compose
-  ];
-
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    dockerSocket.enable = true;
+  fileSystems."/var/lib/libvirt" = {
+    device = config.fileSystems."/".device;
+    fsType = config.fileSystems."/".fsType;
+    options = [
+      "subvol=DATA/LibVirt"
+      "compress=zstd:6"
+    ];
   };
-
 }

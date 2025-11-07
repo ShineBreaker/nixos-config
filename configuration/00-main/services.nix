@@ -18,23 +18,26 @@
     ../services/system/nix.nix
     ../services/system/nix-ld.nix
     # ../services/system/opentabletdriver.nix
-    ../services/system/others.nix
     ../services/system/plymouth.nix
     ../services/system/powerManagement.nix
     ../services/system/sddm.nix
     ../services/system/sudo.nix
     # ../services/system/zfs.nix
 
+    ../services/user/adb.nix
+    ../services/user/appimage.nix
     # ../services/user/clash-verge.nix
     ../services/user/externalPackageManager.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
+    ../services/user/libvirt.nix
+    ../services/user/podman.nix
     ../services/user/poweralertd.nix
     ../services/user/sparkle.nix
     ../services/user/steam.nix
     # ../services/user/sunshine.nix
     ../services/user/syncthing.nix
-    ../services/user/virtualisation.nix
+    ../services/user/waydroid.nix
     # ../services/user/xwayland-satellite.nix
 
   ];
