@@ -28,6 +28,7 @@
     ./programs/keepass.nix
     # ./programs/kitty.nix
     # ./programs/lapce.nix
+    ./programs/lutris.nix
     ./programs/mako.nix
     ./programs/obs-studio.nix
     ./programs/swayidle.nix
@@ -43,6 +44,8 @@
     userDirs.enable = true;
     userDirs.createDirectories = true;
   };
+
+  programs.man.enable = false;
 
   home.packages = with pkgs; [
     (heroic.override {
@@ -74,8 +77,6 @@
         enableJavaFX = true;
       };
     })
-
-    lutris
 
     mangohud_git
     hexo-cli
