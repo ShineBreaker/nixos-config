@@ -166,7 +166,7 @@
         {
           matches = [
             { app-id = "^osu"; }
-            { app-id = "waydroid"; }
+            { app-id = "Waydroid"; }
             { app-id = "gamescope"; }
             { app-id = "r#'^steam_app'#"; }
             { app-id = ".gamescope-wrapped"; }
