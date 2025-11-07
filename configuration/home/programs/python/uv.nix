@@ -12,6 +12,6 @@
   };
   xdg.configFile = {
     "uv/uv.toml".source = ./dotfiles/uv/uv.toml;
-    "fish/conf.d/uv.fish".source = ./dotfiles/conda/uv.fish;
+    "fish/conf.d/uv.fish".source = ./dotfiles/uv/uv.fish;
   };
 }
