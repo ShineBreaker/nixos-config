@@ -45,8 +45,6 @@
     userDirs.createDirectories = true;
   };
 
-  programs.man.enable = false;
-
   home.packages = with pkgs; [
     (heroic.override {
       extraPkgs = pkgs: [

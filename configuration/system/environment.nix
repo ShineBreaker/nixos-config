@@ -35,6 +35,5 @@
 
   documentation = {
     nixos.enable = false;
-    man.enable = false;
   };
 }
