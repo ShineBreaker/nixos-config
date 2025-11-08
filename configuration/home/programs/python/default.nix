@@ -4,8 +4,8 @@
 
 {
   imports = [
-    # ./conda.nix
-    ./uv.nix
+    ./pixi.nix
+    # ./uv.nix
 
     ./package.nix
   ];
