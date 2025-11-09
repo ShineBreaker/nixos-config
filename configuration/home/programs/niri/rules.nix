@@ -71,6 +71,7 @@
             { app-id = "firefox"; }
             { app-id = "librewolf"; }
             { app-id = "chromium-browser"; }
+            { app-id = "io.github.ungoogled_software.ungoogled_chromium"; }
           ];
 
           open-maximized = true;
@@ -178,6 +179,7 @@
         {
           matches = [
             { app-id = "foot"; }
+            { title = "Varia"; }
           ];
 
           default-column-width = {
