@@ -124,6 +124,7 @@
             {
               niri-flake.cache.enable = true;
               nixpkgs.overlays = [ niri-flake.overlays.niri ];
+              systemd.user.services.niri-flake-polkit.enable = false;
             }
 
             home-manager.nixosModules.home-manager
