@@ -54,26 +54,17 @@
 
     # (hmcl.override {
     #   hmclJdk = graalvmPackages.graalvm-ce;
-    #   minecraftJdks = [
-    #     graalvmPackages.graalvm-ce
-    #     zulu8
-    #     zulu17
-    #   ];
+    #   minecraftJdks = jdks = "${jres}";
     # })
 
     (prismlauncher.override {
       jdks = [
-        graalvmPackages.graalvm-ce
-        zulu8
-        zulu17
-        zulu
+        pkgs.graalvmPackages.graalvm-ce
+        pkgs.javaPackages.compiler.temurin-bin.jre-8
+        pkgs.javaPackages.compiler.temurin-bin.jre-17
+        pkgs.javaPackages.compiler.temurin-bin.jre-21
+        pkgs.javaPackages.compiler.temurin-bin.jre-25
       ];
-    })
-
-    (mcaselector.override {
-      jre = zulu.override {
-        enableJavaFX = true;
-      };
     })
 
     mangohud_git
