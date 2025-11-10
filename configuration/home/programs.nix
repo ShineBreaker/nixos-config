@@ -15,7 +15,7 @@
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
     ./programs/waybar/default.nix
-    ./programs/wps-office/default.nix
+    # ./programs/wps-office/default.nix
 
     # ./programs/chromium.nix
     # ./programs/code.nix
