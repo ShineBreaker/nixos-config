@@ -5,11 +5,11 @@
 
 {
   imports = [
-    ./programs/fastfetch/default.nix
-    ./programs/fish/default.nix
+    ./fastfetch/default.nix
+    ./fish/default.nix
 
-    ./programs/foot.nix
-    # ./programs/kitty.nix
+    ./foot.nix
+    # ./kitty.nix
   ];
   home.packages = with pkgs; [
     upscayl-ncnn

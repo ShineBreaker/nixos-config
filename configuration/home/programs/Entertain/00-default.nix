@@ -5,7 +5,7 @@
 
 {
   imports = [
-    ./programs/lutris.nix
+    ./lutris.nix
   ];
 
   home.packages = with pkgs; [

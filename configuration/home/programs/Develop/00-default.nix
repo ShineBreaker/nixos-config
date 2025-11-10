@@ -5,12 +5,12 @@
 
 {
   imports = [
-    # ./programs/code.nix
-    ./programs/helix.nix
-    ./programs/jujutsu.nix
-    # ./programs/lapce.nix
-    ./programs/pixi.nix
-    ./programs/zed.nix
+    # ./code.nix
+    ./helix.nix
+    ./jujutsu.nix
+    # ./lapce.nix
+    ./pixi.nix
+    ./zed.nix
   ];
   home.packages = with pkgs; [
     gh

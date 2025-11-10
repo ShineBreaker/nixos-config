@@ -5,10 +5,10 @@
 
 {
   imports = [
-    # ./programs/chromium.nix
-    ./programs/firefox.nix
+    # ./chromium.nix
+    ./firefox.nix
 
-    # ./programs/wps-office/default.nix
+    # ./wps-office/default.nix
   ];
   home.packages = with pkgs; [
     libreoffice

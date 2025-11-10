@@ -5,12 +5,12 @@
 
 {
   imports = [
-    ./programs/winapps/default.nix
+    ./winapps/default.nix
 
-    ./programs/kdeconnect.nix
-    ./programs/keepass.nix
-    ./programs/obs-studio.nix
-    ./programs/virt-manager.nix
+    ./kdeconnect.nix
+    ./keepass.nix
+    ./obs-studio.nix
+    ./virt-manager.nix
   ];
 
   home.packages = with pkgs; [
