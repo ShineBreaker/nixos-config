@@ -23,6 +23,7 @@
     ./programs/foot.nix
     ./programs/fuzzel.nix
     ./programs/helix.nix
+    ./programs/jujutsu.nix
     ./programs/kdeconnect.nix
     ./programs/keepass.nix
     # ./programs/kitty.nix
@@ -68,6 +69,7 @@
     gh
     hexo-cli
     jupyter
+    postman
 
     libreoffice
 
