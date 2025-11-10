@@ -12,7 +12,6 @@
     # ./programs/linux-wallpaperengine/default.nix
     ./programs/niri/default.nix
     # ./programs/noctalia/default.nix
-    ./programs/python/default.nix
     ./programs/rime/default.nix
     ./programs/winapps/default.nix
     ./programs/waybar/default.nix
@@ -31,6 +30,7 @@
     ./programs/lutris.nix
     ./programs/mako.nix
     ./programs/obs-studio.nix
+    ./programs/pixi.nix
     ./programs/swayidle.nix
     ./programs/virt-manager.nix
     # ./programs/vicinae.nix
@@ -52,11 +52,6 @@
       ];
     })
 
-    # (hmcl.override {
-    #   hmclJdk = graalvmPackages.graalvm-ce;
-    #   minecraftJdks = jdks = "${jres}";
-    # })
-
     (prismlauncher.override {
       jdks = [
         pkgs.graalvmPackages.graalvm-ce
@@ -68,9 +63,11 @@
     })
 
     mangohud_git
-    hexo-cli
     upscayl-ncnn
+
     gh
+    hexo-cli
+    jupyter
 
     libreoffice
 

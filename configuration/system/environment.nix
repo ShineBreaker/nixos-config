@@ -8,9 +8,6 @@
     fastfetch
     git
 
-    nodejs
-    pnpm
-
     nix-output-monitor
     btop
     wget
