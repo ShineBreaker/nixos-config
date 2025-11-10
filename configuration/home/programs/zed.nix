@@ -11,6 +11,9 @@
     enable = true;
     installRemoteServer = true;
 
+    mutableUserSettings = false;
+    mutableUserTasks = false;
+
     extensions = [
       "basher"
       "catppuccin-icons"
