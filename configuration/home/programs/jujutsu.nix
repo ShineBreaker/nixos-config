@@ -24,16 +24,5 @@
         };
       }
     ];
-    userKeymaps = [
-      {
-        context = "jujutsu";
-        bindings = {
-          ctrl-u = "task::Spawn";
-        };
-
-        task_name = "jjui";
-        reveal_target = "center";
-      }
-    ];
   };
 }
