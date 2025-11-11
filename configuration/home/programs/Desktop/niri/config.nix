@@ -85,7 +85,7 @@
       };
 
       focus-ring = {
-        enable = false;
+        enable = true;
         width = config.programs.niri.settings.layout.border.width;
 
         active = {
@@ -103,7 +103,7 @@
 
       border = {
         enable = false;
-        width = 2;
+        width = 4;
       };
 
       shadow = {
