@@ -25,5 +25,6 @@
     mpv
     nomacs
     peazip
+    xarchiver
   ];
 }
