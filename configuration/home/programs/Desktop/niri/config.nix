@@ -69,7 +69,7 @@
     };
 
     layout = {
-      gaps = 8;
+      gaps = 12;
 
       center-focused-column = "on-overflow";
       always-center-single-column = true;
@@ -90,8 +90,8 @@
 
         active = {
           gradient = {
-            from = "#85c7d5";
-            to = "#ddbc7d";
+            from = config.lib.stylix.colors.base0C;
+            to = config.lib.stylix.colors.base0A;
             angle = 45;
           };
         };
@@ -108,8 +108,8 @@
 
       shadow = {
         enable = true;
-        softness = 4;
-        spread = 0;
+        softness = 16;
+        spread = 2;
         offset = {
           x = 0;
           y = 0;
