@@ -85,6 +85,7 @@
             { app-id = "Code"; }
             { app-id = "codium"; }
             { app-id = "dev.zed.Zed"; }
+            { app-id = "jetbrains-pycharm"; }
           ];
 
           open-maximized = true;
