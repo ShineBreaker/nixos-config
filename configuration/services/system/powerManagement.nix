@@ -38,17 +38,11 @@
   };
 
   services.logind.settings.Login = {
-    HandleLidSwitch = "suspend-then-hibernate";
+    HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "lock";
     HandleLidSwitchDocked = "ignore";
 
     powerKey = "lock";
-    powerKeyLongPress = "hibernate";
+    powerKeyLongPress = "shutdown";
   };
-
-  boot.resumeDevice = "/dev/disk/by-uuid/7c5f1768-bf41-4349-9b92-4b53880a8e05";
-
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=15m
-  '';
 }
