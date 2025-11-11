@@ -31,7 +31,9 @@
     ../services/user/fcitx5.nix
     ../services/user/java.nix
     ../services/user/libvirt.nix
+    ../services/user/mongodb.nix
     ../services/user/podman.nix
+    ../services/user/postgresql.nix
     ../services/user/poweralertd.nix
     ../services/user/sparkle.nix
     ../services/user/steam.nix
@@ -39,10 +41,6 @@
     ../services/user/syncthing.nix
     ../services/user/waydroid.nix
     # ../services/user/xwayland-satellite.nix
-
-  ];
-
-  nixpkgs.config.permittedInsecurePackages = [
 
   ];
 

@@ -14,8 +14,6 @@
   ];
   home.packages = with pkgs; [
     gh
-    hexo-cli
-    jupyter
     postman
   ];
 }
