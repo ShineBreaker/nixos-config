@@ -7,7 +7,7 @@
 
   programs.keepassxc = {
     enable = true;
-    autostart = false;
+    autostart = true;
     settings = {
       General = {
         ConfigVersion = 2;
@@ -65,11 +65,6 @@
     hosts = [
       "https://github.com"
       "https://gitee.com"
-    ];
-  };
-  programs.niri.settings = {
-    spawn-at-startup = [
-      { argv = [ "keepassxc" ]; }
     ];
   };
 }

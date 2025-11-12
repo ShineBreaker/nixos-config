@@ -27,9 +27,8 @@
       after = lib.mkForce [ ];
     };
   };
-  
+
   stylix.targets = {
-    niri.enable = true;
     waybar.addCss = false;
   };
 }

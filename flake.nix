@@ -20,11 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri-flake = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -64,7 +59,6 @@
       chaotic,
       # dankMaterialShell,
       home-manager,
-      niri-flake,
       nix-index-database,
       # noctalia,
       # quickshell,
@@ -119,13 +113,6 @@
 
             #   services.noctalia-shell.enable = false;
             # }
-
-            niri-flake.nixosModules.niri
-            {
-              niri-flake.cache.enable = true;
-              nixpkgs.overlays = [ niri-flake.overlays.niri ];
-              systemd.user.services.niri-flake-polkit.enable = false;
-            }
 
             home-manager.nixosModules.home-manager
 

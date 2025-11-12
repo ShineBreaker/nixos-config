@@ -25,26 +25,4 @@
       };
     };
   };
-
-  programs.niri.settings = {
-    spawn-at-startup = [
-      { sh = "wl-paste --watch cliphist store &"; }
-    ];
-    binds = {
-      "Mod+D" = {
-        hotkey-overlay.title = "打开搜索";
-        repeat = false;
-        action.spawn = [ "fuzzel" ];
-      };
-      "Mod+C" = {
-        hotkey-overlay.title = "打开剪切板";
-        repeat = false;
-        action.spawn = [
-          "sh"
-          "-c"
-          "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
-        ];
-      };
-    };
-  };
 }

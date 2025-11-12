@@ -23,6 +23,7 @@
       "html"
       "log"
       "java"
+      "kdl"
       "make"
       "neocmake"
       "nix"

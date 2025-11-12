@@ -9,7 +9,7 @@
     pwvucontrol
     brightnessctl
 
-    xwayland-satellite-unstable
+    xwayland-satellite
     wl-clipboard
     libnotify
     cliphist
@@ -19,7 +19,7 @@
     xwayland.enable = true;
     niri = {
       enable = true;
-      package = pkgs.niri-unstable;
+      package = pkgs.niri_git;
     };
     gtklock.enable = true;
   };
