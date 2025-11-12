@@ -62,6 +62,8 @@ input {
         accel-speed 0.6
         accel-profile "flat"
     }
+
+    focus-follows-mouse max-scroll-amount="10%"
 }
 
 layout {
@@ -95,7 +97,6 @@ workspace "Game"
 workspace "Work"
 
 window-rule {
-    match
     draw-border-with-background false
     geometry-corner-radius 12.000000 12.000000 12.000000 12.000000
     clip-to-geometry true
