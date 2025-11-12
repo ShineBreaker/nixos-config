@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 
@@ -14,9 +15,16 @@
 
   xdg = {
     enable = true;
-    autostart.enable = true;
     userDirs.enable = true;
     userDirs.createDirectories = true;
+
+    autostart = {
+      enable = true;
+      readOnly = false;
+      entries = [
+        "${pkgs.sparkle.out}/share/applications/sparkle.desktop"
+      ];
+    };
   };
 
 }

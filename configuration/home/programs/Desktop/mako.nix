@@ -16,7 +16,7 @@
       border-size = 3;
       border-radius = 10;
       icons = 1;
-      icon-path = "~/.nix-profile/share/icons/Papirus";
+      icon-path = "~/.nix-profile/share/icons/Papirus-Dark";
       max-icon-size = 64;
       default-timeout = 5000;
       ignore-timeout = 1;

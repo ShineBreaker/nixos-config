@@ -1,6 +1,5 @@
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "clash-verge"
 
 spawn-sh-at-startup "wl-paste --watch cliphist store &"
 
