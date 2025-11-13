@@ -7,7 +7,6 @@
   imports = [
     ../home/desktopEntries.nix
     ../home/file.nix
-    ../home/fonts.nix
     ../home/programs.nix
     ../home/theme.nix
   ];
