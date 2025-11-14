@@ -18,6 +18,7 @@
       "basher"
       "catppuccin-icons"
       "csharp"
+      "codebook"
       "colorizer"
       "git-firefly"
       "html"

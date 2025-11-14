@@ -12,13 +12,14 @@
       {
         users = [ "brokenshine" ];
         noPass = false;
-        keepEnv = false;
+        keepEnv = true;
         persist = true;
       }
     ];
   };
 
   environment.systemPackages = with pkgs; [ doas-sudo-shim ];
+
   programs.fish.shellAbbrs = {
     sudo = "doas";
   };
