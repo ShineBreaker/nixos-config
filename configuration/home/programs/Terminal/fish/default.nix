@@ -27,16 +27,8 @@
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";
 
-        cat = "bat";
-        du = "dust";
-        find = "fd";
-        df = "duf";
+        ls = "eza";
         cd = "z";
-
-        nvim = "hx";
-        vim = "hx";
-        vi = "hx";
-        helix = "hx";
       };
 
       interactiveShellInit = ''

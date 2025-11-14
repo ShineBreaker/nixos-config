@@ -22,7 +22,6 @@
       du = "dust";
       find = "fd";
       df = "duf";
-      cd = "z";
 
       nvim = "hx";
       vim = "hx";
