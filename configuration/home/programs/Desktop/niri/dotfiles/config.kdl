@@ -83,7 +83,7 @@ layer-rule {
 }
 
 window-rule {
-    draw-border-with-background true
+    draw-border-with-background false
     geometry-corner-radius 12
     clip-to-geometry true
 
@@ -130,12 +130,6 @@ window-rule {
 
 window-rule {
     match app-id="foot"
-
-    default-column-width { proportion 0.5; }
-    draw-border-with-background false
-}
-
-window-rule {
     match title="Varia"
 
     default-column-width { proportion 0.5; }
