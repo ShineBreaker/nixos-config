@@ -18,5 +18,8 @@
     })
     wechat
     telegram-desktop
+
+    lmms
+    openutau
   ];
 }
