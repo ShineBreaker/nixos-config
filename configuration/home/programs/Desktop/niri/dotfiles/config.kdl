@@ -1,7 +1,7 @@
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "fcitx5" "-d"
 
-spawn-sh-at-startup "wl-paste --watch cliphist store &"
+// spawn-sh-at-startup "wl-paste --watch cliphist store &"
 
 prefer-no-csd
 
@@ -56,11 +56,11 @@ layout {
 
     preset-column-widths {
         proportion 0.5
-        proportion 0.75
+        proportion 0.7
         proportion 1.0
     }
 
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.7; }
 
     focus-ring {
         // off
@@ -250,9 +250,11 @@ binds {
     Mod+8       { focus-workspace 8; }
     Mod+9       { focus-workspace 9; }
 
-    Mod+Ctrl+C  hotkey-overlay-title="将窗口移至中央"   { center-column; }
-    Mod+Ctrl+F  hotkey-overlay-title="使窗口悬浮"       { toggle-window-floating; }
-    Mod+Ctrl+R  hotkey-overlay-title="随机壁纸"         { spawn "waypaper" "--random"; }
+    Mod+Alt+L   hotkey-overlay-title="锁屏" repeat=false { spawn "gtklock"; }
+
+    Mod+Ctrl+C  hotkey-overlay-title="将窗口移至中央"    { center-column; }
+    Mod+Ctrl+F  hotkey-overlay-title="使窗口悬浮"        { toggle-window-floating; }
+    Mod+Ctrl+R  hotkey-overlay-title="随机壁纸"          { spawn "waypaper" "--random"; }
 
     Mod+Ctrl+K     hotkey-overlay-title="上移窗口"    { move-window-up; }
     Mod+Ctrl+Up    hotkey-overlay-title="上移窗口"    { move-window-up; }
@@ -263,17 +265,17 @@ binds {
     Mod+Ctrl+L     hotkey-overlay-title="右移窗口"    { move-column-right; }
     Mod+Ctrl+Right hotkey-overlay-title="右移窗口"    { move-column-right; }
 
-    Mod+Ctrl+End       { move-column-to-last; }
-    Mod+Ctrl+Home      { move-column-to-first; }
+    Mod+Ctrl+End    { move-column-to-last; }
+    Mod+Ctrl+Home   { move-column-to-first; }
 
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+Page_Down hotkey-overlay-title="窗口移至下一工作区"  { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   hotkey-overlay-title="窗口移至上一工作区"  { move-column-to-workspace-up; }
 
-    Mod+C hotkey-overlay-title="打开剪切板"      repeat=false    { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
-    Mod+D hotkey-overlay-title="打开搜索"        repeat=false    { spawn "fuzzel"; }
-    Mod+F hotkey-overlay-title="窗口最大化"                        { maximize-column; }
+    Mod+C hotkey-overlay-title="打开剪切板"      repeat=false    { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
+    Mod+D hotkey-overlay-title="打开搜索"        repeat=false    { spawn "vicinae" "toggle"; }
+    Mod+F hotkey-overlay-title="窗口最大化"                      { maximize-column; }
     Mod+Q hotkey-overlay-title="关闭窗口"        repeat=false    { close-window; }
-    Mod+R hotkey-overlay-title="更改窗口大小"                      { switch-preset-column-width; }
+    Mod+R hotkey-overlay-title="更改窗口大小"                    { switch-preset-column-width; }
 
 
     Mod+K       hotkey-overlay-title="切换到上侧窗口"    { focus-window-up; }
@@ -288,9 +290,9 @@ binds {
 
     Mod+End    hotkey-overlay-title="切换到该工作区的最后一个窗口"  { focus-column-last; }
     Mod+Equal  hotkey-overlay-title="增大窗口宽度"                  { set-column-width "+5%"; }
-    Mod+Escape hotkey-overlay-title="总览"      repeat=false      { toggle-overview; }
+    Mod+Escape hotkey-overlay-title="总览"      repeat=false        { toggle-overview; }
     Mod+Home   hotkey-overlay-title="切换到该工作区的第一个窗口"    { focus-column-first; }
-    Mod+Minus  hotkey-overlay-title="减小窗口宽度" { set-column-width "-5%"; }
+    Mod+Minus  hotkey-overlay-title="减小窗口宽度"                  { set-column-width "-5%"; }
 
     Mod+Page_Up   hotkey-overlay-title="切换到上一个工作区"    { focus-workspace-up; }
     Mod+Page_Down hotkey-overlay-title="切换到下一个工作区"    { focus-workspace-down; }
@@ -344,7 +346,7 @@ binds {
     Mod+WheelScrollRight cooldown-ms=150  { focus-column-right; }
     Mod+WheelScrollUp    cooldown-ms=150  { focus-workspace-up; }
 
-    Super+Alt+L hotkey-overlay-title="锁屏" repeat=false { spawn "gtklock"; }
+
 
     XF86AudioLowerVolume  allow-when-locked=true  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMicMute      allow-when-locked=true  { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }

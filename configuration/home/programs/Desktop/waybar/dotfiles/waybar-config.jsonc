@@ -95,7 +95,7 @@
     "format-icons": {
       "default": ["", "", "", ""],
     },
-    "on-click": "pwvucontrol",
+    "on-click": "easyeffects",
     "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"],
     "tooltip-format": "{volume}%",
   },
@@ -175,7 +175,7 @@
     "format": "",
     "tooltip": true,
     "tooltip-format": "搜索",
-    "on-click": "vicinae open",
+    "on-click": "vicinae toggle",
   },
   "custom/caffeine": {
     "format": "",

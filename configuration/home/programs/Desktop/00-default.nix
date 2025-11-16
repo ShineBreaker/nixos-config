@@ -12,15 +12,18 @@
     ./rime/default.nix
     ./waybar/default.nix
 
-    ./fuzzel.nix
+    # ./fuzzel.nix
     ./mako.nix
     ./swayidle.nix
-    # ./vicinae.nix
+    ./vicinae.nix
     ./waypaper.nix
   ];
 
   home.packages = with pkgs; [
+    brightnessctl
     coppwr
+    easyeffects
+
     lxqt.pcmanfm-qt
     mpv
     nomacs
