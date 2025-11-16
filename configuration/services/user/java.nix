@@ -6,7 +6,7 @@
 {
   programs.java = {
     enable = true;
-    package = pkgs.graalvmPackages.graalvm-ce;
+    package = pkgs.javaPackages.compiler.temurin-bin.jre-21;
   };
 
   environment.variables._JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";

@@ -17,7 +17,7 @@
     gamescopeSession.enable = true;
 
     extraPackages = with pkgs; [
-      zulu8
+      javaPackages.compiler.temurin-bin.jre-8
     ];
     extraCompatPackages = with pkgs; [
       proton-cachyos_x86_64_v3
