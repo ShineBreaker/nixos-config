@@ -17,7 +17,7 @@ services:
       VERSION: "10"
       RAM_SIZE: "4G" # RAM allocated to the Windows VM.
       CPU_CORES: "4" # CPU cores allocated to the Windows VM.
-      DISK_SIZE: "40G" # Size of the primary hard disk.
+      DISK_SIZE: "60G" # Size of the primary hard disk.
       # DISK2_SIZE: "32G" # Uncomment to add an additional hard disk to the Windows VM. Ensure it is mounted as a volume below.
       USERNAME: "BrokenShine" # Edit here to set a custom Windows username. The default is 'MyWindowsUser'.
       PASSWORD: "114514" # Edit here to set a password for the Windows user. The default is 'MyWindowsPassword'.
@@ -27,7 +27,7 @@ services:
       - 3389:3389/tcp # Map '3389' on Linux host to '3389' on Windows VM --> For Remote Desktop Protocol (RDP).
       - 3389:3389/udp # Map '3389' on Linux host to '3389' on Windows VM --> For Remote Desktop Protocol (RDP).
     cap_add:
-      - NET_ADMIN  # Add network permission
+      - NET_ADMIN # Add network permission
     stop_grace_period: 120s # Wait 120 seconds before sending SIGTERM when attempting to shut down the Windows VM.
     restart: on-failure # Restart the Windows VM if the exit code indicates an error.
     volumes:
