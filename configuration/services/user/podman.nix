@@ -6,9 +6,7 @@
 {
   environment.systemPackages = with pkgs; [
     distrobox_git
-
     podman-compose
-    pods
   ];
 
   virtualisation.podman = {
