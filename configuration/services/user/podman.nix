@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     distrobox_git
     podman-compose
+    podman-tui
   ];
 
   virtualisation.podman = {
