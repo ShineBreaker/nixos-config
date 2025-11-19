@@ -7,7 +7,7 @@
 - 使用`Fish`作为Shell，使用`Limine`作为bootloader来提供Secure Boot支持
 - 使用`linyaps`来提供国产软件支持
 - 使用`FprintD`来提供指纹识别支持，目前系统登录、解锁、sudo提权均可以使用指纹识别进行
-- 桌面环境为`Niri`，使用`sddm`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`Nemo`，压缩包管理器为`File-Roller`，默认的输入法为`Fcitx5+Rime`，Rime默认使用`rime-ice`方案
+- 桌面环境为`Niri`，使用`sddm`作为Display Manager，桌面配套的设施为`Waybar`，`GtkLock`，`Fuzzel`，`Mako`，壁纸使用`Waypaper`进行管理，安装了`swww`和`mpvpaper`两个backend，文件管理器为`PcmanFM-QT`，压缩包管理器为`PeaZip`，默认的输入法为`Fcitx5+sRime`，Rime默认使用`rime-ice`方案
 - 默认使用`Papirus`图标包，`Bibata`鼠标指针。启用`qt5ct`, `qt6ct`以及`Kvantum`来实现对QT主题的支持
 - 利用`Stylix`来管理系统主题
 - 尽量将目录树的结构理得比较清晰，以方便自己以及他人理解
@@ -35,32 +35,32 @@
 
 ```
 configuration/
-├── 00-main/              # 主配置入口
-│   ├── home.nix          # Home Manager 主配置
-│   ├── services.nix      # 系统服务配置
-│   └── system.nix        # 系统主配置
-├── device/               # 设备特定配置
-│   ├── hardware/         # 硬件配置
-│   └── platform/         # 平台特定配置
-├── home/                 # Home Manager 配置
-│   ├── programs/         # 用户程序配置
-│   ├── desktopEntries.nix # 桌面入口
-│   ├── file.nix          # 文件配置
-│   ├── programs.nix      # 程序导入
-│   └── theme.nix         # 主题配置
-├── services/             # 服务配置
-└── system/               # 系统配置
-    ├── boot.nix          # 引导配置
-    ├── environment.nix   # 环境配置
-    ├── fonts.nix         # 字体配置
-    ├── hardware.nix      # 硬件配置
+├── 00-main/                       # 主配置入口
+│   ├── home.nix                   # Home Manager 主配置
+│   ├── services.nix               # 系统服务配置
+│   └── system.nix                 # 系统主配置
+├── device/                        # 设备特定配置
+│   ├── hardware/                  # 硬件配置
+│   └── platform/                  # 平台特定配置
+├── home/                          # Home Manager 配置
+│   ├── programs/                  # 用户程序配置
+│   ├── desktopEntries.nix         # 桌面入口
+│   ├── file.nix                   # 文件配置
+│   ├── programs.nix               # 程序导入
+│   └── theme.nix                  # 主题配置
+├── services/                      # 服务配置
+└── system/                        # 系统配置
+    ├── boot.nix                   # 引导配置
+    ├── environment.nix            # 环境配置
+    ├── fonts.nix                  # 字体配置
+    ├── hardware.nix               # 硬件配置
     ├── hardware-configuration.nix # 硬件自动生成配置
-    ├── i18n.nix          # 国际化配置
-    ├── security.nix      # 安全配置
-    ├── services.nix      # 服务配置
-    ├── swap.nix          # 交换配置
-    ├── tpm2.nix          # TPM2 配置
-    └── user.nix          # 用户配置
+    ├── i18n.nix                   # 国际化配置
+    ├── security.nix               # 安全配置
+    ├── services.nix               # 服务配置
+    ├── swap.nix                   # swap分区配置
+    ├── tpm2.nix                   # TPM2 配置
+    └── user.nix                   # 用户配置
 ```
 
 #### 使用说明
