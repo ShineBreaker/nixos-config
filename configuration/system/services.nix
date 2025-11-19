@@ -6,7 +6,7 @@
 
 {
   services = {
-    pipewire = lib.mkForce {
+    pipewire = {
       enable = true;
       pulse.enable = true;
       jack.enable = true;
@@ -32,8 +32,16 @@
       upscaleDefaultCursor = true;
     };
 
+    openssh = {
+      enable = true;
+      settings = {
+        PasswordAuthentication = false; # 禁用密码认证，仅使用密钥
+        KbdInteractiveAuthentication = false;
+      };
+    };
+
     usbguard.dbus.enable = true;
     udisks2.enable = true;
-    speechd.enable = lib.mkForce false;
+    speechd.enable = false;
   };
 }

@@ -17,9 +17,6 @@
     unzip
     unrar
     p7zip
-
-    bibata-cursors
-    adwaita-icon-theme
   ];
 
   environment.localBinInPath = true;
@@ -28,6 +25,7 @@
     NIXOS_OZONE_WL = "1";
     EDITOR = "hx";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    MOZ_ENABLE_WAYLAND = "1";
   };
 
   documentation = {

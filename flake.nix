@@ -9,12 +9,6 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
-    # dankMaterialShell = {
-    #   url = "github:AvengeMedia/DankMaterialShell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.quickshell.follows = "quickshell";
-    # };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,17 +18,6 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # noctalia = {
-    #   url = "github:noctalia-dev/noctalia-shell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.quickshell.follows = "quickshell";
-    # };
-
-    # quickshell = {
-    #   url = "github:outfoxxed/quickshell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
 
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";
@@ -55,21 +38,7 @@
   };
 
   outputs =
-    {
-      chaotic,
-      # dankMaterialShell,
-      home-manager,
-      nix-index-database,
-      # noctalia,
-      # quickshell,
-      solaar,
-      stylix,
-      winapps,
-
-      nixpkgs,
-      self,
-      ...
-    }:
+    { chaotic, home-manager, nix-index-database, solaar, stylix, winapps, nixpkgs, self, ... }:
 
     (
       let
@@ -104,16 +73,6 @@
 
             (import ./overlays)
 
-            # noctalia.nixosModules.default
-            #  {
-            #   environment.systemPackages = [
-            #     noctalia.packages."${system}".default
-            #     quickshell.packages."${system}".default
-            #   ];
-
-            #   services.noctalia-shell.enable = false;
-            # }
-
             home-manager.nixosModules.home-manager
 
             {
@@ -122,11 +81,6 @@
                 useUserPackages = true;
                 users."brokenshine" = {
                   imports = [
-                    # dankMaterialShell.homeModules.dankMaterialShell.default
-                    # dankMaterialShell.homeModules.dankMaterialShell.niri
-
-                    # noctalia.homeModules.default
-
                     ./configuration/00-main/home.nix
                   ];
                 };

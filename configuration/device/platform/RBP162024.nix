@@ -33,7 +33,6 @@
   environment.systemPackages = with pkgs; [
     bluez
     intel-ocl
-
     sof-firmware
   ];
 
@@ -61,5 +60,8 @@
   boot.kernelParams = [
     "acpi_backlight=native"
     "intel_iommu=on"
+    # 添加性能和电源管理相关的内核参数
+    "i915.enable_psr=0"  # 可选：禁用面板自刷新以提高稳定性
+    "i915.enable_dc=0"   # 可选：禁用显示控制器电源节省
   ];
 }
