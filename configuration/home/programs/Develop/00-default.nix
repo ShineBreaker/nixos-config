@@ -6,6 +6,7 @@
 {
   imports = [
     # ./code.nix
+    ./direnv.nix
     ./helix.nix
     ./jujutsu.nix
     # ./lapce.nix
