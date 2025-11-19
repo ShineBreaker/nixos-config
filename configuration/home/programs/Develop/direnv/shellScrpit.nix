@@ -10,15 +10,24 @@ let
       pkgs.pixi
       pkgs.direnv
     ];
+
     text = ''
-      #!/bin/sh
+      #!/usr/bin/env bash
+      set -euo pipefail
+
       echo "正在初始化pixi环境......"
       pixi init
+
       echo "正在写入direnv配置"
-      echo -e "watch_file pixi.lock\neval '$(pixi shell-hook)'" > ./.envrc
+      cat > ./.envrc <<'EOF'
+      watch_file pixi.lock
+      eval "$(pixi shell-hook)"
+      EOF
+
       echo "正在加载direnv配置"
       direnv allow
       sleep 0.4
+
       echo "已完成"
     '';
 
