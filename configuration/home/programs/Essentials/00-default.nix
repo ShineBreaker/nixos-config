@@ -7,12 +7,12 @@
   imports = [
     # ./chromium.nix
     ./firefox.nix
-    ./obsidian.nix
 
     # ./wps-office/default.nix
   ];
   home.packages = with pkgs; [
     libreoffice
+    obsidian
 
     (qq.override {
       commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
