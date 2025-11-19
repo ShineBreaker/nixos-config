@@ -27,6 +27,7 @@
     ../services/user/adb.nix
     ../services/user/appimage.nix
     # ../services/user/clash-verge.nix
+    ../services/user/direnv.nix
     ../services/user/externalPackageManager.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
