@@ -7,6 +7,7 @@
   imports = [
     # ./chromium.nix
     ./firefox.nix
+    ./obsidian.nix
 
     # ./wps-office/default.nix
   ];
