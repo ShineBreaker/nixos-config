@@ -9,7 +9,7 @@
     "$schema" = "https://starship.rs/config-schema.json";
 
     format = lib.concatStrings [
-      "[](color_orange)"
+      "[ ](color_orange)"
       "$os"
       "$username"
       "[](bg:color_yellow fg:color_orange)"
@@ -29,20 +29,22 @@
       "$haskell"
       "$python"
       "[](fg:color_blue bg:color_bg3)"
+      "$direnv"
       "$docker_context"
       "$conda"
       "$pixi"
-      "[](fg:color_bg3 bg:color_bg1)"
+      "[](fg:color_bg3 bg:color_bg2)"
       "$time"
-      "[ ](fg:color_bg1)"
+      "[ ](fg:color_bg2)"
       "$line_break$character"
     ];
 
     palette = "nixos";
 
     palettes.nixos = with config.lib.stylix.colors; {
-      color_fg0 = "#${base07}";
-      color_bg1 = "#${base01}";
+      color_fg0 = "#${base00}";
+      color_fg1 = "#${base07}";
+      color_bg2 = "#${base02}";
       color_bg3 = "#${base03}";
       color_blue = "#${base0D}";
       color_aqua = "#${base0C}";
@@ -99,11 +101,11 @@
     };
 
     directory.substitutions = {
-      "Documents" = "󰈙 ";
-      "Downloads" = " ";
-      "Music" = "󰝚 ";
-      "Pictures" = " ";
-      "Developer" = "󰲋 ";
+      "Documents" = "󰈙";
+      "Downloads" = "";
+      "Music" = "󰝚";
+      "Pictures" = "";
+      "Developer" = "󰲋";
     };
 
     git_branch = {
@@ -124,13 +126,13 @@
     };
 
     c = {
-      symbol = " ";
+      symbol = "";
       style = "bg:color_blue";
       format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
     };
 
     cpp = {
-      symbol = " ";
+      symbol = "";
       style = "bg:color_blue";
       format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)";
     };
@@ -180,24 +182,31 @@
     docker_context = {
       symbol = "";
       style = "bg:color_bg3";
-      format = "[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)";
+      format = "[[ $symbol( $context) ](fg:color_blue bg:color_bg3)]($style)";
     };
 
     conda = {
       style = "bg:color_bg3";
-      format = "[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)";
+      format = "[[ $symbol( $environment) ](fg:color_blue bg:color_bg3)]($style)";
+    };
+
+    direnv = {
+      disabled = false;
+      symbol = "";
+      style = "bg:color_bg3";
+      format = "[[ $symbol $loaded/$allowed ](fg:color_aqua bg:color_bg3)]($style)";
     };
 
     pixi = {
       style = "bg:color_bg3";
-      format = "[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)";
+      format = "[[ ($version)](fg:color_orange bg:color_bg3)]($style)";
     };
 
     time = {
       disabled = false;
       time_format = "%R";
-      style = "bg:color_bg1";
-      format = "[[  $time ](fg:color_fg0 bg:color_bg1)]($style)";
+      style = "bg:color_bg2";
+      format = "[[  $time](fg:color_fg1 bg:color_bg2)]($style)";
     };
 
     line_break = {
@@ -206,12 +215,12 @@
 
     character = {
       disabled = false;
-      success_symbol = "[](bold fg:color_green)";
-      error_symbol = "[](bold fg:color_red)";
-      vimcmd_symbol = "[](bold fg:color_green)";
-      vimcmd_replace_one_symbol = "[](bold fg:color_purple)";
-      vimcmd_replace_symbol = "[](bold fg:color_purple)";
-      vimcmd_visual_symbol = "[](bold fg:color_yellow)";
+      success_symbol = "[ >](bold fg:color_green)";
+      error_symbol = "[ >](bold fg:color_red)";
+      vimcmd_symbol = "[ <](bold fg:color_green)";
+      vimcmd_replace_one_symbol = "[ <](bold fg:color_purple)";
+      vimcmd_replace_symbol = "[ <](bold fg:color_purple)";
+      vimcmd_visual_symbol = "[ <](bold fg:color_yellow)";
     };
 
   };
