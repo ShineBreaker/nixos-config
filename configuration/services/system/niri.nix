@@ -8,7 +8,7 @@
   environment.systemPackages = with pkgs; [
 
     xwayland-satellite
-    wl-clipboard
+    wl-clipboard-rs
     libnotify
     cliphist
   ];
