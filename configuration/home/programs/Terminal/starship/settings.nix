@@ -206,7 +206,7 @@
       disabled = false;
       time_format = "%R";
       style = "bg:color_bg2";
-      format = "[[  $time](fg:color_fg1 bg:color_bg2)]($style)";
+      format = "[[  $time ](fg:color_fg1 bg:color_bg2)]($style)";
     };
 
     line_break = {
