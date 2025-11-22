@@ -5,9 +5,9 @@
 
 {
   imports = [
+    ./apx/default.nix
     ./winapps/default.nix
 
-    ./apx.nix
     ./kdeconnect.nix
     ./keepass.nix
     ./obs-studio.nix
