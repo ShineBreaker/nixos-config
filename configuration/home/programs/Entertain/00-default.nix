@@ -25,5 +25,6 @@
     })
 
     mangohud_git
+    protonup-rs
   ];
 }
