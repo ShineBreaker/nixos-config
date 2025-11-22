@@ -17,6 +17,8 @@
     unzip
     unrar
     p7zip
+
+    adwaita-icon-theme
   ];
 
   environment.localBinInPath = true;

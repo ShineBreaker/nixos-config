@@ -5,20 +5,13 @@
 }:
 
 {
-  home.packages = with pkgs; [
-    adwaita-icon-theme
-  ];
-
   home.sessionVariables = {
     QS_ICON_THEME = config.gtk.iconTheme.name;
   };
 
   gtk = {
     enable = true;
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
+
     gtk2.extraConfig = ''
       gtk-cursor-theme-size = 0
       gtk-toolbar-style = GTK_TOOLBAR_BOTH_HORIZ
@@ -31,6 +24,7 @@
       gtk-xft-hinting = 1
       gtk-xft-hintstyle = "hintfull"
     '';
+
     gtk3.extraConfig = {
       gtk-cursor-theme-size = 0;
       gtk-toolbar-style = "GTK_TOOLBAR_BOTH_HORIZ";
