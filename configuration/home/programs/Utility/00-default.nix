@@ -7,6 +7,7 @@
   imports = [
     ./winapps/default.nix
 
+    ./apx.nix
     ./kdeconnect.nix
     ./keepass.nix
     ./obs-studio.nix
