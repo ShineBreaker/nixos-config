@@ -17,7 +17,7 @@
     (qq.override {
       commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
     })
-    wechat
+    # wechat
     telegram-desktop
   ];
 }
