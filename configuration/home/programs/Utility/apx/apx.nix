@@ -2,6 +2,7 @@
   pkgs,
   ...
 }:
+
 {
   home.packages = with pkgs; [
     (apx.override {
@@ -17,6 +18,4 @@
       gnome-console = null;
     })
   ];
-
-  programs.fish.shellInit = "eval '$(apx completion fish)'";
 }
