@@ -6,6 +6,12 @@
   security = {
     rtkit.enable = true;
     apparmor.enable = true;
+    pam.services.audio = {
+      text = ''
+        @audio - rtprio 90          # maximum realtime priority
+        @audio - memlock unlimited  # maximum locked-in-memory address space (KB)
+      '';
+    };
   };
 
   services.dbus.apparmor = "enabled";
