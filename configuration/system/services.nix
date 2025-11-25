@@ -71,6 +71,11 @@
       };
     };
 
+    gvfs = {
+      enable = true;
+      package = pkgs.gvfs;
+    };
+
     speechd.enable = lib.mkForce false;
   };
 }
