@@ -25,9 +25,10 @@
     easyeffects
 
     lxqt.pcmanfm-qt
+    lxqt.lxqt-archiver
+
     mpv
     nomacs
     peazip
-    xarchiver
   ];
 }
