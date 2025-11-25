@@ -63,7 +63,7 @@
     "format-linked": " Disconnected",
     "format-disconnected": " No IP ({ifname})",
     "tooltip-format": "{ifname} {ipaddr}/{cidr}\nIP: {gwaddr}\n信号强度: {signalStrength}%",
-    "on-click": "nmgui",
+    "on-click": "connman-gtk",
   },
 
   "niri/workspaces": {
