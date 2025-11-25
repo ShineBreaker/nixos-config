@@ -5,7 +5,7 @@
 
 {
   imports = [
-    ./apx/default.nix
+    # ./apx/default.nix
     ./winapps/default.nix
 
     ./kdeconnect.nix
