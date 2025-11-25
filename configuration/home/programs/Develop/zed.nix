@@ -69,7 +69,7 @@
       };
 
       soft_wrap = "none";
-      tab_size = 4;
+      tab_size = 2;
       scrollbar = {
         cursors = true;
         axes = {
