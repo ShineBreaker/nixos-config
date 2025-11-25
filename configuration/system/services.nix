@@ -57,8 +57,20 @@
       };
     };
 
-    usbguard.dbus.enable = true;
-    udisks2.enable = true;
+    udisks2 = {
+      enable = true;
+      settings = {
+        "mount_options.conf" = {
+          defaults = {
+            # 'ntfs' signature, the new 'ntfs3' kernel driver
+            "ntfs:ntfs3_defaults" = "uid=$UID,gid=$GID";
+            "ntfs:ntfs3_allow" =
+              "uid=$UID,gid=$GID,umask,dmask,fmask,iocharset,discard,nodiscard,sparse,nosparse,hidden,nohidden,sys_immutable,showmeta,noshowmeta,prealloc,noprealloc,hide_dot_files,nohide_dot_files,windows_names,nocase,case";
+          };
+        };
+      };
+    };
+
     speechd.enable = lib.mkForce false;
   };
 }
