@@ -6,8 +6,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-
     xwayland-satellite
+    labwc
+
     wl-clipboard-rs
     libnotify
     cliphist
@@ -27,7 +28,6 @@
   services = {
     xserver.desktopManager.runXdgAutostartIfNone = true;
     gnome.gnome-keyring.enable = lib.mkForce false;
-    gvfs.enable = true;
     seatd.enable = true;
   };
 
