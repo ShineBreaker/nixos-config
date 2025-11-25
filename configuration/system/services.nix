@@ -40,7 +40,7 @@
     openssh = {
       enable = true;
       settings = {
-        PasswordAuthentication = false; # 禁用密码认证，仅使用密钥
+        PasswordAuthentication = false;
         KbdInteractiveAuthentication = false;
       };
     };
@@ -48,7 +48,7 @@
     usbguard.dbus.enable = true;
     udisks2.enable = true;
     speechd.enable = lib.mkForce false;
-    openntpd.enable = false;
+    openntpd.enable = true;
     userborn.enable = false;
   };
 }
