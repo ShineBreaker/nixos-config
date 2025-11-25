@@ -14,7 +14,9 @@
     };
   };
 
-  services.dbus.apparmor = "enabled";
+  services = {
+    dbus.apparmor = "enabled";
+  };
 
   networking = {
     nftables.enable = true;
