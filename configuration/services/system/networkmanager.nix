@@ -11,7 +11,7 @@
     };
   };
 
-  environment.systemPackages = [
-    pkgs.nmgui
-  ];
+  services.blueman.enable = true;
+
+  environment.systemPackages = with pkgs; [ nmgui ];
 }

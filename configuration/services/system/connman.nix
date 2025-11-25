@@ -5,13 +5,7 @@
 }:
 
 {
-  networking = {
-    networkmanager.enable = lib.mkForce false;
-    wireless = {
-      enable = lib.mkForce false;
-      iwd.enable = lib.mkForce true;
-    };
-  };
+  networking.networkmanager.enable = lib.mkForce false;
 
   services.connman = {
     enable = true;

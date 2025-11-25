@@ -10,6 +10,23 @@
     etc.overlay.enable = false;
   };
 
+  networking = {
+    wireless = {
+      enable = lib.mkForce false;
+      iwd = {
+        enable = lib.mkForce true;
+        settings = {
+          IPv6 = {
+            Enabled = true;
+          };
+          Settings = {
+            AutoConnect = true;
+          };
+        };
+      };
+    };
+  };
+
   services = {
     pipewire = {
       enable = true;
