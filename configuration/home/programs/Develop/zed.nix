@@ -64,7 +64,7 @@
       lsp_document_colors = "inlay";
 
       inlay_hints = {
-        show_background = true;
+        show_background = false;
         enabled = true;
       };
 
