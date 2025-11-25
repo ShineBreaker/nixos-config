@@ -5,6 +5,11 @@
 }:
 
 {
+  system = {
+    nixos-init.enable = false;
+    etc.overlay.enable = false;
+  };
+
   services = {
     pipewire = {
       enable = true;
@@ -42,6 +47,8 @@
 
     usbguard.dbus.enable = true;
     udisks2.enable = true;
-    speechd.enable = false;
+    speechd.enable = lib.mkForce false;
+    openntpd.enable = false;
+    userborn.enable = false;
   };
 }
