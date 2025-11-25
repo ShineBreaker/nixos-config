@@ -5,11 +5,6 @@
 }:
 
 {
-  system = {
-    nixos-init.enable = false;
-    etc.overlay.enable = false;
-  };
-
   networking = {
     wireless = {
       enable = lib.mkForce false;
@@ -65,7 +60,5 @@
     usbguard.dbus.enable = true;
     udisks2.enable = true;
     speechd.enable = lib.mkForce false;
-    openntpd.enable = true;
-    userborn.enable = false;
   };
 }
