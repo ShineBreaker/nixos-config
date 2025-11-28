@@ -16,5 +16,7 @@
     upscayl-ncnn
     ffmpeg
     imagemagick
+
+    yazi
   ];
 }
