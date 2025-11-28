@@ -23,4 +23,8 @@
   programs.fish.shellAbbrs = {
     sudo = "doas";
   };
+
+  security.pam.services = {
+    "doas".fprintAuth = false;
+  };
 }
