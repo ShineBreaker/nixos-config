@@ -38,7 +38,17 @@
   };
 
   outputs =
-    { chaotic, home-manager, nix-index-database, solaar, stylix, winapps, nixpkgs, self, ... }:
+    {
+      chaotic,
+      home-manager,
+      nix-index-database,
+      solaar,
+      stylix,
+      winapps,
+      nixpkgs,
+      self,
+      ...
+    }:
 
     (
       let
@@ -69,6 +79,10 @@
               environment.systemPackages = [
                 winapps.packages."${system}".winapps
               ];
+              networking.firewall = {
+                allowedUDPPorts = [ 3389 ];
+                allowedTCPPorts = [ 3389 ];
+              };
             }
 
             (import ./overlays)
