@@ -12,20 +12,29 @@
     kernelPackages = pkgs.linuxPackages_cachyos-lto;
 
     kernel.sysctl = {
-      "vm.max_map_count" = 2147483642;
+      "fs.inotify.max_user_watches" = 524288;
 
-      # 添加一些性能和安全相关的sysctl设置
+      "vm.max_map_count" = 2147483642;
+      "vm.compaction_proactiveness" = 0;
+      "vm.vfs_cache_pressure" = 50;
+      "vm.page_lock_unfairness" = 1;
+      "vm.stat_interval" = 120;
+
       "net.core.default_qdisc" = "fq";
       "net.ipv4.tcp_congestion_control" = "bbr";
-      "vm.swappiness" = 1; # 减少交换使用，提高SSD寿命
-      "vm.vfs_cache_pressure" = 50; # 降低缓存压力，提高性能
+      "net.ipv4.tcp_low_latency" = 1;
+      "net.ipv4.tcp_fastopen" = 3;
+
+      "kernel.numa_balancing" = 0;
+      "kernel.sched_autogroup_enabled" = 1;
+      "kernel.sched_child_runs_first" = 0;
     };
 
     loader = {
       systemd-boot = {
         enable = true;
         configurationLimit = 10;
-        editor = false; # 禁用引导编辑器以提高安全性
+        editor = false;
       };
       efi = {
         efiSysMountPoint = "/boot";
