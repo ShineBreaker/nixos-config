@@ -50,7 +50,7 @@
   };
 
   systemd.timers.flatpak-nightly-upgrade = {
-    wantedBy = [ "timers.target" ];
+    wantedBy = [ "graphical-session.target" ];
     timerConfig = {
       OnCalendar = "*-*-* 00:00:00";
       Persistent = true;
@@ -59,7 +59,7 @@
   };
 
   systemd.timers.linyaps-nightly-upgrade = {
-    wantedBy = [ "timers.target" ];
+    wantedBy = [ "graphical-session.target" ];
     timerConfig = {
       OnCalendar = "*-*-* 00:05:00";
       Persistent = true;
