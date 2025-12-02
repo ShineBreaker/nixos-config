@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    minecraft-plymouth-theme = {
+      url = "github:nikp123/minecraft-plymouth-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +50,7 @@
       solaar,
       stylix,
       winapps,
+      minecraft-plymouth-theme,
       nixpkgs,
       self,
       ...
@@ -126,6 +132,11 @@
                 window = "hide";
                 batteryIcons = "symbolic";
               };
+            }
+
+            minecraft-plymouth-theme.nixosModules.default
+            {
+              boot.plymouth.plymouth-minecraft-theme.enable = true;
             }
 
             stylix.nixosModules.stylix

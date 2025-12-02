@@ -1,18 +1,30 @@
-{ 
-  lib, 
-  ... 
+{
+  lib,
+  pkgs,
+  ...
 }:
 
 {
   boot = {
-
     plymouth = {
       enable = true;
+      tpm2-totp.enable = true;
     };
 
-    # Enable "Silent Boot"
-    consoleLogLevel = 0;
+    /*
+      initrd.systemd.services.boot-delay-initrd = {
+        description = "Artificial delay in initrd for Plymouth";
+        wantedBy = [ "initrd.target" ];
+        serviceConfig = {
+          Type = "oneshot";
+          ExecStart = "${pkgs.coreutils}/bin/sleep 5";
+        };
+      };
+    */
+
     initrd.verbose = false;
+
+    consoleLogLevel = 0;
     kernelParams = [
       "quiet"
       "splash"
@@ -23,10 +35,35 @@
       "udev.log_priority=3"
     ];
 
-    # Hide the OS choice for bootloaders.
-    # It's still possible to open the bootloader list by pressing any key
-    # It will just not appear on screen unless a key is pressed
     loader.timeout = lib.mkDefault 0;
-
   };
+
+  /*
+    systemd.services.boot-delay-startup = {
+      description = "Artificial delay before Plymouth quit";
+      wantedBy = [ "plymouth-start.service" ];
+      before = [
+        "plymouth-quit.service"
+        "display-manager.service"
+      ]; # 如果你使用控制台而非图形界面，可移除 display-manager.service
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.coreutils}/bin/sleep 5";
+      };
+    };
+  */
+
+  systemd.services.boot-delay-shutdown = {
+    description = "Artificial delay before Plymouth quit";
+    wantedBy = [ "multi-user.target" ];
+    before = [
+      "plymouth-quit.service"
+      "display-manager.service"
+    ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.coreutils}/bin/sleep 3";
+    };
+  };
+
 }
