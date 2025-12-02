@@ -13,13 +13,4 @@
   };
 
   home.packages = with pkgs; [ wpsoffice-cn ];
-
-  programs.niri.settings.window-rules = [
-    {
-      matches = [
-        { app-id = "wps"; }
-      ];
-      open-maximized = true;
-    }
-  ];
 }

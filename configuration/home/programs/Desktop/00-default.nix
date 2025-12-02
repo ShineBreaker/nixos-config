@@ -29,6 +29,5 @@
 
     mpv
     nomacs
-    peazip
   ];
 }
