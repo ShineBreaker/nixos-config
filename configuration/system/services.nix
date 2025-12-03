@@ -77,5 +77,6 @@
     };
 
     speechd.enable = lib.mkForce false;
+    userborn.enable = true;
   };
 }
