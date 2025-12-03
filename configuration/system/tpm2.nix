@@ -18,10 +18,12 @@
     systemd = {
       enable = true;
       tpm2.enable = true;
-      storePaths = [
-        "${config.boot.initrd.systemd.package}/lib/systemd/systemd-tpm2-setup"
-        "${config.boot.initrd.systemd.package}/lib/systemd/system-generators/systemd-tpm2-generator"
-      ];
+      /*
+        storePaths = [
+          "${config.boot.initrd.systemd.package}/lib/systemd/systemd-tpm2-setup"
+          "${config.boot.initrd.systemd.package}/lib/systemd/system-generators/systemd-tpm2-generator"
+        ];
+      */
     };
 
     luks.devices."root" = {
@@ -29,5 +31,12 @@
     };
   };
 
-  security.tpm2.enable = true;
+  security.tpm2 = {
+    enable = true;
+    abrmd.enable = true;
+    pkcs11.enable = true;
+    tctiEnvironment.enable = true;
+  };
+
+  users.users.brokenshine.extraGroups = [ "tss" ];
 }
