@@ -7,6 +7,7 @@
 {
   stylix = {
     enable = true;
+    enableReleaseChecks = false;
     overlays.enable = true;
     targets.plymouth.enable = false;
 
