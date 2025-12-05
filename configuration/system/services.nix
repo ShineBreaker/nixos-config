@@ -78,5 +78,6 @@
 
     speechd.enable = lib.mkForce false;
     userborn.enable = true;
+    kmscon.enable = true;
   };
 }
