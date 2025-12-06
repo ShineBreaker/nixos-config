@@ -17,7 +17,7 @@
         icons-enabled = "no";
         layer = "overlay";
         line-height = "16";
-        terminal = "foot";
+        terminal = "kitty";
       };
       border = {
         width = "4";

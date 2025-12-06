@@ -9,8 +9,8 @@
     ./fish/default.nix
     ./starship/default.nix
 
-    ./foot.nix
-    # ./kitty.nix
+    # ./foot.nix
+    ./kitty.nix
   ];
   home.packages = with pkgs; [
     upscayl-ncnn
