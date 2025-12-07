@@ -3,7 +3,7 @@
 {
   imports = [
     ../services/system/beesd.nix
-    ../services/system/connman.nix
+    # ../services/system/connman.nix
     # ../services/system/doas.nix
     ../services/system/fish.nix
     ../services/system/fprintd.nix
@@ -13,7 +13,7 @@
     # ../services/system/grub.nix
     ../services/system/limine.nix
     # ../services/system/ly.nix
-    # ../services/system/networkmanager.nix
+    ../services/system/networkmanager.nix
     ../services/system/niri.nix
     ../services/system/nix.nix
     ../services/system/nix-ld.nix

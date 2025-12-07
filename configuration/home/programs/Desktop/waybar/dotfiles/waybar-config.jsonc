@@ -53,7 +53,7 @@
     "format": " {used}G",
     "tooltip": true,
     "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G",
-    "on-click": "btop",
+    "on-click": "kitty btop",
   },
 
   "network": {
@@ -63,7 +63,7 @@
     "format-linked": " Disconnected",
     "format-disconnected": " No IP ({ifname})",
     "tooltip-format": "{ifname} {ipaddr}/{cidr}\nIP: {gwaddr}\n信号强度: {signalStrength}%",
-    "on-click": "connman-gtk",
+    "on-click": "nmgui",
   },
 
   "niri/workspaces": {

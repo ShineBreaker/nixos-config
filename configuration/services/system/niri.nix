@@ -7,7 +7,6 @@
 {
   environment.systemPackages = with pkgs; [
     xwayland-satellite
-    labwc
 
     wl-clipboard-rs
     libnotify
@@ -45,7 +44,8 @@
       enable = true;
       settings = {
         default = [
-          "foot.desktop"
+          # "foot.desktop"
+          "kitty.desktop"
         ];
       };
     };

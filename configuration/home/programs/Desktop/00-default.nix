@@ -29,5 +29,7 @@
 
     mpv
     nomacs
+
+    labwc
   ];
 }
