@@ -5,7 +5,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    distrobox_git
+    distrobox
     podman-compose
     podman-tui
   ];

@@ -40,7 +40,7 @@
 
     scx = {
       enable = true;
-      package = pkgs.scx.full;
+      package = pkgs.scx.rustscheds;
       scheduler = "scx_rusty";
     };
 

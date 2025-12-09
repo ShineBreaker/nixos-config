@@ -17,7 +17,7 @@
     xwayland.enable = true;
     niri = {
       enable = true;
-      package = pkgs.niri_git;
+      package = pkgs.niri;
     };
     gtklock.enable = true;
   };
@@ -34,7 +34,7 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      configPackages = [ pkgs.niri_git ];
+      configPackages = [ pkgs.niri ];
       extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome

@@ -7,7 +7,7 @@
 {
   boot = {
     enableContainers = false;
-    kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     kernel.sysctl = {
       "fs.inotify.max_user_watches" = 524288;
 

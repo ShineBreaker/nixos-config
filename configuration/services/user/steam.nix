@@ -19,15 +19,10 @@
     extraPackages = with pkgs; [
       javaPackages.compiler.temurin-bin.jre-8
     ];
-    extraCompatPackages = with pkgs; [
-      proton-cachyos_x86_64_v3
-      luxtorpeda
-    ];
   };
 
   programs.gamescope = {
     enable = true;
-    package = pkgs.gamescope_git;
     args = [
       "--borderless"
       "--force-grab-cursor"

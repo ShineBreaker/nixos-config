@@ -5,10 +5,6 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +40,6 @@
 
   outputs =
     {
-      chaotic,
       home-manager,
       nix-index-database,
       solaar,
@@ -115,14 +110,6 @@
             {
               programs.nix-index.enable = true;
               programs.nix-index-database.comma.enable = true;
-            }
-
-            chaotic.nixosModules.default
-            {
-              chaotic.mesa-git = {
-                enable = true;
-                replaceBasePackage = true;
-              };
             }
 
             solaar.nixosModules.solaar
