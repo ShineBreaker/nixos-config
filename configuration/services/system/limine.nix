@@ -4,6 +4,7 @@
   lib,
   ...
 }:
+
 {
   environment.systemPackages = with pkgs; [
     sbctl
