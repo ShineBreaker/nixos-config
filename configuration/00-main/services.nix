@@ -11,7 +11,7 @@
     ../services/system/gnupg.nix
     ../services/system/greetd.nix
     # ../services/system/grub.nix
-    # ../services/system/limine.nix
+    ../services/system/limine.nix
     # ../services/system/ly.nix
     ../services/system/networkmanager.nix
     ../services/system/niri.nix
@@ -20,7 +20,7 @@
     # ../services/system/opentabletdriver.nix
     ../services/system/plymouth.nix
     ../services/system/powerManagement.nix
-    ../services/system/refind.nix
+    # ../services/system/refind.nix
     # ../services/system/sddm.nix
     ../services/system/sudo.nix
     # ../services/system/zfs.nix
