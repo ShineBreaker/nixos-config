@@ -39,21 +39,13 @@
   };
 
   outputs =
-    {
-      home-manager,
-      nix-index-database,
-      solaar,
-      stylix,
-      winapps,
-      minecraft-plymouth-theme,
-      nixpkgs,
-      self,
-      ...
-    }:
+    { self, nixpkgs, ... }@inputs:
 
     (
       let
         system = "x86_64-linux";
+        username = "brokenshine";
+
         genRev = {
           system.configurationRevision = self.rev or null;
           system.nixos.label =
@@ -78,7 +70,7 @@
 
             {
               environment.systemPackages = [
-                winapps.packages."${system}".winapps
+                inputs.winapps.packages."${system}".winapps
               ];
               networking.firewall = {
                 allowedUDPPorts = [ 3389 ];
@@ -88,13 +80,13 @@
 
             (import ./overlays)
 
-            home-manager.nixosModules.home-manager
+            inputs.home-manager.nixosModules.home-manager
 
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users."brokenshine" = {
+                users."${username}" = {
                   imports = [
                     ./configuration/00-main/home.nix
                   ];
@@ -106,13 +98,13 @@
               };
             }
 
-            nix-index-database.nixosModules.nix-index
+            inputs.nix-index-database.nixosModules.nix-index
             {
               programs.nix-index.enable = true;
               programs.nix-index-database.comma.enable = true;
             }
 
-            solaar.nixosModules.solaar
+            inputs.solaar.nixosModules.solaar
             {
               services.solaar = {
                 enable = true;
@@ -121,12 +113,12 @@
               };
             }
 
-            minecraft-plymouth-theme.nixosModules.default
+            inputs.minecraft-plymouth-theme.nixosModules.default
             {
               boot.plymouth.plymouth-minecraft-theme.enable = true;
             }
 
-            stylix.nixosModules.stylix
+            inputs.stylix.nixosModules.stylix
             (
               { ... }:
               {
