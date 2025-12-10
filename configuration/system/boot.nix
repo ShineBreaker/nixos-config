@@ -5,6 +5,11 @@
 }:
 
 {
+  system = {
+    etc.overlay.enable = false;
+    nixos-init.enable = false;
+  };
+
   boot = {
     enableContainers = false;
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
