@@ -49,6 +49,8 @@
       cleanOnBoot = true;
     };
 
+    initrd.systemd.enable = true;
+
     supportedFilesystems = {
       btrfs = true;
       ext4 = true;
