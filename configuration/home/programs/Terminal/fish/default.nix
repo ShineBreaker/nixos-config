@@ -17,6 +17,7 @@
       enable = true;
       shellAbbrs = {
         commit = "git commit --all";
+        enter = "distrobox enter";
         push = "git push";
         rebuild = "nh os switch . --ask";
         rebuildb = "nh os boot . --ask";
