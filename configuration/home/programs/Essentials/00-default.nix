@@ -8,7 +8,7 @@
     # ./chromium.nix
     ./firefox.nix
 
-    ./wps-office/default.nix
+    # ./wps-office/default.nix
   ];
   home.packages = with pkgs; [
     (libreoffice.overrideAttrs {
