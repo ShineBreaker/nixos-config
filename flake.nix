@@ -2,17 +2,34 @@
   description = "self-using configuration.";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-compat.url = "github:NixOS/flake-compat";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     minecraft-plymouth-theme = {
       url = "github:nikp123/minecraft-plymouth-theme";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
+
+    };
+
+    nix-cachyos-kernel = {
+      url = "github:xddxdd/nix-cachyos-kernel";
+      inputs = {
+        flake-compat.follows = "flake-compat";
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     nix-index-database = {
@@ -27,13 +44,26 @@
 
     stylix = {
       url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
+
     };
 
     winapps = {
       url = "github:winapps-org/winapps";
+      inputs = {
+        flake-compat.follows = "flake-compat";
+        flake-utils.follows = "flake-utils";
+        nixpkgs.follows = "nixpkgs";
+      };
+
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
 
   };
@@ -67,8 +97,10 @@
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/platform/RBP162024.nix
+            (import ./overlays)
 
             {
+              nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlay ];
               environment.systemPackages = [
                 inputs.winapps.packages."${system}".winapps
               ];
@@ -78,16 +110,15 @@
               };
             }
 
-            (import ./overlays)
-
             inputs.home-manager.nixosModules.home-manager
-
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users."${username}" = {
                   imports = [
+                    inputs.zen-browser.homeModules.twilight
+
                     ./configuration/00-main/home.nix
                   ];
                 };
