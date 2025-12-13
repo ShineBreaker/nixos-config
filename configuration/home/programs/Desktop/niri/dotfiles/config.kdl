@@ -178,6 +178,7 @@ window-rule {
     match app-id="librewolf"
     match app-id="chromium-browser"
     match app-id="io.github.ungoogled_software.ungoogled_chromium"
+    match app-id="^zen*"
 
     open-on-workspace "Browser"
     open-maximized true

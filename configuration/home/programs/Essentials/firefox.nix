@@ -4,22 +4,47 @@
 }:
 
 {
-  stylix.targets.librewolf.profileNames = [ "default" ];
+  stylix.targets.zen-browser.profileNames = [ "default" ];
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "text/html" = "librewolf.desktop";
-      "x-scheme-handler/http" = "librewolf.desktop";
-      "x-scheme-handler/https" = "librewolf.desktop";
-      "x-scheme-handler/about" = "librewolf.desktop";
-      "x-scheme-handler/unknown" = "librewolf.desktop";
+  xdg.mimeApps =
+    let
+      value =
+        let
+          zen-browser = pkgs.zen-twilight.out;
+        in
+        zen-browser.meta.desktopFileName;
+
+      associations = builtins.listToAttrs (
+        map
+          (name: {
+            inherit name value;
+          })
+          [
+            "application/x-extension-shtml"
+            "application/x-extension-xhtml"
+            "application/x-extension-html"
+            "application/x-extension-xht"
+            "application/x-extension-htm"
+            "x-scheme-handler/unknown"
+            "x-scheme-handler/mailto"
+            "x-scheme-handler/chrome"
+            "x-scheme-handler/about"
+            "x-scheme-handler/https"
+            "x-scheme-handler/http"
+            "application/xhtml+xml"
+            "application/json"
+            "text/plain"
+            "text/html"
+          ]
+      );
+    in
+    {
+      associations.added = associations;
+      defaultApplications = associations;
     };
-  };
 
-  programs.librewolf = {
+  programs.zen-browser = {
     enable = true;
-    package = pkgs.librewolf;
     languagePacks = [ "zh-CN" ];
     nativeMessagingHosts = with pkgs; [
       keepassxc
@@ -37,12 +62,12 @@
       DontCheckDefaultBrowser = false;
       DefaultDownloadDirectory = "\${home}/Downloads";
 
-      # EnableTrackingProtection = {
-      #   Value = true;
-      #   Locked = true;
-      #   Cryptomining = true;
-      #   Fingerprinting = true;
-      # };
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
 
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
@@ -59,7 +84,7 @@
         SiteSettings = false;
         Locked = true;
       };
-      # SearchEngines_Default = "Bing";
+      SearchEngines_Default = "Bing";
     };
 
     profiles.default = {
