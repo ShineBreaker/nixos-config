@@ -93,7 +93,7 @@
     "format-bluetooth": "󰂰",
     "format-bluetooth-muted": "󰂲",
     "format-icons": {
-      "default": ["", "", "", ""],
+      "default": ["", "", ""],
     },
     "on-click": "easyeffects",
     "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"],
