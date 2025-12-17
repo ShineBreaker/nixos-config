@@ -1,5 +1,4 @@
 {
-  config,
   ...
 }:
 
@@ -15,7 +14,7 @@
       # Bind resolve.conf to get networking
       BindReadOnly = [ "/etc/resolv.conf:/etc/resolv.conf" ];
       # Bind any directories that you want to be shared
-      Bind = [ "${config.xdg.dataHome}/archlinux" ];
+      Bind = [ "/home/brokenshine/.local/container-homes/archlinux" ];
     };
     networkConfig = {
       Private = false;

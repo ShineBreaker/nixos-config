@@ -33,7 +33,7 @@
     ../services/user/java.nix
     ../services/user/libvirt.nix
     ../services/user/mongodb.nix
-    ../services/user/nspawn.nix
+    # ../services/user/nspawn.nix
     ../services/user/podman.nix
     ../services/user/postgresql.nix
     ../services/user/poweralertd.nix
