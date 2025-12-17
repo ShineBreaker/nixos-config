@@ -34,7 +34,16 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      configPackages = [ pkgs.niri ];
+      config = {
+        common = {
+          default = [ "gnome" ];
+          "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+          "org.freedesktop.impl.portal.Secret" = [
+            "libsecret"
+          ];
+        };
+      };
+
       extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome

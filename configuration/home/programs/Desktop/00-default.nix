@@ -24,8 +24,8 @@
     coppwr
     easyeffects
 
-    nautilus
-    file-roller
+    lxqt.pcmanfm-qt
+    lxqt.lxqt-archiver
 
     mpv
     nomacs
