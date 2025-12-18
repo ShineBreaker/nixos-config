@@ -4,9 +4,9 @@
 }:
 
 {
-  programs.chromium = {
+  programs.brave = {
     enable = true;
-    package = pkgs.ungoogled-chromium;
+    package = pkgs.brave;
     extensions = [
       # ublock origin
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
