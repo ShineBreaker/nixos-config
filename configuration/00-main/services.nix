@@ -28,13 +28,13 @@
     ../services/user/adb.nix
     ../services/user/appimage.nix
     # ../services/user/clash-verge.nix
+    ../services/user/container.nix
     ../services/user/externalPackageManager.nix
     ../services/user/fcitx5.nix
     ../services/user/java.nix
     ../services/user/libvirt.nix
     ../services/user/mongodb.nix
     # ../services/user/nspawn.nix
-    ../services/user/podman.nix
     ../services/user/postgresql.nix
     ../services/user/poweralertd.nix
     ../services/user/sparkle.nix
