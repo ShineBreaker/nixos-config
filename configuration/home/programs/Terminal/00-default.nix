@@ -6,9 +6,9 @@
 {
   imports = [
     ./fastfetch/default.nix
-    ./fish/default.nix
     ./starship/default.nix
 
+    ./fish.nix
     # ./foot.nix
     ./kitty.nix
   ];

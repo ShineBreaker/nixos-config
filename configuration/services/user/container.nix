@@ -5,7 +5,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    distrobox
     toolbox
 
     podman-compose

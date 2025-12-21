@@ -3,10 +3,6 @@
 }:
 
 {
-  xdg.configFile = {
-    "fish/functions/fish_prompt.fish".source = ./dotfiles/fish_prompt.fish;
-  };
-
   programs = {
     eza.enable = true;
     direnv.enable = true;
@@ -17,7 +13,7 @@
       enable = true;
       shellAbbrs = {
         commit = "git commit --all";
-        enter = "distrobox enter";
+        enter = "toolbox enter";
         push = "git push";
         rebuild = "nh os switch . --ask";
         rebuildb = "nh os boot . --ask";
