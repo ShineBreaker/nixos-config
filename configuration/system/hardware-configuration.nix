@@ -73,15 +73,6 @@
     ];
   };
 
-  fileSystems."/data" = {
-    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
-    fsType = "btrfs";
-    options = [
-      "subvol=DATA/Share"
-      "compress=zstd:6"
-    ];
-  };
-
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/9699-52A2";
     fsType = "vfat";

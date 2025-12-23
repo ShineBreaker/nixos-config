@@ -100,10 +100,14 @@
             (import ./overlays)
 
             {
-              nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlay ];
+              nixpkgs.overlays = [
+                inputs.nix-cachyos-kernel.overlay
+              ];
+
               environment.systemPackages = [
                 inputs.winapps.packages."${system}".winapps
               ];
+
               networking.firewall = {
                 allowedUDPPorts = [ 3389 ];
                 allowedTCPPorts = [ 3389 ];
