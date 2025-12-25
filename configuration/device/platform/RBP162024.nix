@@ -2,8 +2,8 @@
   pkgs,
   ...
 }:
+
 {
-  # Graphic Card
   boot.extraModprobeConfig = ''
     options snd-intel-dspcfg dsp_driver=1
     options kvm_intel nested=1
@@ -12,6 +12,7 @@
   '';
 
   hardware.cpu.intel.updateMicrocode = true;
+  # hardware.cpu.intel.npu.enable = true;
   hardware.intel-gpu-tools.enable = true;
 
   hardware.bluetooth = {
@@ -58,8 +59,8 @@
   boot.kernelParams = [
     "acpi_backlight=native"
     "intel_iommu=on"
-    # 添加性能和电源管理相关的内核参数
-    "i915.enable_psr=0" # 可选：禁用面板自刷新以提高稳定性
-    "i915.enable_dc=0" # 可选：禁用显示控制器电源节省
+
+    "i915.enable_psr=0"
+    "i915.enable_dc=0"
   ];
 }

@@ -73,7 +73,7 @@
     ];
   };
 
-  fileSystems."/boot" = {
+  fileSystems."/efi" = {
     device = "/dev/disk/by-uuid/9699-52A2";
     fsType = "vfat";
     options = [

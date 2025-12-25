@@ -11,16 +11,7 @@
     overlays.enable = true;
     targets.plymouth.enable = false;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/material-darker.yaml";
-    override = {
-      base01 = "#27292c";
-      base02 = "#323639";
-      base03 = "#44464d";
-      base04 = "#676c71";
-      base05 = "#ffffff";
-      base06 = "#ffffff";
-      base07 = "#ffffff";
-    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/penumbra-dark-contrast-plus.yaml";
 
     polarity = "dark";
 
