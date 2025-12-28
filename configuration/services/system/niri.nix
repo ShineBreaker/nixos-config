@@ -62,4 +62,6 @@
     icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
   };
 
+  security.soteria.enable = true;
+
 }
