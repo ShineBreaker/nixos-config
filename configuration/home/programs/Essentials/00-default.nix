@@ -23,11 +23,13 @@
         "zh-CN"
       ];
 
-      noto-fonts = null;
-      noto-fonts-lgc-plus = null;
-      noto-fonts-cjk-sans = null;
+      noto-fonts = sarasa-gothic;
+      noto-fonts-lgc-plus = sarasa-gothic;
+      noto-fonts-cjk-sans = sarasa-gothic;
     })
+
     obsidian
+    gimp3-with-plugins
 
     (qq.override {
       commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
