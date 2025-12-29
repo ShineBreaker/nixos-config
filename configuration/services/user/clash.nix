@@ -17,14 +17,14 @@
   */
 
   environment.systemPackages = [
-    pkgs.flclash
+    pkgs.sparkle
   ];
 
-  security.wrappers.sparkle = {
+  security.wrappers.tunnel = {
     owner = "root";
     group = "root";
     capabilities = "cap_net_bind_service,cap_net_raw,cap_net_admin=+ep";
-    source = lib.getExe pkgs.flclash;
+    source = lib.getExe pkgs.sparkle;
   };
 
   networking.proxy.default = "http://127.0.0.1:7890";
