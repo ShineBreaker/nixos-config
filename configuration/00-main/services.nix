@@ -27,7 +27,7 @@
 
     ../services/user/adb.nix
     ../services/user/appimage.nix
-    # ../services/user/clash-verge.nix
+    ../services/user/clash.nix
     ../services/user/container.nix
     ../services/user/externalPackageManager.nix
     ../services/user/fcitx5.nix
@@ -37,7 +37,6 @@
     # ../services/user/nspawn.nix
     ../services/user/postgresql.nix
     ../services/user/poweralertd.nix
-    ../services/user/sparkle.nix
     ../services/user/steam.nix
     ../services/user/sunshine.nix
     ../services/user/syncthing.nix
