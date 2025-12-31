@@ -1,4 +1,5 @@
 {
+  config,
   ...
 }:
 
@@ -43,6 +44,15 @@
     hosts."127.0.0.1" = [
       # Block this domain to prevent QQ from auto-updating.
       "qqpatch.gtimg.cn"
+    ];
+  };
+
+  fileSystems."/var/lib/sbctl" = {
+    device = config.fileSystems."/".device;
+    fsType = config.fileSystems."/".fsType;
+    options = [
+      "subvol=DATA/sbctl"
+      "compress=zstd:6"
     ];
   };
 }

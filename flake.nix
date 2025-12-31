@@ -14,6 +14,11 @@
       };
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     minecraft-plymouth-theme = {
       url = "github:nikp123/minecraft-plymouth-theme";
       inputs = {
@@ -132,6 +137,21 @@
                 verbose = true;
               };
             }
+
+            inputs.lanzaboote.nixosModules.lanzaboote
+            (
+              { pkgs, lib, ... }:
+              {
+                environment.systemPackages = [
+                  pkgs.sbctl
+                ];
+                boot.loader.systemd-boot.enable = lib.mkForce false;
+                boot.lanzaboote = {
+                  enable = true;
+                  pkiBundle = "/var/lib/sbctl";
+                };
+              }
+            )
 
             inputs.nix-index-database.nixosModules.nix-index
             {

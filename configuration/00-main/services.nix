@@ -11,7 +11,7 @@
     ../services/system/gnupg.nix
     ../services/system/greetd.nix
     # ../services/system/grub.nix
-    ../services/system/limine.nix
+    # ../services/system/limine.nix
     # ../services/system/ly.nix
     ../services/system/networkmanager.nix
     ../services/system/niri.nix
