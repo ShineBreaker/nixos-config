@@ -12,6 +12,7 @@
     # ./foot.nix
     ./kitty.nix
   ];
+
   home.packages = with pkgs; [
     upscayl-ncnn
     ffmpeg
