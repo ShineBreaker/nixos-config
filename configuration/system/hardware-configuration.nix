@@ -37,38 +37,20 @@
 
   boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/327f2e02-1e4f-48b2-87f0-797c481850c9";
 
-  fileSystems."/var" = {
-    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
-    fsType = "btrfs";
-    options = [
-      "subvol=SYSTEM/NixOS/@var"
-      "compress=zstd:6"
-    ];
-  };
-
-  fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
-    fsType = "btrfs";
-    options = [
-      "subvol=SYSTEM/NixOS/@nix"
-      "compress=zstd:6"
-    ];
-  };
-
-  fileSystems."/etc" = {
-    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
-    fsType = "btrfs";
-    options = [
-      "subvol=SYSTEM/NixOS/@etc"
-      "compress=zstd:6"
-    ];
-  };
-
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
     fsType = "btrfs";
     options = [
       "subvol=DATA/Home/NixOS"
+      "compress=zstd:6"
+    ];
+  };
+
+  fileSystems."/data" = {
+    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+    fsType = "btrfs";
+    options = [
+      "subvol=DATA/Share"
       "compress=zstd:6"
     ];
   };
