@@ -18,6 +18,7 @@
     niri = {
       enable = true;
       package = pkgs.niri;
+      useNautilus = false;
     };
     gtklock.enable = true;
   };
