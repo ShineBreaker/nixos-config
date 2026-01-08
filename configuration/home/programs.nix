@@ -22,7 +22,7 @@
       enable = true;
       readOnly = false;
       entries = [
-        "${pkgs.sparkle.out}/share/applications/sparkle.desktop"
+
       ];
     };
   };
