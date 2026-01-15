@@ -27,7 +27,7 @@
       "nix"
       "python"
       "scss"
-      "schema"
+      "scheme"
       "sinppets"
       "toml"
     ];
