@@ -7,6 +7,13 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs = {
@@ -118,6 +125,20 @@
                 allowedTCPPorts = [ 3389 ];
               };
             }
+
+            inputs.agenix.nixosModules.default
+            (
+              {
+                inputs,
+                ...
+              }:
+              {
+                imports = [ ./secrets/default.nix ];
+                environment.systemPackages = [
+                  inputs.agenix.packages."${system}".default
+                ];
+              }
+            )
 
             inputs.home-manager.nixosModules.home-manager
             {
