@@ -5,12 +5,10 @@
 }:
 
 {
-  /*
-    system = {
-      nixos-init.enable = true;
-      etc.overlay.enable = true;
-    };
-  */
+  system = {
+    nixos-init.enable = false;
+    etc.overlay.enable = false;
+  };
 
   boot = {
     enableContainers = false;
