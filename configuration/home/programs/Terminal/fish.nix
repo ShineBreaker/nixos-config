@@ -4,10 +4,11 @@
 
 {
   programs = {
-    eza.enable = true;
+    atuin.enable = true;
     direnv.enable = true;
-    zoxide.enable = true;
+    eza.enable = true;
     fzf.enable = true;
+    zoxide.enable = true;
 
     fish = {
       enable = true;
