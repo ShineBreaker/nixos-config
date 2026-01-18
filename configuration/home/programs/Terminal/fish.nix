@@ -19,7 +19,7 @@
         rebuildb = "nh os boot . --ask";
         rebuildc = "nh os switch . && nh clean all && nh os switch .";
 
-        upgrade = "nix flake update && git commit -a -m 'upgrade.' && nh os boot . --ask";
+        upgrade = "nix flake update && git commit -a -m 'bump nixos version.' && nh os boot . --ask";
         update = "sudo ll-cli upgrade && sudo flatpak upgrade";
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";
