@@ -10,6 +10,7 @@
     agenix = {
       url = "github:ryantm/agenix";
       inputs = {
+        home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";
       };
     };
@@ -118,6 +119,7 @@
 
               environment.systemPackages = [
                 inputs.winapps.packages."${system}".winapps
+                inputs.agenix.packages."${system}".default
               ];
 
               networking.firewall = {
@@ -127,18 +129,9 @@
             }
 
             inputs.agenix.nixosModules.default
-            (
-              {
-                inputs,
-                ...
-              }:
-              {
-                imports = [ ./secrets/default.nix ];
-                environment.systemPackages = [
-                  inputs.agenix.packages."${system}".default
-                ];
-              }
-            )
+            {
+              imports = [ ./secrets/default.nix ];
+            }
 
             inputs.home-manager.nixosModules.home-manager
             {
