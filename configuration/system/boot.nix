@@ -12,6 +12,8 @@
     };
   */
 
+  systemd.enableEmergencyMode = true;
+
   boot = {
     enableContainers = false;
     # kernelPackages = pkgs.linuxPackages_xanmod_latest;
@@ -52,7 +54,10 @@
       cleanOnBoot = true;
     };
 
-    initrd.systemd.enable = true;
+    initrd.systemd = {
+      enable = true;
+      emergencyAccess = true;
+    };
 
     supportedFilesystems = {
       btrfs = true;
