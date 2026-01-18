@@ -34,7 +34,7 @@
 
     extraPackages = with pkgs; [
       nixd
-      nixfmt-rfc-style
+      nixfmt
 
       prettier
       pyright
