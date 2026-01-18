@@ -20,7 +20,7 @@
       };
       commit.gpgSign = true;
       credential = {
-        helper = "libsecret";
+        credential.helper = "keepassxc --git-groups";
         credentialStore = "cache";
       };
     };
