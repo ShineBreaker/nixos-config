@@ -1,15 +1,19 @@
-{
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 
 {
   imports = [
-    ./chromium.nix
-    ./firefox.nix
+    ../home/file.nix
 
-    ./wps-office/default.nix
+    ../home/programs/Entertain/00-default.nix
+    ../home/programs/Essentials/wps-office/default.nix
   ];
+
+  home.username = "brokenshine";
+  home.homeDirectory = "/home/brokenshine";
+  home.stateVersion = "25.11"; # Please read the comment before changing.
+
+  programs.home-manager.enable = true;
+
   home.packages = with pkgs; [
     (libreoffice.overrideAttrs {
       variant = "fresh";

@@ -198,6 +198,28 @@
             genRev
           ];
         };
+
+        nixosConfigurations.Guix = nixpkgs.lib.nixosSystem {
+
+          inherit system;
+
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useUserPackages = true;
+              users."${username}" = {
+                imports = [
+                  ./configuration/00-main/guix-home.nix
+                ];
+              };
+
+              backupFileExtension = "backup";
+              overwriteBackup = true;
+              verbose = true;
+            };
+          }
+
+        }
       }
     );
 }
