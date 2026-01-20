@@ -18,6 +18,8 @@
     unrar
     p7zip
 
+    ntfsprogs-plus
+
     adwaita-icon-theme
   ];
 
