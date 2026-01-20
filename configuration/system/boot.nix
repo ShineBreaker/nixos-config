@@ -5,12 +5,10 @@
 }:
 
 {
-  /*
-    system = {
-      nixos-init.enable = true;
-      etc.overlay.enable = true;
-    };
-  */
+  system = {
+    nixos-init.enable = true;
+    etc.overlay.enable = true;
+  };
 
   systemd.enableEmergencyMode = true;
 
