@@ -55,6 +55,24 @@
     ];
   };
 
+  fileSystems."/var/lib" = {
+    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+    fsType = "btrfs";
+    options = [
+      "subvol=SYSTEM/NixOS/@data"
+      "compress=zstd:6"
+    ];
+  };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
+    fsType = "btrfs";
+    options = [
+      "subvol=SYSTEM/NixOS/@nix"
+      "compress=zstd:6"
+    ];
+  };
+
   fileSystems."/efi" = {
     device = "/dev/disk/by-uuid/9699-52A2";
     fsType = "vfat";
