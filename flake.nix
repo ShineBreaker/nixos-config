@@ -199,27 +199,17 @@
           ];
         };
 
-        nixosConfigurations.Guix = nixpkgs.lib.nixosSystem {
+        homeConfigurations.Guix = inputs.home-manager.lib.homeManagerConfiguration {
 
-          inherit system;
+          pkgs = nixpkgs.legacyPackages.${system};
 
-          inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useUserPackages = true;
-              users."${username}" = {
-                imports = [
-                  ./configuration/00-main/guix-home.nix
-                ];
-              };
+          modules = [
+            ./configuration/00-main/guix-home.nix
+            ./configuration/services/system/nix.nix
+          ];
 
-              backupFileExtension = "backup";
-              overwriteBackup = true;
-              verbose = true;
-            };
-          }
-
-        }
+          extraSpecialArgs = { inherit inputs; };
+        };
       }
     );
 }
