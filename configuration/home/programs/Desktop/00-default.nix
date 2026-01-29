@@ -15,8 +15,8 @@
     # ./fuzzel.nix
     # ./mako.nix
     # ./swayidle.nix
-    ./vicinae.nix
-    ./waypaper.nix
+    # ./vicinae.nix
+    # ./waypaper.nix
   ];
 
   home.packages = with pkgs; [
