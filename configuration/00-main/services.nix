@@ -27,6 +27,7 @@
 
     ../services/user/adb.nix
     ../services/user/appimage.nix
+    ../services/user/bind-mount.nix
     ../services/user/clash.nix
     ../services/user/container.nix
     ../services/user/externalPackageManager.nix
