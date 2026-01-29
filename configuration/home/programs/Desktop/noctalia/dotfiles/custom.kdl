@@ -8,7 +8,7 @@ debug {
 }
 
 binds {
-  Mod+Ctrl+R  hotkey-overlay-title="随机壁纸"          { spawn "noctalia-shell" "ipc" "call" "wallpaper" "random"; }
+    Mod+Ctrl+R  hotkey-overlay-title="随机壁纸"          { spawn "noctalia-shell" "ipc" "call" "wallpaper" "random"; }
     Mod+C hotkey-overlay-title="打开剪切板"      repeat=false    { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
     Mod+D hotkey-overlay-title="打开搜索"        repeat=false    { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
 
