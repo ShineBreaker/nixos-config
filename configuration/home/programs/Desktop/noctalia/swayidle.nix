@@ -5,20 +5,12 @@
 {
   services.swayidle = {
     enable = true;
-    events = [
-      {
-        event = "lock";
-        command = "niri msg action power-off-monitors && noctalia-shell ipc call lockScreen toggle";
-      }
-      {
-        event = "unlock";
-        command = "niri msg action power-on-monitors";
-      }
-      {
-        event = "after-resume";
-        command = "noctalia-shell ipc call lockScreen toggle";
-      }
-    ];
+    events = {
+      "lock" = "niri msg action power-off-monitors && noctalia-shell ipc call lockScreen toggle";
+      "unlock" = "niri msg action power-on-monitors";
+      "after-resume" = "noctalia-shell ipc call lockScreen toggle";
+    };
+
     timeouts = [
       {
         timeout = 600;

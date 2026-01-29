@@ -7,23 +7,6 @@
   programs.noctalia-shell = {
     enable = true;
 
-    colors = with config.lib.stylix.colors; {
-      mError = "#${base08}";
-      mOnError = "#${base01}";
-      mOnPrimary = "#${base02}";
-      mOnSecondary = "#${base01}";
-      mOnSurface = "#${base05}";
-      mOnSurfaceVariant = "#${base05}";
-      mOnTertiary = "#${base00}";
-      mOutline = "#${base02}";
-      mPrimary = "#${base0B}";
-      mSecondary = "#${base0A}";
-      mShadow = "#${base00}";
-      mSurface = "#${base00}";
-      mSurfaceVariant = "#${base01}";
-      mTertiary = "#${base0D}";
-    };
-
     settings = {
       settingsVersion = 16;
       setupCompleted = true;
@@ -228,8 +211,6 @@
         preferredPlayer = "";
       };
       ui = {
-        fontDefault = config.stylix.fonts.sansSerif.name;
-        fontFixed = config.stylix.fonts.monospace.name;
         fontDefaultScale = 1;
         fontFixedScale = 1;
         idleInhibitorEnabled = false;
@@ -240,7 +221,6 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Noctalia (default)";
         darkMode = true;
         generateTemplatesForPredefined = false;
       };

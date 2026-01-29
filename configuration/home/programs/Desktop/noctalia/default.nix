@@ -4,7 +4,7 @@
 
 {
   imports = [
-    ./niri.nix
+    # ./niri.nix
     ./noctalia.nix
     ./swayidle.nix
   ];

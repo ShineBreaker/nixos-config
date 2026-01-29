@@ -22,11 +22,6 @@
       };
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     minecraft-plymouth-theme = {
       url = "github:nikp123/minecraft-plymouth-theme";
       inputs = {
@@ -47,6 +42,11 @@
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -104,12 +104,16 @@
       {
         nixosConfigurations.BrokenShine-Desktop = nixpkgs.lib.nixosSystem {
 
-          inherit system;
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+          };
 
           modules = [
             ./configuration/00-main/system.nix
             ./configuration/00-main/services.nix
             ./configuration/device/platform/RBP162024.nix
+
             (import ./overlays)
 
             {
@@ -141,6 +145,7 @@
                 users."${username}" = {
                   imports = [
                     inputs.zen-browser.homeModules.twilight
+                    inputs.noctalia.homeModules.default
 
                     ./configuration/00-main/home.nix
                   ];
@@ -151,21 +156,6 @@
                 verbose = true;
               };
             }
-
-            inputs.lanzaboote.nixosModules.lanzaboote
-            (
-              { pkgs, lib, ... }:
-              {
-                environment.systemPackages = [
-                  pkgs.sbctl
-                ];
-                boot.loader.systemd-boot.enable = lib.mkForce false;
-                boot.lanzaboote = {
-                  enable = true;
-                  pkiBundle = "/var/lib/sbctl";
-                };
-              }
-            )
 
             inputs.nix-index-database.nixosModules.nix-index
             {
