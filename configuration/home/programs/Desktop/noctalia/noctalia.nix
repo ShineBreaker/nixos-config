@@ -11,13 +11,15 @@
       settingsVersion = 16;
       setupCompleted = true;
       bar = {
+        barType = "simple";
         position = "left";
         backgroundOpacity = 0.9;
         density = "comfortable";
+        showOutline = false;
         showCapsule = true;
-        floating = false;
-        marginVertical = 0.25;
-        marginHorizontal = 0.25;
+        floating = true;
+        marginVertical = 12;
+        marginHorizontal = 8;
         widgets = {
           left = [
             {
@@ -92,6 +94,9 @@
         animationSpeed = 1;
         animationDisabled = false;
         compactLockScreen = false;
+        shadowDirection = "center";
+        telemetryEnabled = false;
+        allowPasswordWithFprintd = true;
       };
       location = {
         name = "Guangxi; China";
@@ -112,7 +117,8 @@
         videoSource = "portal";
       };
       wallpaper = {
-        enabled = false;
+        enabled = true;
+        directory = "${config.home.homeDirectory}/Pictures/wallpaper";
       };
       appLauncher = {
         enableClipboardHistory = true;
