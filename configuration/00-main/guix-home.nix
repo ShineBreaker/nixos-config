@@ -4,7 +4,7 @@
   imports = [
     ../home/programs/Essentials/wps-office/default.nix
 
-    ../home/programs/Entertain/00-default.nix
+    # ../home/programs/Entertain/00-default.nix
   ];
 
   targets.genericLinux.enable = true;
@@ -18,6 +18,8 @@
   };
 
   programs.home-manager.enable = true;
+
+  xdg.enable = true;
 
   home.packages = with pkgs; [
     sarasa-gothic

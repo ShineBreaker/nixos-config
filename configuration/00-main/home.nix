@@ -29,5 +29,6 @@
 
   stylix.targets = {
     waybar.addCss = false;
+    zen-browser.profileNames = [ "default" ];
   };
 }
