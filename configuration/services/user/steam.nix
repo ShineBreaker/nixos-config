@@ -4,8 +4,6 @@
 }:
 
 {
-  environment.systemPackages = with pkgs; [ steam-run ];
-
   programs.steam = {
     enable = true;
     package = pkgs.steam.override {
