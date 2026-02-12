@@ -8,7 +8,7 @@
     enable = true;
 
     settings = {
-      settingsVersion = 16;
+      settingsVersion = 0;
       setupCompleted = true;
       bar = {
         barType = "simple";
@@ -84,6 +84,7 @@
           ];
         };
       };
+
       general = {
         dimDesktop = true;
         showScreenCorners = false;
@@ -95,9 +96,12 @@
         animationDisabled = false;
         compactLockScreen = false;
         shadowDirection = "center";
+        shadowOffsetX = 0;
+        shadowOffsetY = 0;
         telemetryEnabled = false;
         allowPasswordWithFprintd = true;
       };
+
       location = {
         name = "Guangxi; China";
         weatherEnabled = true;
@@ -105,6 +109,7 @@
         use12hourFormat = false;
         showWeekNumberInCalendar = true;
       };
+
       screenRecorder = {
         directory = "${config.home.homeDirectory}/Videos/screenRecorder";
         frameRate = 60;
@@ -116,10 +121,12 @@
         audioSource = "default_output";
         videoSource = "portal";
       };
+
       wallpaper = {
         enabled = true;
         directory = "${config.home.homeDirectory}/Pictures/wallpaper";
       };
+
       appLauncher = {
         enableClipboardHistory = true;
         position = "center";
@@ -129,6 +136,7 @@
         sortByMostUsed = true;
         terminalCommand = "foot";
       };
+
       controlCenter = {
         position = "close_to_bar_button";
         shortcuts = {
@@ -155,6 +163,7 @@
             }
           ];
         };
+
         cards = [
           {
             enabled = true;
@@ -178,6 +187,7 @@
           }
         ];
       };
+
       dock = {
         displayMode = "auto_hide";
         backgroundOpacity = 0.9;
@@ -187,9 +197,11 @@
         pinnedApps = [ ];
         colorizeIcons = false;
       };
+
       network = {
         wifiEnabled = true;
       };
+
       notifications = {
         doNotDisturb = false;
         monitors = [ ];
@@ -201,6 +213,7 @@
         normalUrgencyDuration = 8;
         criticalUrgencyDuration = 15;
       };
+
       osd = {
         enabled = true;
         location = "top_right";
@@ -208,6 +221,7 @@
         autoHideMs = 2000;
         alwaysOnTop = false;
       };
+
       audio = {
         volumeStep = 5;
         volumeOverdrive = false;
@@ -216,20 +230,24 @@
         mprisBlacklist = [ ];
         preferredPlayer = "";
       };
+
       ui = {
         fontDefaultScale = 1;
         fontFixedScale = 1;
         idleInhibitorEnabled = false;
         tooltipsEnabled = true;
       };
+
       brightness = {
         brightnessStep = 5;
       };
+
       colorSchemes = {
         useWallpaperColors = false;
         darkMode = true;
         generateTemplatesForPredefined = false;
       };
+
       templates = {
         gtk = false;
         qt = false;
@@ -248,6 +266,7 @@
         pywalfox = false;
         enableUserTemplates = false;
       };
+
       nightLight = {
         enabled = false;
         forced = false;
@@ -257,6 +276,7 @@
         manualSunrise = "06:30";
         manualSunset = "22:30";
       };
+
       hooks = {
         enabled = false;
       };

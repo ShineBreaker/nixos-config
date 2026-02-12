@@ -1,6 +1,5 @@
 spawn-at-startup "waypaper" "--restore"
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "noctalia-shell"
 
 spawn-sh-at-startup "wl-paste --watch cliphist store &"
 
