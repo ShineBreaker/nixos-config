@@ -11,7 +11,7 @@
     overlays.enable = true;
     targets.plymouth.enable = false;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/penumbra-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-mirage.yaml";
     override = {
       base04 = "#676c71";
     };
