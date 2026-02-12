@@ -16,11 +16,7 @@
         commit = "git commit --all";
         enter = "toolbox enter";
         push = "git push";
-        rebuild = "nh os switch . --ask";
-        rebuildb = "nh os boot . --ask";
-        rebuildc = "nh os switch . && nh clean all && nh os switch .";
 
-        upgrade = "nix flake update && git commit -a -m 'bump nixos version.' && nh os boot . --ask";
         update = "sudo ll-cli upgrade && sudo flatpak upgrade";
         shutdown = "systemctl poweroff";
         reboot = "systemctl reboot";
