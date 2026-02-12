@@ -18,6 +18,7 @@
     ffmpeg
     imagemagick
 
+    just
     yazi
   ];
 }
