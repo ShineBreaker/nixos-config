@@ -45,11 +45,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -145,7 +140,6 @@
                 users."${username}" = {
                   imports = [
                     inputs.zen-browser.homeModules.twilight
-                    inputs.noctalia.homeModules.default
 
                     ./configuration/00-main/home.nix
                   ];
@@ -194,6 +188,8 @@
           pkgs = nixpkgs.legacyPackages.${system};
 
           modules = [
+            inputs.zen-browser.homeModules.twilight
+
             ./configuration/00-main/guix-home.nix
             ./configuration/services/system/nix.nix
           ];
