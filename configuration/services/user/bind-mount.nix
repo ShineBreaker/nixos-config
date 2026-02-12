@@ -32,6 +32,12 @@
       options = config.fileSystems."/home/brokenshine/Desktop".options;
     };
 
+    "/home/brokenshine/Games/steam" = {
+      device = "/data/.local/share/steam";
+      depends = config.fileSystems."/home/brokenshine/Desktop".depends;
+      options = config.fileSystems."/home/brokenshine/Desktop".options;
+    };
+
     "/home/brokenshine/Music" = {
       device = "/data/Music";
       depends = config.fileSystems."/home/brokenshine/Desktop".depends;
@@ -52,6 +58,12 @@
 
     "/home/brokenshine/Public" = {
       device = "/data/Public";
+      depends = config.fileSystems."/home/brokenshine/Desktop".depends;
+      options = config.fileSystems."/home/brokenshine/Desktop".options;
+    };
+
+    "/home/brokenshine/.local/share/osu" = {
+      device = "/data/.local/share/osu";
       depends = config.fileSystems."/home/brokenshine/Desktop".depends;
       options = config.fileSystems."/home/brokenshine/Desktop".options;
     };
