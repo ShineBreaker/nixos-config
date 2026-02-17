@@ -25,16 +25,6 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/2f6b6499-2a27-4583-847f-dd70b9fcb036";
-    fsType = "btrfs";
-    options = [
-      "subvol=SYSTEM/NixOS/@"
-      "compress=zstd:6"
-    ];
-  };
-
   boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/327f2e02-1e4f-48b2-87f0-797c481850c9";
 
   fileSystems."/home" = {

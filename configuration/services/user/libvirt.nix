@@ -29,8 +29,8 @@
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   fileSystems."/var/lib/libvirt" = {
-    device = config.fileSystems."/".device;
-    fsType = config.fileSystems."/".fsType;
+    device = config.fileSystems."/data".device;
+    fsType = config.fileSystems."/data".fsType;
     options = [
       "subvol=DATA/LibVirt"
       "compress=zstd:6"

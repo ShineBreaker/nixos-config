@@ -10,8 +10,8 @@
     flatpak.enable = true;
   };
   fileSystems."/var/lib/flatpak" = {
-    device = config.fileSystems."/".device;
-    fsType = config.fileSystems."/".fsType;
+    device = config.fileSystems."/data".device;
+    fsType = config.fileSystems."/data".fsType;
     options = [
       "subvol=DATA/Flatpak"
       "compress=zstd:6"
@@ -19,8 +19,8 @@
   };
 
   fileSystems."/var/lib/linglong" = {
-    device = config.fileSystems."/".device;
-    fsType = config.fileSystems."/".fsType;
+    device = config.fileSystems."/data".device;
+    fsType = config.fileSystems."/data".fsType;
     options = [
       "subvol=DATA/LingLong"
       "compress=zstd:6"

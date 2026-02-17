@@ -6,9 +6,19 @@
   ...
 }:
 {
-  fileSystems."/var/lib/waydroid" = {
-    device = config.fileSystems."/".device;
-    fsType = config.fileSystems."/".fsType;
+  fileSystems."/" = lib.mkForce {
+    device = "none";
+    fsType = "tmpfs";
+    options = [
+      "defaults"
+      "size=25%"
+      "mode=755"
+    ];
+  };
+
+  fileSystems."/persist" = {
+    device = config.fileSystems."/data".device;
+    fsType = config.fileSystems."/data".fsType;
     options = [
       "subvol=SYSTEM/NixOS/@persist"
       "compress=zstd:6"
@@ -20,19 +30,7 @@
     preserveAt."/persist" = {
       directories = [
         "/etc/secureboot"
-        "/var/lib/bluetooth"
-        "/var/lib/fprint"
-        "/var/lib/fwupd"
-        "/var/lib/libvirt"
-        "/var/lib/power-profiles-daemon"
-        "/var/lib/systemd/coredump"
-        "/var/lib/systemd/rfkill"
-        "/var/lib/systemd/timers"
         "/var/log"
-        {
-          directory = "/var/lib/nixos";
-          inInitrd = true;
-        }
       ];
 
       files = [
@@ -48,17 +46,6 @@
         {
           file = "/etc/ssh/ssh_host_ed25519_key";
           how = "symlink";
-          configureParent = true;
-        }
-        "/var/lib/usbguard/rules.conf"
-
-        # creates a symlink on the volatile root
-        # creates an empty directory on the persistent volume, i.e. /persistent/var/lib/systemd
-        # does not create an empty file at the symlink's target (would require `createLinkTarget = true`)
-        {
-          file = "/var/lib/systemd/random-seed";
-          how = "symlink";
-          inInitrd = true;
           configureParent = true;
         }
       ];

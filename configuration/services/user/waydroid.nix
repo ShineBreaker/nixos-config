@@ -15,8 +15,8 @@
   ];
 
   fileSystems."/var/lib/waydroid" = {
-    device = config.fileSystems."/".device;
-    fsType = config.fileSystems."/".fsType;
+    device = config.fileSystems."/data".device;
+    fsType = config.fileSystems."/data".fsType;
     options = [
       "subvol=DATA/WayDroid"
       "compress=zstd:6"

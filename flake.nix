@@ -113,6 +113,13 @@
             ./configuration/00-main/services.nix
             ./configuration/device/platform/RBP162024.nix
 
+            inputs.preservation.nixosModules.default
+            {
+              imports = [
+                ./configuration/system/preservation.nix
+              ];
+            }
+
             (import ./overlays)
 
             {
