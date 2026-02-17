@@ -10,6 +10,7 @@
     ../system/hardware.nix
     ../system/hardware-configuration.nix
     ../system/i18n.nix
+    ../system/preservation.nix
     ../system/security.nix
     ../system/services.nix
     ../system/swap.nix

@@ -45,6 +45,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    preservation = {
+      url = "github:nix-community/preservation";
+    };
+
     solaar = {
       url = "github:Svenum/Solaar-Flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
