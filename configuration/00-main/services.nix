@@ -14,7 +14,6 @@
     ../services/system/limine.nix
     # ../services/system/ly.nix
     ../services/system/networkmanager.nix
-    ../services/system/niri.nix
     ../services/system/nix.nix
     ../services/system/nix-ld.nix
     # ../services/system/opentabletdriver.nix
@@ -23,6 +22,7 @@
     # ../services/system/refind.nix
     # ../services/system/sddm.nix
     ../services/system/sudo.nix
+    ../services/system/wm.nix
     # ../services/system/zfs.nix
 
     ../services/user/adb.nix
