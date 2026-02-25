@@ -2,9 +2,12 @@
 
 {
   imports = [
-    ../home/programs/Essentials/wps-office/default.nix
+    ../home/programs/Develop/jujutsu.nix
+    ../home/programs/Develop/pixi.nix
+    ../home/programs/Develop/zed.nix
 
-    # ../home/programs/Entertain/00-default.nix
+    ../home/programs/Essentials/wps-office/default.nix
+    ../home/programs/Entertain/00-default.nix
   ];
 
   targets.genericLinux.enable = true;
@@ -28,12 +31,15 @@
     gamemode
     gamescope
 
-    postman
+    obsidian
 
     (qq.override {
       commandLineArgs = "--enable-wayland-ime --wayland-text-input-version=3";
     })
     wechat
     telegram-desktop
+
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
   ];
 }
