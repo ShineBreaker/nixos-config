@@ -15,5 +15,8 @@ rebuildc:
 # 更新系统
 upgrade:
   nix flake update
-  git commit -a -m 'bump nixos version.'
+  git commit -m 'bump version.' ./flake.lock
   nh os boot . --ask
+
+guix:
+  home-manager switch -b backup --flake .#Guix --extra-experimental-features nix-command --extra-experimental-features flakes
