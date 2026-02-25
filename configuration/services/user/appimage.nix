@@ -10,7 +10,4 @@
       binfmt = false;
     };
   };
-  environment.systemPackages = [
-    pkgs.gearlever
-  ];
 }
