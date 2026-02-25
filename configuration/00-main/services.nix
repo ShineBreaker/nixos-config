@@ -39,7 +39,7 @@
     ../services/user/postgresql.nix
     ../services/user/poweralertd.nix
     ../services/user/steam.nix
-    ../services/user/sunshine.nix
+    # ../services/user/sunshine.nix
     ../services/user/syncthing.nix
     ../services/user/waydroid.nix
     # ../services/user/xwayland-satellite.nix
