@@ -39,6 +39,12 @@
           inInitrd = true;
         }
         {
+          file = "/etc/subgid";
+        }
+        {
+          file = "/etc/subuid";
+        }
+        {
           file = "/etc/ssh/ssh_host_rsa_key";
           how = "symlink";
           configureParent = true;
