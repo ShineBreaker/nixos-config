@@ -12,7 +12,7 @@
         user = "brokenshine";
       };
       initial_session = {
-        command = "${pkgs.niri}/bin/niri-session";
+        command = "niri-session";
         user = "brokenshine";
       };
     };
