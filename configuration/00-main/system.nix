@@ -17,7 +17,7 @@
     ../system/user.nix
 
     ../device/hardware/sayodevice.nix
-    # ../device/hardware/opentabletdriver.nix
+    ../device/hardware/opentabletdriver.nix
   ];
 
   networking.hostName = "BrokenShine-Desktop";
