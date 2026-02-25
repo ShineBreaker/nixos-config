@@ -6,9 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # xwayland-satellite
-
-    mangowc
+    xwayland-satellite
 
     wl-clipboard-rs
     libnotify
@@ -17,13 +15,11 @@
 
   programs = {
     xwayland.enable = true;
-
     niri = {
       enable = true;
       package = pkgs.niri;
       useNautilus = false;
     };
-
     gtklock.enable = true;
   };
 

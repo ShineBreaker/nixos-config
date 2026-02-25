@@ -200,7 +200,6 @@
 
           modules = [
             inputs.zen-browser.homeModules.twilight
-
             ./configuration/00-main/guix-home.nix
             ./configuration/services/system/nix.nix
           ];
